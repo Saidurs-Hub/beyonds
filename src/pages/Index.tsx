@@ -1,6 +1,14 @@
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const navLinks = ["About", "Programs", "Portfolio", "Team", "Insights", "Contact"];
+const navLinks = [
+  { label: "About", path: "/about" },
+  { label: "Programs", path: "/programs" },
+  { label: "Portfolio", path: "/portfolio" },
+  { label: "Team", path: "/team" },
+  { label: "Insights", path: "/insights" },
+  { label: "Contact", path: "/contact" },
+];
 
 const Index = () => {
   return (
