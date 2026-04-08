@@ -31,7 +31,7 @@ const services = [
     icon: BarChart3,
     category: "Investment Management",
     goal: "Deploying flexible capital instruments — equity, quasi-equity, and performance-linked debt — to drive commercial returns with measurable impact.",
-    subPrograms: [],
+    subServices: [],
     stats: [
       { value: "$200K", label: "Sponsor fund mandate" },
       { value: "$2.5mn", label: "Commitments raised" },
