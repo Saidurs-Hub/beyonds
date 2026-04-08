@@ -1,87 +1,83 @@
-import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
-import PageTransition from "@/components/PageTransition";
+import PageLayout from "@/components/PageLayout";
 
 const investments = [
-  { company: "Mental Health Platform", amount: "$85K", sector: "Healthcare" },
-  { company: "Shikho", amount: "$300K", sector: "EdTech" },
-  { company: "Digital Learning Platform", amount: "$115K", sector: "EdTech" },
+  { company: "Mental Health Platform", amount: "$85K", sector: "Healthcare", type: "Equity" },
+  { company: "Shikho", amount: "$300K", sector: "EdTech", type: "Equity" },
+  { company: "Digital Learning Platform", amount: "$115K", sector: "EdTech", type: "Equity" },
 ];
 
 const sectors = ["Technology", "Food & Agri", "Energy", "Textile & Apparel", "Climate & Environment", "Healthcare"];
-
 const instruments = ["Grants", "Concessional Loans", "Commercial Debt", "Equity"];
 
-const portfolioStats = [
-  { value: "83+", label: "Companies Supported" },
-  { value: "$500K", label: "Deployed to Startups" },
-  { value: "$2.5mn", label: "Funding Commitments Raised" },
-  { value: "6", label: "Sector Verticals" },
-];
-
 const Portfolio = () => (
-  <PageTransition>
-    <div className="min-h-screen bg-background text-foreground">
-      <header className="px-6 md:px-12 lg:px-20 py-6">
-        <Link to="/" className="text-foreground/60 hover:text-foreground transition-colors flex items-center gap-2 text-sm tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>
-          <ArrowLeft className="w-4 h-4" /> Back
-        </Link>
-      </header>
+  <PageLayout
+    title="Portfolio"
+    subtitle="Deploying capital across a diverse range of instruments — backing enterprises that generate commercial returns and measurable impact in underserved markets."
+  >
+    <div className="space-y-24">
+      {/* Key Metrics */}
+      <section className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border/20 rounded-xl overflow-hidden">
+        {[
+          { value: "83+", label: "Companies Supported" },
+          { value: "$6mn+", label: "Funding Under Management" },
+          { value: "$500K", label: "Deployed to Startups" },
+          { value: "$2.5mn", label: "Commitments Raised" },
+        ].map((s) => (
+          <div key={s.label} className="bg-background p-6 md:p-10 space-y-2">
+            <div className="text-3xl md:text-4xl font-light text-foreground" style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
+            <div className="text-foreground/40 text-[11px] tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>{s.label}</div>
+          </div>
+        ))}
+      </section>
 
-      <main className="px-6 md:px-12 lg:px-20 py-12 max-w-5xl mx-auto space-y-20">
-        <section className="space-y-6">
-          <h1 className="text-5xl md:text-7xl font-light tracking-wide" style={{ fontFamily: "var(--font-display)" }}>Portfolio</h1>
-          <p className="text-foreground/60 text-lg leading-relaxed max-w-3xl" style={{ fontFamily: "var(--font-body)" }}>
-            We deploy capital across a diverse range of instruments — from grants and concessional loans to equity — backing enterprises that generate commercial returns and measurable impact.
-          </p>
-        </section>
-
-        {/* Stats */}
-        <section className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {portfolioStats.map((s) => (
-            <div key={s.label} className="text-center space-y-2 bg-card/20 border border-border/20 rounded-lg p-6">
-              <div className="text-3xl md:text-4xl font-light text-accent" style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
-              <div className="text-foreground/40 text-xs tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>{s.label}</div>
+      {/* Investments Table */}
+      <section className="space-y-8">
+        <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>
+          Existing Investments
+        </h2>
+        <div className="border border-border/20 rounded-xl overflow-hidden">
+          {/* Table header */}
+          <div className="grid grid-cols-4 gap-4 px-6 md:px-8 py-4 bg-card/30 border-b border-border/20">
+            {["Company", "Sector", "Instrument", "Amount"].map((h) => (
+              <span key={h} className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{h}</span>
+            ))}
+          </div>
+          {investments.map((inv, i) => (
+            <div key={inv.company} className={`grid grid-cols-4 gap-4 px-6 md:px-8 py-5 ${i < investments.length - 1 ? "border-b border-border/10" : ""}`}>
+              <span className="text-foreground text-sm" style={{ fontFamily: "var(--font-body)" }}>{inv.company}</span>
+              <span className="text-foreground/50 text-sm" style={{ fontFamily: "var(--font-body)" }}>{inv.sector}</span>
+              <span className="text-foreground/50 text-sm" style={{ fontFamily: "var(--font-body)" }}>{inv.type}</span>
+              <span className="text-accent text-sm font-medium" style={{ fontFamily: "var(--font-body)" }}>{inv.amount}</span>
             </div>
           ))}
-        </section>
+        </div>
+      </section>
 
-        {/* Existing Investments */}
-        <section className="space-y-8">
-          <h2 className="text-2xl font-light tracking-wide" style={{ fontFamily: "var(--font-display)" }}>Existing Investments</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {investments.map((inv) => (
-              <div key={inv.company} className="border border-border/30 rounded-lg p-8 bg-card/20 space-y-4">
-                <div className="text-accent text-xs tracking-[0.2em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{inv.sector}</div>
-                <h3 className="text-foreground text-lg" style={{ fontFamily: "var(--font-body)" }}>{inv.company}</h3>
-                <div className="text-2xl font-light text-accent" style={{ fontFamily: "var(--font-display)" }}>{inv.amount}</div>
+      {/* Sectors & Instruments */}
+      <section className="grid md:grid-cols-2 gap-16">
+        <div className="space-y-6">
+          <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Sector Focus</h2>
+          <div className="space-y-0">
+            {sectors.map((s, i) => (
+              <div key={s} className={`py-3 ${i < sectors.length - 1 ? "border-b border-border/10" : ""}`}>
+                <span className="text-foreground/70 text-sm" style={{ fontFamily: "var(--font-body)" }}>{s}</span>
               </div>
             ))}
           </div>
-        </section>
-
-        {/* Sectors & Instruments */}
-        <section className="grid md:grid-cols-2 gap-12">
-          <div className="space-y-6">
-            <h2 className="text-2xl font-light tracking-wide" style={{ fontFamily: "var(--font-display)" }}>Sector Focus</h2>
-            <div className="flex flex-wrap gap-3">
-              {sectors.map((s) => (
-                <span key={s} className="border border-border/30 rounded-full px-4 py-1.5 text-foreground/60 text-xs tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>{s}</span>
-              ))}
-            </div>
+        </div>
+        <div className="space-y-6">
+          <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Capital Instruments</h2>
+          <div className="space-y-0">
+            {instruments.map((inst, i) => (
+              <div key={inst} className={`py-3 ${i < instruments.length - 1 ? "border-b border-border/10" : ""}`}>
+                <span className="text-foreground/70 text-sm" style={{ fontFamily: "var(--font-body)" }}>{inst}</span>
+              </div>
+            ))}
           </div>
-          <div className="space-y-6">
-            <h2 className="text-2xl font-light tracking-wide" style={{ fontFamily: "var(--font-display)" }}>Instruments</h2>
-            <div className="flex flex-wrap gap-3">
-              {instruments.map((inst) => (
-                <span key={inst} className="border border-accent/30 rounded-full px-4 py-1.5 text-accent text-xs tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>{inst}</span>
-              ))}
-            </div>
-          </div>
-        </section>
-      </main>
+        </div>
+      </section>
     </div>
-  </PageTransition>
+  </PageLayout>
 );
 
 export default Portfolio;
