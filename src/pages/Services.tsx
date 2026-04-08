@@ -69,8 +69,8 @@ const Services = () => (
             </div>
           </div>
 
-          <div className="relative rounded-xl overflow-hidden aspect-[21/9]">
-            <img src={p.image} alt={p.category} className="w-full h-full object-cover" loading="lazy" />
+          <div className="relative rounded-xl overflow-hidden aspect-[21/9] group">
+            <img src={p.image} alt={p.category} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
           </div>
 
