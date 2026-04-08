@@ -1,6 +1,6 @@
 import PageLayout from "@/components/PageLayout";
 import { Rocket, Leaf, BarChart3, ArrowRight } from "lucide-react";
-import programsHero from "@/assets/programs-hero.jpg";
+
 
 const programs = [
   {
