@@ -1,14 +1,14 @@
 import PageLayout from "@/components/PageLayout";
 import { Rocket, Leaf, BarChart3, ArrowRight } from "lucide-react";
 import servicesHero from "@/assets/services-hero.jpg";
-
+import rocketLaunchAsset from "@/assets/rocket-launch.mp4.asset.json";
 
 const services = [
   {
     icon: Rocket,
     category: "Acceleration & Investment Readiness",
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=80",
-    video: "https://cdn.pixabay.com/video/2015/08/07/3-135655112_large.mp4",
+    video: rocketLaunchAsset.url,
     goal: "Equipping early-stage entrepreneurs with the resources necessary to build sustainable, investment-ready enterprises through acceleration, technical assistance, and tailored funding.",
     subServices: ["Orange Corners", "B/DESHI Bangladesh", "Catalyst"],
     stats: [
