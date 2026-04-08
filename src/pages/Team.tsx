@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import teamHero from "@/assets/team-hero.jpg";
 
 interface TeamMember {
   name: string;
@@ -33,9 +34,7 @@ const MemberCard = ({ member }: { member: TeamMember }) => (
       <span className="text-foreground/30 text-xs" style={{ fontFamily: "var(--font-body)" }}>{member.years} yrs exp.</span>
     </div>
     <div className="col-span-2 md:col-span-1">
-      <p className="text-foreground/40 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
-        {member.expertise.join(" · ")}
-      </p>
+      <p className="text-foreground/40 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{member.expertise.join(" · ")}</p>
     </div>
   </div>
 );
@@ -44,24 +43,17 @@ const Team = () => (
   <PageLayout
     title="Team"
     subtitle="Decades of combined experience across impact investing, venture building, fund management, and development finance."
+    heroImage={teamHero}
+    heroAlt="Team collaborating in a modern workspace"
   >
     <div className="space-y-20">
       <section className="space-y-4">
-        <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>
-          Leadership
-        </h2>
-        <div>
-          {leadership.map((m) => <MemberCard key={m.name} member={m} />)}
-        </div>
+        <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Leadership</h2>
+        <div>{leadership.map((m) => <MemberCard key={m.name} member={m} />)}</div>
       </section>
-
       <section className="space-y-4">
-        <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>
-          Core Team
-        </h2>
-        <div>
-          {coreTeam.map((m) => <MemberCard key={m.name} member={m} />)}
-        </div>
+        <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Core Team</h2>
+        <div>{coreTeam.map((m) => <MemberCard key={m.name} member={m} />)}</div>
       </section>
     </div>
   </PageLayout>

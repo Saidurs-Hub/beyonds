@@ -1,13 +1,16 @@
 import PageLayout from "@/components/PageLayout";
 import { Building2, TrendingUp, Globe } from "lucide-react";
+import aboutBg from "@/assets/about-bg.jpg";
 
 const About = () => (
   <PageLayout
     title="About"
     subtitle="Beyond S Ventures represents SAJIDA's expansion into active investment management — mobilizing commercial funding for SMEs & startups across the Global South."
+    heroImage={aboutBg}
+    heroAlt="Misty forest at twilight"
   >
     <div className="space-y-24">
-      {/* Vision & Thesis — side by side, clean cards */}
+      {/* Vision & Thesis */}
       <section className="grid md:grid-cols-2 gap-px bg-border/20">
         <div className="bg-background p-8 md:p-12 space-y-4">
           <span className="text-accent text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Vision</span>
@@ -23,38 +26,30 @@ const About = () => (
         </div>
       </section>
 
-      {/* Evolution — editorial timeline */}
+      {/* Evolution */}
       <section className="space-y-12">
-        <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>
-          Our Evolution
-        </h2>
-        <div className="space-y-0">
-          {[
-            { year: "1993", role: "Builder", entity: "SAJIDA Foundation", desc: "Building enterprises directly serving over 3 million people every year — from microfinance to pharmaceuticals to healthcare." },
-            { year: "2021", role: "Enabler", entity: "Impact Partners", desc: "Transitioning from only building own ventures to enabling others to grow through acceleration, technical assistance, and impact-linked financing." },
-            { year: "2024", role: "Investor", entity: "Beyond Ventures", desc: "Mobilizing capital to help enterprises build smarter and reach untapped markets through active investment management." },
-          ].map((m, i) => (
-            <div key={m.year} className="grid grid-cols-[80px_1fr] md:grid-cols-[120px_1fr] gap-6 md:gap-10 py-10 border-t border-border/20">
-              <div>
-                <span className="text-accent text-2xl md:text-3xl font-light" style={{ fontFamily: "var(--font-display)" }}>{m.year}</span>
+        <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Our Evolution</h2>
+        {[
+          { year: "1993", role: "Builder", entity: "SAJIDA Foundation", desc: "Building enterprises directly serving over 3 million people every year — from microfinance to pharmaceuticals to healthcare." },
+          { year: "2021", role: "Enabler", entity: "Impact Partners", desc: "Transitioning from only building own ventures to enabling others to grow through acceleration, technical assistance, and impact-linked financing." },
+          { year: "2024", role: "Investor", entity: "Beyond Ventures", desc: "Mobilizing capital to help enterprises build smarter and reach untapped markets through active investment management." },
+        ].map((m) => (
+          <div key={m.year} className="grid grid-cols-[80px_1fr] md:grid-cols-[120px_1fr] gap-6 md:gap-10 py-10 border-t border-border/20">
+            <span className="text-accent text-2xl md:text-3xl font-light" style={{ fontFamily: "var(--font-display)" }}>{m.year}</span>
+            <div className="space-y-2">
+              <div className="flex items-baseline gap-3">
+                <h3 className="text-foreground text-lg md:text-xl" style={{ fontFamily: "var(--font-body)" }}>{m.entity}</h3>
+                <span className="text-foreground/30 text-xs tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>{m.role}</span>
               </div>
-              <div className="space-y-2">
-                <div className="flex items-baseline gap-3">
-                  <h3 className="text-foreground text-lg md:text-xl" style={{ fontFamily: "var(--font-body)" }}>{m.entity}</h3>
-                  <span className="text-foreground/30 text-xs tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>{m.role}</span>
-                </div>
-                <p className="text-foreground/50 text-sm md:text-base leading-relaxed max-w-xl" style={{ fontFamily: "var(--font-body)" }}>{m.desc}</p>
-              </div>
+              <p className="text-foreground/50 text-sm md:text-base leading-relaxed max-w-xl" style={{ fontFamily: "var(--font-body)" }}>{m.desc}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </section>
 
-      {/* Impact numbers — big bold stats */}
+      {/* Impact Stats */}
       <section className="bg-card/30 border border-border/20 rounded-xl p-8 md:p-14">
-        <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium mb-10" style={{ fontFamily: "var(--font-body)" }}>
-          Impact at a Glance
-        </h2>
+        <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium mb-10" style={{ fontFamily: "var(--font-body)" }}>Impact at a Glance</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {[
             { value: "6M+", label: "Lives Impacted" },
@@ -70,12 +65,10 @@ const About = () => (
         </div>
       </section>
 
-      {/* Global presence */}
+      {/* Global Presence */}
       <section className="space-y-12">
         <div className="space-y-4">
-          <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>
-            Global Presence
-          </h2>
+          <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Global Presence</h2>
           <p className="text-foreground/60 text-base leading-relaxed max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>
             Building a Global South-focused investment platform, grounded in decades of delivering essential services — now scaling to back entrepreneurs with venture support, investment readiness, and catalytic capital.
           </p>

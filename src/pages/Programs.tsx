@@ -1,5 +1,6 @@
 import PageLayout from "@/components/PageLayout";
 import { Rocket, Leaf, BarChart3, ArrowRight } from "lucide-react";
+import programsHero from "@/assets/programs-hero.jpg";
 
 const programs = [
   {
@@ -51,11 +52,12 @@ const Programs = () => (
   <PageLayout
     title="Programs"
     subtitle="From acceleration to venture building to investment management — meeting enterprises wherever they are in their growth journey."
+    heroImage={programsHero}
+    heroAlt="Entrepreneurs in a vibrant marketplace"
   >
     <div className="space-y-24">
       {programs.map((p, idx) => (
         <section key={p.category} className="space-y-10">
-          {/* Category header */}
           <div className="flex items-start gap-5">
             <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-1">
               <p.icon className="w-5 h-5 text-accent" />
@@ -66,18 +68,14 @@ const Programs = () => (
             </div>
           </div>
 
-          {/* Sub-programs */}
           {p.subPrograms.length > 0 && (
-            <div className="flex flex-wrap gap-3 pl-[60px]">
+            <div className="flex flex-wrap gap-3 pl-0 md:pl-[60px]">
               {p.subPrograms.map((sp) => (
-                <span key={sp} className="bg-card/40 border border-border/20 rounded-full px-5 py-2 text-foreground/60 text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>
-                  {sp}
-                </span>
+                <span key={sp} className="bg-card/40 border border-border/20 rounded-full px-5 py-2 text-foreground/60 text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
               ))}
             </div>
           )}
 
-          {/* Stats row */}
           <div className="grid grid-cols-3 gap-px bg-border/20 rounded-xl overflow-hidden">
             {p.stats.map((s) => (
               <div key={s.label} className="bg-background p-6 md:p-8 space-y-2">
@@ -87,9 +85,8 @@ const Programs = () => (
             ))}
           </div>
 
-          {/* Partners */}
           {p.partners.length > 0 && (
-            <div className="pl-[60px]">
+            <div className="pl-0 md:pl-[60px]">
               <span className="text-foreground/30 text-[11px] tracking-[0.2em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Partners: </span>
               <span className="text-foreground/40 text-sm" style={{ fontFamily: "var(--font-body)" }}>{p.partners.join(" · ")}</span>
             </div>
@@ -99,7 +96,6 @@ const Programs = () => (
         </section>
       ))}
 
-      {/* Next 3 Years */}
       <section className="space-y-10 pt-8">
         <div className="space-y-3">
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Looking Ahead</h2>
