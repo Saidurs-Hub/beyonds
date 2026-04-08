@@ -27,7 +27,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
 
   return (
     <PageTransition>
-      <div className="min-h-screen text-foreground" style={{ background: 'white', color: 'hsl(220 30% 6%)' }}>
+      <div className="min-h-screen bg-background text-foreground page-light">
         {/* Hero Section — full bleed like sajida.org */}
         {heroImage ? (
           <div className="relative h-[70vh] min-h-[500px] overflow-hidden">
