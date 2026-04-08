@@ -90,7 +90,7 @@ const Services = () => (
             </div>
           )}
 
-          {idx < programs.length - 1 && <div className="border-t border-border/10" />}
+          {idx < services.length - 1 && <div className="border-t border-border/10" />}
         </section>
       ))}
 
