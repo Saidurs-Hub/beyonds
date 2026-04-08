@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import circularApparel from "@/assets/circular-apparel.png";
 
 
 const studies = [
@@ -32,28 +33,46 @@ const Insights = () => (
   >
     <div className="space-y-0">
       {studies.map((study, i) => (
-        <article key={study.title} className={`py-12 md:py-16 ${i < studies.length - 1 ? "border-b border-border/10" : ""}`}>
-          <div className="grid md:grid-cols-[280px_1fr] gap-8 md:gap-12">
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <span className="text-accent text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>{study.type}</span>
-                <span className="text-foreground/20">·</span>
-                <span className="text-foreground/30 text-[11px] tracking-widest" style={{ fontFamily: "var(--font-body)" }}>{study.year}</span>
-              </div>
-              <h2 className="text-foreground text-lg md:text-xl leading-snug" style={{ fontFamily: "var(--font-body)" }}>{study.title}</h2>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
+        <div key={study.title}>
+          <article className={`py-12 md:py-16 ${i < studies.length - 1 ? "border-b border-border/10" : ""}`}>
+            <div className="grid md:grid-cols-[280px_1fr] gap-8 md:gap-12">
               <div className="space-y-3">
-                <h3 className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Key Findings</h3>
-                <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{study.findings}</p>
+                <div className="flex items-center gap-3">
+                  <span className="text-accent text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>{study.type}</span>
+                  <span className="text-foreground/20">·</span>
+                  <span className="text-foreground/30 text-[11px] tracking-widest" style={{ fontFamily: "var(--font-body)" }}>{study.year}</span>
+                </div>
+                <h2 className="text-foreground text-lg md:text-xl leading-snug" style={{ fontFamily: "var(--font-body)" }}>{study.title}</h2>
               </div>
-              <div className="space-y-3">
-                <h3 className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Recommendation</h3>
-                <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{study.recommendation}</p>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-3">
+                  <h3 className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Key Findings</h3>
+                  <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{study.findings}</p>
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Recommendation</h3>
+                  <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{study.recommendation}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
+
+          {/* Circular Apparel diagram after RMG study */}
+          {i === 0 && (
+            <div className="py-12 md:py-16 border-b border-border/10">
+              <div className="rounded-2xl bg-white/5 border border-border/10 p-8 md:p-12 flex flex-col items-center gap-6">
+                <h3 className="text-foreground/40 text-[10px] tracking-[0.25em] uppercase text-center" style={{ fontFamily: "var(--font-body)" }}>
+                  Framework — Levers for Circular Apparel System
+                </h3>
+                <img
+                  src={circularApparel}
+                  alt="Levers for Circular Apparel System — Input, Design, Production, Use & Reuse, Recovery & Recycle"
+                  className="w-full max-w-2xl rounded-xl bg-white p-6"
+                />
+              </div>
+            </div>
+          )}
+        </div>
       ))}
     </div>
   </PageLayout>
