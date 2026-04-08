@@ -44,11 +44,9 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
             <header className="relative z-20 px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between">
               <Link
                 to="/"
-                className="text-white/70 hover:text-white transition-colors flex items-center gap-2 text-xs tracking-[0.2em] uppercase"
-                style={{ fontFamily: "var(--font-body)" }}
+                className="flex items-center"
               >
-                <ArrowLeft className="w-4 h-4" />
-                Home
+                <img src={bsvLogo} alt="Beyond S Ventures" className="h-8 brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
               </Link>
               <nav className="hidden md:flex items-center gap-8">
                 {navLinks.map((link) => (
