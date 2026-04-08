@@ -1,10 +1,13 @@
 import PageLayout from "@/components/PageLayout";
+import relaxyLogo from "@/assets/relaxy-logo.png";
+import shikhoLogo from "@/assets/shikho-logo.png";
+import cholporiLogo from "@/assets/cholpori-logo.png";
 
 
 const investments = [
-  { company: "Mental Health Platform", amount: "$85K", sector: "Healthcare", type: "Equity" },
-  { company: "Shikho", amount: "$300K", sector: "EdTech", type: "Equity" },
-  { company: "Digital Learning Platform", amount: "$115K", sector: "EdTech", type: "Equity" },
+  { company: "Relaxy", amount: "$85K", sector: "Healthcare", type: "Equity", logo: relaxyLogo },
+  { company: "Shikho", amount: "$300K", sector: "EdTech", type: "Equity", logo: shikhoLogo },
+  { company: "Cholpori", amount: "$115K", sector: "EdTech", type: "Equity", logo: cholporiLogo },
 ];
 
 const sectors = ["Technology", "Food & Agri", "Energy", "Textile & Apparel", "Climate & Environment", "Healthcare"];
