@@ -59,6 +59,12 @@ const Team = () => (
     subtitle="Decades of combined experience across impact investing, venture building, fund management, and development finance."
   >
     <div className="space-y-24">
+      {/* Team Hero Image */}
+      <div className="relative rounded-xl overflow-hidden aspect-[21/9] group">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80" alt="Team collaboration" className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
+      </div>
+
       <section className="space-y-10">
         <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Leadership</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
