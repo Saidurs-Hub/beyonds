@@ -1,72 +1,67 @@
-import { Link } from "react-router-dom";
-import { ArrowLeft, FileText } from "lucide-react";
-import PageTransition from "@/components/PageTransition";
+import PageLayout from "@/components/PageLayout";
+import { ArrowUpRight } from "lucide-react";
 
 const studies = [
   {
-    title: "RMG & Textile Sector Challenge Fund Scoping Study",
+    title: "RMG & Textile Sector Challenge Fund",
+    type: "Scoping Study",
     year: "2026",
     findings: "Global supply chain laws are accelerating the need for circularity among smaller factories, yet existing financing products remain inadequate.",
     recommendation: "Build a dedicated investment facility that will help future-proof these businesses and explore efficiency practices.",
   },
   {
     title: "Ecosystem Mapping & Study",
+    type: "Research",
     year: "2025",
     findings: "Programs largely agnostic to differing business models, type (SMEs vs Startups) and life cycle of companies.",
-    recommendation: "Design programs delivered via domain experts who demonstrate integrity and credibility through lived experiences (locally and/or globally).",
+    recommendation: "Design programs delivered via domain experts who demonstrate integrity and credibility through lived experiences.",
   },
   {
-    title: "Access to Finance Landscape and Inclusive Development (AFLID) Assessment",
+    title: "Access to Finance Landscape and Inclusive Development (AFLID)",
+    type: "Assessment",
     year: "2024",
     findings: "Structural barriers — high transaction costs for banks and elevated interest rates in microfinance — limit effective agricultural financing.",
-    recommendation: "Addressing these gaps will require intermediary-led aggregation models and the redesign of financial products to reflect agricultural production cycles.",
+    recommendation: "Intermediary-led aggregation models and redesigned financial products reflecting agricultural production cycles.",
   },
 ];
 
 const Insights = () => (
-  <PageTransition>
-    <div className="min-h-screen bg-background text-foreground">
-      <header className="px-6 md:px-12 lg:px-20 py-6">
-        <Link to="/" className="text-foreground/60 hover:text-foreground transition-colors flex items-center gap-2 text-sm tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>
-          <ArrowLeft className="w-4 h-4" /> Back
-        </Link>
-      </header>
-
-      <main className="px-6 md:px-12 lg:px-20 py-12 max-w-5xl mx-auto space-y-20">
-        <section className="space-y-6">
-          <h1 className="text-5xl md:text-7xl font-light tracking-wide" style={{ fontFamily: "var(--font-display)" }}>Insights</h1>
-          <p className="text-foreground/60 text-lg leading-relaxed max-w-3xl" style={{ fontFamily: "var(--font-body)" }}>
-            Market scoping and research-driven insights that inform our investment strategy and shape the entrepreneurship ecosystem across the Global South.
-          </p>
-        </section>
-
-        <section className="space-y-8">
-          {studies.map((study) => (
-            <div key={study.title} className="border border-border/30 rounded-lg p-8 md:p-10 bg-card/20 space-y-6">
-              <div className="flex items-start gap-4">
-                <FileText className="w-5 h-5 text-accent mt-1 shrink-0" />
-                <div className="space-y-1">
-                  <h2 className="text-foreground text-lg md:text-xl" style={{ fontFamily: "var(--font-body)" }}>{study.title}</h2>
-                  <span className="text-accent text-xs tracking-[0.2em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{study.year}</span>
-                </div>
+  <PageLayout
+    title="Insights"
+    subtitle="Research-driven market intelligence that informs our investment strategy and shapes the entrepreneurship ecosystem."
+  >
+    <div className="space-y-0">
+      {studies.map((study, i) => (
+        <article key={study.title} className={`py-12 md:py-16 ${i < studies.length - 1 ? "border-b border-border/10" : ""}`}>
+          <div className="grid md:grid-cols-[280px_1fr] gap-8 md:gap-12">
+            {/* Left: Meta */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <span className="text-accent text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>{study.type}</span>
+                <span className="text-foreground/20">·</span>
+                <span className="text-foreground/30 text-[11px] tracking-widest" style={{ fontFamily: "var(--font-body)" }}>{study.year}</span>
               </div>
+              <h2 className="text-foreground text-lg md:text-xl leading-snug" style={{ fontFamily: "var(--font-body)" }}>
+                {study.title}
+              </h2>
+            </div>
 
-              <div className="grid md:grid-cols-2 gap-6 pl-9">
-                <div className="space-y-2">
-                  <h3 className="text-foreground/40 text-xs tracking-[0.2em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Key Findings</h3>
-                  <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{study.findings}</p>
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-foreground/40 text-xs tracking-[0.2em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Recommendation</h3>
-                  <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{study.recommendation}</p>
-                </div>
+            {/* Right: Content */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-3">
+                <h3 className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Key Findings</h3>
+                <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{study.findings}</p>
+              </div>
+              <div className="space-y-3">
+                <h3 className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Recommendation</h3>
+                <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{study.recommendation}</p>
               </div>
             </div>
-          ))}
-        </section>
-      </main>
+          </div>
+        </article>
+      ))}
     </div>
-  </PageTransition>
+  </PageLayout>
 );
 
 export default Insights;
