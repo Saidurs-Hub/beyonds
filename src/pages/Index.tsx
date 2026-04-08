@@ -1,6 +1,14 @@
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const navLinks = ["About", "Programs", "Portfolio", "Team", "Insights", "Contact"];
+const navLinks = [
+  { label: "About", path: "/about" },
+  { label: "Programs", path: "/programs" },
+  { label: "Portfolio", path: "/portfolio" },
+  { label: "Team", path: "/team" },
+  { label: "Insights", path: "/insights" },
+  { label: "Contact", path: "/contact" },
+];
 
 const Index = () => {
   return (
@@ -23,14 +31,14 @@ const Index = () => {
           <div />
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
+              <Link
+                key={link.path}
+                to={link.path}
                 className="text-foreground/70 hover:text-foreground text-xs tracking-[0.2em] uppercase transition-colors duration-300"
                 style={{ fontFamily: "var(--font-body)" }}
               >
-                {link}
-              </a>
+                {link.label}
+              </Link>
             ))}
           </nav>
         </header>
