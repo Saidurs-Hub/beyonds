@@ -9,6 +9,7 @@ interface TeamMember {
   years: string;
   expertise: string[];
   photoIndex: number;
+  individualPhoto?: string;
 }
 
 const leadership: TeamMember[] = [
