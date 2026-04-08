@@ -1,5 +1,5 @@
 import PageLayout from "@/components/PageLayout";
-import insightsHero from "@/assets/insights-hero.jpg";
+
 
 const studies = [
   {
