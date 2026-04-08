@@ -1,5 +1,5 @@
 import PageLayout from "@/components/PageLayout";
-import portfolioHero from "@/assets/portfolio-hero.jpg";
+
 
 const investments = [
   { company: "Mental Health Platform", amount: "$85K", sector: "Healthcare", type: "Equity" },
