@@ -54,7 +54,7 @@ const Services = () => (
     subtitle="From acceleration to venture building to investment management — meeting enterprises wherever they are in their growth journey."
   >
     <div className="space-y-24">
-      {programs.map((p, idx) => (
+      {services.map((p, idx) => (
         <section key={p.category} className="space-y-10">
           <div className="flex items-start gap-5">
             <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-1">
