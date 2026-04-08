@@ -46,7 +46,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
                 to="/"
                 className="flex items-center"
               >
-                <img src={bsvLogo} alt="Beyond S Ventures" className="h-14 brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
+                <img src={bsvLogo} alt="Beyond S Ventures" className="h-24 brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
               </Link>
               <nav className="hidden md:flex items-center gap-8">
                 {navLinks.map((link) => (
@@ -113,7 +113,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
                 to="/"
                 className="flex items-center"
               >
-                <img src={bsvLogo} alt="Beyond S Ventures" className="h-14 opacity-60 hover:opacity-100 transition-opacity" />
+                <img src={bsvLogo} alt="Beyond S Ventures" className="h-24 opacity-60 hover:opacity-100 transition-opacity" />
               </Link>
               <nav className="hidden md:flex items-center gap-8">
                 {navLinks.map((link) => (
