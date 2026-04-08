@@ -37,7 +37,11 @@ const MemberCard = ({ member, groupImage }: { member: TeamMember; groupImage: st
       <div className="relative w-full aspect-[3/4] rounded-xl overflow-hidden bg-accent/10">
         <div
           className="absolute inset-0 bg-cover bg-no-repeat grayscale group-hover:grayscale-0 transition-all duration-500"
-          style={{
+          style={member.individualPhoto ? {
+            backgroundImage: `url(${member.individualPhoto})`,
+            backgroundPosition: 'center 15%',
+            backgroundSize: 'cover',
+          } : {
             backgroundImage: `url(${groupImage})`,
             backgroundPosition: `${xPercent}% 15%`,
             backgroundSize: '500% auto',
