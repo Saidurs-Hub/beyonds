@@ -50,6 +50,20 @@
   }
 }
 
+.page-light {
+  --background: 0 0% 100%;
+  --foreground: 220 30% 10%;
+  --card: 220 15% 96%;
+  --card-foreground: 220 30% 10%;
+  --border: 220 10% 88%;
+  --muted: 220 10% 92%;
+  --muted-foreground: 215 10% 40%;
+  --accent: 35 40% 45%;
+  --accent-foreground: 0 0% 100%;
+  --secondary: 220 10% 92%;
+  --secondary-foreground: 220 20% 25%;
+}
+
 @layer base {
   * {
     @apply border-border;
