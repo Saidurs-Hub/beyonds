@@ -40,7 +40,7 @@ const MemberCard = ({ member }: { member: TeamMember }) => (
       <img
         src={member.photo}
         alt={member.name}
-        className="absolute inset-0 w-full h-full object-cover object-top bg-teal-200"
+        className="absolute inset-0 w-full h-full object-cover object-top bg-white"
       />
     </div>
     <div className="space-y-1">
