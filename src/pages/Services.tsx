@@ -2,7 +2,7 @@ import PageLayout from "@/components/PageLayout";
 import { Rocket, Leaf, BarChart3, ArrowRight } from "lucide-react";
 
 
-const programs = [
+const services = [
   {
     icon: Rocket,
     category: "Acceleration & Investment Readiness",
