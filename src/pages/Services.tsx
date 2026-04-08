@@ -1,5 +1,6 @@
 import PageLayout from "@/components/PageLayout";
 import { Rocket, Leaf, BarChart3, ArrowRight } from "lucide-react";
+import servicesHero from "@/assets/services-hero.jpg";
 
 
 const services = [
@@ -55,6 +56,8 @@ const Services = () => (
   <PageLayout
     title="Services"
     subtitle="From acceleration to venture building to investment management — meeting enterprises wherever they are in their growth journey."
+    heroImage={servicesHero}
+    heroAlt="Lettuce field with mountains in the background"
   >
     <div className="space-y-24">
       {services.map((p, idx) => (
