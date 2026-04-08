@@ -1,6 +1,7 @@
 import PageLayout from "@/components/PageLayout";
 import teamLeadership from "@/assets/team-leadership.png";
 import teamCore from "@/assets/team-core.png";
+import teamAk from "@/assets/team-ak.png";
 
 interface TeamMember {
   name: string;
