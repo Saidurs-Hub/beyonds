@@ -73,6 +73,19 @@ const Services = () => (
             </div>
           </div>
 
+          {"video" in p && p.video && (
+            <div className="relative rounded-xl overflow-hidden ml-0 md:ml-[60px]" style={{ aspectRatio: '21/9' }}>
+              <video
+                src={p.video}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+            </div>
+          )}
 
           {p.subServices.length > 0 && (
             <div className="flex flex-wrap gap-3 pl-0 md:pl-[60px]">
