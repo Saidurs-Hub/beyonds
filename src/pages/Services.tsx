@@ -63,7 +63,7 @@ const Services = () => (
   >
     <div className="space-y-24">
       {services.map((p, idx) => (
-        <section key={p.category} className="relative space-y-10 rounded-xl overflow-hidden" style={idx === 0 ? { padding: '2.5rem' } : undefined}>
+        <section key={p.category} className={`relative space-y-10 overflow-hidden ${idx === 0 ? 'rounded-2xl p-8 md:p-10' : ''}`}>
           {idx === 0 && (
             <>
               <img
@@ -72,16 +72,16 @@ const Services = () => (
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-background/80" />
+              <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/50 to-background/70" />
             </>
           )}
           <div className="relative flex items-start gap-5">
-            <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-1">
-              <p.icon className="w-5 h-5 text-accent" />
+            <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 mt-1 ${idx === 0 ? 'bg-white/10 backdrop-blur-sm' : 'bg-accent/10'}`}>
+              <p.icon className={`w-5 h-5 ${idx === 0 ? 'text-white' : 'text-accent'}`} />
             </div>
             <div className="space-y-3">
-              <h2 className="text-2xl md:text-3xl font-light tracking-wide" style={{ fontFamily: "var(--font-display)" }}>{p.category}</h2>
-              <p className="text-foreground/50 text-sm md:text-base leading-relaxed max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>{p.goal}</p>
+              <h2 className={`text-2xl md:text-3xl font-light tracking-wide ${idx === 0 ? 'text-white drop-shadow-lg' : ''}`} style={{ fontFamily: "var(--font-display)" }}>{p.category}</h2>
+              <p className={`text-sm md:text-base leading-relaxed max-w-2xl ${idx === 0 ? 'text-white/80 drop-shadow-md' : 'text-foreground/50'}`} style={{ fontFamily: "var(--font-body)" }}>{p.goal}</p>
             </div>
           </div>
 
