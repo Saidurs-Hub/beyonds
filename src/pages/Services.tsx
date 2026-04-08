@@ -48,7 +48,7 @@ const futureGoals = [
   { title: "Global Expansion", items: ["Build Global South investment corridors, beginning with East Africa"] },
 ];
 
-const Programs = () => (
+const Services = () => (
   <PageLayout
     title="Services"
     subtitle="From acceleration to venture building to investment management — meeting enterprises wherever they are in their growth journey."
