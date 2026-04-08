@@ -32,6 +32,7 @@ const services = [
   {
     icon: BarChart3,
     category: "Investment Management",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
     goal: "Deploying flexible capital instruments — equity, quasi-equity, and performance-linked debt — to drive commercial returns with measurable impact.",
     subServices: [],
     stats: [
