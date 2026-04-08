@@ -81,12 +81,25 @@
   to { opacity: 1; }
 }
 
+@keyframes ken-burns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.12);
+  }
+}
+
 .animate-fade-up {
   animation: fade-up 1.2s ease-out forwards;
 }
 
 .animate-fade-in {
   animation: fade-in 1.5s ease-out forwards;
+}
+
+.animate-ken-burns {
+  animation: ken-burns 25s ease-out forwards;
 }
 
 .animate-delay-200 {
