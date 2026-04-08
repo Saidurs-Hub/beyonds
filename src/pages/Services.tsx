@@ -74,7 +74,7 @@ const Services = () => (
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/50 to-background/70" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/80" />
             </>
           )}
           <div className="relative flex items-start gap-5">
