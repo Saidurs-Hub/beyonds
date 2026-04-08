@@ -74,7 +74,17 @@ const Services = () => (
             </div>
           </div>
 
-
+          {idx === 0 && (
+            <div className="relative rounded-xl overflow-hidden ml-0 md:ml-[60px]" style={{ aspectRatio: '21/9' }}>
+              <img
+                src={accelerationBg}
+                alt="Rocket launch"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+            </div>
+          )}
 
 
           {p.subServices.length > 0 && (
