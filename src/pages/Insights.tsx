@@ -38,10 +38,6 @@ const Insights = () => (
       {studies.map((study, i) => (
         <div key={study.title}>
           <article className={`py-12 md:py-16 ${i < studies.length - 1 ? "border-b border-border/10" : ""}`}>
-            <div className="relative rounded-xl overflow-hidden aspect-[21/9] mb-8 group">
-              <img src={study.image} alt={study.title} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
-            </div>
             <div className="grid md:grid-cols-[280px_1fr] gap-8 md:gap-12">
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
