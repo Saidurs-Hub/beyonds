@@ -26,6 +26,12 @@ const About = () => (
         </div>
       </section>
 
+      {/* Evolution Image */}
+      <div className="relative rounded-xl overflow-hidden aspect-[21/9] group">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80" alt="Startup ecosystem" className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
+      </div>
+
       {/* Evolution */}
       <section className="space-y-12">
         <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Our Evolution</h2>
@@ -64,6 +70,12 @@ const About = () => (
           ))}
         </div>
       </section>
+
+      {/* Global Presence Image */}
+      <div className="relative rounded-xl overflow-hidden aspect-[21/9] group">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80" alt="Global cityscape" className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
+      </div>
 
       {/* Global Presence */}
       <section className="space-y-12">
