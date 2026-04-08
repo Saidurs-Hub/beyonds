@@ -1,6 +1,6 @@
 import PageLayout from "@/components/PageLayout";
 import { Mail, MapPin, ArrowUpRight } from "lucide-react";
-import contactHero from "@/assets/contact-hero.jpg";
+
 
 const contacts = [
   { name: "Muhymin Chowdhury", role: "Managing Director", email: "muhymin@beyonds.ventures" },
@@ -12,8 +12,6 @@ const Contact = () => (
   <PageLayout
     title="Contact"
     subtitle="Reach out to learn more about our programs, investment opportunities, or partnership possibilities."
-    heroImage={contactHero}
-    heroAlt="Modern office with city view"
   >
     <div className="space-y-24">
       <section className="space-y-8">

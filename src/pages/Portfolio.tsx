@@ -1,5 +1,5 @@
 import PageLayout from "@/components/PageLayout";
-import portfolioHero from "@/assets/portfolio-hero.jpg";
+
 
 const investments = [
   { company: "Mental Health Platform", amount: "$85K", sector: "Healthcare", type: "Equity" },
@@ -14,8 +14,6 @@ const Portfolio = () => (
   <PageLayout
     title="Portfolio"
     subtitle="Deploying capital across a diverse range of instruments — backing enterprises that generate commercial returns and measurable impact in underserved markets."
-    heroImage={portfolioHero}
-    heroAlt="Modern boardroom with city skyline"
   >
     <div className="space-y-24">
       <section className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border/20 rounded-xl overflow-hidden">
