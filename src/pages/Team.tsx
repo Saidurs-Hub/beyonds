@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import teamHero from "@/assets/team-hero.jpeg";
 import teamZahida from "@/assets/team-zahida.png";
 import teamMuhymin from "@/assets/team-muhymin.png";
 import teamAk from "@/assets/team-ak.png";
@@ -57,6 +58,8 @@ const Team = () => (
   <PageLayout
     title="Team"
     subtitle="Decades of combined experience across impact investing, venture building, fund management, and development finance."
+    heroImage={teamHero}
+    heroAlt="SAJIDA Foundation team group photo"
   >
     <div className="space-y-24">
 
