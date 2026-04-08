@@ -50,7 +50,7 @@ const futureGoals = [
 
 const Programs = () => (
   <PageLayout
-    title="Programs"
+    title="Services"
     subtitle="From acceleration to venture building to investment management — meeting enterprises wherever they are in their growth journey."
   >
     <div className="space-y-24">
