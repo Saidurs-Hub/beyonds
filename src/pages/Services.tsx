@@ -6,6 +6,7 @@ const services = [
   {
     icon: Rocket,
     category: "Acceleration & Investment Readiness",
+    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=80",
     goal: "Equipping early-stage entrepreneurs with the resources necessary to build sustainable, investment-ready enterprises through acceleration, technical assistance, and tailored funding.",
     subServices: ["Orange Corners", "B/DESHI Bangladesh", "Catalyst"],
     stats: [
@@ -18,6 +19,7 @@ const services = [
   {
     icon: Leaf,
     category: "Venture Building & Impact-Linked Financing",
+    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&q=80",
     goal: "Scaling innovative solutions that advance climate resilience in Bangladesh — agriculture, water, and food security.",
     subServices: ["Climate Innovation Fund", "NURTURE", "BRIDDHI"],
     stats: [
@@ -30,6 +32,7 @@ const services = [
   {
     icon: BarChart3,
     category: "Investment Management",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
     goal: "Deploying flexible capital instruments — equity, quasi-equity, and performance-linked debt — to drive commercial returns with measurable impact.",
     subServices: [],
     stats: [
@@ -64,6 +67,11 @@ const Services = () => (
               <h2 className="text-2xl md:text-3xl font-light tracking-wide" style={{ fontFamily: "var(--font-display)" }}>{p.category}</h2>
               <p className="text-foreground/50 text-sm md:text-base leading-relaxed max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>{p.goal}</p>
             </div>
+          </div>
+
+          <div className="relative rounded-xl overflow-hidden aspect-[21/9]">
+            <img src={p.image} alt={p.category} className="w-full h-full object-cover" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
           </div>
 
           {p.subServices.length > 0 && (
