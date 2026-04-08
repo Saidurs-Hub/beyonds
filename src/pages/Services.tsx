@@ -74,40 +74,40 @@ const Services = () => (
                 className="absolute inset-0 w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/80" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,10%,95%)]/40 via-[hsl(220,10%,95%)]/60 to-[hsl(220,10%,95%)]/85" />
             </>
           )}
           <div className="relative flex items-start gap-5">
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 mt-1 ${p.bgImage ? 'bg-white/10 backdrop-blur-sm' : 'bg-accent/10'}`}>
-              <p.icon className={`w-5 h-5 ${p.bgImage ? 'text-white' : 'text-accent'}`} />
+            <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 mt-1 ${p.bgImage ? 'bg-foreground/10 backdrop-blur-sm' : 'bg-accent/10'}`}>
+              <p.icon className={`w-5 h-5 ${p.bgImage ? 'text-foreground' : 'text-accent'}`} />
             </div>
             <div className="space-y-3">
-              <h2 className={`text-2xl md:text-3xl font-light tracking-wide ${p.bgImage ? 'text-white drop-shadow-lg' : ''}`} style={{ fontFamily: "var(--font-display)" }}>{p.category}</h2>
-              <p className={`text-sm md:text-base leading-relaxed max-w-2xl ${p.bgImage ? 'text-white/80 drop-shadow-md' : 'text-foreground/50'}`} style={{ fontFamily: "var(--font-body)" }}>{p.goal}</p>
+              <h2 className={`text-2xl md:text-3xl font-light tracking-wide ${p.bgImage ? 'text-foreground' : ''}`} style={{ fontFamily: "var(--font-display)" }}>{p.category}</h2>
+              <p className={`text-sm md:text-base leading-relaxed max-w-2xl ${p.bgImage ? 'text-foreground/70' : 'text-foreground/50'}`} style={{ fontFamily: "var(--font-body)" }}>{p.goal}</p>
             </div>
           </div>
 
           {p.subServices.length > 0 && (
             <div className="relative flex flex-wrap gap-3 pl-0 md:pl-[60px]">
               {p.subServices.map((sp) => (
-                <span key={sp} className={`rounded-full px-5 py-2 text-xs tracking-[0.15em] uppercase ${p.bgImage ? 'bg-white/10 backdrop-blur-sm border border-white/20 text-white/80' : 'bg-card/40 border border-border/20 text-foreground/60'}`} style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
+                <span key={sp} className={`rounded-full px-5 py-2 text-xs tracking-[0.15em] uppercase ${p.bgImage ? 'bg-foreground/10 backdrop-blur-sm border border-foreground/20 text-foreground/70' : 'bg-card/40 border border-border/20 text-foreground/60'}`} style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
               ))}
             </div>
           )}
 
           <div className="relative grid grid-cols-3 gap-px bg-border/20 rounded-xl overflow-hidden">
             {p.stats.map((s) => (
-              <div key={s.label} className={`p-6 md:p-8 space-y-2 ${p.bgImage ? 'bg-black/30 backdrop-blur-sm' : 'bg-background'}`}>
-                <div className={`text-2xl md:text-3xl font-light ${p.bgImage ? 'text-white' : 'text-foreground'}`} style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
-                <div className={`text-[11px] tracking-widest uppercase ${p.bgImage ? 'text-white/50' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{s.label}</div>
+              <div key={s.label} className={`p-6 md:p-8 space-y-2 ${p.bgImage ? 'bg-background/60 backdrop-blur-sm' : 'bg-background'}`}>
+                <div className={`text-2xl md:text-3xl font-light ${p.bgImage ? 'text-foreground' : 'text-foreground'}`} style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
+                <div className={`text-[11px] tracking-widest uppercase ${p.bgImage ? 'text-foreground/50' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{s.label}</div>
               </div>
             ))}
           </div>
 
           {p.partners.length > 0 && (
             <div className="relative pl-0 md:pl-[60px]">
-              <span className={`text-[11px] tracking-[0.2em] uppercase ${p.bgImage ? 'text-white/40' : 'text-foreground/30'}`} style={{ fontFamily: "var(--font-body)" }}>Partners: </span>
-              <span className={`text-sm ${p.bgImage ? 'text-white/60' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{p.partners.join(" · ")}</span>
+              <span className={`text-[11px] tracking-[0.2em] uppercase ${p.bgImage ? 'text-foreground/40' : 'text-foreground/30'}`} style={{ fontFamily: "var(--font-body)" }}>Partners: </span>
+              <span className={`text-sm ${p.bgImage ? 'text-foreground/60' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{p.partners.join(" · ")}</span>
             </div>
           )}
 

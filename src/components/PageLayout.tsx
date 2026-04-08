@@ -38,7 +38,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
               width={1920}
               height={800}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,10%,95%)] via-[hsl(220,10%,95%)]/50 to-transparent" />
 
             {/* Nav over hero */}
             <header className="relative z-20 px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between">
