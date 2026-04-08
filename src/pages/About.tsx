@@ -1,6 +1,6 @@
 import PageLayout from "@/components/PageLayout";
 import { Building2, TrendingUp, Globe } from "lucide-react";
-import aboutBg from "@/assets/about-bg.jpg";
+import aboutBg from "@/assets/about-hero.jpg";
 
 const About = () => (
   <PageLayout
