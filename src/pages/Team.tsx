@@ -1,5 +1,5 @@
 import PageLayout from "@/components/PageLayout";
-import teamHero from "@/assets/team-hero.jpg";
+
 
 interface TeamMember {
   name: string;
