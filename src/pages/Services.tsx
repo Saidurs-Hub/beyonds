@@ -97,9 +97,9 @@ const Services = () => (
 
           <div className="relative grid grid-cols-3 gap-px bg-border/20 rounded-xl overflow-hidden">
             {p.stats.map((s) => (
-              <div key={s.label} className={`p-6 md:p-8 space-y-2 ${p.bgImage ? 'bg-black/30 backdrop-blur-sm' : 'bg-background'}`}>
-                <div className={`text-2xl md:text-3xl font-light ${p.bgImage ? 'text-white' : 'text-foreground'}`} style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
-                <div className={`text-[11px] tracking-widest uppercase ${p.bgImage ? 'text-white/50' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{s.label}</div>
+              <div key={s.label} className={`p-6 md:p-8 space-y-2 ${p.bgImage ? 'bg-background/60 backdrop-blur-sm' : 'bg-background'}`}>
+                <div className={`text-2xl md:text-3xl font-light ${p.bgImage ? 'text-foreground' : 'text-foreground'}`} style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
+                <div className={`text-[11px] tracking-widest uppercase ${p.bgImage ? 'text-foreground/50' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{s.label}</div>
               </div>
             ))}
           </div>
