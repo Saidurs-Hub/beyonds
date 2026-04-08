@@ -1,6 +1,7 @@
 import PageLayout from "@/components/PageLayout";
 import teamLeadership from "@/assets/team-leadership.png";
 import teamCore from "@/assets/team-core.png";
+import teamAk from "@/assets/team-ak.png";
 
 interface TeamMember {
   name: string;
@@ -8,12 +9,13 @@ interface TeamMember {
   years: string;
   expertise: string[];
   photoIndex: number;
+  individualPhoto?: string;
 }
 
 const leadership: TeamMember[] = [
   { name: "Zahida Fizza Kabir", role: "Chairperson", years: "30+", expertise: ["Social Entrepreneurship & Development Leadership", "Healthcare & Women's Empowerment", "Mental Health & Care Economy"], photoIndex: 0 },
   { name: "Muhymin Chowdhury", role: "Managing Director", years: "18+", expertise: ["Strategic Partnerships & Institutional Growth", "Startup & Venture Growth Financing", "Impact Fund Management", "Blended Finance Structuring"], photoIndex: 1 },
-  { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: ["Growth Strategy & Business Expansion", "Venture Development & Portfolio Management", "Digital Transformation & AI for Business"], photoIndex: 2 },
+  { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: ["Growth Strategy & Business Expansion", "Venture Development & Portfolio Management", "Digital Transformation & AI for Business"], photoIndex: 2, individualPhoto: teamAk },
   { name: "Sarah Iqbal", role: "Head — Impact Partners", years: "10+", expertise: ["Impact Investments & Fund Management", "Early-Stage Deal Structuring", "Thematic & Donor-Funded Programs"], photoIndex: 3 },
   { name: "Hridoy Islam", role: "Portfolio Manager", years: "10+", expertise: ["Fund Mobilization & Capital Raising", "Impact-Driven Finance", "Alternative Investment Management"], photoIndex: 4 },
 ];
@@ -35,7 +37,11 @@ const MemberCard = ({ member, groupImage }: { member: TeamMember; groupImage: st
       <div className="relative w-full aspect-[3/4] rounded-xl overflow-hidden bg-accent/10">
         <div
           className="absolute inset-0 bg-cover bg-no-repeat grayscale group-hover:grayscale-0 transition-all duration-500"
-          style={{
+          style={member.individualPhoto ? {
+            backgroundImage: `url(${member.individualPhoto})`,
+            backgroundPosition: 'center 15%',
+            backgroundSize: 'cover',
+          } : {
             backgroundImage: `url(${groupImage})`,
             backgroundPosition: `${xPercent}% 15%`,
             backgroundSize: '500% auto',
