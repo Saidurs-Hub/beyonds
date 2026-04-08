@@ -69,6 +69,11 @@ const Services = () => (
             </div>
           </div>
 
+          <div className="relative rounded-xl overflow-hidden aspect-[21/9]">
+            <img src={p.image} alt={p.category} className="w-full h-full object-cover" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
+          </div>
+
           {p.subServices.length > 0 && (
             <div className="flex flex-wrap gap-3 pl-0 md:pl-[60px]">
               {p.subServices.map((sp) => (
