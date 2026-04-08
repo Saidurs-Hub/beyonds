@@ -1,14 +1,14 @@
 import PageLayout from "@/components/PageLayout";
 import { Rocket, Leaf, BarChart3, ArrowRight } from "lucide-react";
 import servicesHero from "@/assets/services-hero.jpg";
-import rocketLaunchAsset from "@/assets/rocket-launch.mp4.asset.json";
+
 
 const services = [
   {
     icon: Rocket,
     category: "Acceleration & Investment Readiness",
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=80",
-    video: rocketLaunchAsset.url,
+    video: "",
     goal: "Equipping early-stage entrepreneurs with the resources necessary to build sustainable, investment-ready enterprises through acceleration, technical assistance, and tailored funding.",
     subServices: ["Orange Corners", "B/DESHI Bangladesh", "Catalyst"],
     stats: [
@@ -73,19 +73,8 @@ const Services = () => (
             </div>
           </div>
 
-          {"video" in p && p.video && (
-            <div className="relative rounded-xl overflow-hidden ml-0 md:ml-[60px]" style={{ aspectRatio: '21/9' }}>
-              <video
-                src={p.video}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-            </div>
-          )}
+
+
 
           {p.subServices.length > 0 && (
             <div className="flex flex-wrap gap-3 pl-0 md:pl-[60px]">
