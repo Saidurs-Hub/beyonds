@@ -7,7 +7,7 @@ const services = [
     icon: Rocket,
     category: "Acceleration & Investment Readiness",
     goal: "Equipping early-stage entrepreneurs with the resources necessary to build sustainable, investment-ready enterprises through acceleration, technical assistance, and tailored funding.",
-    subPrograms: ["Orange Corners", "B/DESHI Bangladesh", "Catalyst"],
+    subServices: ["Orange Corners", "B/DESHI Bangladesh", "Catalyst"],
     stats: [
       { value: "$3.8mn+", label: "Largest accelerator in Bangladesh" },
       { value: "1,700+", label: "Jobs created" },
