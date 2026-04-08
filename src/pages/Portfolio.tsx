@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import portfolioHero from "@/assets/cholpori-hero.jpg";
 import relaxyLogo from "@/assets/relaxy-logo.png";
 import shikhoLogo from "@/assets/shikho-logo.png";
 import cholporiLogo from "@/assets/cholpori-logo.png";
@@ -17,6 +18,8 @@ const Portfolio = () => (
   <PageLayout
     title="Portfolio"
     subtitle="Deploying capital across a diverse range of instruments — backing enterprises that generate commercial returns and measurable impact in underserved markets."
+    heroImage={portfolioHero}
+    heroAlt="Students in classroom holding up books"
   >
     <div className="space-y-24">
       <section className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border/20 rounded-xl overflow-hidden">
