@@ -67,7 +67,10 @@ const Insights = () => (
                 <img
                   src={circularApparel}
                   alt="Levers for Circular Apparel System — Input, Design, Production, Use & Reuse, Recovery & Recycle"
-                  className="w-full max-w-2xl rounded-xl bg-white p-6"
+                  className="w-full max-w-3xl rounded-xl bg-white p-8 md:p-10"
+                  width={1920}
+                  height={1080}
+                  loading="lazy"
                 />
               </div>
             </div>
