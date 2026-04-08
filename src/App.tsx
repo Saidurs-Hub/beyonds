@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import About from "./pages/About.tsx";
-import Programs from "./pages/Programs.tsx";
+import Services from "./pages/Services.tsx";
 import Portfolio from "./pages/Portfolio.tsx";
 import Team from "./pages/Team.tsx";
 import Insights from "./pages/Insights.tsx";
@@ -22,7 +22,7 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Index />} />
         <Route path="/about" element={<About />} />
-        <Route path="/programs" element={<Programs />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/team" element={<Team />} />
         <Route path="/insights" element={<Insights />} />

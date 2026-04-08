@@ -13,8 +13,8 @@ const studies = [
     title: "Ecosystem Mapping & Study",
     type: "Research",
     year: "2025",
-    findings: "Programs largely agnostic to differing business models, type (SMEs vs Startups) and life cycle of companies.",
-    recommendation: "Design programs delivered via domain experts who demonstrate integrity and credibility through lived experiences.",
+    findings: "Services largely agnostic to differing business models, type (SMEs vs Startups) and life cycle of companies.",
+    recommendation: "Design services delivered via domain experts who demonstrate integrity and credibility through lived experiences.",
   },
   {
     title: "Access to Finance Landscape and Inclusive Development (AFLID)",

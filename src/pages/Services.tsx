@@ -2,12 +2,12 @@ import PageLayout from "@/components/PageLayout";
 import { Rocket, Leaf, BarChart3, ArrowRight } from "lucide-react";
 
 
-const programs = [
+const services = [
   {
     icon: Rocket,
     category: "Acceleration & Investment Readiness",
     goal: "Equipping early-stage entrepreneurs with the resources necessary to build sustainable, investment-ready enterprises through acceleration, technical assistance, and tailored funding.",
-    subPrograms: ["Orange Corners", "B/DESHI Bangladesh", "Catalyst"],
+    subServices: ["Orange Corners", "B/DESHI Bangladesh", "Catalyst"],
     stats: [
       { value: "$3.8mn+", label: "Largest accelerator in Bangladesh" },
       { value: "1,700+", label: "Jobs created" },
@@ -19,7 +19,7 @@ const programs = [
     icon: Leaf,
     category: "Venture Building & Impact-Linked Financing",
     goal: "Scaling innovative solutions that advance climate resilience in Bangladesh — agriculture, water, and food security.",
-    subPrograms: ["Climate Innovation Fund", "NURTURE", "BRIDDHI"],
+    subServices: ["Climate Innovation Fund", "NURTURE", "BRIDDHI"],
     stats: [
       { value: "5,200+", label: "Farmers supported" },
       { value: "$350K+", label: "Mobilized under CIF 1" },
@@ -31,7 +31,7 @@ const programs = [
     icon: BarChart3,
     category: "Investment Management",
     goal: "Deploying flexible capital instruments — equity, quasi-equity, and performance-linked debt — to drive commercial returns with measurable impact.",
-    subPrograms: [],
+    subServices: [],
     stats: [
       { value: "$200K", label: "Sponsor fund mandate" },
       { value: "$2.5mn", label: "Commitments raised" },
@@ -48,13 +48,13 @@ const futureGoals = [
   { title: "Global Expansion", items: ["Build Global South investment corridors, beginning with East Africa"] },
 ];
 
-const Programs = () => (
+const Services = () => (
   <PageLayout
-    title="Programs"
+    title="Services"
     subtitle="From acceleration to venture building to investment management — meeting enterprises wherever they are in their growth journey."
   >
     <div className="space-y-24">
-      {programs.map((p, idx) => (
+      {services.map((p, idx) => (
         <section key={p.category} className="space-y-10">
           <div className="flex items-start gap-5">
             <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-1">
@@ -66,9 +66,9 @@ const Programs = () => (
             </div>
           </div>
 
-          {p.subPrograms.length > 0 && (
+          {p.subServices.length > 0 && (
             <div className="flex flex-wrap gap-3 pl-0 md:pl-[60px]">
-              {p.subPrograms.map((sp) => (
+              {p.subServices.map((sp) => (
                 <span key={sp} className="bg-card/40 border border-border/20 rounded-full px-5 py-2 text-foreground/60 text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
               ))}
             </div>
@@ -90,7 +90,7 @@ const Programs = () => (
             </div>
           )}
 
-          {idx < programs.length - 1 && <div className="border-t border-border/10" />}
+          {idx < services.length - 1 && <div className="border-t border-border/10" />}
         </section>
       ))}
 
@@ -119,4 +119,4 @@ const Programs = () => (
   </PageLayout>
 );
 
-export default Programs;
+export default Services;

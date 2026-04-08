@@ -11,7 +11,7 @@ const contacts = [
 const Contact = () => (
   <PageLayout
     title="Contact"
-    subtitle="Reach out to learn more about our programs, investment opportunities, or partnership possibilities."
+    subtitle="Reach out to learn more about our services, investment opportunities, or partnership possibilities."
   >
     <div className="space-y-24">
       <section className="space-y-8">
