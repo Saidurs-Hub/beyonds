@@ -61,7 +61,6 @@ const Team = () => (
     heroImage={teamHero}
     heroAlt="SAJIDA Foundation team group photo"
   >
-  >
     <div className="space-y-24">
 
       <section className="space-y-10">
