@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import circularApparel from "@/assets/circular-apparel.png";
 
 
 const studies = [
