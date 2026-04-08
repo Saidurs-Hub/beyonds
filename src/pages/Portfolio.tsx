@@ -1,5 +1,5 @@
 import PageLayout from "@/components/PageLayout";
-import relaxyLogo from "@/assets/relaxy-logo.png";
+import portfolioHero from "@/assets/cholpori-hero.jpg";
 import shikhoLogo from "@/assets/shikho-logo.png";
 import cholporiLogo from "@/assets/cholpori-logo.png";
 
