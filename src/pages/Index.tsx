@@ -43,7 +43,7 @@ const Index = () => {
         {/* Hero */}
         <main className="flex-1 flex flex-col items-center justify-center text-center px-6">
           <h1
-            className="opacity-0 animate-fade-up text-foreground text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light italic tracking-wide"
+            className="opacity-0 animate-fade-up text-foreground text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-wide"
             style={{ fontFamily: "var(--font-display)" }}
           >
             Launching Soon
