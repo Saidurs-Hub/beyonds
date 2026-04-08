@@ -63,8 +63,19 @@ const Services = () => (
   >
     <div className="space-y-24">
       {services.map((p, idx) => (
-        <section key={p.category} className="space-y-10">
-          <div className="flex items-start gap-5">
+        <section key={p.category} className="relative space-y-10 rounded-xl overflow-hidden" style={idx === 0 ? { padding: '2.5rem' } : undefined}>
+          {idx === 0 && (
+            <>
+              <img
+                src={accelerationBg}
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-background/80" />
+            </>
+          )}
+          <div className="relative flex items-start gap-5">
             <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center shrink-0 mt-1">
               <p.icon className="w-5 h-5 text-accent" />
             </div>
@@ -73,18 +84,6 @@ const Services = () => (
               <p className="text-foreground/50 text-sm md:text-base leading-relaxed max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>{p.goal}</p>
             </div>
           </div>
-
-          {idx === 0 && (
-            <div className="relative rounded-xl overflow-hidden ml-0 md:ml-[60px]" style={{ aspectRatio: '21/9' }}>
-              <img
-                src={accelerationBg}
-                alt="Rocket launch"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-            </div>
-          )}
 
 
           {p.subServices.length > 0 && (
