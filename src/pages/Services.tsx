@@ -66,7 +66,7 @@ const Services = () => (
             </div>
           </div>
 
-          {p.subPrograms.length > 0 && (
+          {p.subServices.length > 0 && (
             <div className="flex flex-wrap gap-3 pl-0 md:pl-[60px]">
               {p.subPrograms.map((sp) => (
                 <span key={sp} className="bg-card/40 border border-border/20 rounded-full px-5 py-2 text-foreground/60 text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
