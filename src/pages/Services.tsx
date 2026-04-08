@@ -19,7 +19,7 @@ const services = [
     icon: Leaf,
     category: "Venture Building & Impact-Linked Financing",
     goal: "Scaling innovative solutions that advance climate resilience in Bangladesh — agriculture, water, and food security.",
-    subPrograms: ["Climate Innovation Fund", "NURTURE", "BRIDDHI"],
+    subServices: ["Climate Innovation Fund", "NURTURE", "BRIDDHI"],
     stats: [
       { value: "5,200+", label: "Farmers supported" },
       { value: "$350K+", label: "Mobilized under CIF 1" },
