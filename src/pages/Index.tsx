@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-white-maroon.png";
 import PageTransition from "@/components/PageTransition";
 
 const navLinks = [
