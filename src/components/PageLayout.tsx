@@ -27,7 +27,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
 
   return (
     <PageTransition>
-      <div className="min-h-screen bg-background text-foreground page-light">
+      <div className="min-h-screen bg-background text-foreground">
         {/* Hero Section — full bleed like sajida.org */}
         {heroImage ? (
           <div className="relative h-[70vh] min-h-[500px] overflow-hidden">
@@ -38,7 +38,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
               width={1920}
               height={800}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,10%,95%)] via-[hsl(220,10%,95%)]/70 to-[hsl(220,10%,95%)]/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
 
             {/* Nav over hero */}
             <header className="relative z-20 px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between">
