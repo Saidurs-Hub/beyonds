@@ -87,16 +87,16 @@ const Services = () => (
 
 
           {p.subServices.length > 0 && (
-            <div className="flex flex-wrap gap-3 pl-0 md:pl-[60px]">
+            <div className="relative flex flex-wrap gap-3 pl-0 md:pl-[60px]">
               {p.subServices.map((sp) => (
                 <span key={sp} className="bg-card/40 border border-border/20 rounded-full px-5 py-2 text-foreground/60 text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
               ))}
             </div>
           )}
 
-          <div className="grid grid-cols-3 gap-px bg-border/20 rounded-xl overflow-hidden">
+          <div className="relative grid grid-cols-3 gap-px bg-border/20 rounded-xl overflow-hidden">
             {p.stats.map((s) => (
-              <div key={s.label} className="bg-background p-6 md:p-8 space-y-2">
+              <div key={s.label} className="bg-background/80 p-6 md:p-8 space-y-2">
                 <div className="text-2xl md:text-3xl font-light text-foreground" style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
                 <div className="text-foreground/40 text-[11px] tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>{s.label}</div>
               </div>
@@ -104,7 +104,7 @@ const Services = () => (
           </div>
 
           {p.partners.length > 0 && (
-            <div className="pl-0 md:pl-[60px]">
+            <div className="relative pl-0 md:pl-[60px]">
               <span className="text-foreground/30 text-[11px] tracking-[0.2em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Partners: </span>
               <span className="text-foreground/40 text-sm" style={{ fontFamily: "var(--font-body)" }}>{p.partners.join(" · ")}</span>
             </div>
