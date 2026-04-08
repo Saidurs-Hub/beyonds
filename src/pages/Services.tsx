@@ -89,24 +89,24 @@ const Services = () => (
           {p.subServices.length > 0 && (
             <div className="relative flex flex-wrap gap-3 pl-0 md:pl-[60px]">
               {p.subServices.map((sp) => (
-                <span key={sp} className="bg-card/40 border border-border/20 rounded-full px-5 py-2 text-foreground/60 text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
+                <span key={sp} className={`rounded-full px-5 py-2 text-xs tracking-[0.15em] uppercase ${idx === 0 ? 'bg-white/10 backdrop-blur-sm border border-white/20 text-white/80' : 'bg-card/40 border border-border/20 text-foreground/60'}`} style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
               ))}
             </div>
           )}
 
           <div className="relative grid grid-cols-3 gap-px bg-border/20 rounded-xl overflow-hidden">
             {p.stats.map((s) => (
-              <div key={s.label} className="bg-background/80 p-6 md:p-8 space-y-2">
-                <div className="text-2xl md:text-3xl font-light text-foreground" style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
-                <div className="text-foreground/40 text-[11px] tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>{s.label}</div>
+              <div key={s.label} className={`p-6 md:p-8 space-y-2 ${idx === 0 ? 'bg-black/30 backdrop-blur-sm' : 'bg-background'}`}>
+                <div className={`text-2xl md:text-3xl font-light ${idx === 0 ? 'text-white' : 'text-foreground'}`} style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
+                <div className={`text-[11px] tracking-widest uppercase ${idx === 0 ? 'text-white/50' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{s.label}</div>
               </div>
             ))}
           </div>
 
           {p.partners.length > 0 && (
             <div className="relative pl-0 md:pl-[60px]">
-              <span className="text-foreground/30 text-[11px] tracking-[0.2em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Partners: </span>
-              <span className="text-foreground/40 text-sm" style={{ fontFamily: "var(--font-body)" }}>{p.partners.join(" · ")}</span>
+              <span className={`text-[11px] tracking-[0.2em] uppercase ${idx === 0 ? 'text-white/40' : 'text-foreground/30'}`} style={{ fontFamily: "var(--font-body)" }}>Partners: </span>
+              <span className={`text-sm ${idx === 0 ? 'text-white/60' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{p.partners.join(" · ")}</span>
             </div>
           )}
 
