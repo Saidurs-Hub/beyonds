@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
-import { ArrowLeft, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { ReactNode, useState } from "react";
 import PageTransition from "@/components/PageTransition";
+import bsvLogo from "@/assets/bsv-logo-nav.png";
 
 const navLinks = [
   { label: "About", path: "/about" },
