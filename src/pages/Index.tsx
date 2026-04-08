@@ -31,14 +31,14 @@ const Index = () => {
           <div />
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
+              <Link
+                key={link.path}
+                to={link.path}
                 className="text-foreground/70 hover:text-foreground text-xs tracking-[0.2em] uppercase transition-colors duration-300"
                 style={{ fontFamily: "var(--font-body)" }}
               >
-                {link}
-              </a>
+                {link.label}
+              </Link>
             ))}
           </nav>
         </header>
