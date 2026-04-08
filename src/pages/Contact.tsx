@@ -1,6 +1,6 @@
 import PageLayout from "@/components/PageLayout";
 import { Mail, MapPin, ArrowUpRight } from "lucide-react";
-import contactHero from "@/assets/contact-hero.jpg";
+
 
 const contacts = [
   { name: "Muhymin Chowdhury", role: "Managing Director", email: "muhymin@beyonds.ventures" },
