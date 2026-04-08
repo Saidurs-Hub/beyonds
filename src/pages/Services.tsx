@@ -90,7 +90,7 @@ const Services = () => (
           {p.subServices.length > 0 && (
             <div className="relative flex flex-wrap gap-3 pl-0 md:pl-[60px]">
               {p.subServices.map((sp) => (
-                <span key={sp} className={`rounded-full px-5 py-2 text-xs tracking-[0.15em] uppercase ${p.bgImage ? 'bg-white/10 backdrop-blur-sm border border-white/20 text-white/80' : 'bg-card/40 border border-border/20 text-foreground/60'}`} style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
+                <span key={sp} className={`rounded-full px-5 py-2 text-xs tracking-[0.15em] uppercase ${p.bgImage ? 'bg-foreground/10 backdrop-blur-sm border border-foreground/20 text-foreground/70' : 'bg-card/40 border border-border/20 text-foreground/60'}`} style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
               ))}
             </div>
           )}
