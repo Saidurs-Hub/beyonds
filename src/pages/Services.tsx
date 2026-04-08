@@ -119,4 +119,4 @@ const Services = () => (
   </PageLayout>
 );
 
-export default Programs;
+export default Services;
