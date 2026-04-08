@@ -20,12 +20,7 @@ const Index = () => {
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Navigation */}
         <header className="animate-fade-in px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between">
-          <h2
-            className="text-foreground tracking-[0.35em] text-sm md:text-base font-medium uppercase"
-            style={{ fontFamily: "var(--font-body)" }}
-          >
-            Beyonds Ventures
-          </h2>
+          <div />
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
