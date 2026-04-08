@@ -59,7 +59,6 @@ const Team = () => (
     title="Team"
     subtitle="Decades of combined experience across impact investing, venture building, fund management, and development finance."
   >
-  >
     <div className="space-y-24">
 
       <section className="space-y-10">
