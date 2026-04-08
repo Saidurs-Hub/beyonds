@@ -16,7 +16,7 @@ const Index = () => {
   return (
     <PageTransition>
       <div className="relative min-h-screen overflow-hidden">
-        <img src={heroBg} alt="Mountain landscape reflected in still lake at twilight" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+        <img src={heroBg} alt="Tea garden landscape in Bangladesh at sunrise" className="absolute inset-0 w-full h-full object-cover animate-ken-burns" width={1920} height={1080} />
         <div className="absolute inset-0 bg-background/30" />
         <div className="relative z-10 flex flex-col min-h-screen">
           <header className="px-6 md:px-12 lg:px-20 py-6 flex items-center justify-center">
