@@ -43,8 +43,6 @@ const Team = () => (
   <PageLayout
     title="Team"
     subtitle="Decades of combined experience across impact investing, venture building, fund management, and development finance."
-    heroImage={teamHero}
-    heroAlt="Team collaborating in a modern workspace"
   >
     <div className="space-y-20">
       <section className="space-y-4">

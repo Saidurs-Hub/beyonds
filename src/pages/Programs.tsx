@@ -52,8 +52,6 @@ const Programs = () => (
   <PageLayout
     title="Programs"
     subtitle="From acceleration to venture building to investment management — meeting enterprises wherever they are in their growth journey."
-    heroImage={programsHero}
-    heroAlt="Entrepreneurs in a vibrant marketplace"
   >
     <div className="space-y-24">
       {programs.map((p, idx) => (

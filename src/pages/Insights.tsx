@@ -29,8 +29,6 @@ const Insights = () => (
   <PageLayout
     title="Insights"
     subtitle="Research-driven market intelligence that informs our investment strategy and shapes the entrepreneurship ecosystem."
-    heroImage={insightsHero}
-    heroAlt="Research and data analysis"
   >
     <div className="space-y-0">
       {studies.map((study, i) => (
