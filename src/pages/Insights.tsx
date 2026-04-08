@@ -1,5 +1,5 @@
 import PageLayout from "@/components/PageLayout";
-import { ArrowUpRight } from "lucide-react";
+import insightsHero from "@/assets/insights-hero.jpg";
 
 const studies = [
   {
@@ -29,24 +29,21 @@ const Insights = () => (
   <PageLayout
     title="Insights"
     subtitle="Research-driven market intelligence that informs our investment strategy and shapes the entrepreneurship ecosystem."
+    heroImage={insightsHero}
+    heroAlt="Research and data analysis"
   >
     <div className="space-y-0">
       {studies.map((study, i) => (
         <article key={study.title} className={`py-12 md:py-16 ${i < studies.length - 1 ? "border-b border-border/10" : ""}`}>
           <div className="grid md:grid-cols-[280px_1fr] gap-8 md:gap-12">
-            {/* Left: Meta */}
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <span className="text-accent text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>{study.type}</span>
                 <span className="text-foreground/20">·</span>
                 <span className="text-foreground/30 text-[11px] tracking-widest" style={{ fontFamily: "var(--font-body)" }}>{study.year}</span>
               </div>
-              <h2 className="text-foreground text-lg md:text-xl leading-snug" style={{ fontFamily: "var(--font-body)" }}>
-                {study.title}
-              </h2>
+              <h2 className="text-foreground text-lg md:text-xl leading-snug" style={{ fontFamily: "var(--font-body)" }}>{study.title}</h2>
             </div>
-
-            {/* Right: Content */}
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-3">
                 <h3 className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Key Findings</h3>

@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import portfolioHero from "@/assets/portfolio-hero.jpg";
 
 const investments = [
   { company: "Mental Health Platform", amount: "$85K", sector: "Healthcare", type: "Equity" },
@@ -13,9 +14,10 @@ const Portfolio = () => (
   <PageLayout
     title="Portfolio"
     subtitle="Deploying capital across a diverse range of instruments — backing enterprises that generate commercial returns and measurable impact in underserved markets."
+    heroImage={portfolioHero}
+    heroAlt="Modern boardroom with city skyline"
   >
     <div className="space-y-24">
-      {/* Key Metrics */}
       <section className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border/20 rounded-xl overflow-hidden">
         {[
           { value: "83+", label: "Companies Supported" },
@@ -30,13 +32,9 @@ const Portfolio = () => (
         ))}
       </section>
 
-      {/* Investments Table */}
       <section className="space-y-8">
-        <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>
-          Existing Investments
-        </h2>
+        <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Existing Investments</h2>
         <div className="border border-border/20 rounded-xl overflow-hidden">
-          {/* Table header */}
           <div className="grid grid-cols-4 gap-4 px-6 md:px-8 py-4 bg-card/30 border-b border-border/20">
             {["Company", "Sector", "Instrument", "Amount"].map((h) => (
               <span key={h} className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{h}</span>
@@ -53,27 +51,22 @@ const Portfolio = () => (
         </div>
       </section>
 
-      {/* Sectors & Instruments */}
       <section className="grid md:grid-cols-2 gap-16">
         <div className="space-y-6">
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Sector Focus</h2>
-          <div className="space-y-0">
-            {sectors.map((s, i) => (
-              <div key={s} className={`py-3 ${i < sectors.length - 1 ? "border-b border-border/10" : ""}`}>
-                <span className="text-foreground/70 text-sm" style={{ fontFamily: "var(--font-body)" }}>{s}</span>
-              </div>
-            ))}
-          </div>
+          {sectors.map((s, i) => (
+            <div key={s} className={`py-3 ${i < sectors.length - 1 ? "border-b border-border/10" : ""}`}>
+              <span className="text-foreground/70 text-sm" style={{ fontFamily: "var(--font-body)" }}>{s}</span>
+            </div>
+          ))}
         </div>
         <div className="space-y-6">
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Capital Instruments</h2>
-          <div className="space-y-0">
-            {instruments.map((inst, i) => (
-              <div key={inst} className={`py-3 ${i < instruments.length - 1 ? "border-b border-border/10" : ""}`}>
-                <span className="text-foreground/70 text-sm" style={{ fontFamily: "var(--font-body)" }}>{inst}</span>
-              </div>
-            ))}
-          </div>
+          {instruments.map((inst, i) => (
+            <div key={inst} className={`py-3 ${i < instruments.length - 1 ? "border-b border-border/10" : ""}`}>
+              <span className="text-foreground/70 text-sm" style={{ fontFamily: "var(--font-body)" }}>{inst}</span>
+            </div>
+          ))}
         </div>
       </section>
     </div>
