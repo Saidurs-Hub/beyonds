@@ -43,15 +43,10 @@ const Index = () => {
         {/* Hero */}
         <main className="flex-1 flex flex-col items-center justify-center text-center px-6">
           <h1
-            className="opacity-0 animate-fade-up text-foreground font-light tracking-wide"
+            className="opacity-0 animate-fade-up text-foreground text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-wide"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            <span className="block text-lg sm:text-xl md:text-2xl tracking-[0.4em] uppercase text-foreground/50 mb-4" style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}>
-              Impact
-            </span>
-            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
-              Beyond<span className="text-accent">s</span> Ventures
-            </span>
+            Launching Soon
           </h1>
           <p
             className="opacity-0 animate-fade-up animate-delay-500 mt-6 text-foreground/60 text-sm md:text-base tracking-[0.15em] uppercase max-w-md"
