@@ -24,6 +24,7 @@ const services = [
     icon: Leaf,
     category: "Venture Building & Impact-Linked Financing",
     image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&q=80",
+    bgImage: ventureBuildingBg,
     goal: "Scaling innovative solutions that advance climate resilience in Bangladesh — agriculture, water, and food security.",
     subServices: ["Climate Innovation Fund", "NURTURE", "BRIDDHI"],
     stats: [
