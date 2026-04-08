@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import teamHero from "@/assets/team-hero.jpeg";
 import teamZahida from "@/assets/team-zahida.png";
 import teamMuhymin from "@/assets/team-muhymin.png";
 import teamAk from "@/assets/team-ak.png";
