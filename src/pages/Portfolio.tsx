@@ -42,14 +42,14 @@ const Portfolio = () => (
             ))}
           </div>
           {investments.map((inv, i) => (
-            <div key={inv.company} className={`grid grid-cols-4 gap-4 px-6 md:px-8 py-5 ${i < investments.length - 1 ? "border-b border-border/10" : ""}`}>
+            <div key={inv.company} className={`grid grid-cols-4 gap-4 px-6 md:px-8 py-5 items-center ${i < investments.length - 1 ? "border-b border-border/10" : ""}`}>
               <span className="text-foreground text-sm flex items-center gap-3" style={{ fontFamily: "var(--font-body)" }}>
-                <img src={inv.logo} alt={inv.company} className="w-10 h-10 object-contain rounded" />
+                <img src={inv.logo} alt={inv.company} className="w-10 h-10 object-contain rounded flex-shrink-0" />
                 {inv.company}
               </span>
-              <span className="text-foreground/50 text-sm" style={{ fontFamily: "var(--font-body)" }}>{inv.sector}</span>
-              <span className="text-foreground/50 text-sm" style={{ fontFamily: "var(--font-body)" }}>{inv.type}</span>
-              <span className="text-accent text-sm font-medium" style={{ fontFamily: "var(--font-body)" }}>{inv.amount}</span>
+              <span className="text-foreground/50 text-sm flex items-center" style={{ fontFamily: "var(--font-body)" }}>{inv.sector}</span>
+              <span className="text-foreground/50 text-sm flex items-center" style={{ fontFamily: "var(--font-body)" }}>{inv.type}</span>
+              <span className="text-accent text-sm font-medium flex items-center" style={{ fontFamily: "var(--font-body)" }}>{inv.amount}</span>
             </div>
           ))}
         </div>
