@@ -36,7 +36,7 @@ const Insights = () => (
     title="Insights"
     subtitle="Research-driven market intelligence that informs our investment strategy and shapes the entrepreneurship ecosystem."
     heroImage={insightsHero}
-    heroAlt="Tropical forest landscape"
+    heroAlt="Cholpori classroom session with students"
   >
     <div className="space-y-0">
       {studies.map((study, i) => (
