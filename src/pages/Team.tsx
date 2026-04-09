@@ -3,6 +3,7 @@ import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
 import AnimatedImage from "@/components/AnimatedImage";
 import { Linkedin } from "lucide-react";
+import { openExternalLink } from "@/lib/openExternalLink";
 import teamHero from "@/assets/team-hero.jpeg";
 import teamZahida from "@/assets/team-zahida.png";
 import teamMuhymin from "@/assets/team-muhymin.png";
@@ -69,17 +70,18 @@ const MemberCard = ({ member, index }: { member: TeamMember; index: number }) =>
             className="absolute inset-0 z-10 flex items-center justify-center rounded-xl bg-background/80 backdrop-blur-sm animate-scale-in"
             onClick={(e) => { e.stopPropagation(); setShowLinkedin(false); }}
           >
-            <a
-              href={member.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                openExternalLink(member.linkedin);
+              }}
               className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium text-white transition-transform hover:scale-105 active:scale-95"
               style={{ backgroundColor: "#0077b5", fontFamily: "var(--font-body)" }}
             >
               <Linkedin className="w-4 h-4" />
               LinkedIn Profile
-            </a>
+            </button>
           </div>
         )}
       </div>

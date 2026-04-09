@@ -1,6 +1,7 @@
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Mail, MapPin, ArrowUpRight, Linkedin } from "lucide-react";
+import { openExternalLink } from "@/lib/openExternalLink";
 
 const contacts = [
   { name: "Muhymin Chowdhury", role: "Managing Director", email: "muhymin@beyonds.ventures" },
@@ -52,16 +53,15 @@ const Contact = () => (
       <ScrollReveal delay={0.2}>
         <section className="space-y-8">
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Connect</h2>
-          <a
-            href="https://www.linkedin.com/company/beyondsventures/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-border/20 rounded-xl p-8 md:p-10 flex items-center gap-5 max-w-lg group hover:border-border/40 transition-colors"
+          <button
+            type="button"
+            onClick={() => openExternalLink("https://www.linkedin.com/company/beyondsventures/")}
+            className="border border-border/20 rounded-xl p-8 md:p-10 flex items-center gap-5 max-w-lg group hover:border-border/40 transition-colors text-left"
           >
             <Linkedin className="w-5 h-5 text-accent shrink-0" />
             <span className="text-foreground/70 text-sm flex-1" style={{ fontFamily: "var(--font-body)" }}>Beyonds Ventures on LinkedIn</span>
             <ArrowUpRight className="w-4 h-4 text-foreground/30 group-hover:text-foreground/70 transition-colors" />
-          </a>
+          </button>
         </section>
       </ScrollReveal>
     </div>
