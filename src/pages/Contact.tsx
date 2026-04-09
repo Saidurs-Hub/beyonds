@@ -1,6 +1,6 @@
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
-import { Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, MapPin, ArrowUpRight, Linkedin } from "lucide-react";
 
 const contacts = [
   { name: "Muhymin Chowdhury", role: "Managing Director", email: "muhymin@beyonds.ventures" },
