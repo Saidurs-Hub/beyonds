@@ -1,27 +1,16 @@
 
 
-## Plan: Add LinkedIn URLs to all team members
+## Plan: Add white underline to active nav links
 
-The current code already has the LinkedIn popup animation working for Zahida, with the dismiss fix ready. This plan adds LinkedIn URLs to every remaining team member and ensures the overlay dismiss works correctly.
+The reference image shows navigation links with a thin white/light line underneath the active page link. Currently, the nav links only change text opacity/color for the active state.
 
-### Changes (single file: `src/pages/Team.tsx`)
+### Changes (single file: `src/components/PageLayout.tsx`)
 
-**1. Add LinkedIn URLs to all members:**
+**1. Hero nav links (line 75-76):** Add `border-b-2 border-white pb-1` to the active state class, so the active link gets a white underline.
 
-Leadership:
-- Muhymin Chowdhury → `https://www.linkedin.com/in/muhymin-chowdhury/`
-- A.K. Faizan Salam → `https://www.linkedin.com/in/faizan-salam-ak/`
-- Sarah Iqbal → `https://www.linkedin.com/in/sarah-iqbal-5962b641/`
-- Hridoy Islam → `https://www.linkedin.com/in/hridoyislam/`
+**2. Non-hero nav links (line 149-150):** Add `border-b-2 border-foreground pb-1` to the active state class.
 
-Core Team:
-- M. Samiul Haque → `https://www.linkedin.com/in/m-samiul-haque/`
-- Saddam Khan Sumit → `https://www.linkedin.com/in/sksumit/`
-- Lamia Hafiz → `https://www.linkedin.com/in/lamia-hafiz-4a3a303b9/`
-- Kashfia Mahmud → `https://www.linkedin.com/in/kashfiamahmud-mfin/`
-- Ahmed Jawad Yusuf → `https://www.linkedin.com/in/ahmed-jyusuf/`
+**3. Also apply to `src/pages/Index.tsx` nav links (line 30-31):** Add the same underline treatment to the homepage navigation for consistency.
 
-**2. Fix overlay dismiss:**
-
-Change the overlay's `onClick` so clicking the background dismisses the popup (returns to portrait), while clicking the LinkedIn button itself opens the link without dismissing.
+All three nav instances will show a subtle bottom border under the currently active page link.
 
