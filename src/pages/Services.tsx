@@ -94,9 +94,16 @@ const Services = () => (
             {p.subServices.length > 0 && (
               <div className="relative space-y-4 pl-0 md:pl-[60px]">
                 <div className="flex flex-wrap gap-3">
-                  {p.subServices.map((sp) => (
-                    <span key={sp} className={`rounded-full px-5 py-2 text-xs tracking-[0.15em] uppercase ${p.bgImage ? 'bg-white/10 backdrop-blur-sm border border-white/20 text-white/80' : 'bg-card/40 border border-border/20 text-foreground/60'}`} style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
-                  ))}
+                  {p.subServices.map((sp) => {
+                    const isBdeshi = sp.toLowerCase().includes('b/deshi');
+                    return (
+                      <span key={sp} className={`rounded-full px-5 py-2 text-xs tracking-[0.15em] uppercase ${
+                        isBdeshi
+                          ? 'bg-white border border-white text-yellow-500'
+                          : p.bgImage ? 'bg-white/10 backdrop-blur-sm border border-white/20 text-white/80' : 'bg-card/40 border border-border/20 text-foreground/60'
+                      }`} style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
+                    );
+                  })}
                 </div>
                 {idx === 0 && (
                   <img src={accelPrograms} alt="Orange Corners Bangladesh, B/DESHI Catalyst" className="max-w-lg w-full rounded-lg brightness-0 invert" style={{ imageRendering: "auto" }} />
