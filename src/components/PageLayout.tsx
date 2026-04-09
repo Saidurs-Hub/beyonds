@@ -173,10 +173,15 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
                 ))}
               </div>
             )}
-            <div className="px-6 md:px-12 lg:px-20 pt-12 md:pt-20 pb-12 md:pb-16 max-w-6xl mx-auto">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-wide mb-6" style={{ fontFamily: "var(--font-display)" }}>{title}</h1>
-              {subtitle && <p className="text-foreground/50 text-base md:text-lg leading-relaxed max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>{subtitle}</p>}
-            </div>
+            <motion.div
+              className="px-6 md:px-12 lg:px-20 pt-12 md:pt-20 pb-12 md:pb-16 max-w-6xl mx-auto"
+              variants={staggerContainer}
+              initial="initial"
+              animate="animate"
+            >
+              <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-wide mb-6" style={{ fontFamily: "var(--font-display)" }}>{title}</motion.h1>
+              {subtitle && <motion.p variants={fadeUp} className="text-foreground/50 text-base md:text-lg leading-relaxed max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>{subtitle}</motion.p>}
+            </motion.div>
             <div className="mx-6 md:mx-12 lg:mx-20 border-t border-border/20" />
           </>
         )}
