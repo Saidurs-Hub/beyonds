@@ -99,7 +99,7 @@ const Services = () => (
                   ))}
                 </div>
                 {idx === 0 && (
-                  <img src={accelPrograms} alt="Orange Corners Bangladesh, B/DESHI Catalyst" className="max-w-lg w-full rounded-lg" style={{ imageRendering: "auto" }} />
+                  <img src={accelPrograms} alt="Orange Corners Bangladesh, B/DESHI Catalyst" className="max-w-lg w-full rounded-lg brightness-0 invert opacity-80" />
                 )}
               </div>
             )}
