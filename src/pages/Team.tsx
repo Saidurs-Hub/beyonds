@@ -26,18 +26,18 @@ interface TeamMember {
 
 const leadership: TeamMember[] = [
   { name: "Zahida Fizza Kabir", role: "Chairperson", years: "30+", expertise: ["Social Entrepreneurship & Development Leadership", "Healthcare & Women's Empowerment", "Mental Health & Care Economy"], photo: teamZahida, linkedin: "https://www.linkedin.com/in/zahida-fizza-kabir-02456b8b/" },
-  { name: "Muhymin Chowdhury", role: "Managing Director", years: "18+", expertise: ["Strategic Partnerships & Institutional Growth", "Startup & Venture Growth Financing", "Impact Fund Management", "Blended Finance Structuring"], photo: teamMuhymin },
-  { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: ["Growth Strategy & Business Expansion", "Venture Development & Portfolio Management", "Digital Transformation & AI for Business"], photo: teamAk },
-  { name: "Sarah Iqbal", role: "Head — Impact Partners", years: "10+", expertise: ["Impact Investments & Fund Management", "Early-Stage Deal Structuring", "Thematic & Donor-Funded Services"], photo: teamSarah },
-  { name: "Hridoy Islam", role: "Portfolio Manager", years: "10+", expertise: ["Fund Mobilization & Capital Raising", "Impact-Driven Finance", "Alternative Investment Management"], photo: teamHridoy },
+  { name: "Muhymin Chowdhury", role: "Managing Director", years: "18+", expertise: ["Strategic Partnerships & Institutional Growth", "Startup & Venture Growth Financing", "Impact Fund Management", "Blended Finance Structuring"], photo: teamMuhymin, linkedin: "https://www.linkedin.com/in/muhymin-chowdhury/" },
+  { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: ["Growth Strategy & Business Expansion", "Venture Development & Portfolio Management", "Digital Transformation & AI for Business"], photo: teamAk, linkedin: "https://www.linkedin.com/in/faizan-salam-ak/" },
+  { name: "Sarah Iqbal", role: "Head — Impact Partners", years: "10+", expertise: ["Impact Investments & Fund Management", "Early-Stage Deal Structuring", "Thematic & Donor-Funded Services"], photo: teamSarah, linkedin: "https://www.linkedin.com/in/sarah-iqbal-5962b641/" },
+  { name: "Hridoy Islam", role: "Portfolio Manager", years: "10+", expertise: ["Fund Mobilization & Capital Raising", "Impact-Driven Finance", "Alternative Investment Management"], photo: teamHridoy, linkedin: "https://www.linkedin.com/in/hridoyislam/" },
 ];
 
 const coreTeam: TeamMember[] = [
-  { name: "M. Samiul Haque", role: "Head — Research", years: "10+", expertise: ["SME Investment Structuring", "Market-Based Solutions Design", "Policy Analysis"], photo: teamSamiul },
-  { name: "Saddam Khan Sumit", role: "Sr. Investment Associate", years: "10+", expertise: ["Deal Sourcing & Pipeline Development", "Financial Valuation", "Investment Analysis"], photo: teamSaddam },
-  { name: "Lamia Hafiz", role: "Accelerator Manager", years: "12+", expertise: ["Program Design & Delivery", "Portfolio & Founder Support", "Innovation Fund Management"], photo: teamLamia },
-  { name: "Kashfia Mahmud", role: "Gender Lens Strategist", years: "15+", expertise: ["Gender Equality & Social Inclusion", "Microfinance & Financial Inclusion", "Fintech & Alternative Credit Models"], photo: teamKashfia },
-  { name: "Ahmed Jawad Yusuf", role: "Lead — Ecosystem Engagement", years: "12+", expertise: ["Fundraising & Fund Management", "Angel Investments & VC", "Impact Measurement"], photo: teamJawad },
+  { name: "M. Samiul Haque", role: "Head — Research", years: "10+", expertise: ["SME Investment Structuring", "Market-Based Solutions Design", "Policy Analysis"], photo: teamSamiul, linkedin: "https://www.linkedin.com/in/m-samiul-haque/" },
+  { name: "Saddam Khan Sumit", role: "Sr. Investment Associate", years: "10+", expertise: ["Deal Sourcing & Pipeline Development", "Financial Valuation", "Investment Analysis"], photo: teamSaddam, linkedin: "https://www.linkedin.com/in/sksumit/" },
+  { name: "Lamia Hafiz", role: "Accelerator Manager", years: "12+", expertise: ["Program Design & Delivery", "Portfolio & Founder Support", "Innovation Fund Management"], photo: teamLamia, linkedin: "https://www.linkedin.com/in/lamia-hafiz-4a3a303b9/" },
+  { name: "Kashfia Mahmud", role: "Gender Lens Strategist", years: "15+", expertise: ["Gender Equality & Social Inclusion", "Microfinance & Financial Inclusion", "Fintech & Alternative Credit Models"], photo: teamKashfia, linkedin: "https://www.linkedin.com/in/kashfiamahmud-mfin/" },
+  { name: "Ahmed Jawad Yusuf", role: "Lead — Ecosystem Engagement", years: "12+", expertise: ["Fundraising & Fund Management", "Angel Investments & VC", "Impact Measurement"], photo: teamJawad, linkedin: "https://www.linkedin.com/in/ahmed-jyusuf/" },
 ];
 
 const MemberCard = ({ member, index }: { member: TeamMember; index: number }) => {
@@ -67,7 +67,7 @@ const MemberCard = ({ member, index }: { member: TeamMember; index: number }) =>
         {member.linkedin && showLinkedin && (
           <div
             className="absolute inset-0 z-10 flex items-center justify-center rounded-xl bg-background/80 backdrop-blur-sm animate-scale-in"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => { e.stopPropagation(); setShowLinkedin(false); }}
           >
             <a
               href={member.linkedin}
