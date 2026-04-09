@@ -64,6 +64,7 @@ const Contact = () => (
           </a>
         </section>
       </ScrollReveal>
+    </div>
   </PageLayout>
 );
 
