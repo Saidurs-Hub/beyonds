@@ -114,9 +114,14 @@ const Services = () => (
             </div>
 
             {p.partners.length > 0 && (
-              <div className="relative pl-0 md:pl-[60px]">
-                <span className={`text-[11px] tracking-[0.2em] uppercase ${p.bgImage ? 'text-white/40' : 'text-foreground/30'}`} style={{ fontFamily: "var(--font-body)" }}>Partners: </span>
-                <span className={`text-sm ${p.bgImage ? 'text-white/60' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{p.partners.join(" · ")}</span>
+              <div className="relative pl-0 md:pl-[60px] space-y-4">
+                <div>
+                  <span className={`text-[11px] tracking-[0.2em] uppercase ${p.bgImage ? 'text-white/40' : 'text-foreground/30'}`} style={{ fontFamily: "var(--font-body)" }}>Partners: </span>
+                  <span className={`text-sm ${p.bgImage ? 'text-white/60' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{p.partners.join(" · ")}</span>
+                </div>
+                {idx === 0 && (
+                  <img src={accelPartners} alt="Kingdom of the Netherlands, Anchorless Bangladesh, BYLC, YY Ventures, LightCastle Partners, Unilever" className="max-w-md rounded-lg" />
+                )}
               </div>
             )}
 
