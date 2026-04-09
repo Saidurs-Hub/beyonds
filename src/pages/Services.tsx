@@ -5,6 +5,8 @@ import { Rocket, Leaf, BarChart3, ArrowRight } from "lucide-react";
 import servicesHero from "@/assets/services-hero.jpg";
 import accelerationBg from "@/assets/acceleration-bg.jpg";
 import ventureBuildingBg from "@/assets/venture-building-bg.webp";
+import accelPrograms from "@/assets/accel-programs.png";
+import accelPartners from "@/assets/accel-partners.png";
 
 const services = [
   {
@@ -90,10 +92,15 @@ const Services = () => (
             </div>
 
             {p.subServices.length > 0 && (
-              <div className="relative flex flex-wrap gap-3 pl-0 md:pl-[60px]">
-                {p.subServices.map((sp) => (
-                  <span key={sp} className={`rounded-full px-5 py-2 text-xs tracking-[0.15em] uppercase ${p.bgImage ? 'bg-white/10 backdrop-blur-sm border border-white/20 text-white/80' : 'bg-card/40 border border-border/20 text-foreground/60'}`} style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
-                ))}
+              <div className="relative space-y-4 pl-0 md:pl-[60px]">
+                <div className="flex flex-wrap gap-3">
+                  {p.subServices.map((sp) => (
+                    <span key={sp} className={`rounded-full px-5 py-2 text-xs tracking-[0.15em] uppercase ${p.bgImage ? 'bg-white/10 backdrop-blur-sm border border-white/20 text-white/80' : 'bg-card/40 border border-border/20 text-foreground/60'}`} style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
+                  ))}
+                </div>
+                {idx === 0 && (
+                  <img src={accelPrograms} alt="Orange Corners Bangladesh, B/DESHI Catalyst" className="max-w-sm rounded-lg" />
+                )}
               </div>
             )}
 
@@ -107,9 +114,14 @@ const Services = () => (
             </div>
 
             {p.partners.length > 0 && (
-              <div className="relative pl-0 md:pl-[60px]">
-                <span className={`text-[11px] tracking-[0.2em] uppercase ${p.bgImage ? 'text-white/40' : 'text-foreground/30'}`} style={{ fontFamily: "var(--font-body)" }}>Partners: </span>
-                <span className={`text-sm ${p.bgImage ? 'text-white/60' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{p.partners.join(" · ")}</span>
+              <div className="relative pl-0 md:pl-[60px] space-y-4">
+                <div>
+                  <span className={`text-[11px] tracking-[0.2em] uppercase ${p.bgImage ? 'text-white/40' : 'text-foreground/30'}`} style={{ fontFamily: "var(--font-body)" }}>Partners: </span>
+                  <span className={`text-sm ${p.bgImage ? 'text-white/60' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{p.partners.join(" · ")}</span>
+                </div>
+                {idx === 0 && (
+                  <img src={accelPartners} alt="Kingdom of the Netherlands, Anchorless Bangladesh, BYLC, YY Ventures, LightCastle Partners, Unilever" className="max-w-md rounded-lg" />
+                )}
               </div>
             )}
 
