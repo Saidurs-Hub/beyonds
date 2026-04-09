@@ -1,8 +1,24 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { ReactNode, useState } from "react";
+import { motion } from "framer-motion";
 import PageTransition from "@/components/PageTransition";
 import bsvLogo from "@/assets/bsv-logo-nav.png";
+
+const fadeUp = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] } },
+};
+
+const fadeIn = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.8, delay: 0.3 } },
+};
+
+const staggerContainer = {
+  initial: {},
+  animate: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
+};
 
 const navLinks = [
   { label: "About", path: "/about" },
