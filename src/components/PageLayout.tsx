@@ -146,8 +146,8 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
                   <Link
                     key={link.path}
                     to={link.path}
-                    className={`text-xs tracking-[0.2em] uppercase transition-colors duration-300 ${
-                      location.pathname === link.path ? "text-foreground" : "text-foreground/40 hover:text-foreground/70"
+                    className={`text-xs tracking-[0.2em] uppercase transition-colors duration-300 pb-1 ${
+                      location.pathname === link.path ? "text-foreground border-b-2 border-foreground" : "text-foreground/40 hover:text-foreground/70"
                     }`}
                     style={{ fontFamily: "var(--font-body)" }}
                   >

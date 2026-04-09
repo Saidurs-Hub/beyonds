@@ -27,7 +27,7 @@ const Index = () => {
             <div className="md:hidden" />
             <nav className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
-                <Link key={link.path} to={link.path} className="text-foreground/70 hover:text-foreground text-xs tracking-[0.2em] uppercase transition-colors duration-300" style={{ fontFamily: "var(--font-body)" }}>
+                <Link key={link.path} to={link.path} className="text-foreground/70 hover:text-foreground text-xs tracking-[0.2em] uppercase transition-colors duration-300 pb-1" style={{ fontFamily: "var(--font-body)" }}>
                   {link.label}
                 </Link>
               ))}
