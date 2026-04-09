@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
-import { ImgHTMLAttributes } from "react";
 
-interface AnimatedImageProps extends ImgHTMLAttributes<HTMLImageElement> {
+interface AnimatedImageProps {
+  src?: string;
+  alt?: string;
+  className?: string;
+  width?: number;
+  height?: number;
+  loading?: "lazy" | "eager";
   delay?: number;
 }
 
