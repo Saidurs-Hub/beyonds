@@ -73,6 +73,7 @@ const MemberCard = ({ member, index }: { member: TeamMember; index: number }) =>
               href={member.linkedin}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
               className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium text-white transition-transform hover:scale-105 active:scale-95"
               style={{ backgroundColor: "#0077b5", fontFamily: "var(--font-body)" }}
             >
