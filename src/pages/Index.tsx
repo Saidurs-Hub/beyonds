@@ -25,9 +25,9 @@ const Index = () => {
         <div className="relative z-10 flex flex-col min-h-screen">
           <header className="px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between md:justify-center">
             <div className="md:hidden" />
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex items-center bg-white/90 backdrop-blur-sm rounded-full px-6 py-2 gap-6">
               {navLinks.map((link) => (
-                <Link key={link.path} to={link.path} className="text-foreground/70 hover:text-foreground text-xs tracking-[0.2em] uppercase transition-colors duration-300 pb-1" style={{ fontFamily: "var(--font-body)" }}>
+                <Link key={link.path} to={link.path} className="text-black/50 hover:text-black/80 text-xs tracking-[0.2em] uppercase transition-colors duration-300" style={{ fontFamily: "var(--font-body)" }}>
                   {link.label}
                 </Link>
               ))}

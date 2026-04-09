@@ -67,13 +67,13 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
               >
                 <img src={bsvLogo} alt="Beyond S Ventures" className="h-24 brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
               </Link>
-              <nav className="hidden md:flex items-center gap-8">
+              <nav className="hidden md:flex items-center bg-white/90 backdrop-blur-sm rounded-full px-6 py-2 gap-6">
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}
-                    className={`text-xs tracking-[0.2em] uppercase transition-colors duration-300 pb-1 ${
-                      location.pathname === link.path ? "text-white border-b-2 border-white" : "text-white/50 hover:text-white/80"
+                    className={`text-xs tracking-[0.2em] uppercase transition-colors duration-300 ${
+                      location.pathname === link.path ? "text-black font-semibold" : "text-black/50 hover:text-black/80"
                     }`}
                     style={{ fontFamily: "var(--font-body)" }}
                   >
@@ -141,13 +141,13 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
               >
                 <img src={bsvLogo} alt="Beyond S Ventures" className="h-24 opacity-60 hover:opacity-100 transition-opacity" />
               </Link>
-              <nav className="hidden md:flex items-center gap-8">
+              <nav className="hidden md:flex items-center bg-white/90 backdrop-blur-sm rounded-full px-6 py-2 gap-6">
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}
-                    className={`text-xs tracking-[0.2em] uppercase transition-colors duration-300 pb-1 ${
-                      location.pathname === link.path ? "text-foreground border-b-2 border-foreground" : "text-foreground/40 hover:text-foreground/70"
+                    className={`text-xs tracking-[0.2em] uppercase transition-colors duration-300 ${
+                      location.pathname === link.path ? "text-black font-semibold" : "text-black/50 hover:text-black/80"
                     }`}
                     style={{ fontFamily: "var(--font-body)" }}
                   >
