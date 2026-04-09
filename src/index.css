@@ -63,6 +63,14 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
   }
+
+  a, button, [role="button"], input[type="submit"], summary {
+    transition: transform 0.15s ease-out;
+  }
+
+  a:active, button:active, [role="button"]:active, input[type="submit"]:active, summary:active {
+    transform: scale(0.95);
+  }
 }
 
 @keyframes fade-up {
