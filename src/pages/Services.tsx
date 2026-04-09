@@ -92,10 +92,15 @@ const Services = () => (
             </div>
 
             {p.subServices.length > 0 && (
-              <div className="relative flex flex-wrap gap-3 pl-0 md:pl-[60px]">
-                {p.subServices.map((sp) => (
-                  <span key={sp} className={`rounded-full px-5 py-2 text-xs tracking-[0.15em] uppercase ${p.bgImage ? 'bg-white/10 backdrop-blur-sm border border-white/20 text-white/80' : 'bg-card/40 border border-border/20 text-foreground/60'}`} style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
-                ))}
+              <div className="relative space-y-4 pl-0 md:pl-[60px]">
+                <div className="flex flex-wrap gap-3">
+                  {p.subServices.map((sp) => (
+                    <span key={sp} className={`rounded-full px-5 py-2 text-xs tracking-[0.15em] uppercase ${p.bgImage ? 'bg-white/10 backdrop-blur-sm border border-white/20 text-white/80' : 'bg-card/40 border border-border/20 text-foreground/60'}`} style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
+                  ))}
+                </div>
+                {idx === 0 && (
+                  <img src={accelPrograms} alt="Orange Corners Bangladesh, B/DESHI Catalyst" className="max-w-sm rounded-lg" />
+                )}
               </div>
             )}
 
