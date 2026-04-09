@@ -120,7 +120,7 @@ const Services = () => (
                   <span className={`text-sm ${p.bgImage ? 'text-white/60' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{p.partners.join(" · ")}</span>
                 </div>
                 {idx === 0 && (
-                  <img src={accelPartners} alt="Kingdom of the Netherlands, Anchorless Bangladesh, BYLC, YY Ventures, LightCastle Partners, Unilever" className="max-w-xl w-full rounded-lg" style={{ imageRendering: "auto" }} />
+                  <img src={accelPartners} alt="Kingdom of the Netherlands, Anchorless Bangladesh, BYLC, YY Ventures, LightCastle Partners, Unilever" className="max-w-xl w-full rounded-lg brightness-0 invert" style={{ imageRendering: "auto" }} />
                 )}
               </div>
             )}
