@@ -88,20 +88,30 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
 
             {/* Mobile Nav */}
             {mobileOpen && (
-              <div className="relative z-20 md:hidden px-6 pb-6 space-y-4">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    onClick={() => setMobileOpen(false)}
-                    className={`block text-sm tracking-[0.15em] uppercase transition-colors ${
-                      location.pathname === link.path ? "text-white" : "text-white/50"
-                    }`}
-                    style={{ fontFamily: "var(--font-body)" }}
-                  >
-                    {link.label}
+              <div className="fixed inset-0 z-50 bg-background/95 backdrop-blur-sm md:hidden flex flex-col">
+                <div className="px-6 py-6 flex items-center justify-between">
+                  <Link to="/" onClick={() => setMobileOpen(false)}>
+                    <img src={bsvLogo} alt="Beyond S Ventures" className="h-24 brightness-0 invert opacity-80" />
                   </Link>
-                ))}
+                  <button onClick={() => setMobileOpen(false)} className="text-white/70 hover:text-white">
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+                <nav className="flex-1 flex flex-col justify-center px-8 space-y-6">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.path}
+                      to={link.path}
+                      onClick={() => setMobileOpen(false)}
+                      className={`text-lg tracking-[0.15em] uppercase transition-colors ${
+                        location.pathname === link.path ? "text-white" : "text-white/50"
+                      }`}
+                      style={{ fontFamily: "var(--font-body)" }}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </nav>
               </div>
             )}
 
