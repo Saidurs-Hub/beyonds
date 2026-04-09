@@ -1,4 +1,6 @@
 import PageLayout from "@/components/PageLayout";
+import ScrollReveal from "@/components/ScrollReveal";
+import AnimatedImage from "@/components/AnimatedImage";
 import teamHero from "@/assets/team-hero.jpeg";
 import teamZahida from "@/assets/team-zahida.png";
 import teamMuhymin from "@/assets/team-muhymin.png";
@@ -35,23 +37,25 @@ const coreTeam: TeamMember[] = [
   { name: "Ahmed Jawad Yusuf", role: "Lead — Ecosystem Engagement", years: "12+", expertise: ["Fundraising & Fund Management", "Angel Investments & VC", "Impact Measurement"], photo: teamJawad },
 ];
 
-const MemberCard = ({ member }: { member: TeamMember }) => (
-  <div className="group space-y-5">
-    <div className="relative w-full aspect-[3/4] rounded-xl overflow-hidden bg-accent/10">
-      <img
-        src={member.photo}
-        alt={member.name}
-        className="absolute inset-0 w-full h-full object-cover object-top bg-teal-50"
-      />
+const MemberCard = ({ member, index }: { member: TeamMember; index: number }) => (
+  <ScrollReveal delay={index * 0.08}>
+    <div className="group space-y-5">
+      <div className="relative w-full aspect-[3/4] rounded-xl overflow-hidden bg-accent/10">
+        <AnimatedImage
+          src={member.photo}
+          alt={member.name}
+          className="absolute inset-0 w-full h-full object-cover object-top bg-teal-50"
+        />
+      </div>
+      <div className="space-y-1">
+        <h3 className="text-foreground text-base font-medium" style={{ fontFamily: "var(--font-body)" }}>{member.name}</h3>
+        <p className="text-accent text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{member.role}</p>
+      </div>
+      <p className="text-foreground/40 text-xs leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
+        {member.expertise.join(" · ")}
+      </p>
     </div>
-    <div className="space-y-1">
-      <h3 className="text-foreground text-base font-medium" style={{ fontFamily: "var(--font-body)" }}>{member.name}</h3>
-      <p className="text-accent text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{member.role}</p>
-    </div>
-    <p className="text-foreground/40 text-xs leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>
-      {member.expertise.join(" · ")}
-    </p>
-  </div>
+  </ScrollReveal>
 );
 
 const Team = () => (
@@ -62,17 +66,20 @@ const Team = () => (
     heroAlt="SAJIDA Foundation team group photo"
   >
     <div className="space-y-24">
-
       <section className="space-y-10">
-        <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Leadership</h2>
+        <ScrollReveal>
+          <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Leadership</h2>
+        </ScrollReveal>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          {leadership.map((m) => <MemberCard key={m.name} member={m} />)}
+          {leadership.map((m, i) => <MemberCard key={m.name} member={m} index={i} />)}
         </div>
       </section>
       <section className="space-y-10">
-        <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Core Team</h2>
+        <ScrollReveal>
+          <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Core Team</h2>
+        </ScrollReveal>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          {coreTeam.map((m) => <MemberCard key={m.name} member={m} />)}
+          {coreTeam.map((m, i) => <MemberCard key={m.name} member={m} index={i} />)}
         </div>
       </section>
     </div>
