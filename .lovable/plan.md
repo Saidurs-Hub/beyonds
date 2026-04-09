@@ -1,30 +1,22 @@
 
 
-## Plan: Add Rocket Launch Video to Acceleration Section
+## Plan: Add LinkedIn popup animation for Zahida's card
 
-### Overview
-Embed a real NASA rocket launch video (from Pixabay, free license) as a cinematic background/banner in the "Acceleration & Investment Readiness" section on the Services page.
+### What changes
+1. **Add `linkedin` field to `TeamMember` interface** — optional string for LinkedIn URL
+2. **Add LinkedIn URL to Zahida's data** — `linkedin: "https://www.linkedin.com/in/zahida-fizza-kabir-02456b8b/"`
+3. **Update `MemberCard` component** — Add click handler and animated popup:
+   - When a member with a LinkedIn URL is clicked, show an animated tooltip/popup with a LinkedIn icon and "View on LinkedIn" link
+   - Use React state (`useState`) to toggle visibility
+   - Popup animates in with scale + fade (using existing animation classes)
+   - Clicking the popup link opens LinkedIn in a new tab
+   - Clicking outside or clicking again dismisses the popup
+4. **Add LinkedIn icon** — Use `lucide-react`'s `Linkedin` icon in the popup
 
-### Video Source
-- **Pixabay Video #3** by NASA-Imagery — real Space Shuttle launch footage (SD, 2:23)
-- Direct MP4: `https://cdn.pixabay.com/video/2015/08/07/3-135655112_large.mp4`
-- Free for commercial use, no attribution required
-
-### Technical Changes
-
-**File: `src/pages/Services.tsx`**
-
-1. Add a `video` field to the first service object (Acceleration) with the Pixabay MP4 URL
-2. Between the category header and sub-service pills, render a `<video>` element for the Acceleration section:
-   - Autoplay, muted, loop, playsInline for seamless background playback
-   - Aspect ratio 21:9 cinematic crop with `rounded-xl overflow-hidden`
-   - `object-cover` to fill the container
-   - Dark gradient overlay on bottom for cohesion with the dark theme
-   - Only renders for the first service (Acceleration); other sections remain unchanged
-
-### Visual Treatment
-- Cinematic 21:9 aspect ratio container with rounded corners
-- Video autoplays silently on loop
-- Subtle `bg-gradient-to-t from-background/60` overlay for depth
-- Matches the existing card/image styling pattern
+### Technical details
+- File: `src/pages/Team.tsx`
+- Add `useState` for tracking which member's popup is open
+- The popup appears over/below the card with a smooth scale-in animation
+- Style: dark card with LinkedIn blue accent, icon + text "LinkedIn Profile"
+- `cursor-pointer` on cards that have a LinkedIn URL
 
