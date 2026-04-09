@@ -1,11 +1,22 @@
 
 
-## Plan: Add LinkedIn link to Contact page
+## Plan: Fix LinkedIn link clicks on Team page
 
-### Change (single file: `src/pages/Contact.tsx`)
+**Problem:** When clicking the "LinkedIn Profile" button, the click bubbles up to the overlay `div`, which immediately closes the popup (`setShowLinkedin(false)`) before the browser can follow the link.
 
-Add a new "Connect" section after the Office section with the Beyonds Ventures LinkedIn company page link. Style it consistently with the Office section — a bordered card with the Linkedin icon, the company name, and an arrow link.
+**Fix (single file: `src/pages/Team.tsx`):**
 
-- Import `Linkedin` from `lucide-react`
-- Add a new `ScrollReveal` block with a "Connect" heading and a card containing the LinkedIn icon + link to `https://www.linkedin.com/company/beyondsventures/`, opening in a new tab
+Add `e.stopPropagation()` to the `<a>` tag's `onClick` so the click doesn't bubble to the overlay's dismiss handler:
+
+```tsx
+<a
+  href={member.linkedin}
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={(e) => e.stopPropagation()}
+  ...
+>
+```
+
+This prevents the overlay from intercepting the link click, allowing `target="_blank"` to open LinkedIn in a new tab. Clicking the overlay background still dismisses the popup as expected.
 
