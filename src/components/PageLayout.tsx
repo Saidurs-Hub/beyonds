@@ -187,9 +187,14 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
         )}
 
         {/* Content */}
-        <main className="px-6 md:px-12 lg:px-20 py-16 md:py-20 max-w-6xl mx-auto">
+        <motion.main
+          className="px-6 md:px-12 lg:px-20 py-16 md:py-20 max-w-6xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+        >
           {children}
-        </main>
+        </motion.main>
 
         {/* Footer */}
         <footer className="px-6 md:px-12 lg:px-20 py-8 border-t border-border/10 flex flex-col md:flex-row items-center justify-between gap-4">
