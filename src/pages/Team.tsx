@@ -67,7 +67,7 @@ const MemberCard = ({ member, index }: { member: TeamMember; index: number }) =>
         {member.linkedin && showLinkedin && (
           <div
             className="absolute inset-0 z-10 flex items-center justify-center rounded-xl bg-background/80 backdrop-blur-sm animate-scale-in"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => { e.stopPropagation(); setShowLinkedin(false); }}
           >
             <a
               href={member.linkedin}
