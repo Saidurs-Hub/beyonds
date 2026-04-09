@@ -47,12 +47,15 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
         {/* Hero Section — full bleed like sajida.org */}
         {heroImage ? (
           <div className="relative h-[70vh] min-h-[500px] overflow-hidden">
-            <img
+            <motion.img
               src={heroImage}
               alt={heroAlt || title}
               className="absolute inset-0 w-full h-full object-cover"
               width={1920}
               height={800}
+              initial={{ scale: 1.1, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
 
