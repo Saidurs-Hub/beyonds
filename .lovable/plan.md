@@ -1,22 +1,27 @@
 
 
-## Plan: Add LinkedIn popup animation for Zahida's card
+## Plan: Add LinkedIn URLs to all team members
 
-### What changes
-1. **Add `linkedin` field to `TeamMember` interface** — optional string for LinkedIn URL
-2. **Add LinkedIn URL to Zahida's data** — `linkedin: "https://www.linkedin.com/in/zahida-fizza-kabir-02456b8b/"`
-3. **Update `MemberCard` component** — Add click handler and animated popup:
-   - When a member with a LinkedIn URL is clicked, show an animated tooltip/popup with a LinkedIn icon and "View on LinkedIn" link
-   - Use React state (`useState`) to toggle visibility
-   - Popup animates in with scale + fade (using existing animation classes)
-   - Clicking the popup link opens LinkedIn in a new tab
-   - Clicking outside or clicking again dismisses the popup
-4. **Add LinkedIn icon** — Use `lucide-react`'s `Linkedin` icon in the popup
+The current code already has the LinkedIn popup animation working for Zahida, with the dismiss fix ready. This plan adds LinkedIn URLs to every remaining team member and ensures the overlay dismiss works correctly.
 
-### Technical details
-- File: `src/pages/Team.tsx`
-- Add `useState` for tracking which member's popup is open
-- The popup appears over/below the card with a smooth scale-in animation
-- Style: dark card with LinkedIn blue accent, icon + text "LinkedIn Profile"
-- `cursor-pointer` on cards that have a LinkedIn URL
+### Changes (single file: `src/pages/Team.tsx`)
+
+**1. Add LinkedIn URLs to all members:**
+
+Leadership:
+- Muhymin Chowdhury → `https://www.linkedin.com/in/muhymin-chowdhury/`
+- A.K. Faizan Salam → `https://www.linkedin.com/in/faizan-salam-ak/`
+- Sarah Iqbal → `https://www.linkedin.com/in/sarah-iqbal-5962b641/`
+- Hridoy Islam → `https://www.linkedin.com/in/hridoyislam/`
+
+Core Team:
+- M. Samiul Haque → `https://www.linkedin.com/in/m-samiul-haque/`
+- Saddam Khan Sumit → `https://www.linkedin.com/in/sksumit/`
+- Lamia Hafiz → `https://www.linkedin.com/in/lamia-hafiz-4a3a303b9/`
+- Kashfia Mahmud → `https://www.linkedin.com/in/kashfiamahmud-mfin/`
+- Ahmed Jawad Yusuf → `https://www.linkedin.com/in/ahmed-jyusuf/`
+
+**2. Fix overlay dismiss:**
+
+Change the overlay's `onClick` so clicking the background dismisses the popup (returns to portrait), while clicking the LinkedIn button itself opens the link without dismissing.
 
