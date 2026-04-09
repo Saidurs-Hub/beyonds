@@ -15,14 +15,16 @@ const navLinks = [
 ];
 
 const Index = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
     <PageTransition>
       <div className="relative min-h-screen overflow-hidden">
         <img src={heroBg} alt="Tea garden landscape in Bangladesh at sunrise" className="absolute inset-0 w-full h-full object-cover animate-ken-burns" width={1920} height={1080} />
         <div className="absolute inset-0 bg-background/30" />
         <div className="relative z-10 flex flex-col min-h-screen">
-          <header className="px-6 md:px-12 lg:px-20 py-6 flex items-center justify-center">
-            <div />
+          <header className="px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between md:justify-center">
+            <div className="md:hidden" />
             <nav className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
                 <Link key={link.path} to={link.path} className="text-foreground/70 hover:text-foreground text-xs tracking-[0.2em] uppercase transition-colors duration-300" style={{ fontFamily: "var(--font-body)" }}>
@@ -30,7 +32,25 @@ const Index = () => {
                 </Link>
               ))}
             </nav>
+            <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden text-foreground/70 hover:text-foreground">
+              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
           </header>
+          {mobileOpen && (
+            <div className="relative z-20 md:hidden px-6 pb-6 space-y-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setMobileOpen(false)}
+                  className="block text-sm tracking-[0.15em] uppercase text-foreground/70 hover:text-foreground transition-colors"
+                  style={{ fontFamily: "var(--font-body)" }}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          )}
           <main className="flex-1 flex flex-col items-center justify-center text-center px-6">
             <img src={logo} alt="Beyond S Ventures" className="opacity-0 animate-fade-up w-[280px] sm:w-[360px] md:w-[460px] lg:w-[560px]" />
             <p className="opacity-0 animate-fade-up animate-delay-500 mt-2 text-foreground/60 text-sm md:text-base tracking-[0.15em] uppercase max-w-md" style={{ fontFamily: "var(--font-body)" }}>
