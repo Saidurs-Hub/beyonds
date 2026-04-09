@@ -46,7 +46,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
       <div className="min-h-screen bg-background text-foreground">
         {/* Hero Section — full bleed like sajida.org */}
         {heroImage ? (
-          <div className="relative h-[70vh] min-h-[500px] overflow-hidden">
+          <div className="relative h-[50vh] sm:h-[70vh] min-h-[350px] sm:min-h-[500px] overflow-hidden">
             <motion.img
               src={heroImage}
               alt={heroAlt || title}
