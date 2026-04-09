@@ -197,14 +197,19 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
         </motion.main>
 
         {/* Footer */}
-        <footer className="px-6 md:px-12 lg:px-20 py-8 border-t border-border/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <motion.footer
+          className="px-6 md:px-12 lg:px-20 py-8 border-t border-border/10 flex flex-col md:flex-row items-center justify-between gap-4"
+          variants={fadeIn}
+          initial="initial"
+          animate="animate"
+        >
           <span className="text-foreground/30 text-xs tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>
             Beyond S Ventures
           </span>
           <span className="text-foreground/30 text-xs tracking-widest" style={{ fontFamily: "var(--font-body)" }}>
             Dhaka · New York · Kampala
           </span>
-        </footer>
+        </motion.footer>
       </div>
     </PageTransition>
   );
