@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 import logo from "@/assets/logo-white-maroon.png";
 import PageTransition from "@/components/PageTransition";
