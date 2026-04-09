@@ -88,7 +88,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
 
             {/* Mobile Nav */}
             {mobileOpen && (
-              <div className="absolute top-full left-0 right-0 z-30 md:hidden bg-background/90 backdrop-blur-md px-6 py-4 space-y-3 border-b border-white/10">
+              <div className="relative z-20 md:hidden px-6 pb-6 space-y-4">
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
@@ -160,7 +160,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
               </button>
             </header>
             {mobileOpen && (
-              <div className="md:hidden px-6 pb-4 space-y-3 border-b border-border/20">
+              <div className="md:hidden px-6 pb-6 space-y-4 border-b border-border/20">
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
