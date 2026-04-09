@@ -78,7 +78,7 @@ const Team = () => (
         <ScrollReveal>
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Core Team</h2>
         </ScrollReveal>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-8">
           {coreTeam.map((m, i) => <MemberCard key={m.name} member={m} index={i} />)}
         </div>
       </section>
