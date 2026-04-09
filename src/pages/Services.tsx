@@ -1,9 +1,10 @@
 import PageLayout from "@/components/PageLayout";
+import ScrollReveal from "@/components/ScrollReveal";
+import AnimatedImage from "@/components/AnimatedImage";
 import { Rocket, Leaf, BarChart3, ArrowRight } from "lucide-react";
 import servicesHero from "@/assets/services-hero.jpg";
 import accelerationBg from "@/assets/acceleration-bg.jpg";
 import ventureBuildingBg from "@/assets/venture-building-bg.webp";
-
 
 const services = [
   {
@@ -65,77 +66,83 @@ const Services = () => (
   >
     <div className="space-y-24">
       {services.map((p, idx) => (
-        <section key={p.category} className={`relative space-y-10 overflow-hidden ${p.bgImage ? 'rounded-2xl p-8 md:p-10' : ''}`}>
-          {p.bgImage && (
-            <>
-              <img
-                src={p.bgImage}
-                alt=""
-                className="absolute inset-0 w-full h-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/50 to-background/70" />
-            </>
-          )}
-          <div className="relative flex items-start gap-5">
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 mt-1 ${p.bgImage ? 'bg-white/10 backdrop-blur-sm' : 'bg-accent/10'}`}>
-              <p.icon className={`w-5 h-5 ${p.bgImage ? 'text-white' : 'text-accent'}`} />
+        <ScrollReveal key={p.category}>
+          <section className={`relative space-y-10 overflow-hidden ${p.bgImage ? 'rounded-2xl p-8 md:p-10' : ''}`}>
+            {p.bgImage && (
+              <>
+                <AnimatedImage
+                  src={p.bgImage}
+                  alt=""
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/50 to-background/70" />
+              </>
+            )}
+            <div className="relative flex items-start gap-5">
+              <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 mt-1 ${p.bgImage ? 'bg-white/10 backdrop-blur-sm' : 'bg-accent/10'}`}>
+                <p.icon className={`w-5 h-5 ${p.bgImage ? 'text-white' : 'text-accent'}`} />
+              </div>
+              <div className="space-y-3">
+                <h2 className={`text-2xl md:text-3xl font-light tracking-wide ${p.bgImage ? 'text-white drop-shadow-lg' : ''}`} style={{ fontFamily: "var(--font-display)" }}>{p.category}</h2>
+                <p className={`text-sm md:text-base leading-relaxed max-w-2xl ${p.bgImage ? 'text-white/80 drop-shadow-md' : 'text-foreground/50'}`} style={{ fontFamily: "var(--font-body)" }}>{p.goal}</p>
+              </div>
             </div>
-            <div className="space-y-3">
-              <h2 className={`text-2xl md:text-3xl font-light tracking-wide ${p.bgImage ? 'text-white drop-shadow-lg' : ''}`} style={{ fontFamily: "var(--font-display)" }}>{p.category}</h2>
-              <p className={`text-sm md:text-base leading-relaxed max-w-2xl ${p.bgImage ? 'text-white/80 drop-shadow-md' : 'text-foreground/50'}`} style={{ fontFamily: "var(--font-body)" }}>{p.goal}</p>
-            </div>
-          </div>
 
-          {p.subServices.length > 0 && (
-            <div className="relative flex flex-wrap gap-3 pl-0 md:pl-[60px]">
-              {p.subServices.map((sp) => (
-                <span key={sp} className={`rounded-full px-5 py-2 text-xs tracking-[0.15em] uppercase ${p.bgImage ? 'bg-white/10 backdrop-blur-sm border border-white/20 text-white/80' : 'bg-card/40 border border-border/20 text-foreground/60'}`} style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
+            {p.subServices.length > 0 && (
+              <div className="relative flex flex-wrap gap-3 pl-0 md:pl-[60px]">
+                {p.subServices.map((sp) => (
+                  <span key={sp} className={`rounded-full px-5 py-2 text-xs tracking-[0.15em] uppercase ${p.bgImage ? 'bg-white/10 backdrop-blur-sm border border-white/20 text-white/80' : 'bg-card/40 border border-border/20 text-foreground/60'}`} style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
+                ))}
+              </div>
+            )}
+
+            <div className="relative grid grid-cols-3 gap-px bg-border/20 rounded-xl overflow-hidden">
+              {p.stats.map((s) => (
+                <div key={s.label} className={`p-6 md:p-8 space-y-2 ${p.bgImage ? 'bg-black/30 backdrop-blur-sm' : 'bg-background'}`}>
+                  <div className={`text-2xl md:text-3xl font-light ${p.bgImage ? 'text-white' : 'text-foreground'}`} style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
+                  <div className={`text-[11px] tracking-widest uppercase ${p.bgImage ? 'text-white/50' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{s.label}</div>
+                </div>
               ))}
             </div>
-          )}
 
-          <div className="relative grid grid-cols-3 gap-px bg-border/20 rounded-xl overflow-hidden">
-            {p.stats.map((s) => (
-              <div key={s.label} className={`p-6 md:p-8 space-y-2 ${p.bgImage ? 'bg-black/30 backdrop-blur-sm' : 'bg-background'}`}>
-                <div className={`text-2xl md:text-3xl font-light ${p.bgImage ? 'text-white' : 'text-foreground'}`} style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
-                <div className={`text-[11px] tracking-widest uppercase ${p.bgImage ? 'text-white/50' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{s.label}</div>
+            {p.partners.length > 0 && (
+              <div className="relative pl-0 md:pl-[60px]">
+                <span className={`text-[11px] tracking-[0.2em] uppercase ${p.bgImage ? 'text-white/40' : 'text-foreground/30'}`} style={{ fontFamily: "var(--font-body)" }}>Partners: </span>
+                <span className={`text-sm ${p.bgImage ? 'text-white/60' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{p.partners.join(" · ")}</span>
               </div>
-            ))}
-          </div>
+            )}
 
-          {p.partners.length > 0 && (
-            <div className="relative pl-0 md:pl-[60px]">
-              <span className={`text-[11px] tracking-[0.2em] uppercase ${p.bgImage ? 'text-white/40' : 'text-foreground/30'}`} style={{ fontFamily: "var(--font-body)" }}>Partners: </span>
-              <span className={`text-sm ${p.bgImage ? 'text-white/60' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{p.partners.join(" · ")}</span>
-            </div>
-          )}
-
-          {idx < services.length - 1 && <div className="border-t border-border/10" />}
-        </section>
+            {idx < services.length - 1 && <div className="border-t border-border/10" />}
+          </section>
+        </ScrollReveal>
       ))}
 
-      <section className="space-y-10 pt-8">
-        <div className="space-y-3">
-          <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Looking Ahead</h2>
-          <p className="text-2xl md:text-3xl font-light tracking-wide" style={{ fontFamily: "var(--font-display)" }}>Next 3 Years</p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-px bg-border/20 rounded-xl overflow-hidden">
-          {futureGoals.map((item) => (
-            <div key={item.title} className="bg-background p-8 md:p-10 space-y-5">
-              <h3 className="text-accent text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>{item.title}</h3>
-              <ul className="space-y-3">
-                {item.items.map((li, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <ArrowRight className="w-3.5 h-3.5 text-accent/50 mt-1 shrink-0" />
-                    <span className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{li}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ScrollReveal>
+        <section className="space-y-10 pt-8">
+          <div className="space-y-3">
+            <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Looking Ahead</h2>
+            <p className="text-2xl md:text-3xl font-light tracking-wide" style={{ fontFamily: "var(--font-display)" }}>Next 3 Years</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-px bg-border/20 rounded-xl overflow-hidden">
+            {futureGoals.map((item, i) => (
+              <ScrollReveal key={item.title} delay={i * 0.08}>
+                <div className="bg-background p-8 md:p-10 space-y-5">
+                  <h3 className="text-accent text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>{item.title}</h3>
+                  <ul className="space-y-3">
+                    {item.items.map((li, j) => (
+                      <li key={j} className="flex items-start gap-3">
+                        <ArrowRight className="w-3.5 h-3.5 text-accent/50 mt-1 shrink-0" />
+                        <span className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{li}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </section>
+      </ScrollReveal>
     </div>
   </PageLayout>
 );
