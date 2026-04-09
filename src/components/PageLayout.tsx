@@ -1,8 +1,24 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { ReactNode, useState } from "react";
+import { motion } from "framer-motion";
 import PageTransition from "@/components/PageTransition";
 import bsvLogo from "@/assets/bsv-logo-nav.png";
+
+const fadeUp = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] } },
+};
+
+const fadeIn = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1, transition: { duration: 0.8, delay: 0.3 } },
+};
+
+const staggerContainer = {
+  initial: {},
+  animate: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
+};
 
 const navLinks = [
   { label: "About", path: "/about" },
@@ -31,12 +47,15 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
         {/* Hero Section — full bleed like sajida.org */}
         {heroImage ? (
           <div className="relative h-[70vh] min-h-[500px] overflow-hidden">
-            <img
+            <motion.img
               src={heroImage}
               alt={heroAlt || title}
               className="absolute inset-0 w-full h-full object-cover"
               width={1920}
               height={800}
+              initial={{ scale: 1.1, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
 
@@ -87,24 +106,31 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
             )}
 
             {/* Hero Text — positioned at bottom like sajida.org */}
-            <div className="absolute bottom-0 left-0 right-0 z-10 px-6 md:px-12 lg:px-20 pb-16">
+            <motion.div
+              className="absolute bottom-0 left-0 right-0 z-10 px-6 md:px-12 lg:px-20 pb-16"
+              variants={staggerContainer}
+              initial="initial"
+              animate="animate"
+            >
               <div className="max-w-6xl mx-auto">
-                <h1
+                <motion.h1
+                  variants={fadeUp}
                   className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-wide text-white mb-4"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {title}
-                </h1>
+                </motion.h1>
                 {subtitle && (
-                  <p
+                  <motion.p
+                    variants={fadeUp}
                     className="text-white/70 text-base md:text-lg leading-relaxed max-w-2xl"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     {subtitle}
-                  </p>
+                  </motion.p>
                 )}
               </div>
-            </div>
+            </motion.div>
           </div>
         ) : (
           <>
@@ -150,28 +176,43 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
                 ))}
               </div>
             )}
-            <div className="px-6 md:px-12 lg:px-20 pt-12 md:pt-20 pb-12 md:pb-16 max-w-6xl mx-auto">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-wide mb-6" style={{ fontFamily: "var(--font-display)" }}>{title}</h1>
-              {subtitle && <p className="text-foreground/50 text-base md:text-lg leading-relaxed max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>{subtitle}</p>}
-            </div>
+            <motion.div
+              className="px-6 md:px-12 lg:px-20 pt-12 md:pt-20 pb-12 md:pb-16 max-w-6xl mx-auto"
+              variants={staggerContainer}
+              initial="initial"
+              animate="animate"
+            >
+              <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-wide mb-6" style={{ fontFamily: "var(--font-display)" }}>{title}</motion.h1>
+              {subtitle && <motion.p variants={fadeUp} className="text-foreground/50 text-base md:text-lg leading-relaxed max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>{subtitle}</motion.p>}
+            </motion.div>
             <div className="mx-6 md:mx-12 lg:mx-20 border-t border-border/20" />
           </>
         )}
 
         {/* Content */}
-        <main className="px-6 md:px-12 lg:px-20 py-16 md:py-20 max-w-6xl mx-auto">
+        <motion.main
+          className="px-6 md:px-12 lg:px-20 py-16 md:py-20 max-w-6xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+        >
           {children}
-        </main>
+        </motion.main>
 
         {/* Footer */}
-        <footer className="px-6 md:px-12 lg:px-20 py-8 border-t border-border/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <motion.footer
+          className="px-6 md:px-12 lg:px-20 py-8 border-t border-border/10 flex flex-col md:flex-row items-center justify-between gap-4"
+          variants={fadeIn}
+          initial="initial"
+          animate="animate"
+        >
           <span className="text-foreground/30 text-xs tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>
             Beyond S Ventures
           </span>
           <span className="text-foreground/30 text-xs tracking-widest" style={{ fontFamily: "var(--font-body)" }}>
             Dhaka · New York · Kampala
           </span>
-        </footer>
+        </motion.footer>
       </div>
     </PageTransition>
   );
