@@ -21,6 +21,7 @@ interface TeamMember {
   years: string;
   expertise: string[];
   photo: string;
+  linkedin?: string;
 }
 
 const leadership: TeamMember[] = [
