@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Outfit:wght@200;300;400;500;600&display=swap');
+/* Aptos is used as the primary typeface. It is a system-installed Microsoft font,
+   so we declare it first and fall back to similar sans-serif faces for visitors
+   who do not have it installed. */
 
 @tailwind base;
 @tailwind components;
