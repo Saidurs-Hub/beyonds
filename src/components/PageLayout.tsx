@@ -134,10 +134,10 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
           </div>
         ) : (
           <>
-            <header className="px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between">
+            <header className="px-6 md:px-12 lg:px-20 py-6 flex items-center justify-center">
               <Link
                 to="/"
-                className="flex items-center"
+                className="absolute left-6 md:left-12 lg:left-20 flex items-center"
               >
                 <img src={bsvLogo} alt="Beyond S Ventures" className="h-24 opacity-60 hover:opacity-100 transition-opacity" />
               </Link>
@@ -155,7 +155,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
                   </Link>
                 ))}
               </nav>
-              <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden text-foreground/60 hover:text-foreground">
+              <button onClick={() => setMobileOpen(!mobileOpen)} className="absolute right-6 md:right-12 lg:right-20 md:hidden text-foreground/60 hover:text-foreground">
                 {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </header>
