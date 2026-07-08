@@ -60,10 +60,10 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
 
             {/* Nav over hero */}
-            <header className="relative z-20 px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between">
+            <header className="relative z-20 px-6 md:px-12 lg:px-20 py-6 flex items-center justify-center">
               <Link
                 to="/"
-                className="flex items-center"
+                className="absolute left-6 md:left-12 lg:left-20 flex items-center"
               >
                 <img src={bsvLogo} alt="Beyond S Ventures" className="h-24 brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
               </Link>
@@ -81,7 +81,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
                   </Link>
                 ))}
               </nav>
-              <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden text-white/70 hover:text-white">
+              <button onClick={() => setMobileOpen(!mobileOpen)} className="absolute right-6 md:right-12 lg:right-20 md:hidden text-white/70 hover:text-white">
                 {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </header>
@@ -105,14 +105,14 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
               </div>
             )}
 
-            {/* Hero Text — centered like homepage */}
+            {/* Hero Text */}
             <motion.div
-              className="absolute inset-0 z-10 flex items-center justify-center px-6 md:px-12 lg:px-20"
+              className="absolute bottom-0 left-0 right-0 z-10 px-6 md:px-12 lg:px-20 pb-16"
               variants={staggerContainer}
               initial="initial"
               animate="animate"
             >
-              <div className="max-w-4xl mx-auto text-center">
+              <div className="max-w-4xl">
                 <motion.h1
                   variants={fadeUp}
                   className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-wide text-white mb-6"
@@ -123,7 +123,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
                 {subtitle && (
                   <motion.p
                     variants={fadeUp}
-                    className="text-white/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto"
+                    className="text-white/70 text-base md:text-lg leading-relaxed max-w-2xl"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     {subtitle}
@@ -134,10 +134,10 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
           </div>
         ) : (
           <>
-            <header className="px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between">
+            <header className="relative px-6 md:px-12 lg:px-20 py-6 flex items-center justify-center">
               <Link
                 to="/"
-                className="flex items-center"
+                className="absolute left-6 md:left-12 lg:left-20 flex items-center"
               >
                 <img src={bsvLogo} alt="Beyond S Ventures" className="h-24 opacity-60 hover:opacity-100 transition-opacity" />
               </Link>
@@ -155,7 +155,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
                   </Link>
                 ))}
               </nav>
-              <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden text-foreground/60 hover:text-foreground">
+              <button onClick={() => setMobileOpen(!mobileOpen)} className="absolute right-6 md:right-12 lg:right-20 md:hidden text-foreground/60 hover:text-foreground">
                 {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </header>
