@@ -4,7 +4,7 @@ import AnimatedImage from "@/components/AnimatedImage";
 import { Rocket, Leaf, BarChart3, ArrowRight } from "lucide-react";
 import servicesHero from "@/assets/services-hero.jpg";
 import accelerationBg from "@/assets/acceleration-bg.jpg";
-import ventureBuildingBg from "@/assets/venture-building-bg.webp";
+import ventureBuildingBg from "@/assets/venture-building-bg.jpg";
 import accelPrograms from "@/assets/accel-programs.png";
 import accelPartners from "@/assets/accel-partners.png";
 
