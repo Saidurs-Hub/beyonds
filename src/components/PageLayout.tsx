@@ -134,7 +134,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
           </div>
         ) : (
           <>
-            <header className="px-6 md:px-12 lg:px-20 py-6 flex items-center justify-center">
+            <header className="relative px-6 md:px-12 lg:px-20 py-6 flex items-center justify-center">
               <Link
                 to="/"
                 className="absolute left-6 md:left-12 lg:left-20 flex items-center"
