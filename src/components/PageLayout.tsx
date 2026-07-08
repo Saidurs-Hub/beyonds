@@ -105,17 +105,17 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
               </div>
             )}
 
-            {/* Hero Text — positioned at bottom like sajida.org */}
+            {/* Hero Text — centered like homepage */}
             <motion.div
-              className="absolute bottom-0 left-0 right-0 z-10 px-6 md:px-12 lg:px-20 pb-16"
+              className="absolute inset-0 z-10 flex items-center justify-center px-6 md:px-12 lg:px-20"
               variants={staggerContainer}
               initial="initial"
               animate="animate"
             >
-              <div className="max-w-6xl mx-auto">
+              <div className="max-w-4xl mx-auto text-center">
                 <motion.h1
                   variants={fadeUp}
-                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-wide text-white mb-4"
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-wide text-white mb-6"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
                   {title}
@@ -123,7 +123,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
                 {subtitle && (
                   <motion.p
                     variants={fadeUp}
-                    className="text-white/70 text-base md:text-lg leading-relaxed max-w-2xl"
+                    className="text-white/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     {subtitle}
