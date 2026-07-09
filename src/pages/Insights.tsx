@@ -1,7 +1,5 @@
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
-import AnimatedImage from "@/components/AnimatedImage";
-import circularApparel from "@/assets/circular-apparel.png";
 import insightsHero from "@/assets/insights-hero.jpg";
 
 const studies = [
