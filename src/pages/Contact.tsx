@@ -5,7 +5,7 @@ import { openExternalLink } from "@/lib/openExternalLink";
 
 const contacts = [
   { name: "Muhymin Chowdhury", role: "Managing Director", email: "muhymin@beyonds.ventures" },
-  { name: "Sarah Iqbal", role: "Head — Impact Partners", email: "sarah@beyonds.ventures" },
+  { name: "Sarah Iqbal", role: "Portfolio Manager", email: "sarah@beyonds.ventures" },
   { name: "Hridoy Islam", role: "Portfolio Manager", email: "hridoy@beyonds.ventures" },
 ];
 
