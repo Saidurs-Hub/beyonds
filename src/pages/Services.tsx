@@ -1,7 +1,7 @@
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
 import AnimatedImage from "@/components/AnimatedImage";
-import { Rocket, Leaf, BarChart3, ArrowRight } from "lucide-react";
+import { Rocket, Leaf, BarChart3 } from "lucide-react";
 import servicesHero from "@/assets/services-hero.jpg";
 import accelerationBg from "@/assets/acceleration-bg.jpg";
 import ventureBuildingBg from "@/assets/venture-building-bg.jpg";
@@ -52,12 +52,6 @@ const services = [
   },
 ];
 
-const futureGoals = [
-  { title: "Accelerator & Investment Readiness", items: ["Support 300+ impact enterprises", "Codify a replicable investment readiness & entrepreneurship model"] },
-  { title: "Investment Management", items: ["Launch 2 alternative investment funds, raising $10mn each", "Finance 200+ enterprises using flexible instruments"] },
-  { title: "Advisory Services", items: ["Deploy $4mn+ in catalytic financing", "Raise $32mn through investment & transaction advisory"] },
-  { title: "Global Expansion", items: ["Build Global South investment corridors, beginning with East Africa"] },
-];
 
 const Services = () => (
   <PageLayout
@@ -127,31 +121,6 @@ const Services = () => (
         </ScrollReveal>
       ))}
 
-      <ScrollReveal>
-        <section className="space-y-10 pt-8">
-          <div className="space-y-3">
-            <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Looking Ahead</h2>
-            <p className="text-2xl md:text-3xl font-light tracking-wide" style={{ fontFamily: "var(--font-display)" }}>Next 3 Years</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-px bg-border/20 rounded-xl overflow-hidden">
-            {futureGoals.map((item, i) => (
-              <ScrollReveal key={item.title} delay={i * 0.08}>
-                <div className="bg-background p-8 md:p-10 space-y-5">
-                  <h3 className="text-accent text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>{item.title}</h3>
-                  <ul className="space-y-3">
-                    {item.items.map((li, j) => (
-                      <li key={j} className="flex items-start gap-3">
-                        <ArrowRight className="w-3.5 h-3.5 text-accent/50 mt-1 shrink-0" />
-                        <span className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{li}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </section>
-      </ScrollReveal>
     </div>
   </PageLayout>
 );
