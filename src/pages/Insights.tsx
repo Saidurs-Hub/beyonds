@@ -1,7 +1,5 @@
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
-import AnimatedImage from "@/components/AnimatedImage";
-import circularApparel from "@/assets/circular-apparel.png";
 import insightsHero from "@/assets/insights-hero.jpg";
 
 const studies = [
@@ -66,26 +64,6 @@ const Insights = () => (
             </article>
           </ScrollReveal>
 
-          {/* Circular Apparel diagram after RMG study */}
-          {i === 0 && (
-            <ScrollReveal>
-              <div className="py-12 md:py-16 border-b border-border/10">
-                <div className="rounded-2xl bg-white/5 border border-border/10 p-8 md:p-12 flex flex-col items-center gap-6">
-                  <h3 className="text-foreground/40 text-[10px] tracking-[0.25em] uppercase text-center" style={{ fontFamily: "var(--font-body)" }}>
-                    Framework — Levers for Circular Apparel System
-                  </h3>
-                  <AnimatedImage
-                    src={circularApparel}
-                    alt="Levers for Circular Apparel System — Input, Design, Production, Use & Reuse, Recovery & Recycle"
-                    className="w-full max-w-3xl rounded-xl bg-white p-8 md:p-10"
-                    width={1920}
-                    height={1080}
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </ScrollReveal>
-          )}
         </div>
       ))}
     </div>
