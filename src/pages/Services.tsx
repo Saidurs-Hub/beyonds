@@ -29,13 +29,13 @@ const services = [
     image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&q=80",
     bgImage: ventureBuildingBg,
     goal: "Scaling innovative solutions that advance climate resilience in Bangladesh — agriculture, water, and food security.",
-    subServices: ["Climate Innovation Fund", "NURTURE", "BRIDDHI"],
+    subServices: ["Climate Innovation Fund (CIF)", "NURTURE", "BINIYOG BRIDDHI (B-BRIDDHI)"],
     stats: [
-      { value: "5,200+", label: "Farmers supported" },
+      { value: "10,000+", label: "Farmers impacted" },
       { value: "$350K+", label: "Mobilized under CIF 1" },
       { value: "15", label: "Enterprises supported" },
     ],
-    partners: ["LightCastle", "Switzerland", "ATEC°", "Prime Bank", "British Asian Trust"],
+    partners: ["LightCastle", "Switzerland", "Prime Bank PLC.", "British Asian Trust"],
   },
   {
     icon: BarChart3,
