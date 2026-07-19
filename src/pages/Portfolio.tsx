@@ -6,9 +6,11 @@ import shikhoLogo from "@/assets/shikho-logo.png";
 import cholporiLogo from "@/assets/cholpori-logo.png";
 
 const investments = [
-  { company: "Relaxy", amount: "$85K", sector: "Healthcare", type: "Equity", logo: relaxyLogo },
-  { company: "Shikho", amount: "$300K", sector: "EdTech", type: "Equity", logo: shikhoLogo },
-  { company: "Cholpori", amount: "$115K", sector: "EdTech", type: "Equity", logo: cholporiLogo },
+  { company: "Relaxy", sector: "Healthcare", type: "Equity", logo: relaxyLogo },
+  { company: "Shikho", sector: "EdTech", type: "Equity", logo: shikhoLogo },
+  { company: "Cholpori", sector: "EdTech", type: "Equity", logo: cholporiLogo },
+  { company: "Shomvob", sector: "—", type: "Debt", logo: null },
+  { company: "BRLT", sector: "—", type: "Debt", logo: null },
 ];
 
 const sectors = ["Technology", "Food & Agri", "Energy", "Textile & Apparel", "Climate & Environment", "Healthcare"];
