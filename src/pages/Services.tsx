@@ -15,7 +15,7 @@ const services = [
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=80",
     bgImage: accelerationBg,
     goal: "Equipping early-stage entrepreneurs with the resources necessary to build sustainable, investment-ready enterprises through acceleration, technical assistance, and tailored funding.",
-    subServices: ["Orange Corners", "B/DESHI Bangladesh", "Catalyst"],
+    subServices: ["Orange Corners Bangladesh", "B/DESHI Catalyst"],
     stats: [
       { value: "$3.8mn+", label: "Largest accelerator in Bangladesh" },
       { value: "1,700+", label: "Jobs created" },
