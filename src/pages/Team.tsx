@@ -55,11 +55,19 @@ const MemberCard = ({ member, index }: { member: TeamMember; index: number }) =>
         onClick={() => member.linkedin && setShowLinkedin((v) => !v)}
       >
         <div className="relative w-20 h-20 sm:w-full sm:aspect-[3/4] sm:h-auto rounded-xl overflow-hidden bg-accent/10 flex-shrink-0">
-          <AnimatedImage
-            src={member.photo}
-            alt={member.name}
-            className="absolute inset-0 w-full h-full object-cover object-top bg-teal-50"
-          />
+          {member.photo ? (
+            <AnimatedImage
+              src={member.photo}
+              alt={member.name}
+              className="absolute inset-0 w-full h-full object-cover object-top bg-teal-50"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center bg-accent/10">
+              <span className="text-accent/60 text-2xl sm:text-4xl font-light" style={{ fontFamily: "var(--font-display)" }}>
+                {member.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+              </span>
+            </div>
+          )}
         </div>
         <div className="flex flex-col justify-center sm:space-y-1 min-w-0">
           <h3 className="text-foreground text-sm sm:text-base font-medium" style={{ fontFamily: "var(--font-body)" }}>{member.name}</h3>
