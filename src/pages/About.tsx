@@ -95,7 +95,7 @@ const About = () => (
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { icon: Building2, title: "Bangladesh", detail: "400+ unit offices", status: "Headquarters" },
-              { icon: Globe, title: "Uganda", detail: "2-unit offices with expansion underway", status: "Active" },
+              { icon: Globe, title: "Uganda", detail: "8 offices", status: "Active" },
               { icon: TrendingUp, title: "2028 Expansion", detail: "Tanzania · Ghana · Zambia", status: "Planned" },
             ].map((loc, i) => (
               <ScrollReveal key={loc.title} delay={i * 0.1}>
