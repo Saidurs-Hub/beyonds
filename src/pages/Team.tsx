@@ -5,7 +5,7 @@ import AnimatedImage from "@/components/AnimatedImage";
 import { Linkedin } from "lucide-react";
 import { openExternalLink } from "@/lib/openExternalLink";
 import teamHero from "@/assets/team-hero.jpeg";
-import teamZahida from "@/assets/team-zahida.png";
+
 import teamMuhymin from "@/assets/team-muhymin.png";
 import teamAk from "@/assets/team-ak.png";
 import teamSarah from "@/assets/team-sarah.png";
