@@ -5,7 +5,7 @@ import AnimatedImage from "@/components/AnimatedImage";
 import { Linkedin } from "lucide-react";
 import { openExternalLink } from "@/lib/openExternalLink";
 import teamHero from "@/assets/team-hero.jpeg";
-import teamZahida from "@/assets/team-zahida.png";
+
 import teamMuhymin from "@/assets/team-muhymin.png";
 import teamAk from "@/assets/team-ak.png";
 import teamSarah from "@/assets/team-sarah.png";
@@ -26,19 +26,23 @@ interface TeamMember {
 }
 
 const leadership: TeamMember[] = [
-  { name: "Zahida Fizza Kabir", role: "Chairperson", years: "30+", expertise: ["Social Entrepreneurship & Development Leadership", "Healthcare & Women's Empowerment", "Mental Health & Care Economy"], photo: teamZahida, linkedin: "https://www.linkedin.com/in/zahida-fizza-kabir-02456b8b/" },
+  { name: "Shehzad Munim", role: "Chairperson", years: "", expertise: [], photo: "" },
   { name: "Muhymin Chowdhury", role: "Managing Director", years: "18+", expertise: ["Strategic Partnerships & Institutional Growth", "Startup & Venture Growth Financing", "Impact Fund Management", "Blended Finance Structuring"], photo: teamMuhymin, linkedin: "https://www.linkedin.com/in/muhymin-chowdhury/" },
   { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: ["Growth Strategy & Business Expansion", "Venture Development & Portfolio Management", "Digital Transformation & AI for Business"], photo: teamAk, linkedin: "https://www.linkedin.com/in/faizan-salam-ak/" },
-  { name: "Sarah Iqbal", role: "Head — Impact Partners", years: "10+", expertise: ["Impact Investments & Fund Management", "Early-Stage Deal Structuring", "Thematic & Donor-Funded Services"], photo: teamSarah, linkedin: "https://www.linkedin.com/in/sarah-iqbal-5962b641/" },
+  { name: "Sarah Iqbal", role: "Portfolio Manager", years: "10+", expertise: ["Impact Investments & Fund Management", "Early-Stage Deal Structuring", "Thematic & Donor-Funded Services"], photo: teamSarah, linkedin: "https://www.linkedin.com/in/sarah-iqbal-5962b641/" },
   { name: "Hridoy Islam", role: "Portfolio Manager", years: "10+", expertise: ["Fund Mobilization & Capital Raising", "Impact-Driven Finance", "Alternative Investment Management"], photo: teamHridoy, linkedin: "https://www.linkedin.com/in/hridoyislam/" },
 ];
 
 const coreTeam: TeamMember[] = [
-  { name: "M. Samiul Haque", role: "Head — Research", years: "10+", expertise: ["SME Investment Structuring", "Market-Based Solutions Design", "Policy Analysis"], photo: teamSamiul, linkedin: "https://www.linkedin.com/in/m-samiul-haque/" },
+  { name: "M. Samiul Haque", role: "Head — Advisory and Research", years: "10+", expertise: ["SME Investment Structuring", "Market-Based Solutions Design", "Policy Analysis"], photo: teamSamiul, linkedin: "https://www.linkedin.com/in/m-samiul-haque/" },
   { name: "Saddam Khan Sumit", role: "Sr. Investment Associate", years: "10+", expertise: ["Deal Sourcing & Pipeline Development", "Financial Valuation", "Investment Analysis"], photo: teamSaddam, linkedin: "https://www.linkedin.com/in/sksumit/" },
   { name: "Lamia Hafiz", role: "Accelerator Manager", years: "12+", expertise: ["Program Design & Delivery", "Portfolio & Founder Support", "Innovation Fund Management"], photo: teamLamia, linkedin: "https://www.linkedin.com/in/lamia-hafiz-4a3a303b9/" },
   { name: "Kashfia Mahmud", role: "Gender Lens Strategist", years: "15+", expertise: ["Gender Equality & Social Inclusion", "Microfinance & Financial Inclusion", "Fintech & Alternative Credit Models"], photo: teamKashfia, linkedin: "https://www.linkedin.com/in/kashfiamahmud-mfin/" },
   { name: "Ahmed Jawad Yusuf", role: "Lead — Ecosystem Engagement", years: "12+", expertise: ["Fundraising & Fund Management", "Angel Investments & VC", "Impact Measurement"], photo: teamJawad, linkedin: "https://www.linkedin.com/in/ahmed-jyusuf/" },
+  { name: "Meraj Ahmed", role: "", years: "", expertise: [], photo: "" },
+  { name: "Mariya Brishti", role: "", years: "", expertise: [], photo: "" },
+  { name: "Salwa Tasnim Silma", role: "", years: "", expertise: [], photo: "" },
+  { name: "Tasfia Ahmed", role: "", years: "", expertise: [], photo: "" },
 ];
 
 const MemberCard = ({ member, index }: { member: TeamMember; index: number }) => {
@@ -51,11 +55,19 @@ const MemberCard = ({ member, index }: { member: TeamMember; index: number }) =>
         onClick={() => member.linkedin && setShowLinkedin((v) => !v)}
       >
         <div className="relative w-20 h-20 sm:w-full sm:aspect-[3/4] sm:h-auto rounded-xl overflow-hidden bg-accent/10 flex-shrink-0">
-          <AnimatedImage
-            src={member.photo}
-            alt={member.name}
-            className="absolute inset-0 w-full h-full object-cover object-top bg-teal-50"
-          />
+          {member.photo ? (
+            <AnimatedImage
+              src={member.photo}
+              alt={member.name}
+              className="absolute inset-0 w-full h-full object-cover object-top bg-teal-50"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center bg-accent/10">
+              <span className="text-accent/60 text-2xl sm:text-4xl font-light" style={{ fontFamily: "var(--font-display)" }}>
+                {member.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+              </span>
+            </div>
+          )}
         </div>
         <div className="flex flex-col justify-center sm:space-y-1 min-w-0">
           <h3 className="text-foreground text-sm sm:text-base font-medium" style={{ fontFamily: "var(--font-body)" }}>{member.name}</h3>

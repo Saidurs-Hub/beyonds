@@ -17,6 +17,17 @@ const Contact = () => (
     <div className="space-y-24">
       <ScrollReveal>
         <section className="space-y-8">
+          <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>General Enquiries</h2>
+          <a href="mailto:reach@beyonds.ventures" className="border border-border/20 rounded-xl p-8 md:p-10 flex items-center gap-5 max-w-lg group hover:border-border/40 transition-colors">
+            <Mail className="w-5 h-5 text-accent shrink-0" />
+            <span className="text-foreground/70 text-sm flex-1" style={{ fontFamily: "var(--font-body)" }}>reach@beyonds.ventures</span>
+            <ArrowUpRight className="w-4 h-4 text-foreground/30 group-hover:text-foreground/70 transition-colors" />
+          </a>
+        </section>
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <section className="space-y-8">
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Get in Touch</h2>
           <div className="grid md:grid-cols-3 gap-px bg-border/20 rounded-xl overflow-hidden">
             {contacts.map((c) => (
