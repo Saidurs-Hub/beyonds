@@ -34,11 +34,15 @@ const leadership: TeamMember[] = [
 ];
 
 const coreTeam: TeamMember[] = [
-  { name: "M. Samiul Haque", role: "Head — Research", years: "10+", expertise: ["SME Investment Structuring", "Market-Based Solutions Design", "Policy Analysis"], photo: teamSamiul, linkedin: "https://www.linkedin.com/in/m-samiul-haque/" },
+  { name: "M. Samiul Haque", role: "Head — Advisory and Research", years: "10+", expertise: ["SME Investment Structuring", "Market-Based Solutions Design", "Policy Analysis"], photo: teamSamiul, linkedin: "https://www.linkedin.com/in/m-samiul-haque/" },
   { name: "Saddam Khan Sumit", role: "Sr. Investment Associate", years: "10+", expertise: ["Deal Sourcing & Pipeline Development", "Financial Valuation", "Investment Analysis"], photo: teamSaddam, linkedin: "https://www.linkedin.com/in/sksumit/" },
   { name: "Lamia Hafiz", role: "Accelerator Manager", years: "12+", expertise: ["Program Design & Delivery", "Portfolio & Founder Support", "Innovation Fund Management"], photo: teamLamia, linkedin: "https://www.linkedin.com/in/lamia-hafiz-4a3a303b9/" },
   { name: "Kashfia Mahmud", role: "Gender Lens Strategist", years: "15+", expertise: ["Gender Equality & Social Inclusion", "Microfinance & Financial Inclusion", "Fintech & Alternative Credit Models"], photo: teamKashfia, linkedin: "https://www.linkedin.com/in/kashfiamahmud-mfin/" },
   { name: "Ahmed Jawad Yusuf", role: "Lead — Ecosystem Engagement", years: "12+", expertise: ["Fundraising & Fund Management", "Angel Investments & VC", "Impact Measurement"], photo: teamJawad, linkedin: "https://www.linkedin.com/in/ahmed-jyusuf/" },
+  { name: "Meraj Ahmed", role: "", years: "", expertise: [], photo: "" },
+  { name: "Mariya Brishti", role: "", years: "", expertise: [], photo: "" },
+  { name: "Salwa Tasnim Silma", role: "", years: "", expertise: [], photo: "" },
+  { name: "Tasfia Ahmed", role: "", years: "", expertise: [], photo: "" },
 ];
 
 const MemberCard = ({ member, index }: { member: TeamMember; index: number }) => {
