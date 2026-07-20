@@ -46,13 +46,13 @@ const Portfolio = () => (
         <section className="space-y-8">
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Existing Investments</h2>
           <div className="border border-border/20 rounded-xl overflow-hidden">
-            <div className="grid grid-cols-3 gap-4 px-6 md:px-8 py-4 bg-card/30 border-b border-border/20">
-              {["Company", "Sector", "Instrument"].map((h) => (
+            <div className="grid grid-cols-2 gap-4 px-6 md:px-8 py-4 bg-card/30 border-b border-border/20">
+              {["Company", "Sector"].map((h) => (
                 <span key={h} className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{h}</span>
               ))}
             </div>
             {investments.map((inv, i) => (
-              <div key={inv.company} className={`grid grid-cols-3 gap-4 px-6 md:px-8 py-5 items-center ${i < investments.length - 1 ? "border-b border-border/10" : ""}`}>
+              <div key={inv.company} className={`grid grid-cols-2 gap-4 px-6 md:px-8 py-5 items-center ${i < investments.length - 1 ? "border-b border-border/10" : ""}`}>
                 <span className="text-foreground text-sm flex items-center gap-3" style={{ fontFamily: "var(--font-body)" }}>
                   {inv.logo ? (
                     <img src={inv.logo} alt={inv.company} className="w-10 h-10 object-contain rounded flex-shrink-0" />
@@ -62,7 +62,6 @@ const Portfolio = () => (
                   {inv.company}
                 </span>
                 <span className="text-foreground/50 text-sm flex items-center" style={{ fontFamily: "var(--font-body)" }}>{inv.sector}</span>
-                <span className="text-foreground/50 text-sm flex items-center" style={{ fontFamily: "var(--font-body)" }}>{inv.type}</span>
               </div>
             ))}
           </div>
