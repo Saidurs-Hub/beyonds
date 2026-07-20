@@ -4,13 +4,15 @@ import portfolioHero from "@/assets/cholpori-hero.jpg";
 import relaxyLogo from "@/assets/relaxy-logo.png";
 import shikhoLogo from "@/assets/shikho-logo.png";
 import cholporiLogo from "@/assets/cholpori-logo.png";
+import shomvobLogo from "@/assets/shomvob-logo.png.asset.json";
+import brltLogo from "@/assets/brlt-logo.png";
 
 const investments = [
-  { company: "Relaxy", sector: "Healthcare", type: "Equity", logo: relaxyLogo },
-  { company: "Shikho", sector: "EdTech", type: "Equity", logo: shikhoLogo },
-  { company: "Cholpori", sector: "EdTech", type: "Equity", logo: cholporiLogo },
-  { company: "Shomvob", sector: "—", type: "Debt", logo: null },
-  { company: "BRLT", sector: "—", type: "Debt", logo: null },
+  { company: "Relaxy", sector: "Healthcare", logo: relaxyLogo },
+  { company: "Shikho", sector: "EdTech", logo: shikhoLogo },
+  { company: "Cholpori", sector: "EdTech", logo: cholporiLogo },
+  { company: "Shomvob", sector: "—", logo: shomvobLogo.url },
+  { company: "BRLT", sector: "—", logo: brltLogo },
 ];
 
 const sectors = ["Technology", "Food & Agri", "Energy", "Textile & Apparel", "Climate & Environment", "Healthcare"];
@@ -44,13 +46,13 @@ const Portfolio = () => (
         <section className="space-y-8">
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Existing Investments</h2>
           <div className="border border-border/20 rounded-xl overflow-hidden">
-            <div className="grid grid-cols-3 gap-4 px-6 md:px-8 py-4 bg-card/30 border-b border-border/20">
-              {["Company", "Sector", "Instrument"].map((h) => (
+            <div className="grid grid-cols-2 gap-4 px-6 md:px-8 py-4 bg-card/30 border-b border-border/20">
+              {["Company", "Sector"].map((h) => (
                 <span key={h} className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{h}</span>
               ))}
             </div>
             {investments.map((inv, i) => (
-              <div key={inv.company} className={`grid grid-cols-3 gap-4 px-6 md:px-8 py-5 items-center ${i < investments.length - 1 ? "border-b border-border/10" : ""}`}>
+              <div key={inv.company} className={`grid grid-cols-2 gap-4 px-6 md:px-8 py-5 items-center ${i < investments.length - 1 ? "border-b border-border/10" : ""}`}>
                 <span className="text-foreground text-sm flex items-center gap-3" style={{ fontFamily: "var(--font-body)" }}>
                   {inv.logo ? (
                     <img src={inv.logo} alt={inv.company} className="w-10 h-10 object-contain rounded flex-shrink-0" />
@@ -60,7 +62,6 @@ const Portfolio = () => (
                   {inv.company}
                 </span>
                 <span className="text-foreground/50 text-sm flex items-center" style={{ fontFamily: "var(--font-body)" }}>{inv.sector}</span>
-                <span className="text-foreground/50 text-sm flex items-center" style={{ fontFamily: "var(--font-body)" }}>{inv.type}</span>
               </div>
             ))}
           </div>
