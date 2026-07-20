@@ -4,13 +4,15 @@ import portfolioHero from "@/assets/cholpori-hero.jpg";
 import relaxyLogo from "@/assets/relaxy-logo.png";
 import shikhoLogo from "@/assets/shikho-logo.png";
 import cholporiLogo from "@/assets/cholpori-logo.png";
+import shomvobLogo from "@/assets/shomvob-logo.png.asset.json";
+import brltLogo from "@/assets/brlt-logo.png";
 
 const investments = [
-  { company: "Relaxy", sector: "Healthcare", type: "Equity", logo: relaxyLogo },
-  { company: "Shikho", sector: "EdTech", type: "Equity", logo: shikhoLogo },
-  { company: "Cholpori", sector: "EdTech", type: "Equity", logo: cholporiLogo },
-  { company: "Shomvob", sector: "—", type: "Debt", logo: null },
-  { company: "BRLT", sector: "—", type: "Debt", logo: null },
+  { company: "Relaxy", sector: "Healthcare", logo: relaxyLogo },
+  { company: "Shikho", sector: "EdTech", logo: shikhoLogo },
+  { company: "Cholpori", sector: "EdTech", logo: cholporiLogo },
+  { company: "Shomvob", sector: "—", logo: shomvobLogo.url },
+  { company: "BRLT", sector: "—", logo: brltLogo },
 ];
 
 const sectors = ["Technology", "Food & Agri", "Energy", "Textile & Apparel", "Climate & Environment", "Healthcare"];
