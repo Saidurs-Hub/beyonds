@@ -44,20 +44,25 @@ const coreTeam: TeamMember[] = [
   { name: "Tasfia Ahmed", role: "", years: "", expertise: [], photo: "" },
 ];
 
-const MemberCard = ({ member, index }: { member: TeamMember; index: number }) => {
-  const [showLinkedin, setShowLinkedin] = useState(false);
+const MemberCard = ({ member }: { member: TeamMember }) => {
+  const [open, setOpen] = useState(false);
+  const hasDetails = member.expertise.length > 0 || !!member.linkedin;
 
   return (
-    <ScrollReveal delay={index * 0.08}>
+    <ScrollReveal>
       <div
-        className={`group flex flex-row sm:flex-col gap-4 sm:gap-5 relative ${member.linkedin ? "cursor-pointer" : ""}`}
-        onClick={() => member.linkedin && setShowLinkedin((v) => !v)}
+        className={`group flex flex-row sm:flex-col gap-4 sm:gap-5 relative ${hasDetails ? "cursor-pointer" : ""}`}
+        onClick={() => hasDetails && setOpen((v) => !v)}
       >
         <div className="relative w-20 h-20 sm:w-full sm:aspect-[3/4] sm:h-auto rounded-xl overflow-hidden bg-accent/10 flex-shrink-0">
           {member.photo ? (
-            <AnimatedImage
+            <img
               src={member.photo}
               alt={member.name}
+              loading="eager"
+              decoding="async"
+              // @ts-expect-error fetchpriority is valid HTML
+              fetchpriority="high"
               className="absolute inset-0 w-full h-full object-cover object-top bg-teal-50"
             />
           ) : (
@@ -67,34 +72,43 @@ const MemberCard = ({ member, index }: { member: TeamMember; index: number }) =>
               </span>
             </div>
           )}
+
+          {hasDetails && open && (
+            <div
+              className="absolute inset-0 z-10 flex flex-col rounded-xl bg-background/95 backdrop-blur-sm p-4 sm:p-5 animate-scale-in overflow-y-auto"
+              onClick={(e) => { e.stopPropagation(); }}
+            >
+              <button
+                type="button"
+                onClick={(e) => { e.stopPropagation(); setOpen(false); }}
+                className="absolute top-2 right-2 p-1 rounded-md text-foreground/60 hover:text-foreground"
+                aria-label="Close"
+              >
+                <X className="w-4 h-4" />
+              </button>
+              {member.expertise.length > 0 && (
+                <p className="text-foreground/70 text-[11px] sm:text-xs leading-relaxed pr-6" style={{ fontFamily: "var(--font-body)" }}>
+                  {member.expertise.join(" · ")}
+                </p>
+              )}
+              {member.linkedin && (
+                <button
+                  type="button"
+                  onClick={(e) => { e.stopPropagation(); openExternalLink(member.linkedin); }}
+                  className="mt-auto self-start inline-flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium text-white transition-transform hover:scale-105 active:scale-95"
+                  style={{ backgroundColor: "#0077b5", fontFamily: "var(--font-body)" }}
+                >
+                  <Linkedin className="w-3.5 h-3.5" />
+                  LinkedIn
+                </button>
+              )}
+            </div>
+          )}
         </div>
         <div className="flex flex-col justify-center sm:space-y-1 min-w-0">
           <h3 className="text-foreground text-sm sm:text-base font-medium" style={{ fontFamily: "var(--font-body)" }}>{member.name}</h3>
           <p className="text-accent text-[10px] sm:text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{member.role}</p>
-          <p className="text-foreground/40 text-[10px] sm:text-xs leading-relaxed mt-1 sm:mt-3 line-clamp-2 sm:line-clamp-none" style={{ fontFamily: "var(--font-body)" }}>
-            {member.expertise.join(" · ")}
-          </p>
         </div>
-
-        {member.linkedin && showLinkedin && (
-          <div
-            className="absolute inset-0 z-10 flex items-center justify-center rounded-xl bg-background/80 backdrop-blur-sm animate-scale-in"
-            onClick={(e) => { e.stopPropagation(); setShowLinkedin(false); }}
-          >
-            <button
-              type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                openExternalLink(member.linkedin);
-              }}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium text-white transition-transform hover:scale-105 active:scale-95"
-              style={{ backgroundColor: "#0077b5", fontFamily: "var(--font-body)" }}
-            >
-              <Linkedin className="w-4 h-4" />
-              LinkedIn Profile
-            </button>
-          </div>
-        )}
       </div>
     </ScrollReveal>
   );
