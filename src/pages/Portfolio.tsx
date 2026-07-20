@@ -1,5 +1,6 @@
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
+import { openExternalLink } from "@/lib/openExternalLink";
 import portfolioHero from "@/assets/cholpori-hero.jpg";
 import relaxyLogo from "@/assets/relaxy-logo.png";
 import shikhoLogo from "@/assets/shikho-logo.png";
@@ -8,11 +9,11 @@ import shomvobLogo from "@/assets/shomvob-logo.png.asset.json";
 import brltLogo from "@/assets/brlt-logo.png";
 
 const investments = [
-  { company: "Relaxy", sector: "Healthcare", logo: relaxyLogo },
-  { company: "Shikho", sector: "EdTech", logo: shikhoLogo },
-  { company: "Cholpori", sector: "EdTech", logo: cholporiLogo },
-  { company: "Shomvob", sector: "—", logo: shomvobLogo.url },
-  { company: "BRLT", sector: "—", logo: brltLogo },
+  { company: "Relaxy", sector: "Healthcare", logo: relaxyLogo, website: "https://relaxy.com.bd/" },
+  { company: "Shikho", sector: "EdTech", logo: shikhoLogo, website: "https://shikho.com/" },
+  { company: "Cholpori", sector: "EdTech", logo: cholporiLogo, website: "https://www.cholpori.com/" },
+  { company: "Shomvob", sector: "—", logo: shomvobLogo.url, website: "https://shomvob.com/" },
+  { company: "BRLT", sector: "—", logo: brltLogo, website: "https://brtlcenter.com/" },
 ];
 
 const sectors = ["Technology", "Food & Agri", "Energy", "Textile & Apparel", "Climate & Environment", "Healthcare"];
@@ -55,7 +56,14 @@ const Portfolio = () => (
               <div key={inv.company} className={`grid grid-cols-2 gap-4 px-6 md:px-8 py-5 items-center ${i < investments.length - 1 ? "border-b border-border/10" : ""}`}>
                 <span className="text-foreground text-sm flex items-center gap-3" style={{ fontFamily: "var(--font-body)" }}>
                   {inv.logo ? (
-                    <img src={inv.logo} alt={inv.company} className="w-10 h-10 object-contain rounded flex-shrink-0" />
+                    <button
+                      type="button"
+                      onClick={() => openExternalLink(inv.website)}
+                      className="w-10 h-10 flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                      aria-label={`Visit ${inv.company} website`}
+                    >
+                      <img src={inv.logo} alt={inv.company} className="w-full h-full object-contain rounded" />
+                    </button>
                   ) : (
                     <div className="w-10 h-10 rounded bg-accent/10 flex-shrink-0" />
                   )}
