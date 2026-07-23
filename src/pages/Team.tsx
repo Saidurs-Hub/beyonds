@@ -60,10 +60,10 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
         className={`group flex flex-row sm:flex-col gap-4 sm:gap-5 relative ${hasDetails ? "cursor-pointer" : ""}`}
         onClick={() => hasDetails && setOpen((v) => !v)}
       >
-        {/* Square light-blue box; photo sits inside, framed like a headshot */}
-        <div className="relative w-20 sm:w-full flex-shrink-0">
+        {/* Wrapper gives room for the head to overflow above the blue box */}
+        <div className="relative w-20 sm:w-full flex-shrink-0 pt-4 sm:pt-10">
           <div
-            className="relative w-full h-20 sm:h-auto sm:aspect-square rounded-xl overflow-hidden"
+            className="relative w-full h-20 sm:h-auto sm:aspect-square rounded-xl overflow-visible"
             style={{ backgroundColor: BOX_BLUE }}
           >
             {member.photo ? (
@@ -74,7 +74,7 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
                 decoding="async"
                 // @ts-expect-error fetchpriority is valid HTML
                 fetchpriority="high"
-                className="absolute inset-0 w-full h-full object-cover object-top"
+                className="absolute left-0 right-0 bottom-0 w-full h-[118%] object-contain object-bottom pointer-events-none"
                 style={{ filter: "grayscale(1) contrast(1.05)" }}
               />
             ) : (
