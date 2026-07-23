@@ -5,14 +5,14 @@ import { Linkedin, X } from "lucide-react";
 import { openExternalLink } from "@/lib/openExternalLink";
 import teamHero from "@/assets/team-hero.jpeg";
 
-import teamMuhymin from "@/assets/team-muhymin.png";
-import teamAk from "@/assets/team-ak.png";
-import teamSarah from "@/assets/team-sarah.png";
-import teamHridoy from "@/assets/team-hridoy.png";
-import teamSamiul from "@/assets/team-samiul.png";
-import teamSaddam from "@/assets/team-saddam.png";
-import teamKashfia from "@/assets/team-kashfia.png";
-import teamLamiaNew from "@/assets/team-lamia-new.jpeg.asset.json";
+import teamHridoyOld from "@/assets/team-hridoy.png";
+import teamMuhymin from "@/assets/team-muhymin.jpeg.asset.json";
+import teamAk from "@/assets/team-aksalam.jpeg.asset.json";
+import teamSarah from "@/assets/team-sarah.jpeg.asset.json";
+import teamSamiul from "@/assets/team-samiul.jpeg.asset.json";
+import teamSaddam from "@/assets/team-saddam.jpeg.asset.json";
+import teamKashfia from "@/assets/team-kashfia.jpeg.asset.json";
+import teamLamia from "@/assets/team-lamia.jpeg.asset.json";
 import teamJawadNew from "@/assets/team-jawad-new.jpeg.asset.json";
 import teamMariya from "@/assets/team-mariya.jpeg.asset.json";
 import teamTasfia from "@/assets/team-tasfia.jpeg.asset.json";
@@ -30,17 +30,17 @@ interface TeamMember {
 
 const leadership: TeamMember[] = [
   { name: "Shehzad Munim", role: "Chairperson", years: "", expertise: [], photo: "" },
-  { name: "Muhymin Chowdhury", role: "Managing Director", years: "18+", expertise: ["Strategic Partnerships & Institutional Growth", "Startup & Venture Growth Financing", "Impact Fund Management", "Blended Finance Structuring"], photo: teamMuhymin, linkedin: "https://www.linkedin.com/in/muhymin-chowdhury/" },
-  { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: ["Growth Strategy & Business Expansion", "Venture Development & Portfolio Management", "Digital Transformation & AI for Business"], photo: teamAk, linkedin: "https://www.linkedin.com/in/faizan-salam-ak/" },
-  { name: "Sarah Iqbal", role: "Portfolio Manager", years: "10+", expertise: ["Impact Investments & Fund Management", "Early-Stage Deal Structuring", "Thematic & Donor-Funded Services"], photo: teamSarah, linkedin: "https://www.linkedin.com/in/sarah-iqbal-5962b641/" },
-  { name: "Hridoy Islam", role: "Portfolio Manager", years: "10+", expertise: ["Fund Mobilization & Capital Raising", "Impact-Driven Finance", "Alternative Investment Management"], photo: teamHridoy, linkedin: "https://www.linkedin.com/in/hridoyislam/" },
+  { name: "Muhymin Chowdhury", role: "Managing Director", years: "18+", expertise: ["Strategic Partnerships & Institutional Growth", "Startup & Venture Growth Financing", "Impact Fund Management", "Blended Finance Structuring"], photo: teamMuhymin.url, linkedin: "https://www.linkedin.com/in/muhymin-chowdhury/" },
+  { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: ["Growth Strategy & Business Expansion", "Venture Development & Portfolio Management", "Digital Transformation & AI for Business"], photo: teamAk.url, linkedin: "https://www.linkedin.com/in/faizan-salam-ak/" },
+  { name: "Sarah Iqbal", role: "Portfolio Manager", years: "10+", expertise: ["Impact Investments & Fund Management", "Early-Stage Deal Structuring", "Thematic & Donor-Funded Services"], photo: teamSarah.url, linkedin: "https://www.linkedin.com/in/sarah-iqbal-5962b641/" },
+  { name: "Hridoy Islam", role: "Portfolio Manager", years: "10+", expertise: ["Fund Mobilization & Capital Raising", "Impact-Driven Finance", "Alternative Investment Management"], photo: teamHridoyOld, linkedin: "https://www.linkedin.com/in/hridoyislam/" },
 ];
 
 const coreTeam: TeamMember[] = [
-  { name: "M. Samiul Haque", role: "Head — Advisory and Research", years: "10+", expertise: ["SME Investment Structuring", "Market-Based Solutions Design", "Policy Analysis"], photo: teamSamiul, linkedin: "https://www.linkedin.com/in/m-samiul-haque/" },
-  { name: "Saddam Khan Sumit", role: "Sr. Investment Associate", years: "10+", expertise: ["Deal Sourcing & Pipeline Development", "Financial Valuation", "Investment Analysis"], photo: teamSaddam, linkedin: "https://www.linkedin.com/in/sksumit/" },
-  { name: "Lamia Hafiz", role: "Accelerator Manager", years: "12+", expertise: ["Program Design & Delivery", "Portfolio & Founder Support", "Innovation Fund Management"], photo: teamLamiaNew.url, linkedin: "https://www.linkedin.com/in/lamia-hafiz-4a3a303b9/" },
-  { name: "Kashfia Mahmud", role: "Gender Lens Strategist", years: "15+", expertise: ["Gender Equality & Social Inclusion", "Microfinance & Financial Inclusion", "Fintech & Alternative Credit Models"], photo: teamKashfia, linkedin: "https://www.linkedin.com/in/kashfiamahmud-mfin/" },
+  { name: "M. Samiul Haque", role: "Head — Advisory and Research", years: "10+", expertise: ["SME Investment Structuring", "Market-Based Solutions Design", "Policy Analysis"], photo: teamSamiul.url, linkedin: "https://www.linkedin.com/in/m-samiul-haque/" },
+  { name: "Saddam Khan Sumit", role: "Sr. Investment Associate", years: "10+", expertise: ["Deal Sourcing & Pipeline Development", "Financial Valuation", "Investment Analysis"], photo: teamSaddam.url, linkedin: "https://www.linkedin.com/in/sksumit/" },
+  { name: "Lamia Hafiz", role: "Accelerator Manager", years: "12+", expertise: ["Program Design & Delivery", "Portfolio & Founder Support", "Innovation Fund Management"], photo: teamLamia.url, linkedin: "https://www.linkedin.com/in/lamia-hafiz-4a3a303b9/" },
+  { name: "Kashfia Mahmud", role: "Gender Lens Strategist", years: "15+", expertise: ["Gender Equality & Social Inclusion", "Microfinance & Financial Inclusion", "Fintech & Alternative Credit Models"], photo: teamKashfia.url, linkedin: "https://www.linkedin.com/in/kashfiamahmud-mfin/" },
   { name: "Ahmed Jawad Yusuf", role: "Lead — Ecosystem Engagement", years: "12+", expertise: ["Fundraising & Fund Management", "Angel Investments & VC", "Impact Measurement"], photo: teamJawadNew.url, linkedin: "https://www.linkedin.com/in/ahmed-jyusuf/" },
   { name: "Meraj Ahmed", role: "", years: "", expertise: [], photo: teamMeraj.url },
   { name: "Mariya Brishti", role: "", years: "", expertise: [], photo: teamMariya.url },
