@@ -61,7 +61,7 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
         onClick={() => hasDetails && setOpen((v) => !v)}
       >
         {/* Wrapper gives room for the head to overflow above the blue box */}
-        <div className="relative w-20 sm:w-full flex-shrink-0 pt-2 sm:pt-4">
+        <div className="relative w-20 sm:w-full flex-shrink-0 pt-3 sm:pt-6">
           <div
             className="relative w-full h-20 sm:h-auto sm:aspect-square rounded-2xl overflow-visible"
             style={{ backgroundColor: BOX_BLUE }}
@@ -74,9 +74,10 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
                 decoding="async"
                 // @ts-expect-error fetchpriority is valid HTML
                 fetchpriority="high"
-                className="absolute left-0 right-0 bottom-0 w-full h-[45%] object-contain object-bottom pointer-events-none"
-                style={{ filter: "grayscale(1) contrast(1.05)" }}
+                className="absolute left-0 right-0 w-full object-cover object-top pointer-events-none rounded-b-2xl"
+                style={{ filter: "grayscale(1) contrast(1.05)", top: "-12%", height: "112%" }}
               />
+
 
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
