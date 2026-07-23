@@ -60,10 +60,10 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
         className={`group flex flex-row sm:flex-col gap-4 sm:gap-5 relative ${hasDetails ? "cursor-pointer" : ""}`}
         onClick={() => hasDetails && setOpen((v) => !v)}
       >
-        {/* Outer wrapper allows head to overflow above the blue box */}
-        <div className="relative w-20 sm:w-full flex-shrink-0 pt-4 sm:pt-8">
+        {/* Square light-blue box; photo sits inside, framed like a headshot */}
+        <div className="relative w-20 sm:w-full flex-shrink-0">
           <div
-            className="relative w-full h-20 sm:h-auto sm:aspect-[3/4] rounded-xl overflow-visible"
+            className="relative w-full h-20 sm:h-auto sm:aspect-square rounded-xl overflow-hidden"
             style={{ backgroundColor: BOX_BLUE }}
           >
             {member.photo ? (
@@ -74,11 +74,11 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
                 decoding="async"
                 // @ts-expect-error fetchpriority is valid HTML
                 fetchpriority="high"
-                className="absolute left-0 right-0 bottom-0 w-full h-[115%] object-contain object-bottom"
-                style={{ filter: "grayscale(1)" }}
+                className="absolute inset-0 w-full h-full object-cover object-top"
+                style={{ filter: "grayscale(1) contrast(1.05)" }}
               />
             ) : (
-              <div className="absolute inset-0 flex items-center justify-center rounded-xl">
+              <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-foreground/50 text-2xl sm:text-4xl font-light" style={{ fontFamily: "var(--font-display)" }}>
                   {member.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
                 </span>
