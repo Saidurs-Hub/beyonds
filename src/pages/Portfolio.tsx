@@ -13,7 +13,7 @@ const investments = [
   { company: "Shikho", sector: "EdTech", logo: shikhoLogo, website: "https://shikho.com/" },
   { company: "Cholpori", sector: "EdTech", logo: cholporiLogo, website: "https://www.cholpori.com/" },
   { company: "Shomvob", sector: "—", logo: shomvobLogo.url, website: "https://shomvob.com/" },
-  { company: "BRLT", sector: "—", logo: brltLogo, website: "https://brtlcenter.com/" },
+  { company: "BRLT", sector: "—", logo: brltLogo.url, website: "https://brtlcenter.com/" },
 ];
 
 const sectors = ["Technology", "Food & Agri", "Energy", "Textile & Apparel", "Climate & Environment", "Healthcare"];
