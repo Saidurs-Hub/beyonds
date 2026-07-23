@@ -5,19 +5,20 @@ import { Linkedin, X } from "lucide-react";
 import { openExternalLink } from "@/lib/openExternalLink";
 import teamHero from "@/assets/team-hero.jpeg";
 
-import teamHridoyOld from "@/assets/team-hridoy.png";
-import teamMuhymin from "@/assets/team-muhymin.jpeg.asset.json";
-import teamAk from "@/assets/team-aksalam.jpeg.asset.json";
-import teamSarah from "@/assets/team-sarah.jpeg.asset.json";
-import teamSamiul from "@/assets/team-samiul.jpeg.asset.json";
-import teamSaddam from "@/assets/team-saddam.jpeg.asset.json";
-import teamKashfia from "@/assets/team-kashfia.jpeg.asset.json";
-import teamLamia from "@/assets/team-lamia.jpeg.asset.json";
-import teamJawadNew from "@/assets/team-jawad-new.jpeg.asset.json";
-import teamMariya from "@/assets/team-mariya.jpeg.asset.json";
-import teamTasfia from "@/assets/team-tasfia.jpeg.asset.json";
-import teamSalwa from "@/assets/team-salwa.jpeg.asset.json";
-import teamMeraj from "@/assets/team-meraj.jpeg.asset.json";
+import teamMuhymin from "@/assets/team-styled-muhymin.png";
+import teamAk from "@/assets/team-styled-aksalam.png";
+import teamSarah from "@/assets/team-styled-sarah.png";
+import teamSamiul from "@/assets/team-styled-samiul.png";
+import teamSaddam from "@/assets/team-styled-saddam.png";
+import teamKashfia from "@/assets/team-styled-kashfia.png";
+import teamLamia from "@/assets/team-styled-lamia.png";
+import teamJawadNew from "@/assets/team-styled-jawad.png";
+import teamMariya from "@/assets/team-styled-mariya.png";
+import teamTasfia from "@/assets/team-styled-tasfia.png";
+import teamSalwa from "@/assets/team-styled-salwa.png";
+import teamMeraj from "@/assets/team-styled-meraj.png";
+import teamHridoyOld from "@/assets/team-styled-hridoy.png";
+
 
 interface TeamMember {
   name: string;
