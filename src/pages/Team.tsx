@@ -74,7 +74,7 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
                 decoding="async"
                 // @ts-expect-error fetchpriority is valid HTML
                 fetchpriority="high"
-                className="absolute left-0 right-0 bottom-0 w-full h-[107%] object-contain object-bottom pointer-events-none"
+                className="absolute left-0 right-0 bottom-0 w-full h-[45%] object-contain object-bottom pointer-events-none"
                 style={{ filter: "grayscale(1) contrast(1.05)" }}
               />
 
