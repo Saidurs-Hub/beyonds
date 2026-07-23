@@ -5,19 +5,20 @@ import { Linkedin, X } from "lucide-react";
 import { openExternalLink } from "@/lib/openExternalLink";
 import teamHero from "@/assets/team-hero.jpeg";
 
-import teamHridoyOld from "@/assets/team-hridoy.png";
-import teamMuhymin from "@/assets/team-muhymin.jpeg.asset.json";
-import teamAk from "@/assets/team-aksalam.jpeg.asset.json";
-import teamSarah from "@/assets/team-sarah.jpeg.asset.json";
-import teamSamiul from "@/assets/team-samiul.jpeg.asset.json";
-import teamSaddam from "@/assets/team-saddam.jpeg.asset.json";
-import teamKashfia from "@/assets/team-kashfia.jpeg.asset.json";
-import teamLamia from "@/assets/team-lamia.jpeg.asset.json";
-import teamJawadNew from "@/assets/team-jawad-new.jpeg.asset.json";
-import teamMariya from "@/assets/team-mariya.jpeg.asset.json";
-import teamTasfia from "@/assets/team-tasfia.jpeg.asset.json";
-import teamSalwa from "@/assets/team-salwa.jpeg.asset.json";
-import teamMeraj from "@/assets/team-meraj.jpeg.asset.json";
+import teamMuhymin from "@/assets/team-styled-muhymin.png";
+import teamAk from "@/assets/team-styled-aksalam.png";
+import teamSarah from "@/assets/team-styled-sarah.png";
+import teamSamiul from "@/assets/team-styled-samiul.png";
+import teamSaddam from "@/assets/team-styled-saddam.png";
+import teamKashfia from "@/assets/team-styled-kashfia.png";
+import teamLamia from "@/assets/team-styled-lamia.png";
+import teamJawadNew from "@/assets/team-styled-jawad.png";
+import teamMariya from "@/assets/team-styled-mariya.png";
+import teamTasfia from "@/assets/team-styled-tasfia.png";
+import teamSalwa from "@/assets/team-styled-salwa.png";
+import teamMeraj from "@/assets/team-styled-meraj.png";
+import teamHridoyOld from "@/assets/team-styled-hridoy.png";
+
 
 interface TeamMember {
   name: string;
@@ -30,22 +31,22 @@ interface TeamMember {
 
 const leadership: TeamMember[] = [
   { name: "Shehzad Munim", role: "Chairperson", years: "", expertise: [], photo: "" },
-  { name: "Muhymin Chowdhury", role: "Managing Director", years: "18+", expertise: ["Strategic Partnerships & Institutional Growth", "Startup & Venture Growth Financing", "Impact Fund Management", "Blended Finance Structuring"], photo: teamSamiul.url, linkedin: "https://www.linkedin.com/in/muhymin-chowdhury/" },
-  { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: ["Growth Strategy & Business Expansion", "Venture Development & Portfolio Management", "Digital Transformation & AI for Business"], photo: teamAk.url, linkedin: "https://www.linkedin.com/in/faizan-salam-ak/" },
-  { name: "Sarah Iqbal", role: "Portfolio Manager", years: "10+", expertise: ["Impact Investments & Fund Management", "Early-Stage Deal Structuring", "Thematic & Donor-Funded Services"], photo: teamSarah.url, linkedin: "https://www.linkedin.com/in/sarah-iqbal-5962b641/" },
+  { name: "Muhymin Chowdhury", role: "Managing Director", years: "18+", expertise: ["Strategic Partnerships & Institutional Growth", "Startup & Venture Growth Financing", "Impact Fund Management", "Blended Finance Structuring"], photo: teamSamiul, linkedin: "https://www.linkedin.com/in/muhymin-chowdhury/" },
+  { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: ["Growth Strategy & Business Expansion", "Venture Development & Portfolio Management", "Digital Transformation & AI for Business"], photo: teamAk, linkedin: "https://www.linkedin.com/in/faizan-salam-ak/" },
+  { name: "Sarah Iqbal", role: "Portfolio Manager", years: "10+", expertise: ["Impact Investments & Fund Management", "Early-Stage Deal Structuring", "Thematic & Donor-Funded Services"], photo: teamSarah, linkedin: "https://www.linkedin.com/in/sarah-iqbal-5962b641/" },
   { name: "Hridoy Islam", role: "Portfolio Manager", years: "10+", expertise: ["Fund Mobilization & Capital Raising", "Impact-Driven Finance", "Alternative Investment Management"], photo: teamHridoyOld, linkedin: "https://www.linkedin.com/in/hridoyislam/" },
 ];
 
 const coreTeam: TeamMember[] = [
-  { name: "M. Samiul Haque", role: "Head — Advisory and Research", years: "10+", expertise: ["SME Investment Structuring", "Market-Based Solutions Design", "Policy Analysis"], photo: teamMuhymin.url, linkedin: "https://www.linkedin.com/in/m-samiul-haque/" },
-  { name: "Saddam Khan Sumit", role: "Sr. Investment Associate", years: "10+", expertise: ["Deal Sourcing & Pipeline Development", "Financial Valuation", "Investment Analysis"], photo: teamSaddam.url, linkedin: "https://www.linkedin.com/in/sksumit/" },
-  { name: "Lamia Hafiz", role: "Accelerator Manager", years: "12+", expertise: ["Program Design & Delivery", "Portfolio & Founder Support", "Innovation Fund Management"], photo: teamLamia.url, linkedin: "https://www.linkedin.com/in/lamia-hafiz-4a3a303b9/" },
-  { name: "Kashfia Mahmud", role: "Gender Lens Strategist", years: "15+", expertise: ["Gender Equality & Social Inclusion", "Microfinance & Financial Inclusion", "Fintech & Alternative Credit Models"], photo: teamKashfia.url, linkedin: "https://www.linkedin.com/in/kashfiamahmud-mfin/" },
-  { name: "Ahmed Jawad Yusuf", role: "Lead — Ecosystem Engagement", years: "12+", expertise: ["Fundraising & Fund Management", "Angel Investments & VC", "Impact Measurement"], photo: teamJawadNew.url, linkedin: "https://www.linkedin.com/in/ahmed-jyusuf/" },
-  { name: "Meraj Ahmed", role: "", years: "", expertise: [], photo: teamMeraj.url },
-  { name: "Mariya Brishti", role: "", years: "", expertise: [], photo: teamMariya.url },
-  { name: "Salwa Tasnim Silma", role: "", years: "", expertise: [], photo: teamSalwa.url },
-  { name: "Tasfia Ahmed", role: "", years: "", expertise: [], photo: teamTasfia.url },
+  { name: "M. Samiul Haque", role: "Head — Advisory and Research", years: "10+", expertise: ["SME Investment Structuring", "Market-Based Solutions Design", "Policy Analysis"], photo: teamMuhymin, linkedin: "https://www.linkedin.com/in/m-samiul-haque/" },
+  { name: "Saddam Khan Sumit", role: "Sr. Investment Associate", years: "10+", expertise: ["Deal Sourcing & Pipeline Development", "Financial Valuation", "Investment Analysis"], photo: teamSaddam, linkedin: "https://www.linkedin.com/in/sksumit/" },
+  { name: "Lamia Hafiz", role: "Accelerator Manager", years: "12+", expertise: ["Program Design & Delivery", "Portfolio & Founder Support", "Innovation Fund Management"], photo: teamLamia, linkedin: "https://www.linkedin.com/in/lamia-hafiz-4a3a303b9/" },
+  { name: "Kashfia Mahmud", role: "Gender Lens Strategist", years: "15+", expertise: ["Gender Equality & Social Inclusion", "Microfinance & Financial Inclusion", "Fintech & Alternative Credit Models"], photo: teamKashfia, linkedin: "https://www.linkedin.com/in/kashfiamahmud-mfin/" },
+  { name: "Ahmed Jawad Yusuf", role: "Lead — Ecosystem Engagement", years: "12+", expertise: ["Fundraising & Fund Management", "Angel Investments & VC", "Impact Measurement"], photo: teamJawadNew, linkedin: "https://www.linkedin.com/in/ahmed-jyusuf/" },
+  { name: "Meraj Ahmed", role: "", years: "", expertise: [], photo: teamMeraj },
+  { name: "Mariya Brishti", role: "", years: "", expertise: [], photo: teamMariya },
+  { name: "Salwa Tasnim Silma", role: "", years: "", expertise: [], photo: teamSalwa },
+  { name: "Tasfia Ahmed", role: "", years: "", expertise: [], photo: teamTasfia },
 ];
 
 const BOX_BLUE = "#C6DEF1";
@@ -60,10 +61,9 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
         className={`group flex flex-row sm:flex-col gap-4 sm:gap-5 relative ${hasDetails ? "cursor-pointer" : ""}`}
         onClick={() => hasDetails && setOpen((v) => !v)}
       >
-        {/* Wrapper gives room for the head to overflow above the blue box */}
-        <div className="relative w-20 sm:w-full flex-shrink-0 pt-3 sm:pt-6">
+        <div className="relative w-20 sm:w-full flex-shrink-0">
           <div
-            className="relative w-full h-20 sm:h-auto sm:aspect-square rounded-2xl overflow-visible"
+            className="relative w-full h-20 sm:h-auto sm:aspect-square rounded-2xl overflow-hidden"
             style={{ backgroundColor: BOX_BLUE }}
           >
             {member.photo ? (
@@ -74,11 +74,8 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
                 decoding="async"
                 // @ts-expect-error fetchpriority is valid HTML
                 fetchpriority="high"
-                className="absolute left-0 right-0 w-full object-cover object-top pointer-events-none rounded-b-2xl"
-                style={{ filter: "grayscale(1) contrast(1.05)", top: "-12%", height: "112%" }}
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
               />
-
-
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-foreground/50 text-2xl sm:text-4xl font-light" style={{ fontFamily: "var(--font-display)" }}>
@@ -120,6 +117,7 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
             )}
           </div>
         </div>
+
         <div className="flex flex-col justify-center sm:space-y-1 min-w-0">
           <h3 className="text-foreground text-sm sm:text-base font-medium" style={{ fontFamily: "var(--font-body)" }}>{member.name}</h3>
           <p className="text-accent text-[10px] sm:text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{member.role}</p>
