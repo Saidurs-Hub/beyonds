@@ -1,18 +1,29 @@
-## Team page: click-to-reveal bio + faster image loads
+## Team photos + portfolio logos update
 
-### Behavior change
-- Hide each member's expertise/bio text by default. Only name + role remain visible under the photo.
-- Clicking the photo toggles an overlay on the image showing that member's bio (the expertise list, joined). Click again (or click outside/X) to close.
-- Keep the existing LinkedIn behavior but move it into the same overlay: overlay shows bio text + a "LinkedIn Profile" button when a linkedin URL exists. Members without a linkedin still get the click-to-reveal bio.
-- Members with no expertise entries (Shehzad Munim, Meraj Ahmed, Mariya Brishti, Salwa Tasnim Silma, Tasfia Ahmed) simply won't show bio text in the overlay — only name/role/LinkedIn if present.
+### Photo mapping (by user's stated order MB, TA, SS, MA, AY, then Lamia)
+- `image.jpeg` → Mariya Brishti
+- `image-2.jpeg` → Tasfia Ahmed
+- `image-3.jpeg` → Salwa Tasnim Silma
+- `image-4.jpeg` → Meraj Ahmed
+- `image-5.jpeg` → Ahmed Jawad Yusuf (replaces current photo)
+- `image-8.jpeg` → Lamia Hafiz (replaces current photo)
 
-### Faster image loading
-- Add `loading="eager"` + `fetchpriority="high"` to team photos (they're all above/near the fold on the Team page) and `decoding="async"`.
-- Remove the `initial opacity:0 scale:1.05` + 0.8s fade-in on `AnimatedImage` for team photos so they appear immediately instead of waiting for the scroll-reveal transition. Simplest path: render a plain `<img>` for team photos on the Team page rather than `AnimatedImage`, keeping `AnimatedImage` untouched for other pages.
-- Drop the staggered `ScrollReveal delay={index * 0.08}` on member cards so later cards don't wait ~0.7s before their images start animating in. Use `delay={0}` for all.
+### Portfolio logos
+- Replace generated BRTL logo with uploaded `image-6.jpeg` (real BRTL logo).
+- Replace current Shomvob logo with uploaded `image-7.jpeg`.
+
+### New team photo style (applied to every team member card)
+- Card background box: solid powder blue `#C6DEF1`.
+- Photo rendered in black & white (CSS `filter: grayscale(1)`).
+- Head extends slightly above the top edge of the blue box (photo sits with `object-position: bottom` and its top ~10-15% overflows above the box using a negative top margin inside a container with `overflow: visible`).
+- Applied uniformly to leadership + core team cards so styling is consistent.
+- Preserve aspect ratio (`object-fit: contain` on the person cutout so they never stretch/distort).
 
 ### Files to change
-- `src/pages/Team.tsx` — swap `AnimatedImage` for a plain `<img>` with eager loading, remove per-index stagger delay, restructure `MemberCard` so the expertise paragraph is removed from the always-visible layout and instead rendered inside the click overlay alongside the LinkedIn button.
+- Upload 8 images via `lovable-assets` CLI → create `.asset.json` pointers in `src/assets/` (6 team photos + 2 logos).
+- `src/pages/Team.tsx` — swap imports for the 6 members, restructure `MemberCard` photo container: outer wrapper `overflow-visible`, inner blue box with rounded corners + grayscale image that vertically overflows the top.
+- `src/pages/Portfolio.tsx` — swap BRTL + Shomvob logo imports to the new asset pointers.
+- Delete the old generated `brlt-logo.png` (and Shomvob asset pointer) once replaced.
 
 ### Out of scope
-- No changes to other pages, no changes to image assets themselves, no changes to `AnimatedImage` component.
+- No copy/text changes, no other pages, no changes to placeholder cards for members without photos beyond applying the same blue box style.
