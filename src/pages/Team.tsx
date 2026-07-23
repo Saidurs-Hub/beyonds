@@ -61,10 +61,9 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
         className={`group flex flex-row sm:flex-col gap-4 sm:gap-5 relative ${hasDetails ? "cursor-pointer" : ""}`}
         onClick={() => hasDetails && setOpen((v) => !v)}
       >
-        {/* Wrapper gives room for the head to overflow above the blue box */}
-        <div className="relative w-20 sm:w-full flex-shrink-0 pt-3 sm:pt-6">
+        <div className="relative w-20 sm:w-full flex-shrink-0">
           <div
-            className="relative w-full h-20 sm:h-auto sm:aspect-square rounded-2xl overflow-visible"
+            className="relative w-full h-20 sm:h-auto sm:aspect-square rounded-2xl overflow-hidden"
             style={{ backgroundColor: BOX_BLUE }}
           >
             {member.photo ? (
@@ -75,11 +74,8 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
                 decoding="async"
                 // @ts-expect-error fetchpriority is valid HTML
                 fetchpriority="high"
-                className="absolute left-0 right-0 w-full object-cover object-top pointer-events-none rounded-b-2xl"
-                style={{ filter: "grayscale(1) contrast(1.05)", top: "-12%", height: "112%" }}
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
               />
-
-
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-foreground/50 text-2xl sm:text-4xl font-light" style={{ fontFamily: "var(--font-display)" }}>
@@ -121,6 +117,7 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
             )}
           </div>
         </div>
+
         <div className="flex flex-col justify-center sm:space-y-1 min-w-0">
           <h3 className="text-foreground text-sm sm:text-base font-medium" style={{ fontFamily: "var(--font-body)" }}>{member.name}</h3>
           <p className="text-accent text-[10px] sm:text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{member.role}</p>
