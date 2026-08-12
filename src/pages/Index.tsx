@@ -20,7 +20,7 @@ const Index = () => {
   return (
     <PageTransition>
       <div className="relative min-h-screen overflow-hidden">
-        <img src={heroBg} alt="City skyline at golden hour" className="absolute inset-0 w-full h-full object-cover animate-ken-burns" width={1920} height={1080} decoding="async" /* @ts-expect-error fetchpriority is valid HTML */ fetchpriority="high" />
+        <img src={heroBg} alt="City skyline at golden hour" className="absolute inset-0 w-full h-full object-cover animate-ken-burns" width={1920} height={1080} decoding="async" fetchPriority="high" />
         <div className="absolute inset-0 bg-background/30" />
         <div className="relative z-10 flex flex-col min-h-screen">
           <header className="px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between md:justify-center">
