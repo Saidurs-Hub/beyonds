@@ -51,7 +51,7 @@ const coreTeam: TeamMember[] = [
 
 const BOX_BLUE = "#C6DEF1";
 
-const MemberCard = ({ member }: { member: TeamMember }) => {
+const MemberCard = ({ member, priority = false }: { member: TeamMember; priority?: boolean }) => {
   const [open, setOpen] = useState(false);
   const hasDetails = member.expertise.length > 0 || !!member.linkedin;
 
@@ -70,10 +70,10 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
               <img
                 src={member.photo}
                 alt={member.name}
-                loading="eager"
+                loading={priority ? "eager" : "lazy"}
                 decoding="async"
                 // @ts-expect-error fetchpriority is valid HTML
-                fetchpriority="high"
+                fetchpriority={priority ? "high" : "low"}
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none"
               />
             ) : (
@@ -140,7 +140,7 @@ const Team = () => (
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Leadership</h2>
         </ScrollReveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-8">
-          {leadership.map((m) => <MemberCard key={m.name} member={m} />)}
+          {leadership.map((m, i) => <MemberCard key={m.name} member={m} priority={i < 5} />)}
         </div>
       </section>
       <section className="space-y-10">
