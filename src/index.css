@@ -110,6 +110,17 @@
 
 .animate-ken-burns {
   animation: ken-burns 25s ease-out forwards;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ken-burns,
+  .animate-fade-up,
+  .animate-fade-in {
+    animation: none !important;
+    opacity: 1 !important;
+  }
 }
 
 .animate-delay-200 {

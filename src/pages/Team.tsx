@@ -51,7 +51,7 @@ const coreTeam: TeamMember[] = [
 
 const BOX_BLUE = "#C6DEF1";
 
-const MemberCard = ({ member }: { member: TeamMember }) => {
+const MemberCard = ({ member, priority = false }: { member: TeamMember; priority?: boolean }) => {
   const [open, setOpen] = useState(false);
   const hasDetails = member.expertise.length > 0 || !!member.linkedin;
 
@@ -70,10 +70,10 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
               <img
                 src={member.photo}
                 alt={member.name}
-                loading="eager"
+                loading={priority ? "eager" : "lazy"}
                 decoding="async"
                 // @ts-expect-error fetchpriority is valid HTML
-                fetchpriority="high"
+                fetchpriority={priority ? "high" : "low"}
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none"
               />
             ) : (
