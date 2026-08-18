@@ -44,7 +44,7 @@ const coreTeam: TeamMember[] = [
   { name: "Kashfia Mahmud", role: "Gender Lens Strategist", years: "15+", expertise: ["Gender Equality & Social Inclusion", "Microfinance & Financial Inclusion", "Fintech & Alternative Credit Models"], photo: teamKashfia, linkedin: "https://www.linkedin.com/in/kashfiamahmud-mfin/" },
   { name: "Ahmed Jawad Yusuf", role: "Lead — Ecosystem Engagement", years: "12+", expertise: ["Fundraising & Fund Management", "Angel Investments & VC", "Impact Measurement"], photo: teamJawadNew, linkedin: "https://www.linkedin.com/in/ahmed-jyusuf/" },
   { name: "Meraj Ahmed", role: "", years: "", expertise: [], photo: teamMeraj },
-  { name: "Mariya Brishti", role: "", years: "", expertise: [], photo: teamMariya },
+  { name: "Mariya Arafin Bristy", role: "", years: "", expertise: [], photo: teamMariya },
   { name: "Salwa Tasnim Silma", role: "", years: "", expertise: [], photo: teamSalwa },
   { name: "Tasfia Ahmed", role: "", years: "", expertise: [], photo: teamTasfia },
 ];
