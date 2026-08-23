@@ -45,9 +45,9 @@ const coreTeam: TeamMember[] = [
   { name: "Kashfia Mahmud", role: "Gender Lens Strategist", years: "15+", expertise: ["Gender Equality & Social Inclusion", "Microfinance & Financial Inclusion", "Fintech & Alternative Credit Models"], photo: teamKashfia, linkedin: "https://www.linkedin.com/in/kashfiamahmud-mfin/" },
   { name: "Ahmed Jawad Yusuf", role: "Lead — Ecosystem Engagement", years: "12+", expertise: ["Fundraising & Fund Management", "Angel Investments & VC", "Impact Measurement"], photo: teamJawadNew, linkedin: "https://www.linkedin.com/in/ahmed-jyusuf/" },
   { name: "Meraj Ahmed, CFA", role: "", years: "", expertise: [], photo: teamMeraj },
-  { name: "Mariya Arafin Bristy", role: "Assistance Manager - Finance & Accounts", years: "", expertise: [], photo: teamMariya },
-  { name: "Salwa Tasnim Silma", role: "Investment Analyst", years: "", expertise: [], photo: teamSalwa },
-  { name: "Tasfia Ahmed", role: "Data Analyst", years: "", expertise: [], photo: teamTasfia },
+  { name: "Mariya Arafin Bristy", role: "Assistance Manager - Finance & Accounts", years: "", expertise: [], photo: teamMariya, linkedin: "https://www.linkedin.com/in/mariya-arafin-bristy-58a23922b/" },
+  { name: "Salwa Tasnim Silma", role: "Investment Analyst", years: "", expertise: [], photo: teamSalwa, linkedin: "https://www.linkedin.com/in/sk-salwa-tasnim-silma-5b45231a0/" },
+  { name: "Tasfia Ahmed", role: "Data Analyst", years: "", expertise: [], photo: teamTasfia, linkedin: "https://www.linkedin.com/in/tasfia-ahmed/" },
 ];
 
 const BOX_BLUE = "#C6DEF1";
