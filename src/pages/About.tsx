@@ -7,7 +7,7 @@ import aboutBg from "@/assets/about-hero.jpg";
 const About = () => (
   <PageLayout
     title="About"
-    subtitle="Beyond S Ventures represents SAJIDA's expansion into active investment management - mobilizing commercial funding for SMEs & startups across the Global South."
+    subtitle="Beyond S Ventures represents SAJIDA's expansion into active investment management, mobilizing commercial funding for SMEs & startups across the Global South."
     heroImage={aboutBg}
     heroAlt="Misty forest at twilight"
   >
