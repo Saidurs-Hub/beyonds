@@ -24,7 +24,7 @@ const studies = [
     type: "Assessment",
     year: "2024",
     image: "https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?w=1200&q=80",
-    findings: "Structural barriers — high transaction costs for banks and elevated interest rates in microfinance — limit effective agricultural financing.",
+    findings: "Structural barriers - high transaction costs for banks and elevated interest rates in microfinance - limit effective agricultural financing.",
     recommendation: "Intermediary-led aggregation models and redesigned financial products reflecting agricultural production cycles.",
   },
 ];
