@@ -59,7 +59,7 @@ const Index = () => {
           </main>
           <footer className="opacity-0 animate-fade-in animate-delay-800 px-6 md:px-12 lg:px-20 py-8 flex items-center justify-between">
             <span className="text-foreground/40 text-xs tracking-widest uppercase">BEYOND S VENTURES</span>
-            <span className="text-foreground/40 text-xs tracking-widest">info@beyonds.ventures</span>
+            <span className="text-foreground/40 text-xs tracking-widest">reach@beyonds.ventures</span>
           </footer>
         </div>
       </div>
