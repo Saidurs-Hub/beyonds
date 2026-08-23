@@ -44,10 +44,10 @@ const coreTeam: TeamMember[] = [
   { name: "Lamia Hafiz", role: "Accelerator Manager", years: "12+", expertise: ["Program Design & Delivery", "Portfolio & Founder Support", "Innovation Fund Management"], photo: teamLamia, linkedin: "https://www.linkedin.com/in/lamia-hafiz-4a3a303b9/" },
   { name: "Kashfia Mahmud", role: "Gender Lens Strategist", years: "15+", expertise: ["Gender Equality & Social Inclusion", "Microfinance & Financial Inclusion", "Fintech & Alternative Credit Models"], photo: teamKashfia, linkedin: "https://www.linkedin.com/in/kashfiamahmud-mfin/" },
   { name: "Ahmed Jawad Yusuf", role: "Lead — Ecosystem Engagement", years: "12+", expertise: ["Fundraising & Fund Management", "Angel Investments & VC", "Impact Measurement"], photo: teamJawadNew, linkedin: "https://www.linkedin.com/in/ahmed-jyusuf/" },
-  { name: "Meraj Ahmed", role: "", years: "", expertise: [], photo: teamMeraj },
-  { name: "Mariya Arafin Bristy", role: "", years: "", expertise: [], photo: teamMariya },
-  { name: "Salwa Tasnim Silma", role: "", years: "", expertise: [], photo: teamSalwa },
-  { name: "Tasfia Ahmed", role: "", years: "", expertise: [], photo: teamTasfia },
+  { name: "Meraj Ahmed, CFA", role: "", years: "", expertise: [], photo: teamMeraj },
+  { name: "Mariya Arafin Bristy", role: "Assistance Manager - Finance & Accounts", years: "", expertise: [], photo: teamMariya },
+  { name: "Salwa Tasnim Silma", role: "Investment Analyst", years: "", expertise: [], photo: teamSalwa },
+  { name: "Tasfia Ahmed", role: "Data Analyst", years: "", expertise: [], photo: teamTasfia },
 ];
 
 const BOX_BLUE = "#C6DEF1";
