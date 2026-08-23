@@ -31,7 +31,7 @@ interface TeamMember {
 }
 
 const leadership: TeamMember[] = [
-  { name: "Shehzad Munim", role: "CHIEF INVESTMENT STRATEGIST\u00a0", years: "", expertise: [], photo: teamShehzad },
+  { name: "Shehzad Munim", role: "CHIEF INVESTMENT STRATEGIST\u00a0", years: "", expertise: [], photo: teamShehzad, linkedin: "https://www.linkedin.com/in/shehzad-munim-38373865/" },
   { name: "Muhymin Chowdhury", role: "Managing Director", years: "18+", expertise: [], photo: teamSamiul, linkedin: "https://www.linkedin.com/in/muhymin-chowdhury/" },
   { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: [], photo: teamSaddam, linkedin: "https://www.linkedin.com/in/faizan-salam-ak/" },
   { name: "Sarah Iqbal", role: "Portfolio Manager", years: "10+", expertise: [], photo: teamSarah, linkedin: "https://www.linkedin.com/in/sarah-iqbal-5962b641/" },
