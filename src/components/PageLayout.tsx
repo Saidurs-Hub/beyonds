@@ -210,7 +210,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
             Beyond S Ventures
           </span>
           <span className="text-foreground/30 text-xs tracking-widest" style={{ fontFamily: "var(--font-body)" }}>
-            Dhaka · New York · Kampala
+            reach@beyonds.ventures
           </span>
         </motion.footer>
       </div>
