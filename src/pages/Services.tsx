@@ -28,7 +28,7 @@ const services = [
     category: "Venture Building & Impact-Linked Financing",
     image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&q=80",
     bgImage: ventureBuildingBg,
-    goal: "Scaling innovative solutions that advance climate resilience in Bangladesh — agriculture, water, and food security.",
+    goal: "Scaling innovative solutions that advance climate resilience in Bangladesh - agriculture, water, and food security.",
     subServices: ["Climate Innovation Fund (CIF)", "NURTURE", "BINIYOG BRIDDHI (B-BRIDDHI)"],
     stats: [
       { value: "10,000+", label: "Farmers impacted" },
@@ -41,7 +41,7 @@ const services = [
     icon: BarChart3,
     category: "Investment Management",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
-    goal: "Deploying flexible capital instruments — equity, quasi-equity, and performance-linked debt — to drive commercial returns with measurable impact.",
+    goal: "Deploying flexible capital instruments - equity, quasi-equity, and performance-linked debt - to drive commercial returns with measurable impact.",
     subServices: [],
     stats: [
       { value: "$200K", label: "Sponsor fund mandate" },
@@ -56,7 +56,7 @@ const services = [
 const Services = () => (
   <PageLayout
     title="Services"
-    subtitle="From acceleration to venture building to investment management — meeting enterprises wherever they are in their growth journey."
+    subtitle="From acceleration to venture building to investment management - meeting enterprises wherever they are in their growth journey."
     heroImage={servicesHero}
     heroAlt="Lettuce field with mountains in the background"
   >

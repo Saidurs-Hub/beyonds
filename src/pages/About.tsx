@@ -7,7 +7,7 @@ import aboutBg from "@/assets/about-hero.jpg";
 const About = () => (
   <PageLayout
     title="About"
-    subtitle="Beyond S Ventures represents SAJIDA's expansion into active investment management — mobilizing commercial funding for SMEs & startups across the Global South."
+    subtitle="Beyond S Ventures represents SAJIDA's expansion into active investment management - mobilizing commercial funding for SMEs & startups across the Global South."
     heroImage={aboutBg}
     heroAlt="Misty forest at twilight"
   >
@@ -35,7 +35,7 @@ const About = () => (
         <section className="space-y-12">
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Our Evolution</h2>
           {[
-            { year: "1993", role: "Builder", entity: "SAJIDA Foundation", desc: "Building enterprises directly serving over 3 million people every year — from microfinance to pharmaceuticals to healthcare." },
+            { year: "1993", role: "Builder", entity: "SAJIDA Foundation", desc: "Building enterprises directly serving over 3 million people every year - from microfinance to pharmaceuticals to healthcare." },
             { year: "2021", role: "Enabler", entity: "Impact Partners", desc: "Transitioning from only building own ventures to enabling others to grow through acceleration, technical assistance, and impact-linked financing." },
             { year: "2024", role: "Investor", entity: "Beyond Ventures", desc: "Mobilizing capital to help enterprises build smarter and reach untapped markets through active investment management." },
           ].map((m, i) => (
@@ -89,7 +89,7 @@ const About = () => (
           <div className="space-y-4">
             <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Global Presence</h2>
             <p className="text-foreground/60 text-base leading-relaxed max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>
-              Building a Global South-focused investment platform, grounded in decades of delivering essential services — now scaling to back entrepreneurs with venture support, investment readiness, and catalytic capital.
+              Building a Global South-focused investment platform, grounded in decades of delivering essential services - now scaling to back entrepreneurs with venture support, investment readiness, and catalytic capital.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
