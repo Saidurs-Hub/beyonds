@@ -12,8 +12,8 @@ const investments = [
   { company: "Relaxy", sector: "Healthcare", logo: relaxyLogo, website: "https://relaxy.com.bd/" },
   { company: "Shikho", sector: "EdTech", logo: shikhoLogo, website: "https://shikho.com/" },
   { company: "Cholpori", sector: "EdTech", logo: cholporiLogo, website: "https://www.cholpori.com/" },
-  { company: "Shomvob", sector: "—", logo: shomvobLogo.url, website: "https://shomvob.com/" },
-  { company: "BD Recycle Technologies Limited (BRTL)", sector: "—", logo: brltLogo.url, website: "https://brtlcenter.com/" },
+  { company: "Shomvob", sector: "Clean-tech", logo: shomvobLogo.url, website: "https://shomvob.com/" },
+  { company: "BD Recycle Technologies Limited (BRTL)", sector: "Clean-tech", logo: brltLogo.url, website: "https://brtlcenter.com/" },
 ];
 
 const sectors = ["Technology", "Food & Agri", "Energy", "Textile & Apparel", "Climate & Environment", "Healthcare"];
