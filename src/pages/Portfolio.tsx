@@ -44,33 +44,36 @@ const Portfolio = () => (
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="space-y-8">
+        <section className="space-y-10">
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Existing Investments</h2>
-          <div className="border border-border/20 rounded-xl overflow-hidden">
-            <div className="grid grid-cols-2 gap-4 px-6 md:px-8 py-4 bg-card/30 border-b border-border/20">
-              {["Company", "Sector"].map((h) => (
-                <span key={h} className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{h}</span>
-              ))}
-            </div>
-            {investments.map((inv, i) => (
-              <div key={inv.company} className={`grid grid-cols-2 gap-4 px-6 md:px-8 py-5 items-center ${i < investments.length - 1 ? "border-b border-border/10" : ""}`}>
-                <span className="text-foreground text-sm flex items-center gap-3" style={{ fontFamily: "var(--font-body)" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {investments.map((inv) => (
+              <button
+                key={inv.company}
+                type="button"
+                onClick={() => openExternalLink(inv.website)}
+                className="group relative text-left bg-card/40 border border-border/20 rounded-2xl p-8 flex flex-col items-center justify-between gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_20px_40px_-15px_hsl(var(--accent)/0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                aria-label={`Visit ${inv.company} website`}
+              >
+                <div className="flex-1 flex items-center justify-center w-full">
                   {inv.logo ? (
-                    <button
-                      type="button"
-                      onClick={() => openExternalLink(inv.website)}
-                      className="w-10 h-10 flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
-                      aria-label={`Visit ${inv.company} website`}
-                    >
-                      <img src={inv.logo} alt={inv.company} className="w-full h-full object-contain rounded" />
-                    </button>
+                    <img
+                      src={inv.logo}
+                      alt={inv.company}
+                      loading="lazy"
+                      className="max-h-28 max-w-[80%] w-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity duration-300"
+                    />
                   ) : (
-                    <div className="w-10 h-10 rounded bg-accent/10 flex-shrink-0" />
+                    <div className="h-28 w-28 rounded-xl bg-accent/10" />
                   )}
-                  {inv.company}
-                </span>
-                <span className="text-foreground/50 text-sm flex items-center" style={{ fontFamily: "var(--font-body)" }}>{inv.sector}</span>
-              </div>
+                </div>
+                <div className="w-full flex items-center justify-between gap-3">
+                  <span className="text-foreground text-sm leading-snug" style={{ fontFamily: "var(--font-body)" }}>{inv.company}</span>
+                  <span className="shrink-0 text-[10px] tracking-[0.2em] uppercase text-foreground/50 bg-secondary/60 px-3 py-1 rounded-full border border-border/20" style={{ fontFamily: "var(--font-body)" }}>
+                    {inv.sector}
+                  </span>
+                </div>
+              </button>
             ))}
           </div>
         </section>
