@@ -8,7 +8,7 @@ const Contact = () => (
   <PageLayout
     title="Contact"
     subtitle="Reach out to learn more about our services, investment opportunities, or partnership possibilities."
-    backgroundColor="#851E3E"
+    backgroundColor="linear-gradient(165deg, #9B2A4A 0%, #851E3E 40%, #4A0F22 78%, #1A0510 100%)"
   >
     <div className="space-y-24">
       <ScrollReveal>
