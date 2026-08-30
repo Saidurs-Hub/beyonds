@@ -1,7 +1,7 @@
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
 import AnimatedImage from "@/components/AnimatedImage";
-import { Building2, TrendingUp, Globe } from "lucide-react";
+
 import aboutBg from "@/assets/about-hero.jpg";
 
 const About = () => (
@@ -83,35 +83,6 @@ const About = () => (
         </div>
       </ScrollReveal>
 
-      {/* Global Presence */}
-      <ScrollReveal>
-        <section className="space-y-12">
-          <div className="space-y-4">
-            <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Global Presence</h2>
-            <p className="text-foreground/60 text-base leading-relaxed max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>
-              Building a Global South-focused investment platform, grounded in decades of delivering essential services, now scaling to back entrepreneurs with venture support, investment readiness, and catalytic capital.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { icon: Building2, title: "Bangladesh", detail: "400+ unit offices", status: "Headquarters" },
-              { icon: Globe, title: "Uganda", detail: "8 offices", status: "Active" },
-              { icon: TrendingUp, title: "2028 Expansion", detail: "Tanzania · Ghana · Zambia", status: "Planned" },
-            ].map((loc, i) => (
-              <ScrollReveal key={loc.title} delay={i * 0.1}>
-                <div className="border border-border/20 rounded-lg p-6 md:p-8 space-y-4">
-                  <div className="flex items-center justify-between">
-                    <loc.icon className="w-5 h-5 text-accent" />
-                    <span className="text-foreground/20 text-[10px] tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>{loc.status}</span>
-                  </div>
-                  <h3 className="text-foreground text-base font-medium" style={{ fontFamily: "var(--font-body)" }}>{loc.title}</h3>
-                  <p className="text-foreground/40 text-sm" style={{ fontFamily: "var(--font-body)" }}>{loc.detail}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </section>
-      </ScrollReveal>
     </div>
   </PageLayout>
 );
