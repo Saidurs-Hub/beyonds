@@ -19,6 +19,7 @@ import teamSalwa from "@/assets/team-styled-salwa.webp";
 import teamMeraj from "@/assets/team-styled-meraj.webp";
 import teamHridoyOld from "@/assets/team-styled-hridoy.webp";
 import teamShehzad from "@/assets/team-styled-shehzad.webp";
+import teamAzad from "@/assets/team-styled-azad.webp";
 
 
 interface TeamMember {
@@ -33,6 +34,7 @@ interface TeamMember {
 const leadership: TeamMember[] = [
   { name: "Shehzad Munim", role: "CHIEF INVESTMENT STRATEGIST\u00a0", years: "", expertise: [], photo: teamShehzad, linkedin: "https://www.linkedin.com/in/shehzad-munim-38373865/" },
   { name: "Muhymin Chowdhury", role: "Managing Director", years: "18+", expertise: [], photo: teamSamiul, linkedin: "https://www.linkedin.com/in/muhymin-chowdhury/" },
+  { name: "Md. Abul Kalam Azad", role: "", years: "", expertise: [], photo: teamAzad, linkedin: "https://www.linkedin.com/in/azadrubel/" },
 ];
 
 const coreTeam: TeamMember[] = [
