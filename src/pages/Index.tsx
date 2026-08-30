@@ -16,13 +16,41 @@ const navLinks = [
 
 const Index = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          setScrollY(window.scrollY);
+          ticking = false;
+        });
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Fade + gently parallax the hero content out as the user scrolls away,
+  // so the transition into the next section feels like a smooth cross-fade.
+  const fadeDistance = typeof window !== "undefined" ? window.innerHeight * 0.6 : 600;
+  const progress = Math.min(scrollY / fadeDistance, 1);
+  const heroStyle = {
+    opacity: 1 - progress,
+    transform: `translateY(${scrollY * 0.25}px)`,
+    willChange: "opacity, transform",
+  } as const;
 
   return (
     <PageTransition>
       <div className="relative min-h-screen overflow-hidden">
         <img src={heroBg} alt="City skyline at golden hour" className="absolute inset-0 w-full h-full object-cover animate-ken-burns" width={1920} height={1080} decoding="async" fetchPriority="high" />
         <div className="absolute inset-0 bg-background/30" />
-        <div className="relative z-10 flex flex-col min-h-screen">
+        {/* Soft gradient blend at the bottom edge so the hero dissolves into the next section */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-background/80 pointer-events-none" />
+        <div className="relative z-10 flex flex-col min-h-screen" style={heroStyle}>
           <header className="px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between md:justify-center">
             <div className="md:hidden" />
             <nav className="hidden md:flex items-center bg-white/90 backdrop-blur-sm rounded-full px-6 py-2 gap-6">
