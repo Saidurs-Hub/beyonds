@@ -1,7 +1,7 @@
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
 import AnimatedImage from "@/components/AnimatedImage";
-import { Building2, TrendingUp, Globe } from "lucide-react";
+
 import aboutBg from "@/assets/about-hero.jpg";
 
 const About = () => (
