@@ -1,6 +1,7 @@
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
 import AnimatedImage from "@/components/AnimatedImage";
+import CountUp from "@/components/CountUp";
 
 import aboutBg from "@/assets/about-hero.jpg";
 
@@ -61,13 +62,19 @@ const About = () => (
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium mb-10" style={{ fontFamily: "var(--font-body)" }}>Impact at a Glance</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {[
-              { value: "6M+", label: "Lives Impacted" },
-              { value: "6,000+", label: "Workforce" },
-              { value: "400+", label: "Offices in Bangladesh" },
-              { value: "83+", label: "Companies Supported" },
+              { target: 6, suffix: "M+", label: "Lives Impacted" },
+              { target: 6000, suffix: "+", thousands: true, label: "Workforce" },
+              { target: 400, suffix: "+", label: "Offices in Bangladesh" },
+              { target: 83, suffix: "+", label: "Companies Supported" },
             ].map((s) => (
               <div key={s.label} className="space-y-2">
-                <div className="text-4xl md:text-5xl font-light text-foreground" style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
+                <CountUp
+                  target={s.target}
+                  suffix={s.suffix}
+                  thousands={s.thousands}
+                  className="text-4xl md:text-5xl font-light text-foreground"
+                  style={{ fontFamily: "var(--font-display)" }}
+                />
                 <div className="text-foreground/40 text-xs tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>{s.label}</div>
               </div>
             ))}
