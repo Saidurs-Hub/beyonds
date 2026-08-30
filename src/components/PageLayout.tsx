@@ -35,15 +35,16 @@ interface PageLayoutProps {
   subtitle?: string;
   heroImage?: string;
   heroAlt?: string;
+  backgroundColor?: string;
 }
 
-const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayoutProps) => {
+const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundColor }: PageLayoutProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
   return (
     <PageTransition>
-      <div className="min-h-screen bg-background text-foreground">
+      <div className="min-h-screen bg-background text-foreground" style={backgroundColor ? { backgroundColor } : undefined}>
         {/* Hero Section - full bleed like sajida.org */}
         {heroImage ? (
           <div className="relative h-[50vh] sm:h-[70vh] min-h-[350px] sm:min-h-[500px] overflow-hidden">
