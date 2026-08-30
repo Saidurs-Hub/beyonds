@@ -34,13 +34,16 @@ interface TeamMember {
 
 const leadership: TeamMember[] = [
   { name: "Zahida Fizza Kabir", role: "Director", years: "", expertise: [], photo: teamZahida, linkedin: "https://www.linkedin.com/in/zahida-fizza-kabir-02456b8b/" },
-  { name: "Shehzad Munim", role: "CHIEF INVESTMENT STRATEGIST\u00a0", years: "", expertise: [], photo: teamShehzad, linkedin: "https://www.linkedin.com/in/shehzad-munim-38373865/" },
   { name: "Muhymin Chowdhury", role: "Managing Director", years: "18+", expertise: [], photo: teamSamiul, linkedin: "https://www.linkedin.com/in/muhymin-chowdhury/" },
   { name: "Md. Abul Kalam Azad", role: "Director", years: "", expertise: [], photo: teamAzad, linkedin: "https://www.linkedin.com/in/azadrubel/" },
+  { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: [], photo: teamSaddam, linkedin: "https://www.linkedin.com/in/faizan-salam-ak/" },
+];
+
+const managementTeam: TeamMember[] = [
+  { name: "Shehzad Munim", role: "CHIEF INVESTMENT STRATEGIST\u00a0", years: "", expertise: [], photo: teamShehzad, linkedin: "https://www.linkedin.com/in/shehzad-munim-38373865/" },
 ];
 
 const coreTeam: TeamMember[] = [
-  { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: [], photo: teamSaddam, linkedin: "https://www.linkedin.com/in/faizan-salam-ak/" },
   { name: "Sarah Iqbal", role: "Portfolio Manager", years: "10+", expertise: [], photo: teamSarah, linkedin: "https://www.linkedin.com/in/sarah-iqbal-5962b641/" },
   { name: "Hridoy Islam", role: "Portfolio Manager", years: "10+", expertise: [], photo: teamHridoyOld, linkedin: "https://www.linkedin.com/in/hridoyislam/" },
   { name: "M. Samiul Haque", role: "Head - Advisory and Research", years: "10+", expertise: [], photo: teamMuhymin, linkedin: "https://www.linkedin.com/in/m-samiul-haque/" },
