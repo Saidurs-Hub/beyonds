@@ -60,7 +60,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
 
             {/* Nav over hero */}
-            <header className="relative z-20 px-6 md:px-12 lg:px-20 py-6 flex items-center justify-center">
+            <header className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 lg:px-20 py-6 flex items-center justify-center">
               <Link
                 to="/"
                 className="absolute left-6 md:left-12 lg:left-20 flex items-center"
