@@ -177,7 +177,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt }: PageLayou
               </div>
             )}
             <motion.div
-              className="px-6 md:px-12 lg:px-20 pt-12 md:pt-20 pb-12 md:pb-16 max-w-6xl mx-auto"
+              className="px-6 md:px-12 lg:px-20 pt-40 md:pt-44 pb-12 md:pb-16 max-w-6xl mx-auto"
               variants={staggerContainer}
               initial="initial"
               animate="animate"
