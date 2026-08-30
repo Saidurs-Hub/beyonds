@@ -33,12 +33,12 @@ interface TeamMember {
 const leadership: TeamMember[] = [
   { name: "Shehzad Munim", role: "CHIEF INVESTMENT STRATEGIST\u00a0", years: "", expertise: [], photo: teamShehzad, linkedin: "https://www.linkedin.com/in/shehzad-munim-38373865/" },
   { name: "Muhymin Chowdhury", role: "Managing Director", years: "18+", expertise: [], photo: teamSamiul, linkedin: "https://www.linkedin.com/in/muhymin-chowdhury/" },
-  { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: [], photo: teamSaddam, linkedin: "https://www.linkedin.com/in/faizan-salam-ak/" },
-  { name: "Sarah Iqbal", role: "Portfolio Manager", years: "10+", expertise: [], photo: teamSarah, linkedin: "https://www.linkedin.com/in/sarah-iqbal-5962b641/" },
-  { name: "Hridoy Islam", role: "Portfolio Manager", years: "10+", expertise: [], photo: teamHridoyOld, linkedin: "https://www.linkedin.com/in/hridoyislam/" },
 ];
 
 const coreTeam: TeamMember[] = [
+  { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: [], photo: teamSaddam, linkedin: "https://www.linkedin.com/in/faizan-salam-ak/" },
+  { name: "Sarah Iqbal", role: "Portfolio Manager", years: "10+", expertise: [], photo: teamSarah, linkedin: "https://www.linkedin.com/in/sarah-iqbal-5962b641/" },
+  { name: "Hridoy Islam", role: "Portfolio Manager", years: "10+", expertise: [], photo: teamHridoyOld, linkedin: "https://www.linkedin.com/in/hridoyislam/" },
   { name: "M. Samiul Haque", role: "Head - Advisory and Research", years: "10+", expertise: [], photo: teamMuhymin, linkedin: "https://www.linkedin.com/in/m-samiul-haque/" },
   { name: "Saddam Khan Sumit", role: "Sr. Investment Associate", years: "10+", expertise: [], photo: teamAk, linkedin: "https://www.linkedin.com/in/sksumit/" },
   { name: "Lamia Hafiz", role: "Accelerator Manager", years: "12+", expertise: [], photo: teamLamia, linkedin: "https://www.linkedin.com/in/lamia-hafiz-4a3a303b9/" },
@@ -128,8 +128,8 @@ const Team = () => (
         <ScrollReveal>
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Leadership</h2>
         </ScrollReveal>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-8">
-          {leadership.map((m, i) => <MemberCard key={m.name} member={m} priority={i < 5} />)}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-8 max-w-3xl">
+          {leadership.map((m, i) => <MemberCard key={m.name} member={m} priority={i < 2} />)}
         </div>
       </section>
       <section className="space-y-10">
