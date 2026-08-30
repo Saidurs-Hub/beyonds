@@ -1,6 +1,7 @@
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
 import AnimatedImage from "@/components/AnimatedImage";
+import CountUp from "@/components/CountUp";
 
 import aboutBg from "@/assets/about-hero.jpg";
 
