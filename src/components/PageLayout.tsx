@@ -23,7 +23,7 @@ const staggerContainer = {
 const navLinks = [
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
-  { label: "Portfolio", path: "/portfolio" },
+  { label: "INVESTMENTS", path: "/portfolio" },
   { label: "Team", path: "/team" },
   { label: "Insights", path: "/insights" },
   { label: "Contact", path: "/contact" },
