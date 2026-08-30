@@ -26,26 +26,6 @@ const Contact = () => (
         </section>
       </ScrollReveal>
 
-      <ScrollReveal>
-        <section className="space-y-8">
-          <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Get in Touch</h2>
-          <div className="grid md:grid-cols-3 gap-px bg-border/20 rounded-xl overflow-hidden">
-            {contacts.map((c) => (
-              <div key={c.name} className="bg-background p-8 md:p-10 space-y-6">
-                <div className="space-y-1">
-                  <h3 className="text-foreground text-base" style={{ fontFamily: "var(--font-body)" }}>{c.name}</h3>
-                  <p className="text-accent text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{c.role}</p>
-                </div>
-                <a href={`mailto:${c.email}`} className="inline-flex items-center gap-2 text-foreground/50 hover:text-foreground text-sm transition-colors group" style={{ fontFamily: "var(--font-body)" }}>
-                  <Mail className="w-3.5 h-3.5" />
-                  {c.email}
-                  <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </section>
-      </ScrollReveal>
 
       <ScrollReveal delay={0.1}>
         <section className="space-y-8">
