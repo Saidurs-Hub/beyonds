@@ -21,7 +21,7 @@ const instruments = ["Grants", "Concessional Loans", "Commercial Debt", "Equity"
 
 const Portfolio = () => (
   <PageLayout
-    title="Portfolio"
+    title="Investments"
     subtitle="Deploying capital across a diverse range of instruments, backing enterprises that generate commercial returns and measurable impact in underserved markets."
     heroImage={portfolioHero}
     heroAlt="Students in classroom holding up books"
