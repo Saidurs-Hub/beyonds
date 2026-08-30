@@ -18,6 +18,17 @@ const Contact = () => (
             <span className="text-foreground/70 text-sm flex-1" style={{ fontFamily: "var(--font-body)" }}>reach@beyonds.ventures</span>
             <ArrowUpRight className="w-4 h-4 text-foreground/30 group-hover:text-foreground/70 transition-colors" />
           </a>
+          <div className="max-w-2xl">
+            <iframe
+              className="airtable-embed"
+              src="https://airtable.com/embed/appjjKitLzE9FeO3b/pagaLKf0iqUOQxPlY/form"
+              title="Contact form"
+              frameBorder="0"
+              width="100%"
+              height="533"
+              style={{ background: "transparent", border: "1px solid #ccc" }}
+            />
+          </div>
         </section>
       </ScrollReveal>
 
