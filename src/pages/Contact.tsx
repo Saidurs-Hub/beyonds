@@ -24,7 +24,6 @@ const Contact = () => (
               src="https://airtable.com/embed/appjjKitLzE9FeO3b/pagaLKf0iqUOQxPlY/form"
               title="Contact form"
               frameBorder="0"
-              onmouseWheel=""
               width="100%"
               height="533"
               style={{ background: "transparent", border: "1px solid #ccc" }}
