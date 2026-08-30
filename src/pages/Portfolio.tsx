@@ -27,21 +27,6 @@ const Portfolio = () => (
     heroAlt="Students in classroom holding up books"
   >
     <div className="space-y-24">
-      <ScrollReveal>
-        <section className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border/20 rounded-xl overflow-hidden">
-          {[
-            { value: "83+", label: "Companies Supported" },
-            { value: "$6mn+", label: "Funding Under Management" },
-            { value: "$500K", label: "Deployed to Startups" },
-            { value: "$2.5mn", label: "Commitments Raised" },
-          ].map((s) => (
-            <div key={s.label} className="bg-background p-6 md:p-10 space-y-2">
-              <div className="text-3xl md:text-4xl font-light text-foreground" style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
-              <div className="text-foreground/40 text-[11px] tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>{s.label}</div>
-            </div>
-          ))}
-        </section>
-      </ScrollReveal>
 
       <ScrollReveal>
         <section className="space-y-10">
