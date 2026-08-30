@@ -33,12 +33,12 @@ interface TeamMember {
 const leadership: TeamMember[] = [
   { name: "Shehzad Munim", role: "CHIEF INVESTMENT STRATEGIST\u00a0", years: "", expertise: [], photo: teamShehzad, linkedin: "https://www.linkedin.com/in/shehzad-munim-38373865/" },
   { name: "Muhymin Chowdhury", role: "Managing Director", years: "18+", expertise: [], photo: teamSamiul, linkedin: "https://www.linkedin.com/in/muhymin-chowdhury/" },
-  { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: [], photo: teamSaddam, linkedin: "https://www.linkedin.com/in/faizan-salam-ak/" },
-  { name: "Sarah Iqbal", role: "Portfolio Manager", years: "10+", expertise: [], photo: teamSarah, linkedin: "https://www.linkedin.com/in/sarah-iqbal-5962b641/" },
-  { name: "Hridoy Islam", role: "Portfolio Manager", years: "10+", expertise: [], photo: teamHridoyOld, linkedin: "https://www.linkedin.com/in/hridoyislam/" },
 ];
 
 const coreTeam: TeamMember[] = [
+  { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: [], photo: teamSaddam, linkedin: "https://www.linkedin.com/in/faizan-salam-ak/" },
+  { name: "Sarah Iqbal", role: "Portfolio Manager", years: "10+", expertise: [], photo: teamSarah, linkedin: "https://www.linkedin.com/in/sarah-iqbal-5962b641/" },
+  { name: "Hridoy Islam", role: "Portfolio Manager", years: "10+", expertise: [], photo: teamHridoyOld, linkedin: "https://www.linkedin.com/in/hridoyislam/" },
   { name: "M. Samiul Haque", role: "Head - Advisory and Research", years: "10+", expertise: [], photo: teamMuhymin, linkedin: "https://www.linkedin.com/in/m-samiul-haque/" },
   { name: "Saddam Khan Sumit", role: "Sr. Investment Associate", years: "10+", expertise: [], photo: teamAk, linkedin: "https://www.linkedin.com/in/sksumit/" },
   { name: "Lamia Hafiz", role: "Accelerator Manager", years: "12+", expertise: [], photo: teamLamia, linkedin: "https://www.linkedin.com/in/lamia-hafiz-4a3a303b9/" },
