@@ -3,11 +3,6 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { Mail, MapPin, ArrowUpRight, Linkedin } from "lucide-react";
 import { openExternalLink } from "@/lib/openExternalLink";
 
-const contacts = [
-  { name: "Muhymin Chowdhury", role: "Managing Director", email: "muhymin@beyonds.ventures" },
-  { name: "Sarah Iqbal", role: "Portfolio Manager", email: "sarah@beyonds.ventures" },
-  { name: "Hridoy Islam", role: "Portfolio Manager", email: "hridoy@beyonds.ventures" },
-];
 
 const Contact = () => (
   <PageLayout
