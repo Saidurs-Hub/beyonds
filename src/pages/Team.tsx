@@ -33,10 +33,10 @@ interface TeamMember {
 }
 
 const leadership: TeamMember[] = [
+  { name: "Zahida Fizza Kabir", role: "Director", years: "", expertise: [], photo: teamZahida, linkedin: "https://www.linkedin.com/in/zahida-fizza-kabir-02456b8b/" },
   { name: "Shehzad Munim", role: "CHIEF INVESTMENT STRATEGIST\u00a0", years: "", expertise: [], photo: teamShehzad, linkedin: "https://www.linkedin.com/in/shehzad-munim-38373865/" },
   { name: "Muhymin Chowdhury", role: "Managing Director", years: "18+", expertise: [], photo: teamSamiul, linkedin: "https://www.linkedin.com/in/muhymin-chowdhury/" },
-  { name: "Md. Abul Kalam Azad", role: "", years: "", expertise: [], photo: teamAzad, linkedin: "https://www.linkedin.com/in/azadrubel/" },
-  { name: "Zahida Fizza Kabir", role: "Director", years: "", expertise: [], photo: teamZahida, linkedin: "https://www.linkedin.com/in/zahida-fizza-kabir-02456b8b/" },
+  { name: "Md. Abul Kalam Azad", role: "Director", years: "", expertise: [], photo: teamAzad, linkedin: "https://www.linkedin.com/in/azadrubel/" },
 ];
 
 const coreTeam: TeamMember[] = [
