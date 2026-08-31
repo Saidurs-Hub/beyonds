@@ -1,19 +1,13 @@
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
-import AnimatedImage from "@/components/AnimatedImage";
 import { Rocket, Leaf, BarChart3 } from "lucide-react";
 import servicesHero from "@/assets/services-hero.jpg";
-import accelerationBg from "@/assets/acceleration-bg.jpg";
-import ventureBuildingBg from "@/assets/venture-building-bg.jpg";
-import accelPrograms from "@/assets/accel-programs.png";
 import accelPartners from "@/assets/accel-partners.png";
 
 const services = [
   {
     icon: Rocket,
     category: "Acceleration & Investment Readiness",
-    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=80",
-    bgImage: accelerationBg,
     goal: "Equipping early-stage entrepreneurs with the resources necessary to build sustainable, investment-ready enterprises through acceleration, technical assistance, and tailored funding.",
     subServices: ["Orange Corners Bangladesh", "B/DESHI Catalyst"],
     stats: [
@@ -22,12 +16,11 @@ const services = [
       { value: "73", label: "Companies financed" },
     ],
     partners: ["Anchorless", "Kingdom of the Netherlands", "BYLC", "YY Ventures", "LightCastle Partners", "Unilever"],
+    partnersImage: accelPartners,
   },
   {
     icon: Leaf,
     category: "Venture Building & Impact-Linked Financing",
-    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200&q=80",
-    bgImage: ventureBuildingBg,
     goal: "Scaling innovative solutions that advance climate resilience in Bangladesh - agriculture, water, and food security.",
     subServices: ["Climate Innovation Fund (CIF)", "NURTURE", "BINIYOG BRIDDHI (B-BRIDDHI)"],
     stats: [
@@ -40,7 +33,6 @@ const services = [
   {
     icon: BarChart3,
     category: "Investment Management",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
     goal: "Deploying flexible capital instruments - equity, quasi-equity, and performance-linked debt - to drive commercial returns with measurable impact.",
     subServices: [],
     stats: [
@@ -52,7 +44,6 @@ const services = [
   },
 ];
 
-
 const Services = () => (
   <PageLayout
     title="Services"
@@ -61,67 +52,55 @@ const Services = () => (
     heroAlt="Lettuce field with mountains in the background"
     backgroundColor="#851E3E"
   >
-    <div className="space-y-24">
-      {services.map((p, idx) => (
+    <div className="space-y-10 md:space-y-14">
+      {services.map((p) => (
         <ScrollReveal key={p.category}>
-          <section className={`relative space-y-10 overflow-hidden ${p.bgImage ? 'rounded-2xl p-8 md:p-10' : ''}`}>
-            {p.bgImage && (
-              <>
-                <AnimatedImage
-                  src={p.bgImage}
-                  alt=""
-                  className="absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/50 to-background/70" />
-              </>
-            )}
-            <div className="relative flex items-start gap-5">
-              <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 mt-1 ${p.bgImage ? 'bg-white/10 backdrop-blur-sm' : 'bg-accent/10'}`}>
-                <p.icon className={`w-5 h-5 ${p.bgImage ? 'text-white' : 'text-accent'}`} />
+          <section className="relative rounded-2xl overflow-hidden bg-black/25 backdrop-blur-sm border border-white/10 p-8 md:p-12">
+            {/* Header */}
+            <div className="flex items-start gap-5 mb-8">
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 bg-white/10 border border-white/15">
+                <p.icon className="w-6 h-6 text-white" />
               </div>
-              <div className="space-y-3">
-                <h2 className={`text-2xl md:text-3xl font-light tracking-wide ${p.bgImage ? 'text-white drop-shadow-lg' : ''}`} style={{ fontFamily: "var(--font-display)" }}>{p.category}</h2>
-                <p className={`text-sm md:text-base leading-relaxed max-w-2xl ${p.bgImage ? 'text-white/80 drop-shadow-md' : 'text-foreground/50'}`} style={{ fontFamily: "var(--font-body)" }}>{p.goal}</p>
+              <div className="space-y-3 pt-0.5">
+                <h2 className="text-2xl md:text-3xl font-light tracking-wide text-white" style={{ fontFamily: "var(--font-display)" }}>{p.category}</h2>
+                <p className="text-sm md:text-base leading-relaxed max-w-2xl text-white/70" style={{ fontFamily: "var(--font-body)" }}>{p.goal}</p>
               </div>
             </div>
 
+            {/* Sub-services */}
             {p.subServices.length > 0 && (
-              <div className="relative space-y-4 pl-0 md:pl-[60px]">
-                <div className="flex flex-wrap gap-3">
-                  {p.subServices.map((sp) => (
-                    <span key={sp} className={`rounded-full px-5 py-2 text-xs tracking-[0.15em] uppercase ${p.bgImage ? 'bg-white/10 backdrop-blur-sm border border-white/20 text-white/80' : 'bg-card/40 border border-border/20 text-foreground/60'}`} style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
-                  ))}
-                </div>
+              <div className="flex flex-wrap gap-3 mb-8 pl-0 md:pl-[68px]">
+                {p.subServices.map((sp) => (
+                  <span key={sp} className="rounded-full px-5 py-2 text-xs tracking-[0.15em] uppercase bg-white/5 border border-white/15 text-white/80" style={{ fontFamily: "var(--font-body)" }}>{sp}</span>
+                ))}
               </div>
             )}
 
-            <div className="relative grid grid-cols-3 gap-px bg-border/20 rounded-xl overflow-hidden">
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-px bg-white/10 rounded-xl overflow-hidden mb-8">
               {p.stats.map((s) => (
-                <div key={s.label} className={`p-6 md:p-8 space-y-2 ${p.bgImage ? 'bg-black/30 backdrop-blur-sm' : 'bg-background'}`}>
-                  <div className={`text-2xl md:text-3xl font-light ${p.bgImage ? 'text-white' : 'text-foreground'}`} style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
-                  <div className={`text-[11px] tracking-widest uppercase ${p.bgImage ? 'text-white/50' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{s.label}</div>
+                <div key={s.label} className="p-6 md:p-8 space-y-2 bg-black/20">
+                  <div className="text-2xl md:text-4xl font-light text-white" style={{ fontFamily: "var(--font-display)" }}>{s.value}</div>
+                  <div className="text-[11px] tracking-widest uppercase text-white/50" style={{ fontFamily: "var(--font-body)" }}>{s.label}</div>
                 </div>
               ))}
             </div>
 
+            {/* Partners */}
             {p.partners.length > 0 && (
-              <div className="relative pl-0 md:pl-[60px] space-y-4">
-                <div>
-                  <span className={`text-[11px] tracking-[0.2em] uppercase ${p.bgImage ? 'text-white/40' : 'text-foreground/30'}`} style={{ fontFamily: "var(--font-body)" }}>Partners: </span>
-                  <span className={`text-sm ${p.bgImage ? 'text-white/60' : 'text-foreground/40'}`} style={{ fontFamily: "var(--font-body)" }}>{p.partners.join(" · ")}</span>
+              <div className="pl-0 md:pl-[68px] space-y-5">
+                <div className="flex items-baseline gap-2 flex-wrap">
+                  <span className="text-[11px] tracking-[0.2em] uppercase text-white/40 shrink-0" style={{ fontFamily: "var(--font-body)" }}>Partners</span>
+                  <span className="text-sm text-white/70" style={{ fontFamily: "var(--font-body)" }}>{p.partners.join("  ·  ")}</span>
                 </div>
-                {idx === 0 && (
-                  <img src={accelPartners} alt="Kingdom of the Netherlands, Anchorless Bangladesh, BYLC, YY Ventures, LightCastle Partners, Unilever" className="max-w-xl w-full rounded-lg brightness-0 invert" style={{ imageRendering: "auto" }} />
+                {p.partnersImage && (
+                  <img src={p.partnersImage} alt="Kingdom of the Netherlands, Anchorless Bangladesh, BYLC, YY Ventures, LightCastle Partners, Unilever" className="max-w-md w-full rounded-lg bg-white/90 p-4" />
                 )}
               </div>
             )}
-
-            {idx < services.length - 1 && <div className="border-t border-border/10" />}
           </section>
         </ScrollReveal>
       ))}
-
     </div>
   </PageLayout>
 );
