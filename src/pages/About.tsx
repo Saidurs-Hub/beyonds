@@ -11,6 +11,7 @@ const About = () => (
     subtitle="Beyond S Ventures represents SAJIDA's expansion into active investment management, mobilizing commercial funding for SMEs & startups across the Global South."
     heroImage={aboutBg}
     heroAlt="Misty forest at twilight"
+    backgroundColor="#261e3e"
   >
     <div className="space-y-24">
       {/* Vision & Thesis */}
