@@ -5,17 +5,18 @@ import portfolioHero from "@/assets/cholpori-hero.jpg";
 import relaxyLogo from "@/assets/relaxy-logo.png";
 import shikhoLogo from "@/assets/shikho-logo.png";
 import cholporiLogo from "@/assets/cholpori-logo.png";
-import shomvobLogo from "@/assets/shomvob-logo.jpeg.asset.json";
-import brltLogo from "@/assets/brtl-logo.jpeg.asset.json";
+import shomvobLogo from "@/assets/shomvob-logo.jpeg";
+import brltLogo from "@/assets/brtl-logo.jpeg";
+import shondhibazarLogo from "@/assets/shondhibazar-logo.png";
 import shondhibazarLogo from "@/assets/shondhibazar-logo.png.asset.json";
 
 const investments = [
   { company: "Relaxy", sector: "Healthcare", logo: relaxyLogo, website: "https://relaxy.com.bd/" },
   { company: "Shikho", sector: "EdTech", logo: shikhoLogo, website: "https://shikho.com/" },
   { company: "CholPori", sector: "EdTech", logo: cholporiLogo, website: "https://www.cholpori.com/" },
-  { company: "Shomvob Technologies Ltd.", sector: "HR-tech", logo: shomvobLogo.url, website: "https://shomvob.com/" },
-  { company: "BD Recycle Technologies Limited (BRTL)", sector: "Clean-tech", logo: brltLogo.url, website: "https://brtlcenter.com/" },
-  { company: "Shondhibazar", sector: "Agriculture", logo: shondhibazarLogo.url, website: "https://shondhibazar.com/" },
+  { company: "Shomvob Technologies Ltd.", sector: "HR-tech", logo: shomvobLogo, website: "https://shomvob.com/" },
+  { company: "BD Recycle Technologies Limited (BRTL)", sector: "Clean-tech", logo: brltLogo, website: "https://brtlcenter.com/" },
+  { company: "Shondhibazar", sector: "Agriculture", logo: shondhibazarLogo, website: "https://shondhibazar.com/" },
 ];
 
 const sectors = ["Technology", "Food & Agri", "Energy", "Textile & Apparel", "Climate & Environment", "Healthcare"];
