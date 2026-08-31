@@ -72,8 +72,7 @@ const MemberCard = ({ member, priority = false }: { member: TeamMember; priority
       >
         <div className="relative w-20 sm:w-full flex-shrink-0">
           <div
-            className="relative w-full h-20 sm:h-auto sm:aspect-square rounded-2xl overflow-hidden"
-            style={{ backgroundColor: BOX_BLUE }}
+            className="relative w-full h-20 sm:h-auto sm:aspect-square rounded-2xl"
           >
             {member.photo ? (
               <img
