@@ -93,9 +93,6 @@ const Services = () => (
                   <span className="text-[11px] tracking-[0.2em] uppercase text-white/40 shrink-0" style={{ fontFamily: "var(--font-body)" }}>Partners</span>
                   <span className="text-sm text-white/70" style={{ fontFamily: "var(--font-body)" }}>{p.partners.join("  ·  ")}</span>
                 </div>
-                {p.partnersImage && (
-                  <img src={p.partnersImage} alt="Kingdom of the Netherlands, Anchorless Bangladesh, BYLC, YY Ventures, LightCastle Partners, Unilever" className="max-w-md w-full rounded-lg bg-white/90 p-4" />
-                )}
               </div>
             )}
           </section>
