@@ -71,7 +71,7 @@ const MemberCard = ({ member, priority = false }: { member: TeamMember; priority
       >
         <div className="relative w-20 sm:w-full flex-shrink-0">
           <div
-            className="relative w-full h-20 sm:h-auto sm:aspect-square rounded-2xl"
+            className="relative w-full h-20 sm:h-auto sm:aspect-square rounded-lg"
           >
             {member.photo ? (
               <img
@@ -81,9 +81,11 @@ const MemberCard = ({ member, priority = false }: { member: TeamMember; priority
                 decoding="async"
                 // @ts-expect-error fetchpriority is valid HTML
                 fetchpriority={priority ? "high" : "low"}
-                className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+                className="absolute bottom-0 left-0 w-full pointer-events-none"
+                style={{ height: "112.4%" }}
               />
             ) : (
+
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-foreground/50 text-2xl sm:text-4xl font-light" style={{ fontFamily: "var(--font-display)" }}>
                   {member.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
