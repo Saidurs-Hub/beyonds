@@ -22,6 +22,7 @@ import teamHridoyOld from "@/assets/team-styled-hridoy.webp";
 import teamShehzad from "@/assets/team-styled-shehzad.webp";
 import teamAzad from "@/assets/team-styled-azad.webp";
 import teamZahida from "@/assets/team-styled-zahida-zoomed.webp";
+import teamRafid from "@/assets/team-styled-rafid.webp";
 
 
 interface TeamMember {
@@ -56,6 +57,7 @@ const coreTeam: TeamMember[] = [
   { name: "Mariya Arafin Bristy", role: "ASSISTANT MANAGER - FINANCE & ACCOUNTS", years: "", expertise: [], photo: teamMariya, linkedin: "https://www.linkedin.com/in/mariya-arafin-bristy-58a23922b/" },
   { name: "Salwa Tasnim Silma", role: "Investment Analyst", years: "", expertise: [], photo: teamSalwa, linkedin: "https://www.linkedin.com/in/sk-salwa-tasnim-silma-5b45231a0/" },
   { name: "Tasfia Ahmed", role: "Data Analyst", years: "", expertise: [], photo: teamTasfia, linkedin: "https://www.linkedin.com/in/tasfia-ahmed/" },
+  { name: "Mustafa Rafid Amin", role: "", years: "", expertise: [], photo: teamRafid },
 ];
 
 
@@ -118,7 +120,9 @@ const MemberCard = ({ member, priority = false }: { member: TeamMember; priority
 
         <div className="flex flex-col justify-center sm:space-y-1 min-w-0">
           <h3 className="text-foreground text-sm sm:text-base font-medium" style={{ fontFamily: "var(--font-body)" }}>{member.name}</h3>
-          <p className="text-accent text-[10px] sm:text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{member.role}</p>
+          {member.role.trim() && (
+            <p className="text-accent text-[10px] sm:text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{member.role}</p>
+          )}
         </div>
       </div>
     </ScrollReveal>
