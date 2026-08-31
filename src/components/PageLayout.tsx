@@ -58,7 +58,15 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+            <div
+              className="absolute inset-0"
+              style={
+                backgroundColor
+                  ? { background: "linear-gradient(to top, #851E3E 0%, rgba(133,30,62,0.45) 50%, transparent 100%)" }
+                  : undefined
+              }
+            />
+            {!backgroundColor && <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />}
 
             {/* Nav over hero */}
             <header className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 lg:px-20 py-6 flex items-center justify-center">
