@@ -82,7 +82,8 @@ const MemberCard = ({ member, priority = false }: { member: TeamMember; priority
                 // @ts-expect-error fetchpriority is valid HTML
                 fetchpriority={priority ? "high" : "low"}
                 className="absolute bottom-0 left-0 w-full pointer-events-none"
-                style={{ height: "112.4%" }}
+                style={{ height: "114.5%" }}
+
               />
             ) : (
 
