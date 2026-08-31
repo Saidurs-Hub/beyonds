@@ -59,7 +59,7 @@ const Services = () => (
     subtitle="From acceleration to venture building to investment management - meeting enterprises wherever they are in their growth journey."
     heroImage={servicesHero}
     heroAlt="Lettuce field with mountains in the background"
-    backgroundColor="linear-gradient(180deg, #851E3E 0%, #6B1530 50%, #3A0C1C 100%)"
+    backgroundColor="#851E3E"
   >
     <div className="space-y-24">
       {services.map((p, idx) => (
