@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { ReactNode, useState } from "react";
+import { ReactNode, useState, ReactElement } from "react";
 import { motion } from "framer-motion";
 import PageTransition from "@/components/PageTransition";
 import bsvLogo from "@/assets/bsv-logo-nav.png";
@@ -36,9 +36,10 @@ interface PageLayoutProps {
   heroImage?: string;
   heroAlt?: string;
   backgroundColor?: string;
+  headerExtra?: ReactNode;
 }
 
-const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundColor }: PageLayoutProps) => {
+const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundColor, headerExtra }: PageLayoutProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
