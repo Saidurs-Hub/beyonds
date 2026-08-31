@@ -57,7 +57,6 @@ const coreTeam: TeamMember[] = [
   { name: "Tasfia Ahmed", role: "Data Analyst", years: "", expertise: [], photo: teamTasfia, linkedin: "https://www.linkedin.com/in/tasfia-ahmed/" },
 ];
 
-const BOX_BLUE = "#C6DEF1";
 
 const MemberCard = ({ member, priority = false }: { member: TeamMember; priority?: boolean }) => {
   const [hovered, setHovered] = useState(false);
