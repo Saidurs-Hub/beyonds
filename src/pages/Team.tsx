@@ -57,6 +57,7 @@ const coreTeam: TeamMember[] = [
   { name: "Mariya Arafin Bristy", role: "ASSISTANT MANAGER - FINANCE & ACCOUNTS", years: "", expertise: [], photo: teamMariya, linkedin: "https://www.linkedin.com/in/mariya-arafin-bristy-58a23922b/" },
   { name: "Salwa Tasnim Silma", role: "Investment Analyst", years: "", expertise: [], photo: teamSalwa, linkedin: "https://www.linkedin.com/in/sk-salwa-tasnim-silma-5b45231a0/" },
   { name: "Tasfia Ahmed", role: "Data Analyst", years: "", expertise: [], photo: teamTasfia, linkedin: "https://www.linkedin.com/in/tasfia-ahmed/" },
+  { name: "Mustafa Rafid Amin", role: "", years: "", expertise: [], photo: teamRafid },
 ];
 
 
