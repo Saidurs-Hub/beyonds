@@ -62,7 +62,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
               className="absolute inset-0"
               style={
                 backgroundColor
-                  ? { background: "linear-gradient(to top, #9B2A4A 0%, rgba(155,42,74,0.45) 50%, transparent 100%)" }
+                  ? { background: "linear-gradient(to top, #851E3E 0%, rgba(133,30,62,0.45) 50%, transparent 100%)" }
                   : undefined
               }
             />
