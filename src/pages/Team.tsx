@@ -120,7 +120,9 @@ const MemberCard = ({ member, priority = false }: { member: TeamMember; priority
 
         <div className="flex flex-col justify-center sm:space-y-1 min-w-0">
           <h3 className="text-foreground text-sm sm:text-base font-medium" style={{ fontFamily: "var(--font-body)" }}>{member.name}</h3>
-          <p className="text-accent text-[10px] sm:text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{member.role}</p>
+          {member.role.trim() && (
+            <p className="text-accent text-[10px] sm:text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{member.role}</p>
+          )}
         </div>
       </div>
     </ScrollReveal>
