@@ -59,7 +59,7 @@ const About = () => (
 
       {/* Impact Stats */}
       <ScrollReveal>
-        <section className="bg-card/30 border border-border/20 rounded-xl p-8 md:p-14">
+        <section className="bg-white/[0.04] border border-white/10 rounded-xl p-8 md:p-14">
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium mb-10" style={{ fontFamily: "var(--font-body)" }}>Impact at a Glance</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {[
