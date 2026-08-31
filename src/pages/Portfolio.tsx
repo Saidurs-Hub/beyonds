@@ -1,24 +1,32 @@
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { openExternalLink } from "@/lib/openExternalLink";
+import { Sprout, ShoppingBag, Briefcase, Truck, Factory, Building2 } from "lucide-react";
 import portfolioHero from "@/assets/cholpori-hero.jpg";
 import relaxyLogo from "@/assets/relaxy-logo.png";
 import shikhoLogo from "@/assets/shikho-logo.png";
 import cholporiLogo from "@/assets/cholpori-logo.png";
-import shomvobLogo from "@/assets/shomvob-logo.jpeg.asset.json";
-import brltLogo from "@/assets/brtl-logo.jpeg.asset.json";
-import shondhibazarLogo from "@/assets/shondhibazar-logo.png.asset.json";
+import shomvobLogo from "@/assets/shomvob-logo.jpeg";
+import brltLogo from "@/assets/brtl-logo.jpeg";
+import shondhibazarLogo from "@/assets/shondhibazar-logo.png";
 
 const investments = [
   { company: "Relaxy", sector: "Healthcare", logo: relaxyLogo, website: "https://relaxy.com.bd/" },
   { company: "Shikho", sector: "EdTech", logo: shikhoLogo, website: "https://shikho.com/" },
   { company: "CholPori", sector: "EdTech", logo: cholporiLogo, website: "https://www.cholpori.com/" },
-  { company: "Shomvob Technologies Ltd.", sector: "HR-tech", logo: shomvobLogo.url, website: "https://shomvob.com/" },
-  { company: "BD Recycle Technologies Limited (BRTL)", sector: "Clean-tech", logo: brltLogo.url, website: "https://brtlcenter.com/" },
-  { company: "Shondhibazar", sector: "Agriculture", logo: shondhibazarLogo.url, website: "https://shondhibazar.com/" },
+  { company: "Shomvob Technologies Ltd.", sector: "HR-tech", logo: shomvobLogo, website: "https://shomvob.com/" },
+  { company: "BD Recycle Technologies Limited (BRTL)", sector: "Clean-tech", logo: brltLogo, website: "https://brtlcenter.com/" },
+  { company: "Shondhibazar", sector: "Agriculture", logo: shondhibazarLogo, website: "https://shondhibazar.com/" },
 ];
 
-const sectors = ["Technology", "Food & Agri", "Energy", "Textile & Apparel", "Climate & Environment", "Healthcare"];
+const sectors = [
+  { name: "Agriculture", icon: Sprout },
+  { name: "Trade (Wholesale/Retail)", icon: ShoppingBag },
+  { name: "Professional Services", icon: Briefcase },
+  { name: "Mobility", icon: Truck },
+  { name: "Manufacturing", icon: Factory },
+  { name: "Construction & Real Estate", icon: Building2 },
+];
 
 const Portfolio = () => (
   <PageLayout
@@ -66,14 +74,23 @@ const Portfolio = () => (
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="grid md:grid-cols-2 gap-16">
-          <div className="space-y-6">
-            <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Sector Focus</h2>
-            {sectors.map((s, i) => (
-              <div key={s} className={`py-3 ${i < sectors.length - 1 ? "border-b border-border/10" : ""}`}>
-                <span className="text-foreground/70 text-sm" style={{ fontFamily: "var(--font-body)" }}>{s}</span>
-              </div>
-            ))}
+        <section className="space-y-10">
+          <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Sector Focus</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {sectors.map((s) => {
+              const Icon = s.icon;
+              return (
+                <div
+                  key={s.name}
+                  className="group flex items-center gap-5 bg-card/40 border border-border/20 rounded-2xl p-6 transition-all duration-300 hover:border-accent/40 hover:bg-card/60 hover:-translate-y-0.5"
+                >
+                  <div className="shrink-0 flex items-center justify-center h-12 w-12 rounded-xl bg-accent/10 text-accent transition-colors duration-300 group-hover:bg-accent/20">
+                    <Icon className="h-5 w-5" strokeWidth={1.5} />
+                  </div>
+                  <span className="text-foreground/80 text-sm leading-snug" style={{ fontFamily: "var(--font-body)" }}>{s.name}</span>
+                </div>
+              );
+            })}
           </div>
         </section>
       </ScrollReveal>
