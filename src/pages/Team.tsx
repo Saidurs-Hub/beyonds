@@ -5,7 +5,7 @@ import { Linkedin } from "lucide-react";
 import { openExternalLink } from "@/lib/openExternalLink";
 import teamHero from "@/assets/team-hero.jpeg";
 
-import teamMuhymin from "@/assets/team-styled-muhymin.webp";
+import teamMuhymin from "@/assets/team-styled-samiul-centered.webp";
 import teamAk from "@/assets/team-styled-aksalam.webp";
 import teamSarah from "@/assets/team-styled-sarah.webp";
 import teamMuhyminZoomed from "@/assets/team-styled-suhymin-zoomed.webp";
