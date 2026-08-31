@@ -16,14 +16,14 @@ const About = () => (
     <div className="space-y-24">
       {/* Vision & Thesis */}
       <ScrollReveal>
-        <section className="grid md:grid-cols-2 gap-px bg-border/20">
-          <div className="bg-background p-8 md:p-12 space-y-4">
+        <section className="grid md:grid-cols-2 gap-px bg-white/10">
+          <div className="bg-[#261e3e]/60 backdrop-blur-sm p-8 md:p-12 space-y-4">
             <span className="text-accent text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Vision</span>
             <p className="text-foreground/80 text-xl md:text-2xl font-light leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>
               Establish a global investment management and entrepreneurship development model, originating from Bangladesh.
             </p>
           </div>
-          <div className="bg-background p-8 md:p-12 space-y-4">
+          <div className="bg-[#261e3e]/60 backdrop-blur-sm p-8 md:p-12 space-y-4">
             <span className="text-accent text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Investment Thesis</span>
             <p className="text-foreground/80 text-xl md:text-2xl font-light leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>
               Invest in scalable enterprises that generate commercial returns and deliver material impact in underserved markets.
@@ -59,7 +59,7 @@ const About = () => (
 
       {/* Impact Stats */}
       <ScrollReveal>
-        <section className="bg-card/30 border border-border/20 rounded-xl p-8 md:p-14">
+        <section className="bg-white/[0.04] border border-white/10 rounded-xl p-8 md:p-14">
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium mb-10" style={{ fontFamily: "var(--font-body)" }}>Impact at a Glance</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {[
