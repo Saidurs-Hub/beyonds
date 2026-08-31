@@ -48,7 +48,7 @@ const managementTeam: TeamMember[] = [
 
 const coreTeam: TeamMember[] = [
   { name: "M. Samiul Haque", role: "Head - Advisory and Research", years: "10+", expertise: [], photo: teamMuhymin, linkedin: "https://www.linkedin.com/in/m-samiul-haque/" },
-  { name: "Saddam Khan Sumit", role: "Sr. Investment Associate", years: "10+", expertise: [], photo: teamAk, linkedin: "https://www.linkedin.com/in/sksumit/" },
+  { name: "Saddam Khan Sumit", role: "Sr. Investment Associate", years: "10+", expertise: [], photo: teamSaddam, linkedin: "https://www.linkedin.com/in/sksumit/" },
   { name: "Lamia Hafiz", role: "Accelerator Manager", years: "12+", expertise: [], photo: teamLamia, linkedin: "https://www.linkedin.com/in/lamia-hafiz-4a3a303b9/" },
   { name: "Kashfia Mahmud", role: "Gender Lens Strategist", years: "15+", expertise: [], photo: teamKashfia, linkedin: "https://www.linkedin.com/in/kashfiamahmud-mfin/" },
   { name: "Ahmed Jawad Yusuf", role: "Lead - Ecosystem Engagement", years: "12+", expertise: [], photo: teamJawadNew, linkedin: "https://www.linkedin.com/in/ahmed-jyusuf/" },
