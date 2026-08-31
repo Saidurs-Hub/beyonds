@@ -19,7 +19,6 @@ const investments = [
 ];
 
 const sectors = ["Technology", "Food & Agri", "Energy", "Textile & Apparel", "Climate & Environment", "Healthcare"];
-const instruments = ["Grants", "Concessional Loans", "Commercial Debt", "Equity"];
 
 const Portfolio = () => (
   <PageLayout
@@ -73,14 +72,6 @@ const Portfolio = () => (
             {sectors.map((s, i) => (
               <div key={s} className={`py-3 ${i < sectors.length - 1 ? "border-b border-border/10" : ""}`}>
                 <span className="text-foreground/70 text-sm" style={{ fontFamily: "var(--font-body)" }}>{s}</span>
-              </div>
-            ))}
-          </div>
-          <div className="space-y-6">
-            <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Capital Instruments</h2>
-            {instruments.map((inst, i) => (
-              <div key={inst} className={`py-3 ${i < instruments.length - 1 ? "border-b border-border/10" : ""}`}>
-                <span className="text-foreground/70 text-sm" style={{ fontFamily: "var(--font-body)" }}>{inst}</span>
               </div>
             ))}
           </div>
