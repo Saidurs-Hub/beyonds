@@ -2,7 +2,7 @@ import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Rocket, Leaf, BarChart3 } from "lucide-react";
 import servicesHero from "@/assets/services-hero.jpg";
-import accelPartners from "@/assets/accel-partners.png";
+
 
 const services = [
   {
@@ -16,7 +16,7 @@ const services = [
       { value: "73", label: "Companies financed" },
     ],
     partners: ["Anchorless", "Kingdom of the Netherlands", "BYLC", "YY Ventures", "LightCastle Partners", "Unilever"],
-    partnersImage: accelPartners,
+    
   },
   {
     icon: Leaf,
