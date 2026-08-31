@@ -22,6 +22,7 @@ import teamHridoyOld from "@/assets/team-styled-hridoy.webp";
 import teamShehzad from "@/assets/team-styled-shehzad.webp";
 import teamAzad from "@/assets/team-styled-azad.webp";
 import teamZahida from "@/assets/team-styled-zahida-zoomed.webp";
+import teamRafid from "@/assets/team-styled-rafid.webp";
 
 
 interface TeamMember {
