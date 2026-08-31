@@ -169,6 +169,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
               <button onClick={() => setMobileOpen(!mobileOpen)} className="absolute right-6 md:right-12 lg:right-20 md:hidden text-foreground/60 hover:text-foreground">
                 {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
+              {headerExtra && <div className="absolute right-6 md:right-12 lg:right-20 top-1/2 -translate-y-1/2 hidden md:block">{headerExtra}</div>}
             </header>
             {mobileOpen && (
               <div className="md:hidden px-6 pb-6 space-y-4 border-b border-border/20">
