@@ -34,7 +34,7 @@ interface TeamMember {
 
 const leadership: TeamMember[] = [
   { name: "Zahida Fizza Kabir", role: "Director", years: "", expertise: [], photo: teamZahida, linkedin: "https://www.linkedin.com/in/zahida-fizza-kabir-02456b8b/" },
-  { name: "Muhymin Chowdhury", role: "Managing Director", years: "18+", expertise: [], photo: teamMuhyminZoomed, linkedin: "https://www.linkedin.com/in/muhymin-chowdhury/" },
+  { name: "Muhymin Chowdhury", role: "DIRECTOR", years: "18+", expertise: [], photo: teamMuhyminZoomed, linkedin: "https://www.linkedin.com/in/muhymin-chowdhury/" },
   { name: "Md. Abul Kalam Azad", role: "Director", years: "", expertise: [], photo: teamAzad, linkedin: "https://www.linkedin.com/in/azadrubel/" },
   { name: "A.K. Faizan Salam", role: "Director & CAMLCO", years: "12+", expertise: [], photo: teamSaddam, linkedin: "https://www.linkedin.com/in/faizan-salam-ak/" },
 ];
