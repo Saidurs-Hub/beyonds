@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Linkedin } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Linkedin } from "lucide-react";
@@ -135,6 +136,17 @@ const Team = () => (
     subtitle="Decades of combined experience across impact investing, venture building, fund management, and development finance."
     heroImage={teamHero}
     heroAlt="SAJIDA Foundation team group photo"
+    headerExtra={
+      <a
+        href="https://www.linkedin.com/company/beyondsventures"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Beyond S Ventures on LinkedIn"
+        className="text-white/70 hover:text-white transition-colors"
+      >
+        <Linkedin className="w-5 h-5" />
+      </a>
+    }
   >
     <div className="space-y-24">
       <section className="space-y-10">
