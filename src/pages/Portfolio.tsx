@@ -8,7 +8,7 @@ import shikhoLogo from "@/assets/shikho-logo.png";
 import cholporiLogoAsset from "@/assets/cholpori-logo.png.asset.json";
 import shomvobLogo from "@/assets/shomvob-logo.jpeg";
 import brltLogoAsset from "@/assets/brtl-logo.png.asset.json";
-import shondhibazarLogo from "@/assets/shondhibazar-logo.png";
+import shondhibazarLogoAsset from "@/assets/shondhibazar-logo.png.asset.json";
 
 const investments = [
   { company: "Relaxy", sector: "Healthcare", logo: relaxyLogo, website: "https://relaxy.com.bd/" },
@@ -16,7 +16,7 @@ const investments = [
   { company: "CholPori", sector: "EdTech", logo: cholporiLogoAsset.url, website: "https://www.cholpori.com/" },
   { company: "Shomvob Technologies Ltd.", sector: "HR-tech", logo: shomvobLogo, website: "https://shomvob.com/" },
   { company: "BD Recycle Technologies Limited (BRTL)", sector: "Clean-tech", logo: brltLogoAsset.url, website: "https://brtlcenter.com/" },
-  { company: "Shondhibazar", sector: "Agriculture", logo: shondhibazarLogo, website: "https://shondhibazar.com/" },
+  { company: "Shondhibazar", sector: "Agriculture", logo: shondhibazarLogoAsset.url, website: "https://shondhibazar.com/" },
 ];
 
 const sectors = [
