@@ -8,7 +8,7 @@ import shikhoLogo from "@/assets/shikho-logo.png";
 import cholporiLogoAsset from "@/assets/cholpori-logo.png.asset.json";
 import shomvobLogo from "@/assets/shomvob-logo.jpeg";
 import brltLogoAsset from "@/assets/brtl-logo.png.asset.json";
-import shondhibazarLogo from "@/assets/shondhibazar-logo.png";
+import shondhibazarLogoAsset from "@/assets/shondhibazar-logo.png.asset.json";
 
 const investments = [
   { company: "Relaxy", sector: "Healthcare", logo: relaxyLogo, website: "https://relaxy.com.bd/" },
