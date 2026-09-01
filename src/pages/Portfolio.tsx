@@ -5,7 +5,7 @@ import { Sprout, ShoppingBag, Briefcase, Truck, Factory, Building2 } from "lucid
 import portfolioHero from "@/assets/cholpori-hero.jpg";
 import relaxyLogo from "@/assets/relaxy-logo.png";
 import shikhoLogo from "@/assets/shikho-logo.png";
-import cholporiLogo from "@/assets/cholpori-logo.png";
+import cholporiLogoAsset from "@/assets/cholpori-logo.png.asset.json";
 import shomvobLogo from "@/assets/shomvob-logo.jpeg";
 import brltLogo from "@/assets/brtl-logo.jpeg";
 import shondhibazarLogo from "@/assets/shondhibazar-logo.png";
