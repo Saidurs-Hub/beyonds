@@ -11,7 +11,7 @@ import brltLogoAsset from "@/assets/brtl-logo.png.asset.json";
 import shondhibazarLogoAsset from "@/assets/shondhibazar-logo.png.asset.json";
 
 const investments = [
-  { company: "Relaxy", sector: "Healthcare", logo: relaxyLogo, website: "https://relaxy.com.bd/" },
+  { company: "Relaxy", sector: "Healthcare", logo: relaxyLogoAsset.url, website: "https://relaxy.com.bd/" },
   { company: "Shikho", sector: "EdTech", logo: shikhoLogo, website: "https://shikho.com/" },
   { company: "CholPori", sector: "EdTech", logo: cholporiLogoAsset.url, website: "https://www.cholpori.com/" },
   { company: "Shomvob Technologies Ltd.", sector: "HR-tech", logo: shomvobLogo, website: "https://shomvob.com/" },
