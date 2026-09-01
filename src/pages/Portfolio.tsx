@@ -3,7 +3,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { openExternalLink } from "@/lib/openExternalLink";
 import { Sprout, ShoppingBag, Briefcase, Truck, Factory, Building2 } from "lucide-react";
 import portfolioHero from "@/assets/cholpori-hero.jpg";
-import relaxyLogo from "@/assets/relaxy-logo.png";
+import relaxyLogoAsset from "@/assets/relaxy-logo.png.asset.json";
 import shikhoLogo from "@/assets/shikho-logo.png";
 import cholporiLogoAsset from "@/assets/cholpori-logo.png.asset.json";
 import shomvobLogo from "@/assets/shomvob-logo.jpeg";
@@ -11,7 +11,7 @@ import brltLogoAsset from "@/assets/brtl-logo.png.asset.json";
 import shondhibazarLogoAsset from "@/assets/shondhibazar-logo.png.asset.json";
 
 const investments = [
-  { company: "Relaxy", sector: "Healthcare", logo: relaxyLogo, website: "https://relaxy.com.bd/" },
+  { company: "Relaxy", sector: "Healthcare", logo: relaxyLogoAsset.url, website: "https://relaxy.com.bd/" },
   { company: "Shikho", sector: "EdTech", logo: shikhoLogo, website: "https://shikho.com/" },
   { company: "CholPori", sector: "EdTech", logo: cholporiLogoAsset.url, website: "https://www.cholpori.com/" },
   { company: "Shomvob Technologies Ltd.", sector: "HR-tech", logo: shomvobLogo, website: "https://shomvob.com/" },
