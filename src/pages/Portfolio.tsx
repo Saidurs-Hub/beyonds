@@ -15,7 +15,7 @@ const investments = [
   { company: "Shikho", sector: "EdTech", logo: shikhoLogo, website: "https://shikho.com/" },
   { company: "CholPori", sector: "EdTech", logo: cholporiLogoAsset.url, website: "https://www.cholpori.com/" },
   { company: "Shomvob Technologies Ltd.", sector: "HR-tech", logo: shomvobLogo, website: "https://shomvob.com/" },
-  { company: "BD Recycle Technologies Limited (BRTL)", sector: "Clean-tech", logo: brltLogo, website: "https://brtlcenter.com/" },
+  { company: "BD Recycle Technologies Limited (BRTL)", sector: "Clean-tech", logo: brltLogoAsset.url, website: "https://brtlcenter.com/" },
   { company: "Shondhibazar", sector: "Agriculture", logo: shondhibazarLogo, website: "https://shondhibazar.com/" },
 ];
 
