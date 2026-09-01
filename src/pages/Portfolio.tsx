@@ -6,7 +6,7 @@ import portfolioHero from "@/assets/cholpori-hero.jpg";
 import relaxyLogoAsset from "@/assets/relaxy-logo.png.asset.json";
 import shikhoLogo from "@/assets/shikho-logo.png";
 import cholporiLogoAsset from "@/assets/cholpori-logo.png.asset.json";
-import shomvobLogo from "@/assets/shomvob-logo.jpeg";
+import shomvobLogoAsset from "@/assets/shomvob-logo.png.asset.json";
 import brltLogoAsset from "@/assets/brtl-logo.png.asset.json";
 import shondhibazarLogoAsset from "@/assets/shondhibazar-logo.png.asset.json";
 
