@@ -7,7 +7,7 @@ import relaxyLogo from "@/assets/relaxy-logo.png";
 import shikhoLogo from "@/assets/shikho-logo.png";
 import cholporiLogoAsset from "@/assets/cholpori-logo.png.asset.json";
 import shomvobLogo from "@/assets/shomvob-logo.jpeg";
-import brltLogo from "@/assets/brtl-logo.jpeg";
+import brltLogoAsset from "@/assets/brtl-logo.png.asset.json";
 import shondhibazarLogo from "@/assets/shondhibazar-logo.png";
 
 const investments = [
