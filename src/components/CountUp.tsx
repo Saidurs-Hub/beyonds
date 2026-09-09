@@ -11,6 +11,8 @@ interface CountUpProps {
   thousands?: boolean;
   /** Duration of the count-up animation in ms */
   duration?: number;
+  /** Number of decimal places to preserve */
+  decimals?: number;
   className?: string;
   style?: React.CSSProperties;
 }
@@ -23,6 +25,7 @@ const CountUp = ({
   suffix = "",
   thousands = false,
   duration = 2000,
+  decimals = 0,
   className,
   style,
 }: CountUpProps) => {
@@ -43,7 +46,8 @@ const CountUp = ({
             const animate = (now: number) => {
               const progress = Math.min((now - start) / duration, 1);
               const eased = easeOutExpo(progress);
-              setValue(Math.round(eased * target));
+              const factor = 10 ** decimals;
+              setValue(Math.round(eased * target * factor) / factor);
               if (progress < 1) requestAnimationFrame(animate);
               else setValue(target);
             };
@@ -56,11 +60,11 @@ const CountUp = ({
 
     observer.observe(node);
     return () => observer.disconnect();
-  }, [target, duration]);
+  }, [target, duration, decimals]);
 
   const formatted = thousands
-    ? value.toLocaleString("en-US")
-    : value.toString();
+    ? value.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals })
+    : value.toFixed(decimals);
 
   return (
     <span ref={ref} className={className} style={style}>
