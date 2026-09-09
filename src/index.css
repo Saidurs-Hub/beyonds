@@ -1,7 +1,3 @@
-/* Aptos is used as the primary typeface. It is a system-installed Microsoft font,
-   so we declare it first and fall back to similar sans-serif faces for visitors
-   who do not have it installed. */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -38,8 +34,13 @@
 
     --radius: 0.5rem;
 
-    --font-display: 'Aptos', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    --font-body: 'Aptos', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --font-body: 'Manrope', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+    --service-maroon: 341 63% 32%;
+    --service-plum: 259 35% 18%;
+    --service-lavender: 289 17% 83%;
+    --service-paper: 330 15% 95%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
