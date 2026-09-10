@@ -20,15 +20,17 @@ const Contact = () => (
             <ArrowUpRight className="w-4 h-4 text-foreground/30 group-hover:text-foreground/70 transition-colors" />
           </a>
           <div className="max-w-2xl">
-            <iframe
-              className="airtable-embed"
-              src="https://airtable.com/embed/appjjKitLzE9FeO3b/pagaLKf0iqUOQxPlY/form"
-              title="Contact form"
-              frameBorder="0"
-              width="100%"
-              height="533"
-              style={{ background: "transparent", border: "1px solid #ccc" }}
-            />
+            <div className="rounded-2xl border border-border/20 bg-[#F5F1F4] p-2 shadow-sm overflow-hidden">
+              <iframe
+                className="airtable-embed block w-full rounded-xl"
+                src="https://airtable.com/embed/appjjKitLzE9FeO3b/pagaLKf0iqUOQxPlY/form"
+                title="Contact form"
+                frameBorder="0"
+                width="100%"
+                height="533"
+                style={{ background: "transparent", border: "0" }}
+              />
+            </div>
           </div>
         </section>
       </ScrollReveal>
