@@ -134,16 +134,16 @@ const Services = () => (
 
       <ScrollReveal>
         <section className="group grid gap-10 border-t border-service-lavender/15 pt-12 lg:grid-cols-12 lg:items-center md:pt-16">
-          <div className="order-2 lg:order-1 lg:col-span-7">
-            <StatBlock stats={services[1].stats} />
-          </div>
-          <div className="order-1 lg:order-2 lg:col-span-7 lg:pl-12">
+          <div className="lg:col-span-5">
             <div className="mb-5 flex items-center gap-3 text-service-lavender/65">
               <Leaf className="h-5 w-5" /><span className="text-[10px] font-medium uppercase tracking-[0.25em]">02 / Build</span>
             </div>
             <h2 className="text-4xl font-light not-italic leading-[1.05] text-service-paper md:text-6xl">Venture Building &amp;<br /><span className="text-service-lavender">Impact-Linked Financing</span></h2>
-            <p className="mt-7 max-w-xl text-sm leading-7 text-service-paper/65">{services[1].goal}</p>
+            <p className="mt-7 max-w-md text-sm leading-7 text-service-paper/65">{services[1].goal}</p>
             <ServiceTags items={services[1].subServices} />
+          </div>
+          <div className="lg:col-span-7">
+            <StatBlock stats={services[1].stats} />
           </div>
         </section>
       </ScrollReveal>
