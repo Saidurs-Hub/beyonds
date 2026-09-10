@@ -79,8 +79,20 @@ const Index = () => {
               ))}
             </div>
           )}
-          <main className="flex-1 flex flex-col items-center justify-center text-center px-6">
-            <img src={logo} alt="Beyond S Ventures" className="opacity-0 animate-fade-up w-[280px] sm:w-[360px] md:w-[460px] lg:w-[560px]" />
+          {/* Center vignette to make the white logo pop against the abstract background */}
+          <div
+            className="absolute inset-0 z-0 pointer-events-none"
+            style={{
+              background: "radial-gradient(circle at 50% 55%, rgba(26, 5, 16, 0.6) 0%, rgba(26, 5, 16, 0.25) 35%, rgba(26, 5, 16, 0) 65%)",
+            }}
+          />
+          <main className="flex-1 flex flex-col items-center justify-center text-center px-6 relative z-10">
+            <img
+              src={logo}
+              alt="Beyond S Ventures"
+              className="opacity-0 animate-fade-up w-[280px] sm:w-[360px] md:w-[460px] lg:w-[560px]"
+              style={{ filter: "drop-shadow(0 0 28px rgba(0, 0, 0, 0.65))" }}
+            />
             <p className="opacity-0 animate-fade-up animate-delay-500 mt-2 text-foreground/60 text-sm md:text-base tracking-[0.15em] uppercase max-w-md" style={{ fontFamily: "var(--font-body)" }}>
               Impact investing across the Global South
             </p>
