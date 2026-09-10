@@ -63,7 +63,7 @@ const AnimatedStat = ({ value, label }: { value: string; label: string }) => {
       <CountUp
         {...parts}
         duration={1800}
-        className="block whitespace-nowrap text-3xl font-light leading-none text-service-paper transition-transform duration-500 group-hover/stat:-translate-y-1 md:text-5xl"
+        className="block whitespace-nowrap text-3xl font-light leading-none text-service-paper transition-transform duration-500 group-hover/stat:-translate-y-1 md:text-4xl"
       />
       <p className="mt-5 text-[10px] font-medium uppercase tracking-[0.2em] text-service-lavender/65">{label}</p>
     </div>
