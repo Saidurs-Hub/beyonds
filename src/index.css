@@ -38,6 +38,8 @@
     --accent: 35 40% 55%;
     --accent-foreground: 341 55% 8%;
     --accent-vivid: 38 92% 60%;
+    --nav-pill-start: 341 65% 16%;
+    --nav-pill-end: 341 55% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 341 10% 98%;
