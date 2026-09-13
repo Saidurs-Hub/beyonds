@@ -163,8 +163,16 @@ const Team = () => (
         <ScrollReveal>
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Management Team</h2>
         </ScrollReveal>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-8 max-w-3xl">
+        <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 sm:gap-8 max-w-2xl">
           {managementTeam.map((m, i) => <MemberCard key={m.name} member={m} priority={i < 2} />)}
+        </div>
+      </section>
+      <section className="space-y-10">
+        <ScrollReveal>
+          <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Advisory Panel</h2>
+        </ScrollReveal>
+        <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 sm:gap-8 max-w-2xl">
+          {advisoryPanel.map((m) => <MemberCard key={m.name} member={m} />)}
         </div>
       </section>
       <section className="space-y-10">
