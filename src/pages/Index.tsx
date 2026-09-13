@@ -17,6 +17,7 @@ const navLinks = [
 const Index = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const location = useLocation();
 
   useEffect(() => {
     let ticking = false;
