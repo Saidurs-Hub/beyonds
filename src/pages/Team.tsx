@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Linkedin } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
