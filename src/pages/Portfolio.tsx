@@ -41,16 +41,16 @@ const Portfolio = () => (
       <ScrollReveal>
         <section className="space-y-10">
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Existing Investments</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-6">
             {investments.map((inv) => (
               <button
                 key={inv.company}
                 type="button"
                 onClick={() => openExternalLink(inv.website)}
-                className="group relative text-left bg-card/40 border border-border/20 rounded-2xl p-8 flex flex-col items-center justify-between gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_20px_40px_-15px_hsl(var(--accent)/0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="group relative h-full text-left bg-card/40 border border-border/20 rounded-2xl p-8 flex flex-col items-center justify-between gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_20px_40px_-15px_hsl(var(--accent)/0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 aria-label={`Visit ${inv.company} website`}
               >
-                <div className="flex-1 flex items-center justify-center w-full h-28">
+                <div className="flex-1 flex items-center justify-center w-full min-h-36">
                   {inv.logo ? (
                     <img
                       src={inv.logo}
@@ -62,7 +62,7 @@ const Portfolio = () => (
                     <div className="h-16 w-16 rounded-xl bg-accent/10" />
                   )}
                 </div>
-                <div className="w-full flex items-start justify-between gap-3">
+                <div className="w-full min-h-20 shrink-0 flex items-start justify-between gap-3">
                   <span className="text-foreground text-sm leading-snug" style={{ fontFamily: "var(--font-body)" }}>{inv.company}</span>
                   <span className="shrink-0 text-[10px] tracking-[0.2em] uppercase text-foreground/50 bg-secondary/60 px-3 py-1 rounded-full border border-border/20" style={{ fontFamily: "var(--font-body)" }}>
                     {inv.sector}
