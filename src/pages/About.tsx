@@ -4,6 +4,7 @@ import AnimatedImage from "@/components/AnimatedImage";
 import CountUp from "@/components/CountUp";
 
 import aboutBg from "@/assets/about-hero.jpg";
+import bangladeshGlobal from "@/assets/bangladesh-global.jpg";
 
 const About = () => (
   <PageLayout
@@ -86,7 +87,7 @@ const About = () => (
       {/* Global Presence Image */}
       <ScrollReveal>
         <div className="relative rounded-xl overflow-hidden aspect-[21/9] group">
-          <AnimatedImage src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80" alt="Global cityscape" className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+          <AnimatedImage src={bangladeshGlobal} alt="Abstract Bangladesh skyline and river delta motif" className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
           <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
         </div>
       </ScrollReveal>
