@@ -85,7 +85,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
             </div>
 
             {/* Nav over hero */}
-            <header className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 lg:px-20 py-6 flex items-center justify-center">
+            <header className={`fixed top-0 left-0 right-0 z-50 px-6 md:px-12 lg:px-20 py-6 flex items-center justify-center transition-colors duration-300 ${mobileOpen ? "bg-background" : ""}`}>
               <Link
                 to="/"
                 className="absolute left-6 md:left-12 lg:left-20 flex items-center"
@@ -116,7 +116,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
 
             {/* Mobile Nav */}
             {mobileOpen && (
-              <div className="relative z-20 md:hidden px-6 pb-6 space-y-4">
+              <div className="fixed inset-0 z-40 bg-background md:hidden flex flex-col px-6 pt-24 pb-6 space-y-4">
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
@@ -162,7 +162,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
           </div>
         ) : (
           <>
-            <header className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 lg:px-20 py-6 flex items-center justify-center">
+            <header className={`fixed top-0 left-0 right-0 z-50 px-6 md:px-12 lg:px-20 py-6 flex items-center justify-center transition-colors duration-300 ${mobileOpen ? "bg-background" : ""}`}>
               <Link
                 to="/"
                 className="absolute left-6 md:left-12 lg:left-20 flex items-center"
@@ -191,7 +191,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
               {headerExtra && <div className="absolute right-6 md:right-12 lg:right-20 top-1/2 -translate-y-1/2 hidden md:block">{headerExtra}</div>}
             </header>
             {mobileOpen && (
-              <div className="md:hidden px-6 pb-6 space-y-4 border-b border-border/20">
+              <div className="fixed inset-0 z-40 bg-background md:hidden flex flex-col px-6 pt-24 pb-6 space-y-4">
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
