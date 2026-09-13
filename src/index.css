@@ -37,6 +37,7 @@
 
     --accent: 35 40% 55%;
     --accent-foreground: 341 55% 8%;
+    --accent-vivid: 38 92% 60%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 341 10% 98%;
@@ -160,4 +161,10 @@
   .page-gradient-contact { background-image: var(--gradient-contact); }
   .page-gradient-team { background-image: var(--gradient-team); }
   .page-gradient-insights { background-image: var(--gradient-insights); }
+
+  .nav-link-active {
+    color: hsl(var(--accent-vivid));
+    text-shadow: 0 0 10px hsl(var(--accent-vivid) / 0.95), 0 0 22px hsl(var(--accent-vivid) / 0.6);
+    font-weight: 600;
+  }
 }
