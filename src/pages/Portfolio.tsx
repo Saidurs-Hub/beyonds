@@ -56,10 +56,10 @@ const Portfolio = () => (
                       src={inv.logo}
                       alt={inv.company}
                       loading="lazy"
-                      className={`h-16 w-auto max-w-[70%] mx-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity duration-300${"invertLogo" in inv && inv.invertLogo ? " brightness-0 invert" : ""}`}
+                      className={`h-24 w-auto max-w-[70%] mx-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity duration-300${"invertLogo" in inv && inv.invertLogo ? " brightness-0 invert" : ""}`}
                     />
                   ) : (
-                    <div className="h-16 w-16 rounded-xl bg-accent/10" />
+                    <div className="h-24 w-24 rounded-xl bg-accent/10" />
                   )}
                 </div>
                 <div className="w-full min-h-20 shrink-0 flex items-start justify-between gap-3">
