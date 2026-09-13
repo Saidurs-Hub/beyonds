@@ -59,25 +59,30 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
         {/* Hero Section - full bleed like sajida.org */}
         {heroImage ? (
           <div className="relative h-[50vh] sm:h-[70vh] min-h-[350px] sm:min-h-[500px] overflow-hidden">
-            <motion.img
-              src={heroImage}
-              alt={heroAlt || title}
-              className="absolute inset-0 w-full h-full object-cover"
-              width={1920}
-              height={800}
-              initial={{ scale: 1.1, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-            />
+            {/* Masked hero: image fades to fully transparent at the bottom so the
+                page background/gradient shows through with no visible seam. */}
             <div
               className="absolute inset-0"
-              style={
-                backgroundColor
-                  ? { background: `linear-gradient(to top, ${backgroundColor} 0%, ${backgroundColor}cc 50%, transparent 100%)` }
-                  : undefined
-              }
-            />
-            {!backgroundColor && <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />}
+              style={{
+                WebkitMaskImage:
+                  "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 45%, rgba(0,0,0,0.75) 68%, rgba(0,0,0,0.35) 86%, rgba(0,0,0,0) 100%)",
+                maskImage:
+                  "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 45%, rgba(0,0,0,0.75) 68%, rgba(0,0,0,0.35) 86%, rgba(0,0,0,0) 100%)",
+              }}
+            >
+              <motion.img
+                src={heroImage}
+                alt={heroAlt || title}
+                className="absolute inset-0 w-full h-full object-cover"
+                width={1920}
+                height={800}
+                initial={{ scale: 1.1, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+              />
+              {/* Legibility scrim, masked together with the image */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-black/25" />
+            </div>
 
             {/* Nav over hero */}
             <header className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 lg:px-20 py-6 flex items-center justify-center">
