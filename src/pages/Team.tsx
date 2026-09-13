@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Linkedin } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -65,16 +64,11 @@ const coreTeam: TeamMember[] = [
 
 
 const MemberCard = ({ member, priority = false }: { member: TeamMember; priority?: boolean }) => {
-  const [hovered, setHovered] = useState(false);
-  const hasDetails = !!member.linkedin;
+  const hasLinkedIn = !!member.linkedin;
 
   return (
     <ScrollReveal>
-      <div
-        className={`group relative flex flex-col w-36 sm:w-40 md:w-44 ${hasDetails ? "cursor-pointer" : ""}`}
-        onMouseEnter={() => hasDetails && setHovered(true)}
-        onMouseLeave={() => hasDetails && setHovered(false)}
-      >
+      <div className="relative flex flex-col w-36 sm:w-40 md:w-44">
         <div className="relative w-full aspect-square rounded-lg">
           {member.photo ? (
             <img
@@ -93,28 +87,23 @@ const MemberCard = ({ member, priority = false }: { member: TeamMember; priority
               </span>
             </div>
           )}
-
-          {hasDetails && hovered && (
-            <div
-              className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-3 rounded-lg bg-background/95 backdrop-blur-sm p-4 sm:p-5 animate-scale-in"
-            >
-              {member.linkedin && (
-                <button
-                  type="button"
-                  onClick={(e) => { e.stopPropagation(); openExternalLink(member.linkedin); }}
-                  className="inline-flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium text-white bg-service-maroon transition-transform hover:scale-105 active:scale-95"
-                  style={{ fontFamily: "var(--font-body)" }}
-                >
-                  <Linkedin className="w-3.5 h-3.5" />
-                  LinkedIn
-                </button>
-              )}
-            </div>
-          )}
         </div>
 
         <div className="mt-3 space-y-1">
-          <h3 className="text-foreground text-sm sm:text-base font-medium" style={{ fontFamily: "var(--font-body)" }}>{member.name}</h3>
+          <h3 className="text-foreground text-sm sm:text-base font-medium" style={{ fontFamily: "var(--font-body)" }}>
+            {hasLinkedIn ? (
+              <button
+                type="button"
+                onClick={() => openExternalLink(member.linkedin)}
+                className="text-left transition-colors hover:text-accent hover:underline underline-offset-2"
+                style={{ fontFamily: "var(--font-body)" }}
+              >
+                {member.name}
+              </button>
+            ) : (
+              member.name
+            )}
+          </h3>
           {member.role.trim() && (
             <p className="text-accent text-[10px] sm:text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{member.role}</p>
           )}
