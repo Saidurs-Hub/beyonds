@@ -4,6 +4,7 @@ import AnimatedImage from "@/components/AnimatedImage";
 import CountUp from "@/components/CountUp";
 
 import aboutBg from "@/assets/about-hero.jpg";
+import bangladeshGlobal from "@/assets/bangladesh-global.jpg";
 
 const About = () => (
   <PageLayout
