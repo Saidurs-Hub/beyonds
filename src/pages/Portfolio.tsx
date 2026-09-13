@@ -56,13 +56,13 @@ const Portfolio = () => (
                       src={inv.logo}
                       alt={inv.company}
                       loading="lazy"
-                      className={`h-16 w-auto max-w-[70%] object-contain opacity-85 group-hover:opacity-100 transition-opacity duration-300${"invertLogo" in inv && inv.invertLogo ? " brightness-0 invert" : ""}`}
+                      className={`h-16 w-auto max-w-[70%] mx-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity duration-300${"invertLogo" in inv && inv.invertLogo ? " brightness-0 invert" : ""}`}
                     />
                   ) : (
                     <div className="h-16 w-16 rounded-xl bg-accent/10" />
                   )}
                 </div>
-                <div className="w-full flex items-center justify-between gap-3">
+                <div className="w-full flex items-start justify-between gap-3">
                   <span className="text-foreground text-sm leading-snug" style={{ fontFamily: "var(--font-body)" }}>{inv.company}</span>
                   <span className="shrink-0 text-[10px] tracking-[0.2em] uppercase text-foreground/50 bg-secondary/60 px-3 py-1 rounded-full border border-border/20" style={{ fontFamily: "var(--font-body)" }}>
                     {inv.sector}
