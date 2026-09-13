@@ -8,6 +8,7 @@ import bangladeshGlobal from "@/assets/bangladesh-global.jpg";
 
 const About = () => (
   <PageLayout
+    gradient="about"
     title="About"
     subtitle="Beyond S Ventures represents SAJIDA's expansion into active investment management, mobilizing commercial funding for SMEs & startups across the Global South."
     heroImage={aboutBg}

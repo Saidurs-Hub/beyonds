@@ -7,6 +7,7 @@ import ContactForm from "@/components/ContactForm";
 
 const Contact = () => (
   <PageLayout
+    gradient="contact"
     title="Contact"
     subtitle="Reach out to learn more about our services, investment opportunities, or partnership possibilities."
   >

@@ -29,6 +29,15 @@ const navLinks = [
   { label: "Contact", path: "/contact" },
 ];
 
+const pageGradients = {
+  about: "page-gradient-about",
+  services: "page-gradient-services",
+  investments: "page-gradient-investments",
+  contact: "page-gradient-contact",
+  team: "page-gradient-team",
+  insights: "page-gradient-insights",
+} as const;
+
 interface PageLayoutProps {
   children: ReactNode;
   title: string;
@@ -36,16 +45,17 @@ interface PageLayoutProps {
   heroImage?: string;
   heroAlt?: string;
   backgroundColor?: string;
+  gradient?: keyof typeof pageGradients;
   headerExtra?: ReactNode;
 }
 
-const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundColor, headerExtra }: PageLayoutProps) => {
+const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundColor, gradient, headerExtra }: PageLayoutProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
   return (
     <PageTransition>
-      <div className="min-h-screen bg-background text-foreground" style={backgroundColor ? { background: backgroundColor } : undefined}>
+      <div className={`min-h-screen bg-background text-foreground ${gradient ? pageGradients[gradient] : ""}`} style={backgroundColor ? { background: backgroundColor } : undefined}>
         {/* Hero Section - full bleed like sajida.org */}
         {heroImage ? (
           <div className="relative h-[50vh] sm:h-[70vh] min-h-[350px] sm:min-h-[500px] overflow-hidden">

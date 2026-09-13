@@ -31,6 +31,7 @@ const studies = [
 
 const Insights = () => (
   <PageLayout
+    gradient="insights"
     title="Insights"
     subtitle="Research-driven market intelligence that informs our investment strategy and shapes the entrepreneurship ecosystem."
     heroImage={insightsHero}
