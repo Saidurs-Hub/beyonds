@@ -34,6 +34,7 @@ const Portfolio = () => (
     subtitle="Deploying capital across a diverse range of instruments, backing enterprises that generate commercial returns and measurable impact in underserved markets."
     heroImage={portfolioHero}
     heroAlt="Students in classroom holding up books"
+    backgroundColor="#4A0F22"
   >
     <div className="space-y-24">
 
