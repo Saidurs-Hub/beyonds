@@ -169,13 +169,15 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
               >
                 <img src={bsvLogo} alt="Beyond S Ventures" className={`h-24 transition-opacity ${backgroundColor || gradient ? "brightness-0 invert opacity-90 hover:opacity-100" : "opacity-60 hover:opacity-100"}`} />
               </Link>
-              <nav className="hidden md:flex items-center bg-white/90 backdrop-blur-sm rounded-full px-6 py-2 gap-6">
+              <nav className="hidden md:flex items-center bg-background/80 backdrop-blur-md rounded-full px-6 py-2 gap-6 border border-border/20">
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}
                     className={`text-xs tracking-[0.2em] uppercase transition-colors duration-300 ${
-                      location.pathname === link.path ? "text-black font-semibold" : "text-black/50 hover:text-black/80"
+                      location.pathname === link.path
+                        ? "text-foreground font-semibold drop-shadow-[0_0_6px_hsl(var(--accent)/0.7)]"
+                        : "text-foreground/60 hover:text-foreground/90"
                     }`}
                     style={{ fontFamily: "var(--font-body)" }}
                   >
