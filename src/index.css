@@ -169,4 +169,11 @@
     text-shadow: 0 0 10px hsl(var(--accent-vivid) / 0.95), 0 0 22px hsl(var(--accent-vivid) / 0.6);
     font-weight: 600;
   }
+
+  .nav-pill {
+    background: linear-gradient(135deg, hsl(var(--nav-pill-start) / 0.96), hsl(var(--nav-pill-end) / 0.96));
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--accent-vivid) / 0.35);
+    box-shadow: 0 0 20px hsl(var(--accent-vivid) / 0.12), 0 8px 30px rgba(0, 0, 0, 0.25);
+  }
 }
