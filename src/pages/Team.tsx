@@ -42,9 +42,12 @@ const leadership: TeamMember[] = [
 ];
 
 const managementTeam: TeamMember[] = [
-  { name: "Shehzad Munim", role: "CHIEF INVESTMENT STRATEGIST\u00a0", years: "", expertise: [], photo: teamShehzad, linkedin: "https://www.linkedin.com/in/shehzad-munim-38373865/" },
   { name: "Sarah Iqbal", role: "Portfolio Manager", years: "10+", expertise: [], photo: teamSarah, linkedin: "https://www.linkedin.com/in/sarah-iqbal-5962b641/" },
   { name: "Hridoy Islam", role: "Portfolio Manager", years: "10+", expertise: [], photo: teamHridoyOld, linkedin: "https://www.linkedin.com/in/hridoyislam/" },
+];
+
+const advisoryPanel: TeamMember[] = [
+  { name: "Shehzad Munim", role: "CHIEF INVESTMENT STRATEGIST\u00a0", years: "", expertise: [], photo: teamShehzad, linkedin: "https://www.linkedin.com/in/shehzad-munim-38373865/" },
 ];
 
 const coreTeam: TeamMember[] = [
@@ -57,7 +60,7 @@ const coreTeam: TeamMember[] = [
   { name: "Mariya Arafin Bristy", role: "ASSISTANT MANAGER - FINANCE & ACCOUNTS", years: "", expertise: [], photo: teamMariya, linkedin: "https://www.linkedin.com/in/mariya-arafin-bristy-58a23922b/" },
   { name: "Salwa Tasnim Silma", role: "Investment Analyst", years: "", expertise: [], photo: teamSalwa, linkedin: "https://www.linkedin.com/in/sk-salwa-tasnim-silma-5b45231a0/" },
   { name: "Tasfia Ahmed", role: "Data Analyst", years: "", expertise: [], photo: teamTasfia, linkedin: "https://www.linkedin.com/in/tasfia-ahmed/" },
-  { name: "Mustafa Rafid Amin", role: "", years: "", expertise: [], photo: teamRafid },
+  { name: "Mustafa Rafid Amin", role: "Communication Specialist", years: "", expertise: [], photo: teamRafid },
 ];
 
 
