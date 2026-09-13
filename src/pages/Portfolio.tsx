@@ -15,7 +15,7 @@ const investments = [
   { company: "Shikho", sector: "EdTech", logo: shikhoLogo, website: "https://shikho.com/" },
   { company: "CholPori", sector: "EdTech", logo: cholporiLogoAsset.url, website: "https://www.cholpori.com/" },
   { company: "Shomvob Technologies Ltd.", sector: "HR-tech", logo: shomvobLogoAsset.url, website: "https://shomvob.com/" },
-  { company: "BD Recycle Technologies Limited (BRTL)", sector: "Clean-tech", logo: brltLogoAsset.url, website: "https://brtlcenter.com/" },
+  { company: "BD Recycle Technologies Limited (BRTL)", sector: "Clean-tech", logo: brltLogoAsset.url, website: "https://brtlcenter.com/", invertLogo: true },
   { company: "Shondhibazar", sector: "Agriculture", logo: shondhibazarLogoAsset.url, website: "https://shondhibazar.com/" },
 ];
 
@@ -49,16 +49,16 @@ const Portfolio = () => (
                 className="group relative text-left bg-card/40 border border-border/20 rounded-2xl p-8 flex flex-col items-center justify-between gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_20px_40px_-15px_hsl(var(--accent)/0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 aria-label={`Visit ${inv.company} website`}
               >
-                <div className="flex-1 flex items-center justify-center w-full">
+                <div className="flex-1 flex items-center justify-center w-full h-28">
                   {inv.logo ? (
                     <img
                       src={inv.logo}
                       alt={inv.company}
                       loading="lazy"
-                      className="max-h-28 max-w-[80%] w-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity duration-300"
+                      className={`h-16 w-auto max-w-[70%] object-contain opacity-85 group-hover:opacity-100 transition-opacity duration-300${"invertLogo" in inv && inv.invertLogo ? " brightness-0 invert" : ""}`}
                     />
                   ) : (
-                    <div className="h-28 w-28 rounded-xl bg-accent/10" />
+                    <div className="h-16 w-16 rounded-xl bg-accent/10" />
                   )}
                 </div>
                 <div className="w-full flex items-center justify-between gap-3">
