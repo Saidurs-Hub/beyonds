@@ -103,7 +103,7 @@ const Index = () => {
               className="opacity-0 animate-fade-up w-[280px] sm:w-[360px] md:w-[460px] lg:w-[560px]"
               style={{ filter: "drop-shadow(0 0 28px rgba(0, 0, 0, 0.65))" }}
             />
-            <p className="opacity-0 animate-fade-up animate-delay-500 mt-5 text-foreground/60 text-xs sm:text-sm md:text-base tracking-[0.15em] uppercase whitespace-nowrap" style={{ fontFamily: "var(--font-body)" }}>
+            <p className="opacity-0 animate-fade-up animate-delay-500 mt-10 text-foreground/60 text-xs sm:text-sm md:text-base tracking-[0.15em] uppercase whitespace-nowrap" style={{ fontFamily: "var(--font-body)" }}>
               Impact investing across the Global South
             </p>
           </main>
