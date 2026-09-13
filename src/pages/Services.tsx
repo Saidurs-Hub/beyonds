@@ -104,14 +104,23 @@ const Services = () => (
           </div>
           <div>
             <p className="max-w-xl text-sm leading-7 text-service-paper/65 md:text-base">Our three pillars form one connected pathway, preparing entrepreneurs, building resilient ventures, and deploying capital for sustained commercial and social impact.</p>
-            <div className="mt-8 grid grid-cols-3 border-t border-service-lavender/20 pt-5">
-              {stageLabels.map((stage, index) => (
-                <div key={stage} className="group flex items-center gap-2 text-service-paper/70">
-                  <span className="text-xs text-service-lavender/50">0{index + 1}</span>
-                  <span className="text-[10px] font-medium uppercase tracking-[0.18em] sm:text-xs">{stage}</span>
-                  {index < 2 && <ArrowDownRight className="ml-auto mr-2 hidden h-4 w-4 text-service-lavender/40 transition-transform group-hover:translate-x-1 group-hover:translate-y-1 sm:block" />}
-                </div>
-              ))}
+            <div className="mt-8 flex items-center justify-between border-t border-service-lavender/20 pt-5">
+              {stageLabels.map((stage, index) => {
+                const isLast = index === stageLabels.length - 1;
+                return (
+                  <>
+                    <a
+                      key={stage}
+                      href={`#${stageIds[index]}`}
+                      className="group flex items-center gap-2 text-service-paper/70 transition-colors hover:text-service-paper"
+                    >
+                      <span className="text-xs text-service-lavender/50 transition-colors group-hover:text-service-lavender/80">0{index + 1}</span>
+                      <span className="text-[10px] font-medium uppercase tracking-[0.18em] underline-offset-2 transition-all group-hover:underline sm:text-xs">{stage}</span>
+                    </a>
+                    {!isLast && <ArrowDownRight className="h-4 w-4 text-service-lavender/40" aria-hidden="true" />}
+                  </>
+                );
+              })}
             </div>
           </div>
         </section>
