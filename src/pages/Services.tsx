@@ -88,6 +88,7 @@ const ServiceTags = ({ items }: { items: string[] }) => items.length > 0 ? (
 
 const Services = () => (
   <PageLayout
+    gradient="services"
     title="Services"
     subtitle="From acceleration to venture building to investment management - meeting enterprises wherever they are in their growth journey."
     heroImage={servicesHero}

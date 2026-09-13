@@ -126,6 +126,7 @@ const MemberCard = ({ member, priority = false }: { member: TeamMember; priority
 
 const Team = () => (
   <PageLayout
+    gradient="team"
     title="Team"
     subtitle="Decades of combined experience across impact investing, venture building, fund management, and development finance."
     heroImage={teamHero}

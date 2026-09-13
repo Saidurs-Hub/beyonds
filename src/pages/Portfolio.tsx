@@ -30,6 +30,7 @@ const sectors = [
 
 const Portfolio = () => (
   <PageLayout
+    gradient="investments"
     title="Investments"
     subtitle="Deploying capital across a diverse range of instruments, backing enterprises that generate commercial returns and measurable impact in underserved markets."
     heroImage={portfolioHero}

@@ -5,6 +5,19 @@
 @layer base {
   :root {
     --background: 341 55% 7%;
+
+    --page-maroon: 341 63% 32%;
+    --page-ink: 255 35% 10%;
+    --page-blue-purple: 255 35% 18%;
+    --page-plum: 298 28% 22%;
+    --page-burgundy: 330 38% 25%;
+    --page-dusty: 316 24% 27%;
+    --gradient-about: radial-gradient(ellipse at 0% 0%, hsl(var(--page-blue-purple)) 0%, hsl(var(--page-blue-purple)) 38%, hsl(var(--page-plum)) 68%, hsl(var(--page-maroon)) 100%);
+    --gradient-services: linear-gradient(135deg, hsl(var(--page-maroon)) 0%, hsl(var(--page-burgundy)) 42%, hsl(var(--page-blue-purple)) 82%, hsl(var(--page-ink)) 100%);
+    --gradient-investments: radial-gradient(ellipse at 50% 52%, hsl(var(--page-maroon)) 0%, hsl(var(--page-burgundy)) 32%, hsl(var(--page-blue-purple)) 76%, hsl(var(--page-ink)) 100%);
+    --gradient-contact: radial-gradient(ellipse at 45% 100%, hsl(var(--page-maroon)) 0%, hsl(var(--page-burgundy)) 33%, hsl(var(--page-dusty)) 58%, hsl(var(--page-blue-purple)) 100%);
+    --gradient-team: linear-gradient(180deg, hsl(var(--page-blue-purple)) 0%, hsl(var(--page-plum)) 28%, hsl(var(--page-burgundy)) 45%, hsl(var(--page-maroon)) 64%, hsl(var(--page-burgundy)) 100%);
+    --gradient-insights: linear-gradient(110deg, hsl(var(--page-ink)) 0%, hsl(var(--page-blue-purple)) 25%, hsl(var(--page-plum)) 62%, hsl(var(--page-burgundy)) 100%);
     --foreground: 341 10% 95%;
 
     --card: 341 45% 11%;
@@ -138,4 +151,13 @@
 
 .animate-delay-800 {
   animation-delay: 800ms;
+}
+
+@layer components {
+  .page-gradient-about { background-image: var(--gradient-about); }
+  .page-gradient-services { background-image: var(--gradient-services); }
+  .page-gradient-investments { background-image: var(--gradient-investments); }
+  .page-gradient-contact { background-image: var(--gradient-contact); }
+  .page-gradient-team { background-image: var(--gradient-team); }
+  .page-gradient-insights { background-image: var(--gradient-insights); }
 }
