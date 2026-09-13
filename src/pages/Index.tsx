@@ -54,9 +54,18 @@ const Index = () => {
         <div className="relative z-10 flex flex-col min-h-screen" style={heroStyle}>
           <header className="px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between md:justify-center">
             <div className="md:hidden" />
-            <nav className="hidden md:flex items-center bg-white/90 backdrop-blur-sm rounded-full px-6 py-2 gap-6">
+            <nav className="hidden md:flex items-center bg-background/80 backdrop-blur-md rounded-full px-6 py-2 gap-6 border border-border/20">
               {navLinks.map((link) => (
-                <Link key={link.path} to={link.path} className="text-black/50 hover:text-black/80 text-xs tracking-[0.2em] uppercase transition-colors duration-300" style={{ fontFamily: "var(--font-body)" }}>
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`text-xs tracking-[0.2em] uppercase transition-colors duration-300 ${
+                    location.pathname === link.path
+                      ? "text-foreground font-semibold drop-shadow-[0_0_6px_hsl(var(--accent)/0.7)]"
+                      : "text-foreground/60 hover:text-foreground/90"
+                  }`}
+                  style={{ fontFamily: "var(--font-body)" }}
+                >
                   {link.label}
                 </Link>
               ))}
