@@ -52,7 +52,7 @@ const Index = () => {
         {/* Soft gradient blend at the bottom edge so the hero dissolves into the next section */}
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-background/80 pointer-events-none" />
         <div className="relative z-10 flex flex-col min-h-screen" style={heroStyle}>
-          <header className="px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between md:justify-center">
+          <header className={`relative z-50 px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between md:justify-center transition-colors duration-300 ${mobileOpen ? "bg-background" : ""}`}>
             <div className="md:hidden" />
             <nav className="hidden md:flex items-center nav-pill rounded-full px-6 py-2 gap-6">
               {navLinks.map((link) => (
@@ -75,7 +75,7 @@ const Index = () => {
             </button>
           </header>
           {mobileOpen && (
-            <div className="relative z-20 md:hidden px-6 pb-6 space-y-4">
+            <div className="fixed inset-0 z-30 bg-background md:hidden flex flex-col px-6 pt-24 pb-6 space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
