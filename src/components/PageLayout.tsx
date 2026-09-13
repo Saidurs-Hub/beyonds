@@ -236,9 +236,13 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
           <span className="text-foreground/30 text-xs tracking-widest uppercase" style={{ fontFamily: "var(--font-body)" }}>
             Beyond S Ventures
           </span>
-          <span className="text-foreground/30 text-xs tracking-widest" style={{ fontFamily: "var(--font-body)" }}>
+          <Link
+            to="/contact"
+            className="text-foreground/30 text-xs tracking-widest hover:text-foreground/60 hover:underline transition-colors"
+            style={{ fontFamily: "var(--font-body)" }}
+          >
             reach@beyonds.ventures
-          </span>
+          </Link>
         </motion.footer>
       </div>
     </PageTransition>
