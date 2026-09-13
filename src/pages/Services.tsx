@@ -105,22 +105,18 @@ const Services = () => (
           <div>
             <p className="max-w-xl text-sm leading-7 text-service-paper/65 md:text-base">Our three pillars form one connected pathway, preparing entrepreneurs, building resilient ventures, and deploying capital for sustained commercial and social impact.</p>
             <div className="mt-8 flex items-center justify-between border-t border-service-lavender/20 pt-5">
-              {stageLabels.map((stage, index) => {
-                const isLast = index === stageLabels.length - 1;
-                return (
-                  <>
-                    <a
-                      key={stage}
-                      href={`#${stageIds[index]}`}
-                      className="group flex items-center gap-2 text-service-paper/70 transition-colors hover:text-service-paper"
-                    >
-                      <span className="text-xs text-service-lavender/50 transition-colors group-hover:text-service-lavender/80">0{index + 1}</span>
-                      <span className="text-[10px] font-medium uppercase tracking-[0.18em] underline-offset-2 transition-all group-hover:underline sm:text-xs">{stage}</span>
-                    </a>
-                    {!isLast && <ArrowDownRight className="h-4 w-4 text-service-lavender/40" aria-hidden="true" />}
-                  </>
-                );
-              })}
+              {stageLabels.map((stage, index) => (
+                <div key={stage} className="flex flex-1 items-center justify-center gap-3 sm:gap-4">
+                  <a
+                    href={`#${stageIds[index]}`}
+                    className="group flex items-center gap-2 text-service-paper/70 transition-colors hover:text-service-paper"
+                  >
+                    <span className="text-xs text-service-lavender/50 transition-colors group-hover:text-service-lavender/80">0{index + 1}</span>
+                    <span className="text-[10px] font-medium uppercase tracking-[0.18em] underline-offset-2 transition-all group-hover:underline sm:text-xs">{stage}</span>
+                  </a>
+                  {index < stageLabels.length - 1 && <ArrowDownRight className="h-4 w-4 text-service-lavender/40" aria-hidden="true" />}
+                </div>
+              ))}
             </div>
           </div>
         </section>
