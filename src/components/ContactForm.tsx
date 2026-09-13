@@ -141,9 +141,9 @@ const ContactForm = () => {
           value={values.inquiryType}
           onChange={(e) => setField("inquiryType", e.target.value)}
         >
-          <option value="" className="bg-[#4A0F22]">Select an option</option>
+          <option value="" className="bg-background">Select an option</option>
           {INQUIRY_TYPES.map((type) => (
-            <option key={type} value={type} className="bg-[#4A0F22]">{type}</option>
+            <option key={type} value={type} className="bg-background">{type}</option>
           ))}
         </select>
         {errors.inquiryType && <p className="text-destructive text-xs mt-2">{errors.inquiryType}</p>}

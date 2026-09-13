@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 220 30% 6%;
-    --foreground: 210 20% 95%;
+    --background: 341 55% 7%;
+    --foreground: 341 10% 95%;
 
-    --card: 220 25% 10%;
-    --card-foreground: 210 20% 95%;
+    --card: 341 45% 11%;
+    --card-foreground: 341 10% 95%;
 
-    --popover: 220 25% 10%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 341 45% 11%;
+    --popover-foreground: 341 10% 95%;
 
-    --primary: 210 20% 95%;
-    --primary-foreground: 220 30% 6%;
+    --primary: 341 10% 95%;
+    --primary-foreground: 341 55% 7%;
 
-    --secondary: 220 15% 18%;
-    --secondary-foreground: 210 20% 85%;
+    --secondary: 341 35% 18%;
+    --secondary-foreground: 341 10% 85%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 215 10% 55%;
+    --muted: 341 30% 15%;
+    --muted-foreground: 341 12% 55%;
 
     --accent: 35 40% 55%;
-    --accent-foreground: 220 30% 6%;
+    --accent-foreground: 341 55% 8%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 341 10% 98%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 210 20% 95%;
+    --border: 341 30% 22%;
+    --input: 341 30% 18%;
+    --ring: 341 30% 80%;
 
     --radius: 0.5rem;
 
@@ -38,18 +38,18 @@
     --font-body: 'Manrope', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 
     --service-maroon: 341 63% 32%;
-    --service-plum: 259 35% 18%;
-    --service-lavender: 289 17% 83%;
-    --service-paper: 330 15% 95%;
+    --service-plum: 341 45% 18%;
+    --service-lavender: 341 25% 75%;
+    --service-paper: 341 20% 95%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 341 50% 8%;
+    --sidebar-foreground: 341 10% 95%;
+    --sidebar-primary: 341 30% 90%;
+    --sidebar-primary-foreground: 341 50% 7%;
+    --sidebar-accent: 341 35% 18%;
+    --sidebar-accent-foreground: 341 10% 95%;
+    --sidebar-border: 341 30% 20%;
+    --sidebar-ring: 341 30% 80%;
   }
 }
 

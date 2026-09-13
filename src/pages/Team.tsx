@@ -102,8 +102,8 @@ const MemberCard = ({ member, priority = false }: { member: TeamMember; priority
                 <button
                   type="button"
                   onClick={(e) => { e.stopPropagation(); openExternalLink(member.linkedin); }}
-                  className="inline-flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium text-white transition-transform hover:scale-105 active:scale-95"
-                  style={{ backgroundColor: "#0077b5", fontFamily: "var(--font-body)" }}
+                  className="inline-flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium text-white bg-service-maroon transition-transform hover:scale-105 active:scale-95"
+                  style={{ fontFamily: "var(--font-body)" }}
                 >
                   <Linkedin className="w-3.5 h-3.5" />
                   LinkedIn

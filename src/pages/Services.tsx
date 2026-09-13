@@ -92,7 +92,6 @@ const Services = () => (
     subtitle="From acceleration to venture building to investment management - meeting enterprises wherever they are in their growth journey."
     heroImage={servicesHero}
     heroAlt="Lettuce field with mountains in the background"
-    backgroundColor="#851E3E"
   >
     <div className="space-y-28 md:space-y-40">
       <ScrollReveal>
