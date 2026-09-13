@@ -176,7 +176,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
                     to={link.path}
                     className={`text-xs tracking-[0.2em] uppercase transition-colors duration-300 ${
                       location.pathname === link.path
-                        ? "text-foreground font-semibold drop-shadow-[0_0_6px_hsl(var(--accent)/0.7)]"
+                        ? "nav-link-active"
                         : "text-foreground/60 hover:text-foreground/90"
                     }`}
                     style={{ fontFamily: "var(--font-body)" }}
