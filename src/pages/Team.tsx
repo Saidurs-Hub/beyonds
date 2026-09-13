@@ -3,7 +3,7 @@ import { Linkedin } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { openExternalLink } from "@/lib/openExternalLink";
-import teamHero from "@/assets/team-hero.jpeg";
+import teamHero from "@/assets/team-hero-brand.jpg";
 
 import teamMuhymin from "@/assets/team-styled-samiul-centered.webp";
 import teamAk from "@/assets/team-styled-aksalam.webp";

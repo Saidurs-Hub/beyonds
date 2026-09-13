@@ -2,7 +2,7 @@ import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { openExternalLink } from "@/lib/openExternalLink";
 import { Sprout, ShoppingBag, Briefcase, Truck, Factory, Building2 } from "lucide-react";
-import portfolioHero from "@/assets/cholpori-hero.jpg";
+import portfolioHero from "@/assets/investments-hero.jpg";
 import relaxyLogo from "@/assets/portfolio-logos/relaxy.png";
 import shikhoLogo from "@/assets/portfolio-logos/shikho.png";
 import cholporiLogo from "@/assets/portfolio-logos/cholpori.png";
