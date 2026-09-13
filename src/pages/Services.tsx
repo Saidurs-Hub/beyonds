@@ -41,6 +41,7 @@ const services = [
 ];
 
 const stageLabels = ["Accelerate", "Build", "Invest"];
+const stageIds = ["acceleration", "venture-building", "investment-management"];
 
 const statParts = (value: string) => {
   const match = value.match(/^(\$)?([\d,.]+)(.*)$/);
