@@ -8,7 +8,7 @@ import PageTransition from "@/components/PageTransition";
 const navLinks = [
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
-  { label: "Portfolio", path: "/portfolio" },
+  { label: "Investments", path: "/portfolio" },
   { label: "Team", path: "/team" },
   { label: "Insights", path: "/insights" },
   { label: "Contact", path: "/contact" },
