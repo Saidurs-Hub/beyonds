@@ -165,7 +165,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
                 to="/"
                 className="absolute left-6 md:left-12 lg:left-20 flex items-center"
               >
-                <img src={bsvLogo} alt="Beyond S Ventures" className={`h-24 transition-opacity ${backgroundColor ? "brightness-0 invert opacity-90 hover:opacity-100" : "opacity-60 hover:opacity-100"}`} />
+                <img src={bsvLogo} alt="Beyond S Ventures" className={`h-24 transition-opacity ${backgroundColor || gradient ? "brightness-0 invert opacity-90 hover:opacity-100" : "opacity-60 hover:opacity-100"}`} />
               </Link>
               <nav className="hidden md:flex items-center bg-white/90 backdrop-blur-sm rounded-full px-6 py-2 gap-6">
                 {navLinks.map((link) => (
