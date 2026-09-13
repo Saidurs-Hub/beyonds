@@ -14,8 +14,8 @@ const investments = [
   { company: "Relaxy", sector: "Healthcare", logo: relaxyLogo, website: "https://relaxy.com.bd/" },
   { company: "Shikho", sector: "EdTech", logo: shikhoLogo, website: "https://shikho.com/" },
   { company: "CholPori", sector: "EdTech", logo: cholporiLogo, website: "https://www.cholpori.com/" },
-  { company: "Shomvob Technologies Ltd.", sector: "HR-tech", logo: shomvobLogo, website: "https://shomvob.com/" },
-  { company: "BD Recycle Technologies Limited (BRTL)", sector: "Clean-tech", logo: brtlLogo, website: "https://brtlcenter.com/", invertLogo: true },
+  { company: "Shomvob Technologies Ltd.", sector: "HR-tech", logo: shomvobLogo, website: "https://shomvob.com/", multiLineName: true },
+  { company: "BD Recycle Technologies Limited (BRTL)", sector: "Clean-tech", logo: brtlLogo, website: "https://brtlcenter.com/", invertLogo: true, multiLineName: true },
   { company: "Shondhibazar", sector: "Agriculture", logo: shondhibazarLogo, website: "https://shondhibazar.com/" },
 ];
 
@@ -62,7 +62,7 @@ const Portfolio = () => (
                     <div className="h-24 w-24 rounded-xl bg-accent/10" />
                   )}
                 </div>
-                <div className="w-full min-h-[58px] shrink-0 flex items-end justify-between gap-3">
+                <div className={`w-full min-h-[58px] shrink-0 flex ${inv.multiLineName ? "items-end" : "items-center"} justify-between gap-3`}>
                   <span className="text-foreground text-sm leading-snug" style={{ fontFamily: "var(--font-body)" }}>{inv.company}</span>
                   <span className="shrink-0 text-[10px] tracking-[0.2em] uppercase text-foreground/50 bg-secondary/60 px-3 py-1 rounded-full border border-border/20" style={{ fontFamily: "var(--font-body)" }}>
                     {inv.sector}
