@@ -71,57 +71,49 @@ const MemberCard = ({ member, priority = false }: { member: TeamMember; priority
   return (
     <ScrollReveal>
       <div
-        className={`group relative ${hasDetails ? "cursor-pointer" : ""}`}
+        className={`group relative flex flex-col w-36 sm:w-40 md:w-44 ${hasDetails ? "cursor-pointer" : ""}`}
         onMouseEnter={() => hasDetails && setHovered(true)}
         onMouseLeave={() => hasDetails && setHovered(false)}
       >
-        <div className="relative w-20 sm:w-full flex-shrink-0">
-          <div
-            className="relative w-full h-20 sm:h-auto sm:aspect-square rounded-lg"
-          >
-            {member.photo ? (
-              <img
-                src={member.photo}
-                alt={member.name}
-                loading={priority ? "eager" : "lazy"}
-                decoding="async"
-                // @ts-expect-error fetchpriority is valid HTML
-                fetchpriority={priority ? "high" : "low"}
-                className="absolute bottom-0 left-0 w-full pointer-events-none"
-                style={{ height: "114.5%" }}
+        <div className="relative w-full aspect-square rounded-lg">
+          {member.photo ? (
+            <img
+              src={member.photo}
+              alt={member.name}
+              loading={priority ? "eager" : "lazy"}
+              decoding="async"
+              // @ts-expect-error fetchpriority is valid HTML
+              fetchpriority={priority ? "high" : "low"}
+              className="absolute bottom-0 left-0 w-full h-[114.5%] pointer-events-none"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-foreground/50 text-2xl sm:text-4xl font-light" style={{ fontFamily: "var(--font-display)" }}>
+                {member.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+              </span>
+            </div>
+          )}
 
-              />
-            ) : (
-
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-foreground/50 text-2xl sm:text-4xl font-light" style={{ fontFamily: "var(--font-display)" }}>
-                  {member.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
-                </span>
-              </div>
-            )}
-
-            {hasDetails && hovered && (
-              <div
-                className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-3 rounded-2xl bg-background/95 backdrop-blur-sm p-4 sm:p-5 animate-scale-in"
-              >
-                {member.linkedin && (
-                  <button
-                    type="button"
-                    onClick={(e) => { e.stopPropagation(); openExternalLink(member.linkedin); }}
-                    className="inline-flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium text-white transition-transform hover:scale-105 active:scale-95"
-                    style={{ backgroundColor: "#0077b5", fontFamily: "var(--font-body)" }}
-                  >
-                    <Linkedin className="w-3.5 h-3.5" />
-                    LinkedIn
-                  </button>
-                )}
-              </div>
-            )}
-          </div>
+          {hasDetails && hovered && (
+            <div
+              className="absolute inset-0 z-20 flex flex-col items-center justify-center gap-3 rounded-lg bg-background/95 backdrop-blur-sm p-4 sm:p-5 animate-scale-in"
+            >
+              {member.linkedin && (
+                <button
+                  type="button"
+                  onClick={(e) => { e.stopPropagation(); openExternalLink(member.linkedin); }}
+                  className="inline-flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium text-white transition-transform hover:scale-105 active:scale-95"
+                  style={{ backgroundColor: "#0077b5", fontFamily: "var(--font-body)" }}
+                >
+                  <Linkedin className="w-3.5 h-3.5" />
+                  LinkedIn
+                </button>
+              )}
+            </div>
+          )}
         </div>
 
-
-        <div className="flex flex-col justify-center sm:space-y-1 min-w-0">
+        <div className="mt-3 space-y-1">
           <h3 className="text-foreground text-sm sm:text-base font-medium" style={{ fontFamily: "var(--font-body)" }}>{member.name}</h3>
           {member.role.trim() && (
             <p className="text-accent text-[10px] sm:text-xs tracking-[0.15em] uppercase" style={{ fontFamily: "var(--font-body)" }}>{member.role}</p>
