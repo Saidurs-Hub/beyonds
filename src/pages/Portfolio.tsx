@@ -3,20 +3,20 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { openExternalLink } from "@/lib/openExternalLink";
 import { Sprout, ShoppingBag, Briefcase, Truck, Factory, Building2 } from "lucide-react";
 import portfolioHero from "@/assets/cholpori-hero.jpg";
-import relaxyLogoAsset from "@/assets/relaxy-logo.png.asset.json";
-import shikhoLogo from "@/assets/shikho-logo.png";
-import cholporiLogoAsset from "@/assets/cholpori-logo.png.asset.json";
-import shomvobLogoAsset from "@/assets/shomvob-logo.png.asset.json";
-import brltLogoAsset from "@/assets/brtl-logo.png.asset.json";
-import shondhibazarLogoAsset from "@/assets/shondhibazar-logo.png.asset.json";
+import relaxyLogo from "@/assets/portfolio-logos/relaxy.png";
+import shikhoLogo from "@/assets/portfolio-logos/shikho.png";
+import cholporiLogo from "@/assets/portfolio-logos/cholpori.png";
+import shomvobLogo from "@/assets/portfolio-logos/shomvob.png";
+import brtlLogo from "@/assets/portfolio-logos/brtl.png";
+import shondhibazarLogo from "@/assets/portfolio-logos/shondhibazar.png";
 
 const investments = [
-  { company: "Relaxy", sector: "Healthcare", logo: relaxyLogoAsset.url, website: "https://relaxy.com.bd/" },
+  { company: "Relaxy", sector: "Healthcare", logo: relaxyLogo, website: "https://relaxy.com.bd/" },
   { company: "Shikho", sector: "EdTech", logo: shikhoLogo, website: "https://shikho.com/" },
-  { company: "CholPori", sector: "EdTech", logo: cholporiLogoAsset.url, website: "https://www.cholpori.com/" },
-  { company: "Shomvob Technologies Ltd.", sector: "HR-tech", logo: shomvobLogoAsset.url, website: "https://shomvob.com/" },
-  { company: "BD Recycle Technologies Limited (BRTL)", sector: "Clean-tech", logo: brltLogoAsset.url, website: "https://brtlcenter.com/", invertLogo: true },
-  { company: "Shondhibazar", sector: "Agriculture", logo: shondhibazarLogoAsset.url, website: "https://shondhibazar.com/" },
+  { company: "CholPori", sector: "EdTech", logo: cholporiLogo, website: "https://www.cholpori.com/" },
+  { company: "Shomvob Technologies Ltd.", sector: "HR-tech", logo: shomvobLogo, website: "https://shomvob.com/" },
+  { company: "BD Recycle Technologies Limited (BRTL)", sector: "Clean-tech", logo: brtlLogo, website: "https://brtlcenter.com/", invertLogo: true },
+  { company: "Shondhibazar", sector: "Agriculture", logo: shondhibazarLogo, website: "https://shondhibazar.com/" },
 ];
 
 const sectors = [
