@@ -54,7 +54,7 @@ const Index = () => {
         <div className="relative z-10 flex flex-col min-h-screen" style={heroStyle}>
           <header className="px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between md:justify-center">
             <div className="md:hidden" />
-            <nav className="hidden md:flex items-center bg-background/80 backdrop-blur-md rounded-full px-6 py-2 gap-6 border border-border/20">
+            <nav className="hidden md:flex items-center nav-pill rounded-full px-6 py-2 gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}

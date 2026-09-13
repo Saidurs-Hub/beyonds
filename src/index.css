@@ -38,6 +38,8 @@
     --accent: 35 40% 55%;
     --accent-foreground: 341 55% 8%;
     --accent-vivid: 38 92% 60%;
+    --nav-pill-start: 341 65% 16%;
+    --nav-pill-end: 341 55% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 341 10% 98%;
@@ -166,5 +168,12 @@
     color: hsl(var(--accent-vivid));
     text-shadow: 0 0 10px hsl(var(--accent-vivid) / 0.95), 0 0 22px hsl(var(--accent-vivid) / 0.6);
     font-weight: 600;
+  }
+
+  .nav-pill {
+    background: linear-gradient(135deg, hsl(var(--nav-pill-start) / 0.96), hsl(var(--nav-pill-end) / 0.96));
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--accent-vivid) / 0.35);
+    box-shadow: 0 0 20px hsl(var(--accent-vivid) / 0.12), 0 8px 30px rgba(0, 0, 0, 0.25);
   }
 }
