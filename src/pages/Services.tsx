@@ -41,6 +41,7 @@ const services = [
 ];
 
 const stageLabels = ["Accelerate", "Build", "Invest"];
+const stageIds = ["acceleration", "venture-building", "investment-management"];
 
 const statParts = (value: string) => {
   const match = value.match(/^(\$)?([\d,.]+)(.*)$/);
@@ -103,12 +104,17 @@ const Services = () => (
           </div>
           <div>
             <p className="max-w-xl text-sm leading-7 text-service-paper/65 md:text-base">Our three pillars form one connected pathway, preparing entrepreneurs, building resilient ventures, and deploying capital for sustained commercial and social impact.</p>
-            <div className="mt-8 grid grid-cols-3 border-t border-service-lavender/20 pt-5">
+            <div className="mt-8 flex items-center justify-between border-t border-service-lavender/20 pt-5">
               {stageLabels.map((stage, index) => (
-                <div key={stage} className="group flex items-center gap-2 text-service-paper/70">
-                  <span className="text-xs text-service-lavender/50">0{index + 1}</span>
-                  <span className="text-[10px] font-medium uppercase tracking-[0.18em] sm:text-xs">{stage}</span>
-                  {index < 2 && <ArrowDownRight className="ml-auto mr-2 hidden h-4 w-4 text-service-lavender/40 transition-transform group-hover:translate-x-1 group-hover:translate-y-1 sm:block" />}
+                <div key={stage} className="flex flex-1 items-center justify-center gap-3 sm:gap-4">
+                  <a
+                    href={`#${stageIds[index]}`}
+                    className="group flex items-center gap-2 text-service-paper/70 transition-colors hover:text-service-paper"
+                  >
+                    <span className="text-xs text-service-lavender/50 transition-colors group-hover:text-service-lavender/80">0{index + 1}</span>
+                    <span className="text-[10px] font-medium uppercase tracking-[0.18em] underline-offset-2 transition-all group-hover:underline sm:text-xs">{stage}</span>
+                  </a>
+                  {index < stageLabels.length - 1 && <ArrowDownRight className="h-4 w-4 text-service-lavender/40" aria-hidden="true" />}
                 </div>
               ))}
             </div>
@@ -117,7 +123,7 @@ const Services = () => (
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="group grid gap-10 border-t border-service-lavender/15 pt-12 lg:grid-cols-12 lg:items-center md:pt-16">
+        <section id="acceleration" className="group grid gap-10 scroll-mt-24 border-t border-service-lavender/15 pt-12 lg:grid-cols-12 lg:items-center md:pt-16">
           <div className="lg:col-span-5">
             <div className="mb-5 flex items-center gap-3 text-service-lavender/65">
               <Rocket className="h-5 w-5" /><span className="text-[10px] font-medium uppercase tracking-[0.25em]">01 / Accelerate</span>
@@ -133,7 +139,7 @@ const Services = () => (
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="group grid gap-10 border-t border-service-lavender/15 pt-12 lg:grid-cols-12 lg:items-center md:pt-16">
+        <section id="venture-building" className="group grid gap-10 scroll-mt-24 border-t border-service-lavender/15 pt-12 lg:grid-cols-12 lg:items-center md:pt-16">
           <div className="lg:col-span-5">
             <div className="mb-5 flex items-center gap-3 text-service-lavender/65">
               <Leaf className="h-5 w-5" /><span className="text-[10px] font-medium uppercase tracking-[0.25em]">02 / Build</span>
@@ -149,7 +155,7 @@ const Services = () => (
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="group grid gap-10 border-t border-service-lavender/15 pt-12 lg:grid-cols-12 lg:items-center md:pt-16">
+        <section id="investment-management" className="group grid gap-10 scroll-mt-24 border-t border-service-lavender/15 pt-12 lg:grid-cols-12 lg:items-center md:pt-16">
             <div className="lg:col-span-5">
               <div className="mb-5 flex items-center gap-3 text-service-lavender/65">
                 <BarChart3 className="h-5 w-5" /><span className="text-[10px] font-medium uppercase tracking-[0.25em]">03 / Invest</span>
