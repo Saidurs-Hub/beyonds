@@ -127,7 +127,7 @@ const Services = () => (
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="group grid gap-10 border-t border-service-lavender/15 pt-12 lg:grid-cols-12 lg:items-center md:pt-16">
+        <section id="acceleration" className="group grid gap-10 scroll-mt-24 border-t border-service-lavender/15 pt-12 lg:grid-cols-12 lg:items-center md:pt-16">
           <div className="lg:col-span-5">
             <div className="mb-5 flex items-center gap-3 text-service-lavender/65">
               <Rocket className="h-5 w-5" /><span className="text-[10px] font-medium uppercase tracking-[0.25em]">01 / Accelerate</span>
@@ -143,7 +143,7 @@ const Services = () => (
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="group grid gap-10 border-t border-service-lavender/15 pt-12 lg:grid-cols-12 lg:items-center md:pt-16">
+        <section id="venture-building" className="group grid gap-10 scroll-mt-24 border-t border-service-lavender/15 pt-12 lg:grid-cols-12 lg:items-center md:pt-16">
           <div className="lg:col-span-5">
             <div className="mb-5 flex items-center gap-3 text-service-lavender/65">
               <Leaf className="h-5 w-5" /><span className="text-[10px] font-medium uppercase tracking-[0.25em]">02 / Build</span>
@@ -159,7 +159,7 @@ const Services = () => (
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="group grid gap-10 border-t border-service-lavender/15 pt-12 lg:grid-cols-12 lg:items-center md:pt-16">
+        <section id="investment-management" className="group grid gap-10 scroll-mt-24 border-t border-service-lavender/15 pt-12 lg:grid-cols-12 lg:items-center md:pt-16">
             <div className="lg:col-span-5">
               <div className="mb-5 flex items-center gap-3 text-service-lavender/65">
                 <BarChart3 className="h-5 w-5" /><span className="text-[10px] font-medium uppercase tracking-[0.25em]">03 / Invest</span>
