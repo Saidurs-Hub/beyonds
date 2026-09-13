@@ -23,7 +23,7 @@ const About = () => (
               Establish a global investment management and entrepreneurship development model, originating from Bangladesh.
             </p>
           </div>
-          <div className="bg-[#261e3e]/60 backdrop-blur-sm p-8 md:p-12 space-y-4">
+          <div className="bg-[#4A0F22]/60 backdrop-blur-sm p-8 md:p-12 space-y-4">
             <span className="text-accent text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Investment Thesis</span>
             <p className="text-foreground/80 text-xl md:text-2xl font-light leading-relaxed" style={{ fontFamily: "var(--font-display)" }}>
               Invest in scalable enterprises that generate commercial returns and deliver material impact in underserved markets.
