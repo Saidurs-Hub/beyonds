@@ -161,4 +161,10 @@
   .page-gradient-contact { background-image: var(--gradient-contact); }
   .page-gradient-team { background-image: var(--gradient-team); }
   .page-gradient-insights { background-image: var(--gradient-insights); }
+
+  .nav-link-active {
+    color: hsl(var(--accent-vivid));
+    text-shadow: 0 0 10px hsl(var(--accent-vivid) / 0.95), 0 0 22px hsl(var(--accent-vivid) / 0.6);
+    font-weight: 600;
+  }
 }
