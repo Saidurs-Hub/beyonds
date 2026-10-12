@@ -88,7 +88,7 @@ const About = () => (
       <ScrollReveal>
         <div className="relative rounded-xl overflow-hidden aspect-[21/9] group">
           <AnimatedImage src={bangladeshGlobal} alt="Abstract Bangladesh skyline and river delta motif" className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/15 to-transparent" />
         </div>
       </ScrollReveal>
 
