@@ -22,7 +22,7 @@ const services = [
     goal: "Scaling innovative solutions that advance climate resilience in Bangladesh - agriculture, water, and food security.",
     subServices: ["Climate Innovation Fund (CIF)", "NURTURE", "BINIYOG BRIDDHI (B-BRIDDHI)"],
     stats: [
-      { value: "10,000+", label: "Farmers impacted" },
+      { value: "12,000+", label: "Farmers impacted" },
       { value: "$350K+", label: "Mobilized under CIF 1" },
       { value: "15", label: "Enterprises supported" },
     ],
