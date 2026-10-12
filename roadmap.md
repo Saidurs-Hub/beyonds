@@ -1,0 +1,1 @@
+- Recolor About Global Presence image: maroon-to-plum-indigo spectrum, soft glow behind skyline, no map outline; soften overlay
