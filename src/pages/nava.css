@@ -21,7 +21,8 @@
 .nava .nava-grain::before { content:""; position:absolute; inset:0; pointer-events:none; z-index:0; mix-blend-mode:overlay; opacity:.32; background-image:var(--grain); background-size:220px; }
 .nava .nava-grain > * { position:relative; z-index:1; }
 .nava .nava-hero { display:grid; grid-template-columns:1.08fr 1fr; gap:64px; padding-top:164px; padding-bottom:112px; align-items:center; }
-.nava .nava-hero h1 span { color:var(--mint); }
+.nava .nava-hero h1 { font-size:clamp(56px,5.6vw,76px); }
+.nava .nava-hero h1 span { color:var(--mint); white-space:nowrap; }
 .nava .nava-hero-spacer { min-height:320px; }
 .nava .nava-lead { color:var(--soft); font-size:17px; margin-top:30px; max-width:530px; }
 .nava .nava-actions { display:flex; flex-wrap:wrap; gap:14px; margin-top:32px; }
@@ -98,6 +99,7 @@
 @media (max-width:767px) {
  .nava .nava-container { width:calc(100% - 40px); } .nava h1 { font-size:48px; } .nava h2 { font-size:38px; }
   .nava .nava-hero { grid-template-columns:1fr; padding-top:120px; gap:40px; padding-bottom:96px; }
+  .nava .nava-hero h1 span { white-space:normal; }
   .nava .nava-hero-spacer { display:none; }
  .nava .nava-figures { grid-template-columns:1fr; padding:30px; gap:24px; }
  .nava .nava-figure { border-left:0; border-top:1px solid rgba(19,29,53,.18); padding:24px 0 0; } .nava .nava-figure:first-child { border-top:0; padding-top:0; }
