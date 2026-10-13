@@ -60,6 +60,19 @@
 .nava .nava-benefits li { padding:20px 0; font-size:13px; line-height:1.7; border-top:1px solid var(--hairline); }
 .nava .nava-investors .nava-benefits li { border-color:rgba(231,236,245,0.18); }
 .nava .nava-smes .nava-benefits li { border-color:rgba(231,236,245,0.14); }
+/* RISK ACCORDION — to remove: delete content.risk and the section markup in Nava.tsx plus these rules. */
+.nava .nava-risk { padding:100px 0; }
+.nava .nava-risk-grid { display:grid; grid-template-columns:2fr 3fr; gap:64px; align-items:start; }
+.nava .nava-risk-label { color:#5FF0B0; font-weight:600; }
+.nava .nava-risk-title { color:#F2F6FA; }
+.nava .nava-risk-item { border:none; border-top:1px solid rgba(180,190,211,0.22); }
+.nava .nava-risk-item:last-child { border-bottom:1px solid rgba(180,190,211,0.22); }
+.nava .nava-risk-trigger { padding:22px 0; font-family:var(--font-body); font-weight:500; font-size:16px; color:#F2F6FA; }
+.nava .nava-risk-trigger:hover { text-decoration:none; }
+.nava .nava-risk-trigger svg { display:none; }
+.nava .nava-risk-plus { font-size:20px; line-height:1; color:#5FF0B0; transition:transform 0.2s ease; }
+.nava .nava-risk-trigger[data-state=open] .nava-risk-plus { transform:rotate(45deg); }
+.nava .nava-risk-content p { max-width:480px; font-size:14px; line-height:1.7; color:#B4BED3; }
 .nava .nava-backing-title { max-width:36ch; }
 .nava .nava-backing { padding:88px 0; margin-bottom:0; background:
   radial-gradient(60% 80% at 100% 100%, rgba(30,227,162,0.16) 0%, rgba(30,227,162,0) 70%),
@@ -106,6 +119,8 @@ html:has(.nava) { scroll-behavior:smooth; }
  .nava .nava-figures { grid-template-columns:1fr; padding:30px; gap:24px; }
  .nava .nava-figure { border-left:0; border-top:1px solid rgba(19,29,53,.18); padding:24px 0 0; } .nava .nava-figure:first-child { border-top:0; padding-top:0; }
  .nava .nava-section { margin-top:64px; }
+  .nava .nava-risk { padding:64px 0; }
+  .nava .nava-risk-grid { grid-template-columns:1fr; gap:36px; }
  .nava .nava-audiences { grid-template-columns:1fr; } .nava .nava-audience,.nava .nava-audience:first-child,.nava .nava-audience:last-child { padding:48px 24px; }
   .nava .nava-backing { padding:56px 0; margin-bottom:0; }
   .nava .nava-backing-grid { grid-template-columns:1fr; gap:48px; margin-top:36px; }
