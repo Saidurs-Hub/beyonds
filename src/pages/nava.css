@@ -139,7 +139,8 @@ html:has(.nava) { scroll-behavior:smooth; }
  .nava .nava-figures { grid-template-columns:1fr; padding:30px; gap:24px; }
  .nava .nava-figure { border-left:0; border-top:1px solid rgba(19,29,53,.18); padding:24px 0 0; } .nava .nava-figure:first-child { border-top:0; padding-top:0; }
   .nava .nava-section { margin-top:64px; }
-  .nava .nava-how { padding:56px 0; }
+  .nava .nava-how { padding:48px 0; }
+  .nava .nava-how-card { border-radius:32px; padding:36px 24px; }
   .nava .nava-how-flow { grid-template-columns:1fr; gap:0; }
   .nava .nava-how-step-wrap { flex-direction:column; align-items:stretch; }
   .nava .nava-how-arrow { align-self:center; margin:4px 0 12px; }
