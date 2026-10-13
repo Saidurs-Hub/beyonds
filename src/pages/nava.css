@@ -80,15 +80,16 @@
 .nava .nava-band { background:radial-gradient(60% 100% at 100% 100%,var(--glow-mint),transparent 70%),var(--deep-gradient); padding:80px 0; }
 /* HIDDEN FOR NOW: "Join us" band styles (.nava-join, .nava-join-grid, .nava-join-single, .nava-routes, .nava-route) removed — see content.join in Nava.tsx to restore. */
 html:has(.nava) { scroll-behavior:smooth; }
-.nava .nava-contact-band { background:radial-gradient(50% 120% at 0% 50%, rgba(15,85,80,0.45) 0%, rgba(15,85,80,0) 70%), linear-gradient(180deg, #1A2849 0%, #131D35 100%); }
-.nava .nava-contact { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 28px; padding:48px 0; scroll-margin-top:100px; }
-.nava .nava-contact-label { font-size:12px; font-weight:500; letter-spacing:3.5px; text-transform:uppercase; color:#B4BED3; margin:0; }
-.nava .nava-contact-email { font-family:var(--font-body); font-weight:500; font-size:20px; line-height:1.4; letter-spacing:0.2px; color:#E7ECF5; user-select:text; }
-.nava .nava-contact-email:hover { text-decoration:underline; text-decoration-color:var(--mint); text-decoration-thickness:1px; text-underline-offset:6px; }
-.nava .nava-footer { padding:40px 0; background:#0E1628; }
-.nava .nava-footer-top { display:flex; justify-content:space-between; gap:24px; }
-.nava .nava-footer .nava-label { font-size:10px; letter-spacing:2.5px; }
-.nava .nava-footer p { font-size:11px; color:var(--muted); max-width:1000px; }
+.nava .nava-closing { background:#0E1628; padding:56px 0 48px; scroll-margin-top:100px; }
+.nava .nava-contact-card { display:flex; align-items:center; justify-content:space-between; gap:32px; border-radius:14px; padding:32px 36px; background:
+  radial-gradient(60% 80% at 100% 100%, rgba(30,227,162,0.20) 0%, rgba(30,227,162,0) 70%),
+  linear-gradient(140deg, #DDF8EC 0%, #C6F1E0 55%, #ADE7D2 100%); }
+.nava .nava-contact-label { display:block; font-size:12px; font-weight:500; letter-spacing:3.5px; text-transform:uppercase; color:#0E7A57; margin-bottom:14px; }
+.nava .nava-contact-email { font-family:var(--font-body); font-weight:600; font-size:20px; line-height:1.4; color:#131D35; user-select:text; }
+.nava .nava-contact-email:hover { text-decoration:underline; text-decoration-color:#0E7A57; text-decoration-thickness:1px; text-underline-offset:6px; }
+.nava .nava-contact-button { background:#131D35; color:#FFFFFF; height:auto; min-height:48px; padding:14px 22px; border-radius:6px; font-weight:600; font-size:14px; white-space:nowrap; }
+.nava .nava-contact-button:hover { background:#1B2846; }
+.nava .nava-closing-line { margin-top:28px; font-size:11px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:#8F9AB5; }
 .nava a:focus-visible { outline:2px solid var(--cyan); outline-offset:5px; }
 @media (max-width:1100px) {
  .nava h1 { font-size:64px; } .nava h2 { font-size:42px; }
