@@ -40,6 +40,13 @@
     --accent-vivid: 38 92% 60%;
     --nav-pill-start: 341 65% 16%;
     --nav-pill-end: 341 55% 10%;
+    --nava-bridge-deep: #131D35;
+    --nava-bridge-teal: #0A3A3F;
+    --nava-bridge-green: #0D5A4C;
+    --nava-bridge-mint: #1EE3A2;
+    --nava-bridge-label: #5FF0B0;
+    --nava-bridge-text: #FFFFFF;
+    --nava-bridge-gradient: linear-gradient(120deg, var(--nava-bridge-deep) 0%, var(--nava-bridge-teal) 45%, var(--nava-bridge-green) 75%, var(--nava-bridge-mint) 100%);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 341 10% 98%;
@@ -176,4 +183,11 @@
     border: 1px solid hsl(var(--accent-vivid) / 0.35);
     box-shadow: 0 0 20px hsl(var(--accent-vivid) / 0.12), 0 8px 30px rgba(0, 0, 0, 0.25);
   }
+  .nava-bridge { display: block; background: var(--nava-bridge-gradient); border-radius: 20px; padding: 40px; color: var(--nava-bridge-text); }
+  .nava-bridge-label { color: var(--nava-bridge-label); font-size: 11px; letter-spacing: 3.5px; text-transform: uppercase; }
+  .nava-bridge-heading { font-family: var(--font-display); font-weight: 300; font-size: 36px; line-height: 1.15; margin: 16px 0; }
+  .nava-bridge-copy { max-width: 700px; font-size: 15px; line-height: 1.7; }
+  .nava-bridge-button { display: inline-flex; margin-top: 24px; padding: 12px 20px; border-radius: 6px; background: var(--nava-bridge-mint); color: var(--nava-bridge-deep); font-size: 14px; font-weight: 600; }
+  .nava-bridge:hover .nava-bridge-button { background: var(--nava-bridge-label); }
+  .nava-bridge:focus-visible { outline: 2px solid var(--nava-bridge-label); outline-offset: 4px; }
 }

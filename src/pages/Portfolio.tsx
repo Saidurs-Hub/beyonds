@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 import { openExternalLink } from "@/lib/openExternalLink";
 import { Sprout, ShoppingBag, Briefcase, Truck, Factory, Building2 } from "lucide-react";
