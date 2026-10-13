@@ -1,4 +1,4 @@
 - [x] Recolor About Global Presence image; publishing cancelled, retain in preview.
-- [ ] Add isolated Nava page and stylesheet with supplied copy and visual identity.
-- [ ] Add shared-header-only PageLayout option, Nava route/nav, and Investments bridge card.
-- [ ] Verify Nava interactions, mobile layout and unchanged existing pages; do not publish.
+- [x] Add isolated Nava page and stylesheet with supplied copy and visual identity.
+- [x] Add shared-header-only PageLayout option, Nava route/nav, and Investments bridge card.
+- [x] Verify Nava interactions, mobile layout and unchanged existing pages; do not publish.
