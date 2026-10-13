@@ -103,7 +103,7 @@ const Portfolio = () => (
             <span className="nava-bridge-label">NAVA CAPITAL NETWORK</span>
             <h3 className="nava-bridge-heading">Invest alongside BSV through Nava.</h3>
             <p className="nava-bridge-copy">A private investor consortium that syndicates vetted, high-growth SMEs to members, with diligence and monitoring handled for you.</p>
-            <span className="nava-bridge-button">Explore Nava →</span>
+            <span className="nava-bridge-button">Explore NAVA →</span>
           </Link>
         </section>
       </ScrollReveal>
