@@ -34,8 +34,7 @@ const content = {
   // HIDDEN FOR NOW — the whole "Join us" section (label, heading, routes) is not rendered.
   // To restore it: re-add the section markup after "Our backing" and the .nava-join* / .nava-route* CSS.
   join: { label: "Join us", title: "Building the infrastructure that matches capital to growth.", text: "\n", routes: ([ {label:"Investors", title:"Apply for membership", link:"Start application →", show:false}, {label:"SMEs", title:"Submit your company", link:"Share your details →", show:false} ] as { label: string; title: string; link: string; show?: boolean }[]), },
-  contact: { label: "CONTACT NOW:", email: "ahmed.jawad@sajida.org" },
-  footer: { name:"NAVA CAPITAL NETWORK", parent:"\n", disclaimer:"\n" },
+  contact: { label: "CONTACT US NOW", email: "ahmed.jawad@sajida.org", button: "Email us →", network: "NAVA CAPITAL NETWORK" },
 };
 
 // Hero buttons scroll to the contact section while "Join us" is hidden for now.
@@ -59,8 +58,18 @@ const Nava = () => (
         <section className="nava-section nava-audiences">{content.audiences.map((audience,index) => <div key={audience.label} className={`nava-audience nava-grain ${index ? "nava-smes" : "nava-investors"}`}><span className="nava-label">{audience.label}</span><h2><Hyphens text={audience.title} /></h2><p>{audience.text}</p><ul className="nava-benefits">{audience.benefits.map(text => <li key={text}>{text}</li>)}</ul>{index === 0 && audience.showButton && <JoinButton className="nava-button-dark">{audience.button}</JoinButton>}</div>)}</section>
         <section className="nava-section nava-backing"><div className="nava-container"><span className="nava-label">{content.backing.label}</span><h2 className="nava-backing-title"><Hyphens text={content.backing.title} /></h2><div className="nava-backing-grid"><div className="nava-backing-entries">{content.backing.entries.map(entry => <div key={entry.key} className="nava-backing-entry"><img src={entry.key === "sajida" ? sajidaLogo : bsvLogoDark} alt={entry.alt} className="nava-backing-logo" /><p>{entry.text}</p></div>)}</div><dl className="nava-backing-stats">{content.backing.stats.map(([value,text]) => <div key={value}><dt>{value}</dt><dd>{text}</dd></div>)}</dl></div></div></section>
       </main>
-      <section id="contact" className="nava-contact-band"><div className="nava-container nava-contact"><span className="nava-label nava-contact-label">{content.contact.label}</span><a className="nava-contact-email" href={`mailto:${content.contact.email}`}>{content.contact.email}</a></div></section>
-      <footer className="nava-footer"><div className="nava-container"><div className="nava-footer-top"><span className="nava-label">{content.footer.name}</span><span className="nava-label">{content.footer.parent}</span></div><p>{content.footer.disclaimer}</p></div></footer>
+      <section id="contact" className="nava-closing">
+        <div className="nava-container">
+          <div className="nava-contact-card">
+            <div className="nava-contact-info">
+              <span className="nava-contact-label">{content.contact.label}</span>
+              <a className="nava-contact-email" href={`mailto:${content.contact.email}`}>{content.contact.email}</a>
+            </div>
+            <Button asChild className="nava-contact-button"><a href={`mailto:${content.contact.email}`}>{content.contact.button}</a></Button>
+          </div>
+          <p className="nava-closing-line">{content.contact.network}</p>
+        </div>
+      </section>
     </div>
   </PageLayout>
 );
