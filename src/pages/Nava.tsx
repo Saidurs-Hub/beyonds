@@ -10,6 +10,8 @@
 import { Link } from "react-router-dom";
 import PageLayout from "@/components/PageLayout";
 import { Button } from "@/components/ui/button";
+import sajidaLogo from "@/assets/sajida-logo.png";
+import bsvLogo from "@/assets/logo-white-maroon.png";
 import "./nava.css";
 
 // CONTENT: All Nava display copy lives here. Edit these values without changing layout.
@@ -25,7 +27,12 @@ const content = {
     { label: "For smart private investors", title: "A trusted pipeline, with the work already done", text: "Performance-driven, proprietary deals with targeted returns of 300 to 500 bps above market rates and flexible ticket sizes.", benefits: ["End-to-end transaction advisory, from sourcing to recovery", "De-risked through co-investment and shared diligence", "Deal briefs, data room review, and investment memos", "Monthly business and field reports after you invest"], button: "Apply for membership" },
     { label: "For high-growth SMEs", title: "Capital, plus the network to grow with it", text: "For established SMEs ready to scale, with BDT 3 to 5 Cr in annual revenue and at least 3 years in operation.", benefits: ["Raise USD 50k to 200k, mainly debt or revenue share", "Market access and business development support", "Mentorship from like-minded investors and founders", "A seat at managed investor showcases"] },
   ] as { label: string; title: string; text: string; benefits: string[]; button?: string }[]),
-  backing: { label: "Our backing", title: "Housed under Beyond S Ventures, promoted by SAJIDA Foundation.", text: "SAJIDA Foundation is one of the country's top five MFIs. BSV, its private investment arm, brings direct access to investments, networks, pipelines, and markets.", stats: [["30 years", "of microfinance experience"], ["400k", "borrowers across the country"], ["$400 Mn", "deployed in the market to date"]] },
+  backing: { label: "Our backing", title: "Housed under Beyond S Ventures, promoted by SAJIDA Foundation.", text: "Nava brings together SAJIDA's three decades of on-the-ground experience and BSV's investment platform, so every deal is backed by people who know the market.",
+    panels: [
+      { key: "sajida", alt: "SAJIDA Foundation logo", label: "Promoter", text: "One of Bangladesh's top five MFIs, with 30 years of experience and a nationwide borrower network." },
+      { key: "bsv", alt: "Beyond S Ventures logo", label: "Home of Nava", text: "SAJIDA's private investment arm, giving Nava direct access to investments, networks, pipelines, and markets." },
+    ],
+    stats: [["30 years", "of microfinance experience"], ["400k", "borrowers across the country"], ["$400 Mn", "deployed in the market to date"]] },
   ahead: { label: "What's ahead", title: "Bringing structure to a fragmented market.", items: [
     ["Oct 2026", "First managed showcase", "Qualified deals presented to a small group at SAJIDA HQ, then new deals every quarter."],
     ["Dec 2026", "Official launch", "Launch event with selected investors, members, partners, and affiliates."],
@@ -59,7 +66,7 @@ const Nava = () => (
         </section>
         <section className="nava-container nava-figures nava-grain">{content.figures.map(([value,caption]) => <div className="nava-figure" key={value}><span className="nava-number"><Hyphens text={value} /></span><p>{caption}</p></div>)}</section>
         <section className="nava-section nava-audiences">{content.audiences.map((audience,index) => <div key={audience.label} className={`nava-audience nava-grain ${index ? "nava-smes" : "nava-investors"}`}><span className="nava-label">{audience.label}</span><h2><Hyphens text={audience.title} /></h2><p>{audience.text}</p><ul className="nava-benefits">{audience.benefits.map(text => <li key={text}>{text}</li>)}</ul>{index === 0 && <JoinButton className="nava-button-dark">{audience.button}</JoinButton>}</div>)}</section>
-        <section className="nava-container nava-section nava-backing nava-grain"><div className="nava-backing-art nava-grain" aria-hidden="true"/><div className="nava-backing-copy"><span className="nava-label">{content.backing.label}</span><h2>{content.backing.title}</h2><p>{content.backing.text}</p><dl className="nava-stats">{content.backing.stats.map(([value,text]) => <div key={value}><dt>{value}</dt><dd>{text}</dd></div>)}</dl></div></section>
+        <section className="nava-container nava-section nava-backing nava-grain"><div className="nava-backing-head"><div><span className="nava-label">{content.backing.label}</span><h2>{content.backing.title}</h2></div><p>{content.backing.text}</p></div><div className="nava-backing-panels">{content.backing.panels.map(panel => <div key={panel.key} className="nava-backing-panel"><img src={panel.key === "sajida" ? sajidaLogo : bsvLogo} alt={panel.alt} width={182} height={50} className={panel.key === "sajida" ? "nava-backing-logo nava-logo-white" : "nava-backing-logo"} /><span className="nava-label">{panel.label}</span><p>{panel.text}</p></div>)}</div><dl className="nava-backing-stats">{content.backing.stats.map(([value,text]) => <div key={value}><dt>{value}</dt><dd>{text}</dd></div>)}</dl></section>
         <section className="nava-section nava-band nava-grain"><div className="nava-container"><span className="nava-label">{content.ahead.label}</span><h2>{content.ahead.title}</h2><div className="nava-roadmap">{content.ahead.items.map(([date,title,text]) => <article key={date} className="nava-roadmap-card"><span className="nava-label">{date}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
         <section id="join" className="nava-band nava-join nava-grain"><div className="nava-container nava-join-grid"><div><span className="nava-label">{content.join.label}</span><h2>{content.join.title}</h2><p>{content.join.text}</p></div><div><div className="nava-routes">{content.join.routes.map(route => <Link key={route.label} to="/contact" className="nava-route"><span className="nava-label">{route.label}</span><h3>{route.title}</h3><span>{route.link}</span></Link>)}</div><div className="nava-email">{content.join.email}</div></div></div></section>
       </main>
