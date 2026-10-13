@@ -68,7 +68,7 @@
 .nava .nava-backing-stats div { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:20px 0; border-top:1px solid rgba(231,236,245,0.22); }
 .nava .nava-backing-stats div:last-child { border-bottom:1px solid rgba(231,236,245,0.22); }
 .nava .nava-backing-stats dt { font-family:var(--font-display); font-size:44px; font-weight:400; line-height:1.1; white-space:nowrap; }
-.nava .nava-backing-stats dd { margin:0; font-size:14px; color:#131D35; text-align:right; }
+.nava .nava-backing-stats dd { margin:0; font-size:14px; color:#CFE3E1; text-align:right; }
 .nava .nava-band { background:radial-gradient(60% 100% at 100% 100%,var(--glow-mint),transparent 70%),var(--deep-gradient); padding:80px 0; }
 .nava .nava-join { scroll-margin-top:100px; border-top:1px solid var(--hairline); }
 .nava .nava-join-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; }
