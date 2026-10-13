@@ -177,6 +177,17 @@
     font-weight: 600;
   }
 
+  /* Nava menu link: mint highlight instead of the shared gold, used across the shared nav, homepage nav and mobile menus. */
+  .nav-link-nava-active {
+    color: var(--nava-bridge-mint);
+    text-shadow: 0 0 12px rgba(30, 227, 162, 0.55);
+    font-weight: 600;
+  }
+  .nava-nav-link:hover {
+    color: var(--nava-bridge-mint);
+    text-shadow: 0 0 12px rgba(30, 227, 162, 0.55);
+  }
+
   .nav-pill {
     background: linear-gradient(135deg, hsl(var(--nav-pill-start) / 0.96), hsl(var(--nav-pill-end) / 0.96));
     backdrop-filter: blur(12px);

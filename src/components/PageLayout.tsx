@@ -102,8 +102,8 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
                     to={link.path}
                     className={`text-xs tracking-[0.2em] uppercase transition-colors duration-300 ${
                       location.pathname === link.path
-                        ? "nav-link-active"
-                        : "text-foreground/60 hover:text-foreground/90"
+                        ? link.path === "/nava" ? "nav-link-nava-active" : "nav-link-active"
+                        : link.path === "/nava" ? "nava-nav-link text-foreground/60" : "text-foreground/60 hover:text-foreground/90"
                     }`}
                     style={{ fontFamily: "var(--font-body)" }}
                   >
@@ -126,7 +126,9 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
                     to={link.path}
                     onClick={() => setMobileOpen(false)}
                     className={`block text-sm tracking-[0.15em] uppercase transition-colors ${
-                      location.pathname === link.path ? "text-white" : "text-white/50"
+                      location.pathname === link.path
+                        ? link.path === "/nava" ? "nav-link-nava-active" : "text-white"
+                        : link.path === "/nava" ? "nava-nav-link text-white/50" : "text-white/50"
                     }`}
                     style={{ fontFamily: "var(--font-body)" }}
                   >
@@ -179,8 +181,8 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
                     to={link.path}
                     className={`text-xs tracking-[0.2em] uppercase transition-colors duration-300 ${
                       location.pathname === link.path
-                        ? "nav-link-active"
-                        : "text-foreground/60 hover:text-foreground/90"
+                        ? link.path === "/nava" ? "nav-link-nava-active" : "nav-link-active"
+                        : link.path === "/nava" ? "nava-nav-link text-foreground/60" : "text-foreground/60 hover:text-foreground/90"
                     }`}
                     style={{ fontFamily: "var(--font-body)" }}
                   >
@@ -201,7 +203,9 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
                     to={link.path}
                     onClick={() => setMobileOpen(false)}
                     className={`block text-sm tracking-[0.15em] uppercase transition-colors ${
-                      location.pathname === link.path ? "text-foreground" : "text-foreground/40"
+                      location.pathname === link.path
+                        ? link.path === "/nava" ? "nav-link-nava-active" : "text-foreground"
+                        : link.path === "/nava" ? "nava-nav-link text-foreground/40" : "text-foreground/40"
                     }`}
                     style={{ fontFamily: "var(--font-body)" }}
                   >
