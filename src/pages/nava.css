@@ -77,7 +77,7 @@
 .nava .nava-how-step::before { content:""; display:block; width:40px; height:1px; background:#131D35; opacity:0.4; margin:0 auto 14px; }
 .nava .nava-how-step-mid::before { width:56px; height:2px; background:#1EE3A2; opacity:1; }
 .nava .nava-how-step h3 { margin:0; padding-top:0; border-top:none; font-family:var(--font-display); font-weight:300; font-size:24px; line-height:1.2; letter-spacing:0; color:#131D35; }
-.nava .nava-how-step-mid h3 { border-top:none; padding-top:0; }
+.nava .nava-how-step-mid h3 { border-top:none; padding-top:0; color:#1EE3A2; }
 .nava .nava-how-step p { margin:8px auto 0; max-width:30ch; font-family:var(--font-body); font-size:14px; line-height:1.6; color:#26345A; }
 @media (min-width:768px) {
   .nava .nava-how { background:none; padding:0; height:0; position:relative; z-index:5; }

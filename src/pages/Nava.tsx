@@ -45,7 +45,7 @@ const content = {
     heading: "One network between capital and growth.",
     steps: ([
       { title: "Private investors", text: "Bring capital and join as members" },
-      { title: "Nava Capital Network", text: "Sources, screens and runs shared diligence, then monitors every deal" },
+      { title: "NAVA Capital Network", text: "Sources, screens and runs shared diligence, then monitors every deal" },
       { title: "High-growth SMEs", text: "Receive capital, mentorship and market access" },
     ] as { title: string; text: string }[]),
   },
