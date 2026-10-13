@@ -76,7 +76,10 @@
 .nava .nava-route .nava-label { margin-bottom:12px; }
 .nava .nava-route h3 { font-size:34px; font-weight:400; margin-bottom:20px; }
 .nava .nava-route span:last-child { font-size:13px; font-weight:600; }
-.nava .nava-email { overflow-wrap:anywhere; user-select:text; font-size:13px; color:var(--soft); margin-top:24px; }
+.nava .nava-contact { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 28px; padding:48px 0; border-top:1px solid rgba(231,236,245,.24); }
+.nava .nava-contact-label { font-size:12px; font-weight:500; letter-spacing:3.5px; text-transform:uppercase; color:#B4BED3; margin:0; }
+.nava .nava-contact-email { font-family:var(--font-display); font-weight:400; font-size:32px; line-height:1.2; color:#E7ECF5; user-select:text; }
+.nava .nava-contact-email:hover { text-decoration:underline; text-decoration-color:var(--mint); text-decoration-thickness:1px; text-underline-offset:6px; }
 .nava .nava-footer { padding:40px 0; background:var(--deep); }
 .nava .nava-footer-top { display:flex; justify-content:space-between; gap:24px; }
 .nava .nava-footer .nava-label { font-size:10px; letter-spacing:2.5px; }
@@ -98,5 +101,6 @@
   .nava .nava-backing-grid { grid-template-columns:1fr; gap:48px; margin-top:36px; }
   .nava .nava-backing-logo { width:168px; height:46px; }
  .nava .nava-join-grid { grid-template-columns:1fr; gap:32px; } .nava .nava-band { padding:56px 0; }
+ .nava .nava-contact-email { font-size:24px; }
  .nava .nava-footer-top { flex-direction:column; gap:0; }
 }
