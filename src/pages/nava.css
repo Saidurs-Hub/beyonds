@@ -66,12 +66,6 @@
 .nava .nava-backing-stats dt { font-family:var(--font-display); font-size:44px; font-weight:400; line-height:1.1; color:#E7ECF5; white-space:nowrap; }
 .nava .nava-backing-stats dd { margin:0; font-size:14px; color:var(--soft); text-align:right; }
 .nava .nava-band { background:radial-gradient(60% 100% at 100% 100%,var(--glow-mint),transparent 70%),var(--deep-gradient); padding:80px 0; }
-.nava .nava-roadmap { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:40px; }
-.nava .nava-roadmap-card { border:1px solid var(--hairline); border-radius:8px; padding:30px; background:var(--deep-gradient); }
-.nava .nava-roadmap-card:first-child { background:var(--mint-gradient); color:var(--deep); border-color:transparent; }
-.nava .nava-roadmap-card .nava-label { font-size:10px; letter-spacing:2px; }
-.nava .nava-roadmap-card h3 { font-size:30px; margin-bottom:16px; }
-.nava .nava-roadmap-card p { font-size:13px; }
 .nava .nava-join { scroll-margin-top:100px; border-top:1px solid var(--hairline); }
 .nava .nava-join-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; }
 .nava .nava-join-grid p { margin-top:24px; color:var(--soft); }
@@ -92,7 +86,6 @@
  .nava h1 { font-size:64px; } .nava h2 { font-size:42px; }
  .nava .nava-hero { gap:36px; }
  .nava .nava-figures { grid-template-columns:repeat(2,1fr); gap:32px 0; } .nava .nava-figure:nth-child(3) { border-left:0; }
- .nava .nava-roadmap { grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:767px) {
  .nava .nava-container { width:calc(100% - 40px); } .nava h1 { font-size:48px; } .nava h2 { font-size:38px; }
@@ -104,7 +97,6 @@
  .nava .nava-audiences { grid-template-columns:1fr; } .nava .nava-audience,.nava .nava-audience:first-child,.nava .nava-audience:last-child { padding:48px 24px; }
   .nava .nava-backing-grid { grid-template-columns:1fr; gap:48px; margin-top:36px; }
   .nava .nava-backing-logo { width:168px; height:46px; }
- .nava .nava-roadmap { grid-template-columns:1fr; }
  .nava .nava-join-grid { grid-template-columns:1fr; gap:32px; } .nava .nava-band { padding:56px 0; }
  .nava .nava-footer-top { flex-direction:column; gap:0; }
 }
