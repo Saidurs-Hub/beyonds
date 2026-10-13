@@ -92,17 +92,17 @@ const Nava = () => {
             <div className="nava-how-card">
               <span className="nava-label nava-how-label">{content.how.label}</span>
               <h2 className="nava-how-title"><Hyphens text={content.how.heading} /></h2>
-            <div className="nava-how-flow">
-              {content.how.steps.map((step, i) => (
-                <div key={step.title} className="nava-how-step-wrap">
-                  {i > 0 && <span className="nava-how-arrow" aria-hidden="true">→</span>}
-                  <div className={`nava-how-step ${i === 1 ? "nava-how-step-mid" : ""}`}>
-                    <h3>{step.title}</h3>
-                    <p>{step.text}</p>
+              <div className="nava-how-flow">
+                {content.how.steps.map((step, i) => (
+                  <div key={step.title} className="nava-how-step-wrap">
+                    {i > 0 && <span className="nava-how-arrow" aria-hidden="true">→</span>}
+                    <div className={`nava-how-step ${i === 1 ? "nava-how-step-mid" : ""}`}>
+                      <h3>{step.title}</h3>
+                      <p>{step.text}</p>
+                    </div>
                   </div>
-            </div>
-              ))}
-            </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
