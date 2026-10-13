@@ -26,9 +26,6 @@ const content = {
     { label: "For high-growth SMEs", title: "Capital, plus the network to grow with it", text: "For established SMEs ready to scale, with BDT 3 to 5 Cr in annual revenue and at least 3 years in operation.", benefits: ["Raise USD 50k to 200k, mainly debt or revenue share", "Market access and business development support", "Mentorship from like-minded investors and founders", "A seat at managed investor showcases"] },
   ] as { label: string; title: string; text: string; benefits: string[]; button?: string }[]),
   backing: { label: "Our backing", title: "Housed under Beyond S Ventures, promoted by SAJIDA Foundation.", text: "SAJIDA Foundation is one of the country's top five MFIs. BSV, its private investment arm, brings direct access to investments, networks, pipelines, and markets.", stats: [["30 years", "of microfinance experience"], ["400k", "borrowers across the country"], ["$400 Mn", "deployed in the market to date"]] },
-  qualification: { label: "Deal qualification", title: "A framework that builds integrity.", intro: "What every company on the Nava platform needs to show before it reaches our members.", criteria: [
-    ["Traction", "BDT 3 to 5 Cr annual revenue, 3+ years operating, 2+ years audited financials"], ["Cheque size", "BDT 50 Lacs to 5 Cr, at commercial rates"], ["Instruments", "Debt, convertibles, revenue share, equity, SAFE"], ["Holding tenure", "12 to 36 months"], ["Pipeline", "Proprietary, MFIs, banks, MNCs, corporates, government agencies"], ["Data room", "DD levels 1 and 2, third-party DD available at cost"],
-  ] },
   ahead: { label: "What's ahead", title: "Bringing structure to a fragmented market.", items: [
     ["Oct 2026", "First managed showcase", "Qualified deals presented to a small group at SAJIDA HQ, then new deals every quarter."],
     ["Dec 2026", "Official launch", "Launch event with selected investors, members, partners, and affiliates."],
