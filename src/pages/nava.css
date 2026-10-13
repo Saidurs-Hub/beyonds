@@ -100,6 +100,7 @@
  .nava .nava-figure { border-left:0; border-top:1px solid rgba(19,29,53,.18); padding:24px 0 0; } .nava .nava-figure:first-child { border-top:0; padding-top:0; }
  .nava .nava-section { margin-top:64px; }
  .nava .nava-audiences { grid-template-columns:1fr; } .nava .nava-audience,.nava .nava-audience:first-child,.nava .nava-audience:last-child { padding:48px 24px; }
+  .nava .nava-backing { padding:56px 0; margin-bottom:64px; }
   .nava .nava-backing-grid { grid-template-columns:1fr; gap:48px; margin-top:36px; }
   .nava .nava-backing-logo { width:168px; height:46px; }
  .nava .nava-join-grid { grid-template-columns:1fr; gap:32px; } .nava .nava-band { padding:56px 0; }
