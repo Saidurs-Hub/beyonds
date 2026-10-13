@@ -64,25 +64,25 @@
 .nava .nava-how { padding:44px 0; margin-top:0; background:
   radial-gradient(70% 80% at 0% 100%, rgba(30,227,162,0.22) 0%, rgba(30,227,162,0) 70%),
   linear-gradient(140deg, #0F5550 0%, #0B4246 55%, #08333A 100%); }
-.nava .nava-how-card { border-radius:36px; padding:44px 64px 48px; text-align:center; background:
+.nava .nava-how-card { border-radius:36px; padding:30px 64px 32px; text-align:center; background:
   radial-gradient(50% 80% at 100% 100%, rgba(30,227,162,0.18) 0%, rgba(30,227,162,0) 70%),
   linear-gradient(140deg, #F2F8F6 0%, #E3F1EC 55%, #D4EAE2 100%);
   box-shadow:0 20px 60px rgba(5,37,44,0.25); }
 .nava .nava-how-label { color:#0E7A57; font-weight:600; }
-.nava .nava-how-title { color:#131D35; margin-bottom:0; }
-.nava .nava-how-flow { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0 16px; max-width:1040px; margin:32px auto 0; align-items:stretch; }
+.nava .nava-how-title { color:#131D35; margin-top:2px; margin-bottom:0; }
+.nava .nava-how-flow { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0 16px; max-width:1040px; margin:22px auto 0; align-items:stretch; }
 .nava .nava-how-step-wrap { display:flex; align-items:flex-start; gap:16px; }
-.nava .nava-how-arrow { flex:0 0 auto; margin-top:26px; font-family:var(--font-body); font-size:20px; line-height:1; color:#0E7A57; }
+.nava .nava-how-arrow { flex:0 0 auto; margin-top:20px; font-family:var(--font-body); font-size:20px; line-height:1; color:#0E7A57; }
 .nava .nava-how-step { flex:1 1 auto; text-align:center; }
-.nava .nava-how-step::before { content:""; display:block; width:40px; height:1px; background:#131D35; opacity:0.4; margin:0 auto 14px; }
+.nava .nava-how-step::before { content:""; display:block; width:40px; height:1px; background:#131D35; opacity:0.4; margin:0 auto 10px; }
 .nava .nava-how-step-mid::before { width:56px; height:2px; background:#1EE3A2; opacity:1; }
 .nava .nava-how-step h3 { margin:0; padding-top:0; border-top:none; font-family:var(--font-display); font-weight:300; font-size:24px; line-height:1.2; letter-spacing:0; color:#131D35; }
-.nava .nava-how-step-mid h3 { border-top:none; padding-top:0; color:#1EE3A2; }
-.nava .nava-how-step p { margin:8px auto 0; max-width:30ch; font-family:var(--font-body); font-size:14px; line-height:1.6; color:#26345A; }
+.nava .nava-how-step-mid h3 { border-top:none; padding-top:0; color:#0FB57E; }
+.nava .nava-how-step p { margin:6px auto 0; max-width:30ch; font-family:var(--font-body); font-size:14px; line-height:1.6; color:#26345A; }
 @media (min-width:768px) {
   .nava .nava-how { background:none; padding:0; height:0; position:relative; z-index:5; }
   .nava .nava-how > .nava-container { transform:translateY(-50%); }
-  .nava .nava-audience { padding-bottom:254px; }
+  .nava .nava-audience { padding-bottom:220px; }
   .nava .nava-how .nava-container { width:min(1560px,calc(100% - 96px)); }
 }
 /* RISK ACCORDION — to remove: delete content.risk and the section markup in Nava.tsx plus these rules. */
@@ -91,7 +91,7 @@
   radial-gradient(40% 70% at 100% 0%, rgba(63,217,232,0.06) 0%, rgba(63,217,232,0) 70%),
   linear-gradient(140deg, #0A3A3D 0%, #072F35 55%, #05252C 100%); }
 @media (min-width:768px) {
-  .nava .nava-risk { padding-top:290px; }
+  .nava .nava-risk { padding-top:250px; }
 }
 .nava .nava-risk-grid { display:grid; grid-template-columns:2fr 3fr; gap:64px; align-items:start; }
 .nava .nava-risk-label { color:#5FF0B0; font-weight:600; }
