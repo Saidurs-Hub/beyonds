@@ -37,7 +37,10 @@
 .nava .nava-glance dl div { display:flex; justify-content:space-between; gap:14px; border-top:1px solid var(--hairline); padding:13px 0; font-size:12px; }
 .nava .nava-glance dt { color:var(--soft); }
 .nava .nava-glance dd { margin:0; text-align:right; }
-.nava .nava-figures { margin-top:-56px; display:grid; grid-template-columns:repeat(4,1fr); border-radius:20px; padding:40px 20px; color:var(--deep); background:radial-gradient(70% 140% at 100% 100%,rgba(63,217,232,.65),transparent 70%),linear-gradient(115deg,var(--mint),#24DFAE); }
+.nava .nava-figures { margin-top:-56px; display:grid; grid-template-columns:repeat(4,1fr); border-radius:20px; padding:40px 20px; color:#131D35; background:
+  radial-gradient(60% 80% at 100% 100%, rgba(30,227,162,0.22) 0%, rgba(30,227,162,0) 70%),
+  radial-gradient(50% 70% at 0% 0%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 65%),
+  linear-gradient(140deg, #DDF8EC 0%, #C6F1E0 55%, #ADE7D2 100%); }
 .nava .nava-figure { padding:0 26px; border-left:1px solid rgba(19,29,53,.18); }
 .nava .nava-figure:first-child { border-left:0; }
 .nava .nava-number { display:block; font-family:var(--font-display); font-size:48px; font-weight:400; line-height:1.2; margin-bottom:14px; }
@@ -55,21 +58,20 @@
 .nava .nava-investors .nava-benefits li { border-color:rgba(19,29,53,.2); }
 .nava .nava-backing-title { max-width:36ch; }
 .nava .nava-backing { padding:88px 0; margin-bottom:100px; background:
-  radial-gradient(60% 80% at 100% 100%, rgba(30,227,162,0.22) 0%, rgba(30,227,162,0) 70%),
-  radial-gradient(50% 70% at 0% 0%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 65%),
-  linear-gradient(140deg, #DDF8EC 0%, #C6F1E0 55%, #ADE7D2 100%); }
-.nava .nava-backing .nava-label { color:#0E7A57; }
+  radial-gradient(70% 140% at 100% 100%, rgba(63,217,232,0.65) 0%, rgba(63,217,232,0) 70%),
+  linear-gradient(115deg, #1EE3A2 0%, #24DFAE 100%); }
+.nava .nava-backing .nava-label { color:#0B4A3A; }
 .nava .nava-backing .nava-backing-title, .nava .nava-backing-stats dt { color:#131D35; }
 .nava .nava-backing .nava-label { margin-bottom:22px; }
 .nava .nava-backing-grid { display:grid; grid-template-columns:3fr 2fr; gap:64px; margin-top:48px; }
 .nava .nava-backing-entries { display:grid; gap:40px; align-content:start; }
-.nava .nava-backing-entry { border-top:1px solid rgba(19,29,53,0.20); padding-top:28px; }
+.nava .nava-backing-entry { border-top:1px solid rgba(19,29,53,0.22); padding-top:28px; }
 .nava .nava-backing-logo { display:block; width:200px; height:56px; object-fit:contain; object-position:left center; }
 .nava .nava-backing-entry:last-child .nava-backing-logo { width:300px; height:96px; }
 .nava .nava-backing-entry p { margin:20px 0 0; font-size:15px; line-height:1.75; font-weight:500; color:#131D35; }
 .nava .nava-backing-stats { margin:0; }
-.nava .nava-backing-stats div { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:20px 0; border-top:1px solid rgba(19,29,53,0.20); }
-.nava .nava-backing-stats div:last-child { border-bottom:1px solid rgba(19,29,53,0.20); }
+.nava .nava-backing-stats div { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:20px 0; border-top:1px solid rgba(19,29,53,0.22); }
+.nava .nava-backing-stats div:last-child { border-bottom:1px solid rgba(19,29,53,0.22); }
 .nava .nava-backing-stats dt { font-family:var(--font-display); font-size:44px; font-weight:400; line-height:1.1; white-space:nowrap; }
 .nava .nava-backing-stats dd { margin:0; font-size:14px; color:#131D35; text-align:right; }
 .nava .nava-band { background:radial-gradient(60% 100% at 100% 100%,var(--glow-mint),transparent 70%),var(--deep-gradient); padding:80px 0; }
