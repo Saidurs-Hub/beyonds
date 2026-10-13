@@ -53,9 +53,8 @@
 .nava .nava-benefits li { padding:20px 0; font-size:13px; line-height:1.7; border-top:1px solid var(--hairline); }
 .nava .nava-investors .nava-benefits li { border-color:rgba(19,29,53,.2); }
 .nava .nava-backing-title { max-width:36ch; }
-.nava .nava-backing { padding:88px 0 120px; margin-bottom:0; background:
+.nava .nava-backing { padding:88px 0; margin-bottom:0; background:
   radial-gradient(60% 70% at 100% 70%, rgba(30,227,162,0.24) 0%, rgba(30,227,162,0) 70%),
-  linear-gradient(180deg, rgba(19,29,53,0) 72%, #131D35 100%),
   linear-gradient(140deg, #0F5550 0%, #0B4246 55%, #08333A 100%); }
 .nava .nava-backing .nava-label { color:#5FF0B0; }
 .nava .nava-backing .nava-backing-title, .nava .nava-backing-stats dt { color:#FFFFFF; }
@@ -73,23 +72,9 @@
 .nava .nava-backing-stats dt { font-family:var(--font-display); font-size:44px; font-weight:400; line-height:1.1; white-space:nowrap; }
 .nava .nava-backing-stats dd { margin:0; font-size:14px; color:#CFE3E1; text-align:right; }
 .nava .nava-band { background:radial-gradient(60% 100% at 100% 100%,var(--glow-mint),transparent 70%),var(--deep-gradient); padding:80px 0; }
-.nava .nava-join { scroll-margin-top:100px; background:
-  radial-gradient(55% 60% at 0% 0%, rgba(15,85,80,0.55) 0%, rgba(15,85,80,0) 70%),
-  radial-gradient(60% 100% at 100% 100%, rgba(30,227,162,0.30) 0%, rgba(30,227,162,0) 70%),
-  linear-gradient(180deg, #131D35 0%, #141F3A 40%, #0E1830 100%); }
-.nava .nava-join-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; }
-.nava .nava-join-grid.nava-join-single { grid-template-columns:1fr; }
-.nava .nava-join-grid.nava-join-single h2 { max-width:22ch; } /* keeps lines readable when the section spans full width */
-.nava .nava-join-grid p { margin-top:24px; color:var(--soft); }
-.nava .nava-routes { display:grid; gap:20px; }
-.nava .nava-route[hidden] { display:none; } /* keeps the SME card as :nth-child(2) so its slate style and size stay intact */
-.nava .nava-route { display:block; border-radius:12px; padding:28px; color:var(--deep); background:var(--mint-gradient); }
-.nava .nava-route:nth-child(2) { background:var(--slate-gradient); }
-.nava .nava-route:hover { filter:brightness(1.06); }
-.nava .nava-route .nava-label { margin-bottom:12px; }
-.nava .nava-route h3 { font-size:34px; font-weight:400; margin-bottom:20px; }
-.nava .nava-route span:last-child { font-size:13px; font-weight:600; }
-.nava .nava-contact { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 28px; padding:48px 0; border-top:1px solid rgba(231,236,245,.24); }
+/* HIDDEN FOR NOW: "Join us" band styles (.nava-join, .nava-join-grid, .nava-join-single, .nava-routes, .nava-route) removed — see content.join in Nava.tsx to restore. */
+html:has(.nava) { scroll-behavior:smooth; }
+.nava .nava-contact { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 28px; padding:48px 0; border-top:1px solid rgba(231,236,245,.24); scroll-margin-top:100px; }
 .nava .nava-contact-label { font-size:12px; font-weight:500; letter-spacing:3.5px; text-transform:uppercase; color:#B4BED3; margin:0; }
 .nava .nava-contact-email { font-family:var(--font-body); font-weight:500; font-size:20px; line-height:1.4; letter-spacing:0.2px; color:#E7ECF5; user-select:text; }
 .nava .nava-contact-email:hover { text-decoration:underline; text-decoration-color:var(--mint); text-decoration-thickness:1px; text-underline-offset:6px; }
@@ -112,10 +97,10 @@
  .nava .nava-figure { border-left:0; border-top:1px solid rgba(19,29,53,.18); padding:24px 0 0; } .nava .nava-figure:first-child { border-top:0; padding-top:0; }
  .nava .nava-section { margin-top:64px; }
  .nava .nava-audiences { grid-template-columns:1fr; } .nava .nava-audience,.nava .nava-audience:first-child,.nava .nava-audience:last-child { padding:48px 24px; }
-  .nava .nava-backing { padding:56px 0 80px; margin-bottom:0; }
+  .nava .nava-backing { padding:56px 0; margin-bottom:0; }
   .nava .nava-backing-grid { grid-template-columns:1fr; gap:48px; margin-top:36px; }
   .nava .nava-backing-logo { width:168px; height:46px; } .nava .nava-backing-entry:last-child .nava-backing-logo { width:240px; height:76px; }
- .nava .nava-join-grid { grid-template-columns:1fr; gap:32px; } .nava .nava-band { padding:56px 0; }
+ .nava .nava-band { padding:56px 0; } /* kept for the hidden "Join us" band */
  .nava .nava-contact-label { font-size:12px; } .nava .nava-contact-email { font-size:16px; }
  .nava .nava-footer-top { flex-direction:column; gap:0; }
 }
