@@ -31,7 +31,7 @@
 .nava .nava-button-dark { background:var(--deep); color:var(--ice); }
 .nava .nava-button-dark:hover { background:var(--navy); }
 .nava .nava-button-cyan { background:var(--cyan); }
-.nava .nava-hero-panel { min-height:540px; border-radius:20px; display:flex; align-items:flex-end; padding:30px; background:radial-gradient(75% 75% at 100% 100%,var(--glow-mint),transparent 65%),radial-gradient(60% 60% at 0% 0%,var(--glow-cyan),transparent 70%),linear-gradient(160deg,var(--navy),var(--deep)); }
+.nava .nava-hero-panel { min-height:320px; border-radius:20px; display:flex; align-items:flex-end; padding:30px; background:radial-gradient(75% 75% at 100% 100%,var(--glow-mint),transparent 65%),radial-gradient(60% 60% at 0% 0%,var(--glow-cyan),transparent 70%),linear-gradient(160deg,var(--navy),var(--deep)); }
 .nava .nava-glance { border-radius:12px; background:var(--panel); backdrop-filter:blur(12px); padding:26px; width:100%; }
 .nava .nava-glance dl { margin:0; }
 .nava .nava-glance dl div { display:flex; justify-content:space-between; gap:14px; border-top:1px solid var(--hairline); padding:13px 0; font-size:12px; }
@@ -100,7 +100,7 @@
 @media (max-width:767px) {
  .nava .nava-container { width:calc(100% - 40px); } .nava h1 { font-size:48px; } .nava h2 { font-size:38px; }
  .nava .nava-hero { grid-template-columns:1fr; padding-top:120px; gap:40px; padding-bottom:96px; }
- .nava .nava-hero-panel { min-height:440px; padding:20px; } .nava .nava-glance { padding:22px; }
+ .nava .nava-hero-panel { min-height:280px; padding:20px; } .nava .nava-glance { padding:22px; }
  .nava .nava-figures { grid-template-columns:1fr; padding:30px; gap:24px; }
  .nava .nava-figure { border-left:0; border-top:1px solid rgba(19,29,53,.18); padding:24px 0 0; } .nava .nava-figure:first-child { border-top:0; padding-top:0; }
  .nava .nava-section { margin-top:64px; }
