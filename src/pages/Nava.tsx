@@ -28,7 +28,7 @@ const content = {
   backing: { label: "Our backing", title: "Housed under Beyond S Ventures & promoted by SAJIDA Foundation",
     entries: [
       { key: "sajida", alt: "SAJIDA Foundation logo", text: "A top-5 MFI in the country that also spearheads startup-ecosystem development through Impact Partners, a strategic impact advisory and thematic fund manager. Current portfolio includes OCBIF, CIF, & BSV." },
-      { key: "bsv", alt: "Beyond S Ventures logo", text: "The private investment arm of SAJIDA Foundation (soon to be a licensed fund manager), leverages its corporate relationships with direct access to investments, networks, pipelines, and markets." },
+      { key: "bsv", alt: "Beyond S Ventures logo", text: "The private investment arm of SAJIDA Foundation, leverages its corporate relationships with direct access to investments, networks, pipelines, and markets." },
     ],
     stats: [["30 yrs", "of MFI experience in the market"], ["400k", "borrower network across the country"], ["$400 Mn", "deployed in the market to date"]] },
   // HIDDEN FOR NOW — the whole "Join us" section (label, heading, routes) is not rendered.
