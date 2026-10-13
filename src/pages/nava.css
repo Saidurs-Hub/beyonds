@@ -138,11 +138,9 @@ html:has(.nava) { scroll-behavior:smooth; }
   .nava .nava-how { padding:56px 0; }
   .nava .nava-how-flow { grid-template-columns:1fr; gap:0; }
   .nava .nava-how-step-wrap { align-items:center; }
-  .nava .nava-how-step { padding-bottom:22px; }
   .nava .nava-how-step-wrap:not(:last-child) .nava-how-step { padding-bottom:22px; }
-  .nava .nava-how-arrow::before { content:"↓"; }
-  .nava .nava-how-arrow { font-size:20px; }
-  .nava .nava-how-arrow::before { content:"↓"; }
+  .nava .nava-how-arrow { font-size:0; line-height:0; }
+  .nava .nava-how-arrow::before { content:"↓"; font-size:20px; line-height:1; }
   .nava .nava-risk { padding:64px 0; }
   .nava .nava-risk-grid { grid-template-columns:1fr; gap:36px; }
  .nava .nava-audiences { grid-template-columns:1fr; } .nava .nava-audience,.nava .nava-audience:first-child,.nava .nava-audience:last-child { padding:48px 24px; }
