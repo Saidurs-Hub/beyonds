@@ -100,8 +100,9 @@ const Nava = () => {
                     <h3>{step.title}</h3>
                     <p>{step.text}</p>
                   </div>
-                </div>
+            </div>
               ))}
+            </div>
             </div>
           </div>
         </section>
