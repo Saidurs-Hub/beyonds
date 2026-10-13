@@ -54,7 +54,11 @@
 .nava .nava-benefits li { padding:20px 0; font-size:13px; line-height:1.7; border-top:1px solid var(--hairline); }
 .nava .nava-investors .nava-benefits li { border-color:rgba(19,29,53,.2); }
 .nava .nava-backing-title { max-width:36ch; }
-.nava .nava-backing { padding:88px 0; margin-bottom:100px; background:linear-gradient(140deg,#A9B3CA 0%,#9AA5BF 50%,#8794B2 100%); }
+.nava .nava-backing { padding:88px 0; margin-bottom:100px; background:
+  radial-gradient(60% 85% at 0% 0%, rgba(255,255,255,0.42) 0%, rgba(255,255,255,0) 62%),
+  radial-gradient(45% 65% at 88% 8%, rgba(63,217,232,0.14) 0%, rgba(63,217,232,0) 70%),
+  radial-gradient(60% 80% at 100% 100%, rgba(19,29,53,0.20) 0%, rgba(19,29,53,0) 65%),
+  linear-gradient(135deg, #B8C1D5 0%, #A3ADC5 38%, #939FBB 72%, #8591AF 100%); }
 .nava .nava-backing .nava-label, .nava .nava-backing .nava-backing-title, .nava .nava-backing-stats dt { color:#131D35; }
 .nava .nava-backing .nava-label { margin-bottom:22px; }
 .nava .nava-backing-grid { display:grid; grid-template-columns:3fr 2fr; gap:64px; margin-top:48px; }
