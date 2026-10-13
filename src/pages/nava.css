@@ -55,21 +55,21 @@
 .nava .nava-investors .nava-benefits li { border-color:rgba(19,29,53,.2); }
 .nava .nava-backing-title { max-width:36ch; }
 .nava .nava-backing { padding:88px 0; margin-bottom:100px; background:
-  radial-gradient(55% 80% at 0% 0%, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 60%),
-  radial-gradient(50% 70% at 92% 10%, rgba(63,217,232,0.22) 0%, rgba(63,217,232,0) 70%),
-  radial-gradient(65% 85% at 100% 100%, rgba(19,29,53,0.28) 0%, rgba(19,29,53,0) 65%),
-  linear-gradient(135deg, #A9B5D3 0%, #8D9BC2 40%, #7787B3 75%, #6A7AA8 100%); }
-.nava .nava-backing .nava-label, .nava .nava-backing .nava-backing-title, .nava .nava-backing-stats dt { color:#131D35; }
+  radial-gradient(60% 80% at 100% 100%, rgba(30,227,162,0.22) 0%, rgba(30,227,162,0) 70%),
+  radial-gradient(50% 70% at 0% 0%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 65%),
+  linear-gradient(140deg, #DDF8EC 0%, #C6F1E0 55%, #ADE7D2 100%); }
+.nava .nava-backing .nava-label { color:#0E7A57; }
+.nava .nava-backing .nava-backing-title, .nava .nava-backing-stats dt { color:#131D35; }
 .nava .nava-backing .nava-label { margin-bottom:22px; }
 .nava .nava-backing-grid { display:grid; grid-template-columns:3fr 2fr; gap:64px; margin-top:48px; }
 .nava .nava-backing-entries { display:grid; gap:40px; align-content:start; }
-.nava .nava-backing-entry { border-top:1px solid rgba(19,29,53,0.35); padding-top:28px; }
+.nava .nava-backing-entry { border-top:1px solid rgba(19,29,53,0.20); padding-top:28px; }
 .nava .nava-backing-logo { display:block; width:200px; height:56px; object-fit:contain; object-position:left center; }
 .nava .nava-backing-entry:last-child .nava-backing-logo { width:300px; height:96px; }
 .nava .nava-backing-entry p { margin:20px 0 0; font-size:15px; line-height:1.75; font-weight:500; color:#131D35; }
 .nava .nava-backing-stats { margin:0; }
-.nava .nava-backing-stats div { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:20px 0; border-top:1px solid rgba(19,29,53,0.35); }
-.nava .nava-backing-stats div:last-child { border-bottom:1px solid rgba(19,29,53,0.35); }
+.nava .nava-backing-stats div { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:20px 0; border-top:1px solid rgba(19,29,53,0.20); }
+.nava .nava-backing-stats div:last-child { border-bottom:1px solid rgba(19,29,53,0.20); }
 .nava .nava-backing-stats dt { font-family:var(--font-display); font-size:44px; font-weight:400; line-height:1.1; white-space:nowrap; }
 .nava .nava-backing-stats dd { margin:0; font-size:14px; color:#131D35; text-align:right; }
 .nava .nava-band { background:radial-gradient(60% 100% at 100% 100%,var(--glow-mint),transparent 70%),var(--deep-gradient); padding:80px 0; }
