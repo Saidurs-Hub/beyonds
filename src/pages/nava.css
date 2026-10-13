@@ -83,7 +83,6 @@
   .nava .nava-how { background:none; padding:0; height:0; position:relative; z-index:5; }
   .nava .nava-how > .nava-container { transform:translateY(-50%); }
   .nava .nava-audience { padding-bottom:254px; }
-  .nava .nava-risk { padding-top:290px; }
   .nava .nava-how .nava-container { width:min(1560px,calc(100% - 96px)); }
 }
 /* RISK ACCORDION — to remove: delete content.risk and the section markup in Nava.tsx plus these rules. */
