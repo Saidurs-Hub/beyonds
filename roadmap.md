@@ -1,1 +1,4 @@
-- Recolor About Global Presence image: maroon-to-plum-indigo spectrum, soft glow behind skyline, no map outline; soften overlay
+- [x] Recolor About Global Presence image; publishing cancelled, retain in preview.
+- [x] Add isolated Nava page and stylesheet with supplied copy and visual identity.
+- [x] Add shared-header-only PageLayout option, Nava route/nav, and Investments bridge card.
+- [x] Verify Nava interactions, mobile layout and unchanged existing pages; do not publish.

@@ -13,6 +13,7 @@ const Portfolio = lazy(() => import("./pages/Portfolio.tsx"));
 const Team = lazy(() => import("./pages/Team.tsx"));
 const Insights = lazy(() => import("./pages/Insights.tsx"));
 const Contact = lazy(() => import("./pages/Contact.tsx"));
+const Nava = lazy(() => import("./pages/Nava.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const AnimatedRoutes = () => {
           <Route path="/team" element={<Team />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/nava" element={<Nava />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>

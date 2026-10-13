@@ -24,6 +24,7 @@ const navLinks = [
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
   { label: "INVESTMENTS", path: "/portfolio" },
+  { label: "Nava", path: "/nava" },
   { label: "Team", path: "/team" },
   { label: "Insights", path: "/insights" },
   { label: "Contact", path: "/contact" },
@@ -47,9 +48,11 @@ interface PageLayoutProps {
   backgroundColor?: string;
   gradient?: keyof typeof pageGradients;
   headerExtra?: ReactNode;
+  /** Retain the shared header while the page supplies full-width content and footer. */
+  bare?: boolean;
 }
 
-const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundColor, gradient, headerExtra }: PageLayoutProps) => {
+const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundColor, gradient, headerExtra, bare = false }: PageLayoutProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
@@ -92,7 +95,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
               >
                 <img src={bsvLogo} alt="Beyond S Ventures" className="h-24 brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
               </Link>
-              <nav className="hidden md:flex items-center nav-pill rounded-full px-6 py-2 gap-6">
+              <nav className={`${bare ? "hidden xl:flex" : "hidden md:flex"} items-center nav-pill rounded-full px-6 py-2 gap-6`}>
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
@@ -116,7 +119,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
 
             {/* Mobile Nav */}
             {mobileOpen && (
-              <div className="fixed inset-0 z-40 bg-background md:hidden flex flex-col px-6 pt-24 pb-6 space-y-4">
+              <div className={`fixed inset-0 z-40 bg-background ${bare ? "xl:hidden" : "md:hidden"} flex flex-col px-6 pt-24 pb-6 space-y-4`}>
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
@@ -167,9 +170,9 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
                 to="/"
                 className="absolute left-6 md:left-12 lg:left-20 flex items-center"
               >
-                <img src={bsvLogo} alt="Beyond S Ventures" className={`h-24 transition-opacity ${backgroundColor || gradient ? "brightness-0 invert opacity-90 hover:opacity-100" : "opacity-60 hover:opacity-100"}`} />
+                <img src={bsvLogo} alt="Beyond S Ventures" className={`h-24 transition-opacity ${backgroundColor || gradient || bare ? "brightness-0 invert opacity-90 hover:opacity-100" : "opacity-60 hover:opacity-100"}`} />
               </Link>
-              <nav className="hidden md:flex items-center nav-pill rounded-full px-6 py-2 gap-6">
+              <nav className={`${bare ? "hidden xl:flex" : "hidden md:flex"} items-center nav-pill rounded-full px-6 py-2 gap-6`}>
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
@@ -185,13 +188,13 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
                   </Link>
                 ))}
               </nav>
-              <button onClick={() => setMobileOpen(!mobileOpen)} className="absolute right-6 md:right-12 lg:right-20 md:hidden text-foreground/60 hover:text-foreground">
+              <button onClick={() => setMobileOpen(!mobileOpen)} className={`absolute right-6 md:right-12 lg:right-20 ${bare ? "xl:hidden" : "md:hidden"} text-foreground/60 hover:text-foreground`}>
                 {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
               {headerExtra && <div className="absolute right-6 md:right-12 lg:right-20 top-1/2 -translate-y-1/2 hidden md:block">{headerExtra}</div>}
             </header>
             {mobileOpen && (
-              <div className="fixed inset-0 z-40 bg-background md:hidden flex flex-col px-6 pt-24 pb-6 space-y-4">
+              <div className={`fixed inset-0 z-40 bg-background ${bare ? "xl:hidden" : "md:hidden"} flex flex-col px-6 pt-24 pb-6 space-y-4`}>
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
@@ -207,6 +210,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
                 ))}
               </div>
             )}
+            {!bare && <>
             <motion.div
               className="px-6 md:px-12 lg:px-20 pt-40 md:pt-44 pb-12 md:pb-16 max-w-6xl mx-auto"
               variants={staggerContainer}
@@ -217,21 +221,22 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
               {subtitle && <motion.p variants={fadeUp} className="text-foreground/50 text-base md:text-lg leading-relaxed max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>{subtitle}</motion.p>}
             </motion.div>
             <div className="mx-6 md:mx-12 lg:mx-20 border-t border-border/20" />
+            </>}
           </>
         )}
 
         {/* Content */}
-        <motion.main
+        {bare ? children : <motion.main
           className="px-6 md:px-12 lg:px-20 py-16 md:py-20 max-w-6xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           {children}
-        </motion.main>
+        </motion.main>}
 
         {/* Footer */}
-        <motion.footer
+        {!bare && <motion.footer
           className="px-6 md:px-12 lg:px-20 py-8 border-t border-border/10 flex flex-col md:flex-row items-center justify-between gap-4"
           variants={fadeIn}
           initial="initial"
@@ -247,7 +252,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
           >
             reach@beyonds.ventures
           </Link>
-        </motion.footer>
+        </motion.footer>}
       </div>
     </PageTransition>
   );

@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 import { openExternalLink } from "@/lib/openExternalLink";
 import { Sprout, ShoppingBag, Briefcase, Truck, Factory, Building2 } from "lucide-react";
@@ -93,6 +94,17 @@ const Portfolio = () => (
               );
             })}
           </div>
+        </section>
+      </ScrollReveal>
+      <ScrollReveal>
+        <section className="space-y-10">
+          <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Co-invest with us</h2>
+          <Link to="/nava" className="nava-bridge">
+            <span className="nava-bridge-label">NAVA CAPITAL NETWORK</span>
+            <h3 className="nava-bridge-heading">Invest alongside BSV through Nava.</h3>
+            <p className="nava-bridge-copy">A private investor consortium that syndicates vetted, high-growth SMEs to members, with diligence and monitoring handled for you.</p>
+            <span className="nava-bridge-button">Explore Nava →</span>
+          </Link>
         </section>
       </ScrollReveal>
     </div>
