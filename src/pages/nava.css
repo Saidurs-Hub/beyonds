@@ -78,6 +78,8 @@
   radial-gradient(60% 100% at 100% 100%, rgba(30,227,162,0.30) 0%, rgba(30,227,162,0) 70%),
   linear-gradient(180deg, #131D35 0%, #141F3A 40%, #0E1830 100%); }
 .nava .nava-join-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; }
+.nava .nava-join-grid.nava-join-single { grid-template-columns:1fr; }
+.nava .nava-join-grid.nava-join-single h2 { max-width:22ch; } /* keeps lines readable when the section spans full width */
 .nava .nava-join-grid p { margin-top:24px; color:var(--soft); }
 .nava .nava-routes { display:grid; gap:20px; }
 .nava .nava-route[hidden] { display:none; } /* keeps the SME card as :nth-child(2) so its slate style and size stay intact */
