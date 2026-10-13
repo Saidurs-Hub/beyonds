@@ -10,7 +10,7 @@
 import PageLayout from "@/components/PageLayout";
 import { Button } from "@/components/ui/button";
 import sajidaLogo from "@/assets/sajida-logo.png";
-import bsvLogo from "@/assets/bsv-logo-white-trimmed.png";
+import bsvLogoDark from "@/assets/bsv-logo-dark-trimmed.png";
 import "./nava.css";
 
 // CONTENT: All Nava display copy lives here. Edit these values without changing layout.
@@ -57,9 +57,9 @@ const Nava = () => (
         <section className="nava-container nava-hero"><div><span className="nava-label">{content.hero.label}</span><h1><Hyphens text={content.hero.headline} /> <span><Hyphens text={content.hero.highlight} /></span></h1><p className="nava-lead">{content.hero.lead}</p><div className="nava-actions">{content.hero.buttons.map((label,index) => <JoinButton key={label} className={index ? "nava-button-outline" : ""}>{label}</JoinButton>)}</div></div><div className="nava-hero-spacer" aria-hidden="true" /></section>
         <section className="nava-container nava-figures nava-grain">{content.figures.map(([value,caption]) => <div className="nava-figure" key={value}><span className="nava-number"><Hyphens text={value} /></span><p>{caption}</p></div>)}</section>
         <section className="nava-section nava-audiences">{content.audiences.map((audience,index) => <div key={audience.label} className={`nava-audience nava-grain ${index ? "nava-smes" : "nava-investors"}`}><span className="nava-label">{audience.label}</span><h2><Hyphens text={audience.title} /></h2><p>{audience.text}</p><ul className="nava-benefits">{audience.benefits.map(text => <li key={text}>{text}</li>)}</ul>{index === 0 && audience.showButton && <JoinButton className="nava-button-dark">{audience.button}</JoinButton>}</div>)}</section>
-        <section className="nava-section nava-backing"><div className="nava-container"><span className="nava-label">{content.backing.label}</span><h2 className="nava-backing-title"><Hyphens text={content.backing.title} /></h2><div className="nava-backing-grid"><div className="nava-backing-entries">{content.backing.entries.map(entry => <div key={entry.key} className="nava-backing-entry"><img src={entry.key === "sajida" ? sajidaLogo : bsvLogo} alt={entry.alt} className={`nava-backing-logo ${entry.key === "sajida" ? "nava-logo-white" : ""}`} /><p>{entry.text}</p></div>)}</div><dl className="nava-backing-stats">{content.backing.stats.map(([value,text]) => <div key={value}><dt>{value}</dt><dd>{text}</dd></div>)}</dl></div></div></section>
+        <section className="nava-section nava-backing"><div className="nava-container"><span className="nava-label">{content.backing.label}</span><h2 className="nava-backing-title"><Hyphens text={content.backing.title} /></h2><div className="nava-backing-grid"><div className="nava-backing-entries">{content.backing.entries.map(entry => <div key={entry.key} className="nava-backing-entry"><img src={entry.key === "sajida" ? sajidaLogo : bsvLogoDark} alt={entry.alt} className="nava-backing-logo" /><p>{entry.text}</p></div>)}</div><dl className="nava-backing-stats">{content.backing.stats.map(([value,text]) => <div key={value}><dt>{value}</dt><dd>{text}</dd></div>)}</dl></div></div></section>
       </main>
-      <section id="contact" className="nava-contact nava-container"><span className="nava-label nava-contact-label">{content.contact.label}</span><a className="nava-contact-email" href={`mailto:${content.contact.email}`}>{content.contact.email}</a></section>
+      <section id="contact" className="nava-contact-band"><div className="nava-container nava-contact"><span className="nava-label nava-contact-label">{content.contact.label}</span><a className="nava-contact-email" href={`mailto:${content.contact.email}`}>{content.contact.email}</a></div></section>
       <footer className="nava-footer"><div className="nava-container"><div className="nava-footer-top"><span className="nava-label">{content.footer.name}</span><span className="nava-label">{content.footer.parent}</span></div><p>{content.footer.disclaimer}</p></div></footer>
     </div>
   </PageLayout>
