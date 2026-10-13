@@ -95,7 +95,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
               >
                 <img src={bsvLogo} alt="Beyond S Ventures" className="h-24 brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
               </Link>
-              <nav className="hidden md:flex items-center nav-pill rounded-full px-6 py-2 gap-6">
+              <nav className="hidden lg:flex items-center nav-pill rounded-full px-6 py-2 gap-6">
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
@@ -111,15 +111,15 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
                   </Link>
                 ))}
               </nav>
-              <button onClick={() => setMobileOpen(!mobileOpen)} className="absolute right-6 md:right-12 lg:right-20 md:hidden text-white/70 hover:text-white">
+              <button onClick={() => setMobileOpen(!mobileOpen)} className="absolute right-6 md:right-12 lg:right-20 lg:hidden text-white/70 hover:text-white">
                 {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
-              {headerExtra && <div className="absolute right-6 md:right-12 lg:right-20 top-1/2 -translate-y-1/2 hidden md:block">{headerExtra}</div>}
+              {headerExtra && <div className="absolute right-6 md:right-12 lg:right-20 top-1/2 -translate-y-1/2 hidden lg:block">{headerExtra}</div>}
             </header>
 
             {/* Mobile Nav */}
             {mobileOpen && (
-              <div className="fixed inset-0 z-40 bg-background md:hidden flex flex-col px-6 pt-24 pb-6 space-y-4">
+              <div className="fixed inset-0 z-40 bg-background lg:hidden flex flex-col px-6 pt-24 pb-6 space-y-4">
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
@@ -172,7 +172,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
               >
                 <img src={bsvLogo} alt="Beyond S Ventures" className={`h-24 transition-opacity ${backgroundColor || gradient || bare ? "brightness-0 invert opacity-90 hover:opacity-100" : "opacity-60 hover:opacity-100"}`} />
               </Link>
-              <nav className="hidden md:flex items-center nav-pill rounded-full px-6 py-2 gap-6">
+              <nav className="hidden lg:flex items-center nav-pill rounded-full px-6 py-2 gap-6">
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
@@ -188,13 +188,13 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
                   </Link>
                 ))}
               </nav>
-              <button onClick={() => setMobileOpen(!mobileOpen)} className="absolute right-6 md:right-12 lg:right-20 md:hidden text-foreground/60 hover:text-foreground">
+              <button onClick={() => setMobileOpen(!mobileOpen)} className="absolute right-6 md:right-12 lg:right-20 lg:hidden text-foreground/60 hover:text-foreground">
                 {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
-              {headerExtra && <div className="absolute right-6 md:right-12 lg:right-20 top-1/2 -translate-y-1/2 hidden md:block">{headerExtra}</div>}
+              {headerExtra && <div className="absolute right-6 md:right-12 lg:right-20 top-1/2 -translate-y-1/2 hidden lg:block">{headerExtra}</div>}
             </header>
             {mobileOpen && (
-              <div className="fixed inset-0 z-40 bg-background md:hidden flex flex-col px-6 pt-24 pb-6 space-y-4">
+              <div className="fixed inset-0 z-40 bg-background lg:hidden flex flex-col px-6 pt-24 pb-6 space-y-4">
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
