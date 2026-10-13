@@ -61,22 +61,24 @@
 .nava .nava-investors .nava-benefits li { border-color:rgba(231,236,245,0.18); }
 .nava .nava-smes .nava-benefits li { border-color:rgba(231,236,245,0.14); }
 /* HOW IT WORKS — to remove: delete content.how and the section markup in Nava.tsx plus these rules. */
-.nava .nava-how { padding:72px 0; margin-top:0; background:
+.nava .nava-how { padding:96px 0; margin-top:0; background:
   radial-gradient(70% 80% at 0% 100%, rgba(30,227,162,0.22) 0%, rgba(30,227,162,0) 70%),
   linear-gradient(140deg, #0F5550 0%, #0B4246 55%, #08333A 100%); }
-.nava .nava-how-card { border-radius:36px; padding:56px 64px; text-align:center; background:
+.nava .nava-how-card { border-radius:36px; padding:80px 80px 88px; text-align:center; background:
   radial-gradient(50% 80% at 100% 100%, rgba(30,227,162,0.18) 0%, rgba(30,227,162,0) 70%),
   linear-gradient(140deg, #F2F8F6 0%, #E3F1EC 55%, #D4EAE2 100%);
   box-shadow:0 20px 60px rgba(5,37,44,0.25); }
 .nava .nava-how-label { color:#0E7A57; font-weight:600; }
-.nava .nava-how-title { color:#131D35; }
-.nava .nava-how-flow { display:grid; grid-template-columns:1fr 1.2fr 1fr; gap:0 28px; margin-top:48px; align-items:stretch; }
-.nava .nava-how-step-wrap { display:flex; align-items:flex-start; gap:28px; }
-.nava .nava-how-arrow { flex:0 0 auto; margin-top:22px; font-family:var(--font-body); font-size:22px; line-height:1; color:#0E7A57; }
-.nava .nava-how-step { flex:1 1 auto; }
-.nava .nava-how-step h3 { padding-top:14px; border-top:1px solid #131D35; font-family:var(--font-body); font-weight:600; font-size:17px; letter-spacing:0; color:#131D35; }
-.nava .nava-how-step-mid h3 { border-top:2px solid #1EE3A2; padding-top:13px; }
-.nava .nava-how-step p { margin-top:10px; font-size:14px; line-height:1.6; color:#26345A; }
+.nava .nava-how-title { color:#131D35; margin-top:6px; }
+.nava .nava-how-flow { display:grid; grid-template-columns:1fr 1.15fr 1fr; gap:0 24px; margin-top:64px; align-items:stretch; counter-reset:how; }
+.nava .nava-how-step-wrap { display:flex; align-items:flex-start; gap:24px; }
+.nava .nava-how-arrow { flex:0 0 auto; margin-top:52px; font-family:var(--font-body); font-size:24px; line-height:1; color:#0E7A57; }
+.nava .nava-how-step { flex:1 1 auto; text-align:left; counter-increment:how; }
+.nava .nava-how-step::before { content:"0" counter(how); display:block; font-family:var(--font-display); font-weight:300; font-size:44px; line-height:1; color:#0E7A57; margin-bottom:18px; }
+.nava .nava-how-step-mid::before { color:#0F5550; }
+.nava .nava-how-step h3 { margin:0; padding-top:18px; border-top:1px solid rgba(19,29,53,0.35); font-family:var(--font-body); font-weight:600; font-size:19px; letter-spacing:0; color:#131D35; }
+.nava .nava-how-step-mid h3 { border-top:2px solid #1EE3A2; padding-top:17px; }
+.nava .nava-how-step p { margin-top:12px; font-size:15px; line-height:1.7; color:#26345A; max-width:30ch; }
 /* RISK ACCORDION — to remove: delete content.risk and the section markup in Nava.tsx plus these rules. */
 .nava .nava-risk { padding:100px 0; background:
   radial-gradient(50% 80% at 0% 100%, rgba(30,227,162,0.12) 0%, rgba(30,227,162,0) 70%),
@@ -139,14 +141,15 @@ html:has(.nava) { scroll-behavior:smooth; }
  .nava .nava-figures { grid-template-columns:1fr; padding:30px; gap:24px; }
  .nava .nava-figure { border-left:0; border-top:1px solid rgba(19,29,53,.18); padding:24px 0 0; } .nava .nava-figure:first-child { border-top:0; padding-top:0; }
   .nava .nava-section { margin-top:64px; }
-  .nava .nava-how { padding:48px 0; }
-  .nava .nava-how-card { border-radius:28px; padding:36px 24px; }
-  .nava .nava-how-flow { grid-template-columns:1fr; gap:0; }
+  .nava .nava-how { padding:56px 0; }
+  .nava .nava-how-card { border-radius:28px; padding:40px 24px; }
+  .nava .nava-how-flow { grid-template-columns:1fr; gap:0; margin-top:36px; }
   .nava .nava-how-step-wrap { flex-direction:column; align-items:stretch; }
-  .nava .nava-how-arrow { align-self:center; margin:4px 0 12px; }
+  .nava .nava-how-arrow { align-self:center; margin:6px 0 14px; }
   .nava .nava-how-step-wrap:not(:last-child) .nava-how-step { padding-bottom:22px; }
   .nava .nava-how-arrow { font-size:0; line-height:0; }
   .nava .nava-how-arrow::before { content:"↓"; font-size:20px; line-height:1; }
+  .nava .nava-how-step::before { font-size:36px; margin-bottom:12px; }
   .nava .nava-risk { padding:64px 0; }
   .nava .nava-risk-grid { grid-template-columns:1fr; gap:36px; }
  .nava .nava-audiences { grid-template-columns:1fr; } .nava .nava-audience,.nava .nava-audience:first-child,.nava .nava-audience:last-child { padding:48px 24px; }
