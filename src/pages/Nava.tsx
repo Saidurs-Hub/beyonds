@@ -20,7 +20,7 @@ const content = {
     label: "Nava Capital Network", headline: "Ignite scale for", highlight: "high-growth SMEs.",
     lead: "A private investor consortium that connects Bangladesh's high-growth SMEs with smart private capital, backed by gated originations, shared diligence, and active monitoring after every deal.",
     buttons: ["Become a member", "Raise with Nava"], glanceTitle: "At a glance",
-    glance: [ ["Model", "Private investor syndication"], ["Cheque size", "BDT 50 Lacs to 5 Cr"], ["Instruments", "80% debt, 20% equity"], ["Holding tenure", "12 to 36 months"], ["Industry", "SME agnostic"] ],
+    glance: [ ["Model", "Private investor consortium"], ["Focus", "High-growth SMEs"], ["Geography", "Bangladesh"] ],
   },
   figures: [ ["< 1/3", "of managed funds in Bangladesh beat inflation"], ["4 Mn+", "SMEs borrow from informal lenders at over 5% a month"], ["$170 Bn", "sits in low-return, illiquid assets like fixed deposits and land"], ["$50k–500k", "the missing middle: too big for MFIs, too small for banks"] ],
   audiences: ([
