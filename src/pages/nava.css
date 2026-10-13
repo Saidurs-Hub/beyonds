@@ -107,8 +107,8 @@
  .nava .nava-audiences { grid-template-columns:1fr; } .nava .nava-audience,.nava .nava-audience:first-child,.nava .nava-audience:last-child { padding:48px 24px; }
   .nava .nava-backing { padding:56px 0; margin-bottom:64px; }
   .nava .nava-backing-grid { grid-template-columns:1fr; gap:48px; margin-top:36px; }
-  .nava .nava-backing-logo { width:168px; height:46px; }
+  .nava .nava-backing-logo { width:168px; height:46px; } .nava .nava-backing-entry:last-child .nava-backing-logo { width:200px; height:64px; }
  .nava .nava-join-grid { grid-template-columns:1fr; gap:32px; } .nava .nava-band { padding:56px 0; }
- .nava .nava-contact-label, .nava .nava-contact-email { font-size:12px; }
+ .nava .nava-contact-label { font-size:12px; } .nava .nava-contact-email { font-size:24px; }
  .nava .nava-footer-top { flex-direction:column; gap:0; }
 }
