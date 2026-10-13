@@ -39,6 +39,16 @@ const content = {
       { title: "Skin in the game", text: "NCN, through BSV, may co-invest in the deals it brings." },
     ] as { title: string; text: string }[]),
   },
+  // HOW IT WORKS — to remove: delete content.how, the .nava-how section markup below and the .nava-how rules in nava.css.
+  how: {
+    label: "HOW IT WORKS",
+    heading: "One network between capital and growth.",
+    steps: ([
+      { title: "Private investors", text: "Bring capital and join as members" },
+      { title: "Nava Capital Network", text: "Sources, screens and runs shared diligence, then monitors every deal" },
+      { title: "High-growth SMEs", text: "Receive capital, mentorship and market access" },
+    ] as { title: string; text: string }[]),
+  },
   backing: { label: "Our backing", title: "Housed under Beyond S Ventures & promoted by SAJIDA Foundation",
     entries: [
       { key: "sajida", alt: "SAJIDA Foundation logo", text: "A top-5 MFI in the country that also spearheads startup-ecosystem development through Impact Partners, a strategic impact advisory and thematic fund manager. Current portfolio includes OCBIF, CIF, & BSV." },
