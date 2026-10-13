@@ -80,6 +80,7 @@
 .nava .nava-join-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; }
 .nava .nava-join-grid p { margin-top:24px; color:var(--soft); }
 .nava .nava-routes { display:grid; gap:20px; }
+.nava .nava-route[hidden] { display:none; } /* keeps the SME card as :nth-child(2) so its slate style and size stay intact */
 .nava .nava-route { display:block; border-radius:12px; padding:28px; color:var(--deep); background:var(--mint-gradient); }
 .nava .nava-route:nth-child(2) { background:var(--slate-gradient); }
 .nava .nava-route:hover { filter:brightness(1.06); }
