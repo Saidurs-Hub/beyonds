@@ -125,7 +125,7 @@ html:has(.nava) { scroll-behavior:smooth; }
   .nava .nava-risk { padding:64px 0; }
   .nava .nava-risk-grid { grid-template-columns:1fr; gap:36px; }
  .nava .nava-audiences { grid-template-columns:1fr; } .nava .nava-audience,.nava .nava-audience:first-child,.nava .nava-audience:last-child { padding:48px 24px; }
-  .nava .nava-backing { padding:56px 0; margin-bottom:0; }
+  .nava .nava-backing { margin-top:0; padding:56px 0; margin-bottom:0; }
   .nava .nava-backing-grid { grid-template-columns:1fr; gap:48px; margin-top:36px; }
   .nava .nava-backing-logo { height:44px; }
  .nava .nava-band { padding:56px 0; } /* kept for the hidden "Join us" band */
