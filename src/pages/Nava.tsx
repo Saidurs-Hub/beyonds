@@ -63,7 +63,13 @@ const Hyphens = ({ text }: { text: string }) => (
   </>
 );
 
-const Nava = () => (
+// Risk accordion: hover-capable devices open rows on mouse enter (last hovered stays open on
+// leave, so the layout doesn't jump); click/tap and keyboard still work as before on all devices.
+const canHover = typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
+
+const Nava = () => {
+  const [openItem, setOpenItem] = useState("item-0");
+  return (
   <PageLayout title={content.hero.label} bare>
     <div className="nava">
       <main>
