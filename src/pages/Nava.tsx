@@ -33,7 +33,7 @@ const content = {
       { key: "bsv", alt: "Beyond S Ventures logo", text: "The private investment arm of SAJIDA Foundation (soon to be a licensed fund manager), leverages its corporate relationships with direct access to investments, networks, pipelines, and markets." },
     ],
     stats: [["30 yrs", "of MFI experience in the market"], ["400k", "borrower network across the country"], ["$400 Mn", "deployed in the market to date"]] },
-  join: { label: "Join us", title: "Building the infrastructure that matches capital to growth.", text: "Membership is BDT 30k a year for individuals and 50k for corporates (up to 3 representatives). Arranger fees of 3 to 5% are shared between investor and investee.", routes: [ {label:"Investors", title:"Apply for membership", link:"Start application →"}, {label:"SMEs", title:"Submit your company", link:"Share your details →"} ], email: "Or write to ahmed.jawad@sajida.org" },
+  join: { label: "Join us", title: "Building the infrastructure that matches capital to growth.", text: "\n", routes: [ {label:"Investors", title:"Apply for membership", link:"Start application →"}, {label:"SMEs", title:"Submit your company", link:"Share your details →"} ], email: "Or write to ahmed.jawad@sajida.org" },
   footer: { name:"NAVA CAPITAL NETWORK", parent:"HOUSED UNDER BEYOND S VENTURES", disclaimer:"Targeted returns are not guaranteed. Investing in private SMEs involves risk, including loss of capital and limited liquidity. Information on this page is for general purposes only and does not constitute an offer or investment advice. [Final disclaimer wording to be confirmed.]" },
 };
 
