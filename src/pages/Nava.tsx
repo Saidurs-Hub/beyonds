@@ -42,7 +42,7 @@ const content = {
   },
   // HOW IT WORKS — to remove: delete content.how, the .nava-how section markup below and the .nava-how rules in nava.css.
   how: {
-    label: "HOW IT WORKS",
+    label: "HOW NAVA WORKS",
     heading: "One network between capital and growth.",
     steps: ([
       { title: "Private investors", text: "Bring capital and join as members" },
