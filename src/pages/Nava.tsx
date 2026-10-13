@@ -7,6 +7,7 @@
  * Remove the Co-invest with us bridge section and Link import in Portfolio.tsx.
  * Remove the nava-bridge tokens/styles in src/index.css.
  */
+import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
@@ -62,7 +63,13 @@ const Hyphens = ({ text }: { text: string }) => (
   </>
 );
 
-const Nava = () => (
+// Risk accordion: hover-capable devices open rows on mouse enter (last hovered stays open on
+// leave, so the layout doesn't jump); click/tap and keyboard still work as before on all devices.
+const canHover = typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
+
+const Nava = () => {
+  const [openItem, setOpenItem] = useState("item-0");
+  return (
   <PageLayout title={content.hero.label} bare>
     <div className="nava">
       <main>
@@ -76,9 +83,12 @@ const Nava = () => (
               <span className="nava-label nava-risk-label">{content.risk.label}</span>
               <h2 className="nava-risk-title"><Hyphens text={content.risk.heading} /></h2>
             </div>
-            <Accordion type="single" collapsible defaultValue="item-0" className="nava-risk-list">
+            <Accordion type="single" collapsible value={openItem} onValueChange={setOpenItem} className="nava-risk-list">
               {content.risk.items.map((item, i) => (
-                <AccordionItem key={item.title} value={`item-${i}`} className="nava-risk-item">
+                <AccordionItem key={item.title} value={`item-${i}`} className="nava-risk-item"
+                  onMouseEnter={() => { if (canHover) setOpenItem(`item-${i}`); }}
+                  // Leaving the list intentionally keeps the last hovered item open.
+                >
                   <AccordionTrigger className="nava-risk-trigger">
                     <span>{item.title}</span>
                     <span className="nava-risk-plus" aria-hidden="true">+</span>
@@ -107,5 +117,6 @@ const Nava = () => (
       </section>
     </div>
   </PageLayout>
-);
+  );
+};
 export default Nava;
