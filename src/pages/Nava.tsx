@@ -2,6 +2,7 @@
  * Delete src/pages/Nava.tsx and src/pages/nava.css.
  * Remove the Nava lazy import and /nava route in src/App.tsx.
  * Remove the Nava navLinks entry in src/components/PageLayout.tsx.
+ * Remove the Nava navLinks entry in src/pages/Index.tsx (homepage nav + mobile menu share one array).
  * Remove PageLayout's optional bare prop/branches if no other page uses it.
  * Remove the Co-invest with us bridge section and Link import in Portfolio.tsx.
  * Remove the nava-bridge tokens/styles in src/index.css.
