@@ -34,7 +34,7 @@
 .nava .nava-button-dark { background:var(--deep); color:var(--ice); }
 .nava .nava-button-dark:hover { background:var(--navy); }
 .nava .nava-button-cyan { background:var(--cyan); }
-.nava .nava-figures { margin-top:-56px; display:grid; grid-template-columns:repeat(4,1fr); border-radius:20px; padding:40px 20px; color:#131D35; background:
+.nava .nava-figures { margin-top:0; display:grid; grid-template-columns:repeat(4,1fr); border-radius:20px; padding:40px 20px; color:#131D35; background:
   radial-gradient(60% 80% at 100% 100%, rgba(30,227,162,0.22) 0%, rgba(30,227,162,0) 70%),
   radial-gradient(50% 70% at 0% 0%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 65%),
   linear-gradient(140deg, #DDF8EC 0%, #C6F1E0 55%, #ADE7D2 100%); }
@@ -61,9 +61,7 @@
 .nava .nava-investors .nava-benefits li { border-color:rgba(231,236,245,0.18); }
 .nava .nava-smes .nava-benefits li { border-color:rgba(231,236,245,0.14); }
 /* HOW IT WORKS — to remove: delete content.how and the section markup in Nava.tsx plus these rules. */
-.nava .nava-how { padding:44px 0; margin-top:0; background:
-  radial-gradient(70% 80% at 0% 100%, rgba(30,227,162,0.22) 0%, rgba(30,227,162,0) 70%),
-  linear-gradient(140deg, #0F5550 0%, #0B4246 55%, #08333A 100%); }
+.nava .nava-how { padding:0; margin-top:0; background:none; position:relative; z-index:5; }
 .nava .nava-how-card { border-radius:36px; padding:30px 64px 32px; text-align:center; background:
   radial-gradient(50% 80% at 100% 100%, rgba(30,227,162,0.18) 0%, rgba(30,227,162,0) 70%),
   linear-gradient(140deg, #F2F8F6 0%, #E3F1EC 55%, #D4EAE2 100%);
@@ -80,18 +78,21 @@
 .nava .nava-how-step-mid h3 { border-top:none; padding-top:0; color:#0FB57E; }
 .nava .nava-how-step p { margin:6px auto 0; max-width:30ch; font-family:var(--font-body); font-size:14px; line-height:1.6; color:#26345A; }
 @media (min-width:768px) {
-  .nava .nava-how { background:none; padding:0; height:0; position:relative; z-index:5; }
-  .nava .nava-how > .nava-container { transform:translateY(-50%); }
-  .nava .nava-audience { padding-bottom:220px; }
+  .nava .nava-how { margin-top:-56px; }
+  /* Figures measure about 198px high: half the card plus 56px clearance. */
+  .nava .nava-audience { padding-bottom:156px; }
   .nava .nava-how .nava-container { width:min(1560px,calc(100% - 96px)); }
 }
+/* MARKET FIGURES — remove this band and its desktop overlap/spacing overrides with content.figures and the markup in Nava.tsx. */
+.nava .nava-figures-band { height:0; position:relative; z-index:5; }
+.nava .nava-figures-band > .nava-figures { transform:translateY(-50%); }
 /* RISK ACCORDION — to remove: delete content.risk and the section markup in Nava.tsx plus these rules. */
 .nava .nava-risk { padding:100px 0; background:
   radial-gradient(50% 80% at 0% 100%, rgba(30,227,162,0.12) 0%, rgba(30,227,162,0) 70%),
   radial-gradient(40% 70% at 100% 0%, rgba(63,217,232,0.06) 0%, rgba(63,217,232,0) 70%),
   linear-gradient(140deg, #0A3A3D 0%, #072F35 55%, #05252C 100%); }
 @media (min-width:768px) {
-  .nava .nava-risk { padding-top:250px; }
+  .nava .nava-risk { padding-top:156px; }
 }
 .nava .nava-risk-grid { display:grid; grid-template-columns:2fr 3fr; gap:64px; align-items:start; }
 .nava .nava-risk-label { color:#5FF0B0; font-weight:600; }
@@ -139,6 +140,9 @@ html:has(.nava) { scroll-behavior:smooth; }
 @media (max-width:1100px) {
  .nava h1 { font-size:64px; } .nava h2 { font-size:42px; }
   .nava .nava-hero { gap:36px; }
+  /* Two-row figures measure up to 343px: reserve half plus 56px. */
+  .nava .nava-audience { padding-bottom:228px; }
+  .nava .nava-risk { padding-top:228px; }
   .nava .nava-figures { grid-template-columns:repeat(2,1fr); gap:32px 0; } .nava .nava-figure:nth-child(3) { border-left:0; }
 }
 @media (max-width:767px) {
@@ -150,7 +154,11 @@ html:has(.nava) { scroll-behavior:smooth; }
  .nava .nava-figures { grid-template-columns:1fr; padding:30px; gap:24px; }
  .nava .nava-figure { border-left:0; border-top:1px solid rgba(19,29,53,.18); padding:24px 0 0; } .nava .nava-figure:first-child { border-top:0; padding-top:0; }
   .nava .nava-section { margin-top:64px; }
-  .nava .nava-how { padding:44px 0; }
+  .nava .nava-how { padding:0; margin-top:0; }
+  .nava .nava-figures-band { height:auto; padding:44px 0; background:
+    radial-gradient(70% 80% at 0% 100%, rgba(30,227,162,0.22) 0%, rgba(30,227,162,0) 70%),
+    linear-gradient(140deg, #0F5550 0%, #0B4246 55%, #08333A 100%); }
+  .nava .nava-figures-band > .nava-figures { transform:none; }
   .nava .nava-how-card { border-radius:28px; padding:32px 20px; }
   .nava .nava-how-flow { grid-template-columns:1fr; gap:0; max-width:none; }
   .nava .nava-how-step-wrap { flex-direction:column; align-items:stretch; }
