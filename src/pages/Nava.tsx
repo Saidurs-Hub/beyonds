@@ -34,7 +34,7 @@ const content = {
   // HIDDEN FOR NOW — the whole "Join us" section (label, heading, routes) is not rendered.
   // To restore it: re-add the section markup after "Our backing" and the .nava-join* / .nava-route* CSS.
   join: { label: "Join us", title: "Building the infrastructure that matches capital to growth.", text: "\n", routes: ([ {label:"Investors", title:"Apply for membership", link:"Start application →", show:false}, {label:"SMEs", title:"Submit your company", link:"Share your details →", show:false} ] as { label: string; title: string; link: string; show?: boolean }[]), },
-  contact: { label: "Contact us now:", email: "ahmed.jawad@sajida.org" },
+  contact: { label: "CONTACT NOW:", email: "ahmed.jawad@sajida.org" },
   footer: { name:"NAVA CAPITAL NETWORK", parent:"\n", disclaimer:"\n" },
 };
 
