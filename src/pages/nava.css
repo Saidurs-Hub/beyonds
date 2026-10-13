@@ -20,9 +20,10 @@
 .nava .nava-grain { position:relative; isolation:isolate; overflow:hidden; }
 .nava .nava-grain::before { content:""; position:absolute; inset:0; pointer-events:none; z-index:0; mix-blend-mode:overlay; opacity:.32; background-image:var(--grain); background-size:220px; }
 .nava .nava-grain > * { position:relative; z-index:1; }
-.nava .nava-hero { padding-top:164px; padding-bottom:64px; }
+.nava .nava-hero { display:grid; grid-template-columns:1.08fr 1fr; gap:64px; padding-top:164px; padding-bottom:112px; align-items:center; }
 .nava .nava-hero h1 span { color:var(--mint); }
-.nava .nava-lead { color:var(--soft); font-size:17px; margin-top:30px; max-width:640px; }
+.nava .nava-hero-spacer { min-height:320px; }
+.nava .nava-lead { color:var(--soft); font-size:17px; margin-top:30px; max-width:530px; }
 .nava .nava-actions { display:flex; flex-wrap:wrap; gap:14px; margin-top:32px; }
 .nava .nava-button { background:var(--mint); color:var(--deep); border:1px solid transparent; height:auto; min-height:48px; padding:13px 22px; border-radius:6px; font-weight:600; font-size:13px; }
 .nava .nava-button:hover { background:var(--mint-soft); }
@@ -31,7 +32,7 @@
 .nava .nava-button-dark { background:var(--deep); color:var(--ice); }
 .nava .nava-button-dark:hover { background:var(--navy); }
 .nava .nava-button-cyan { background:var(--cyan); }
-.nava .nava-figures { margin-top:0; display:grid; grid-template-columns:repeat(4,1fr); border-radius:20px; padding:40px 20px; color:#131D35; background:
+.nava .nava-figures { margin-top:-56px; display:grid; grid-template-columns:repeat(4,1fr); border-radius:20px; padding:40px 20px; color:#131D35; background:
   radial-gradient(60% 80% at 100% 100%, rgba(30,227,162,0.22) 0%, rgba(30,227,162,0) 70%),
   radial-gradient(50% 70% at 0% 0%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 65%),
   linear-gradient(140deg, #DDF8EC 0%, #C6F1E0 55%, #ADE7D2 100%); }
@@ -90,11 +91,13 @@
 .nava a:focus-visible { outline:2px solid var(--cyan); outline-offset:5px; }
 @media (max-width:1100px) {
  .nava h1 { font-size:64px; } .nava h2 { font-size:42px; }
+  .nava .nava-hero { gap:36px; }
   .nava .nava-figures { grid-template-columns:repeat(2,1fr); gap:32px 0; } .nava .nava-figure:nth-child(3) { border-left:0; }
 }
 @media (max-width:767px) {
  .nava .nava-container { width:calc(100% - 40px); } .nava h1 { font-size:48px; } .nava h2 { font-size:38px; }
-  .nava .nava-hero { padding-top:120px; padding-bottom:48px; }
+  .nava .nava-hero { grid-template-columns:1fr; padding-top:120px; gap:40px; padding-bottom:96px; }
+  .nava .nava-hero-spacer { display:none; }
  .nava .nava-figures { grid-template-columns:1fr; padding:30px; gap:24px; }
  .nava .nava-figure { border-left:0; border-top:1px solid rgba(19,29,53,.18); padding:24px 0 0; } .nava .nava-figure:first-child { border-top:0; padding-top:0; }
  .nava .nava-section { margin-top:64px; }
