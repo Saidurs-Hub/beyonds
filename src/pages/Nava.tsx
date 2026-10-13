@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import PageLayout from "@/components/PageLayout";
 import { Button } from "@/components/ui/button";
 import sajidaLogo from "@/assets/sajida-logo.png";
-import bsvLogo from "@/assets/logo-white-maroon.png";
+import bsvLogo from "@/assets/bsv-logo-white-trimmed.png";
 import "./nava.css";
 
 // CONTENT: All Nava display copy lives here. Edit these values without changing layout.
@@ -27,12 +27,12 @@ const content = {
     { label: "For smart private investors", title: "A trusted pipeline, with the work already done", text: "Performance-driven, proprietary deals with targeted returns of 300 to 500 bps above market rates and flexible ticket sizes.", benefits: ["End-to-end transaction advisory, from sourcing to recovery", "De-risked through co-investment and shared diligence", "Deal briefs, data room review, and investment memos", "Monthly business and field reports after you invest"], button: "Apply for membership" },
     { label: "For high-growth SMEs", title: "Capital, plus the network to grow with it", text: "For established SMEs ready to scale, with BDT 3 to 5 Cr in annual revenue and at least 3 years in operation.", benefits: ["Raise USD 50k to 200k, mainly debt or revenue share", "Market access and business development support", "Mentorship from like-minded investors and founders", "A seat at managed investor showcases"] },
   ] as { label: string; title: string; text: string; benefits: string[]; button?: string }[]),
-  backing: { label: "Our backing", title: "Housed under Beyond S Ventures, promoted by SAJIDA Foundation.", text: "Nava brings together SAJIDA's three decades of on-the-ground experience and BSV's investment platform, so every deal is backed by people who know the market.",
-    panels: [
-      { key: "sajida", alt: "SAJIDA Foundation logo", label: "Promoter", text: "One of Bangladesh's top five MFIs, with 30 years of experience and a nationwide borrower network." },
-      { key: "bsv", alt: "Beyond S Ventures logo", label: "Home of Nava", text: "SAJIDA's private investment arm, giving Nava direct access to investments, networks, pipelines, and markets." },
+  backing: { label: "Our backing", title: "Housed under Beyond S Ventures and promoted by the SAJIDA Foundation",
+    entries: [
+      { key: "sajida", alt: "SAJIDA Foundation logo", text: "A top-5 MFI in the country that also spearheads startup-ecosystem development through Impact Partners, a strategic impact advisory and thematic fund manager. Current portfolio includes OCBIF, CIF, & BSV." },
+      { key: "bsv", alt: "Beyond S Ventures logo", text: "The private investment arm of SAJIDA Foundation (soon to be a licensed fund manager), leverages its corporate relationships with direct access to investments, networks, pipelines, and markets." },
     ],
-    stats: [["30 years", "of microfinance experience"], ["400k", "borrowers across the country"], ["$400 Mn", "deployed in the market to date"]] },
+    stats: [["30 yrs", "of MFI experience in the market"], ["400k", "borrower network across the country"], ["$400 Mn", "deployed in the market to date"]] },
   ahead: { label: "What's ahead", title: "Bringing structure to a fragmented market.", items: [
     ["Oct 2026", "First managed showcase", "Qualified deals presented to a small group at SAJIDA HQ, then new deals every quarter."],
     ["Dec 2026", "Official launch", "Launch event with selected investors, members, partners, and affiliates."],
