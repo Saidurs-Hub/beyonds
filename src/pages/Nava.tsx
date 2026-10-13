@@ -7,6 +7,7 @@
  * Remove the Co-invest with us bridge section and Link import in Portfolio.tsx.
  * Remove the nava-bridge tokens/styles in src/index.css.
  */
+import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
