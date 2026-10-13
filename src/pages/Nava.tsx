@@ -89,8 +89,9 @@ const Nava = () => {
         {/* HOW IT WORKS — to remove: delete content.how in Nava.tsx and the .nava-how rules in nava.css. */}
         <section className="nava-how">
           <div className="nava-container">
-            <span className="nava-label nava-how-label">{content.how.label}</span>
-            <h2 className="nava-how-title"><Hyphens text={content.how.heading} /></h2>
+            <div className="nava-how-card">
+              <span className="nava-label nava-how-label">{content.how.label}</span>
+              <h2 className="nava-how-title"><Hyphens text={content.how.heading} /></h2>
             <div className="nava-how-flow">
               {content.how.steps.map((step, i) => (
                 <div key={step.title} className="nava-how-step-wrap">
