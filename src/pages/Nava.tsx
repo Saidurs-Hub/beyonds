@@ -39,6 +39,16 @@ const content = {
       { title: "Skin in the game", text: "NCN, through BSV, may co-invest in the deals it brings." },
     ] as { title: string; text: string }[]),
   },
+  // HOW IT WORKS — to remove: delete content.how, the .nava-how section markup below and the .nava-how rules in nava.css.
+  how: {
+    label: "HOW IT WORKS",
+    heading: "One network between capital and growth.",
+    steps: ([
+      { title: "Private investors", text: "Bring capital and join as members" },
+      { title: "Nava Capital Network", text: "Sources, screens and runs shared diligence, then monitors every deal" },
+      { title: "High-growth SMEs", text: "Receive capital, mentorship and market access" },
+    ] as { title: string; text: string }[]),
+  },
   backing: { label: "Our backing", title: "Housed under Beyond S Ventures & promoted by SAJIDA Foundation",
     entries: [
       { key: "sajida", alt: "SAJIDA Foundation logo", text: "A top-5 MFI in the country that also spearheads startup-ecosystem development through Impact Partners, a strategic impact advisory and thematic fund manager. Current portfolio includes OCBIF, CIF, & BSV." },
@@ -76,6 +86,24 @@ const Nava = () => {
         <section className="nava-container nava-hero"><div><span className="nava-label">{content.hero.label}</span><h1><Hyphens text={content.hero.headline} /> <span><Hyphens text={content.hero.highlight} /></span></h1><p className="nava-lead">{content.hero.lead}</p><div className="nava-actions">{content.hero.buttons.map((label,index) => <JoinButton key={label} className={index ? "nava-button-outline" : ""}>{label}</JoinButton>)}</div></div><div className="nava-hero-spacer" aria-hidden="true" /></section>
         <section className="nava-container nava-figures nava-grain">{content.figures.map(([value,caption]) => <div className="nava-figure" key={value}><span className="nava-number"><Hyphens text={value} /></span><p>{caption}</p></div>)}</section>
         <section className="nava-section nava-audiences">{content.audiences.map((audience,index) => <div key={audience.label} className={`nava-audience nava-grain ${index ? "nava-smes" : "nava-investors"}`}><span className="nava-label">{audience.label}</span><h2><Hyphens text={audience.title} /></h2><p>{audience.text}</p><ul className="nava-benefits">{audience.benefits.map(text => <li key={text}>{text}</li>)}</ul>{index === 0 && audience.showButton && <JoinButton className="nava-button-dark">{audience.button}</JoinButton>}</div>)}</section>
+        {/* HOW IT WORKS — to remove: delete content.how in Nava.tsx and the .nava-how rules in nava.css. */}
+        <section className="nava-how">
+          <div className="nava-container">
+            <span className="nava-label nava-how-label">{content.how.label}</span>
+            <h2 className="nava-how-title"><Hyphens text={content.how.heading} /></h2>
+            <div className="nava-how-flow">
+              {content.how.steps.map((step, i) => (
+                <div key={step.title} className="nava-how-step-wrap">
+                  {i > 0 && <span className="nava-how-arrow" aria-hidden="true">→</span>}
+                  <div className={`nava-how-step ${i === 1 ? "nava-how-step-mid" : ""}`}>
+                    <h3>{step.title}</h3>
+                    <p>{step.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
         {/* RISK SECTION — to remove: delete content.risk in Nava.tsx and the .nava-risk rules in nava.css. */}
         <section className="nava-risk">
           <div className="nava-container nava-risk-grid">

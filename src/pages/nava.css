@@ -60,6 +60,19 @@
 .nava .nava-benefits li { padding:20px 0; font-size:13px; line-height:1.7; border-top:1px solid var(--hairline); }
 .nava .nava-investors .nava-benefits li { border-color:rgba(231,236,245,0.18); }
 .nava .nava-smes .nava-benefits li { border-color:rgba(231,236,245,0.14); }
+/* HOW IT WORKS — to remove: delete content.how and the section markup in Nava.tsx plus these rules. */
+.nava .nava-how { padding:88px 0; margin-top:0; background:
+  radial-gradient(50% 80% at 100% 100%, rgba(30,227,162,0.18) 0%, rgba(30,227,162,0) 70%),
+  linear-gradient(140deg, #F2F8F6 0%, #E3F1EC 55%, #D4EAE2 100%); }
+.nava .nava-how-label { color:#0E7A57; font-weight:600; }
+.nava .nava-how-title { color:#131D35; }
+.nava .nava-how-flow { display:grid; grid-template-columns:1fr 1.2fr 1fr; gap:0 28px; margin-top:48px; align-items:stretch; }
+.nava .nava-how-step-wrap { display:flex; align-items:center; gap:28px; }
+.nava .nava-how-arrow { flex:0 0 auto; font-family:var(--font-body); font-size:22px; line-height:1; color:#0E7A57; }
+.nava .nava-how-step { flex:1 1 auto; }
+.nava .nava-how-step h3 { padding-top:14px; border-top:1px solid #131D35; font-family:var(--font-body); font-weight:600; font-size:17px; letter-spacing:0; color:#131D35; }
+.nava .nava-how-step-mid h3 { border-top:2px solid #1EE3A2; }
+.nava .nava-how-step p { margin-top:10px; font-size:14px; line-height:1.6; color:#26345A; }
 /* RISK ACCORDION — to remove: delete content.risk and the section markup in Nava.tsx plus these rules. */
 .nava .nava-risk { padding:100px 0; background:
   radial-gradient(50% 80% at 0% 100%, rgba(30,227,162,0.12) 0%, rgba(30,227,162,0) 70%),
@@ -121,7 +134,14 @@ html:has(.nava) { scroll-behavior:smooth; }
   .nava .nava-hero-spacer { display:none; }
  .nava .nava-figures { grid-template-columns:1fr; padding:30px; gap:24px; }
  .nava .nava-figure { border-left:0; border-top:1px solid rgba(19,29,53,.18); padding:24px 0 0; } .nava .nava-figure:first-child { border-top:0; padding-top:0; }
- .nava .nava-section { margin-top:64px; }
+  .nava .nava-section { margin-top:64px; }
+  .nava .nava-how { padding:56px 0; }
+  .nava .nava-how-flow { grid-template-columns:1fr; gap:0; }
+  .nava .nava-how-step-wrap { flex-direction:column; align-items:stretch; }
+  .nava .nava-how-arrow { align-self:center; margin:4px 0 12px; }
+  .nava .nava-how-step-wrap:not(:last-child) .nava-how-step { padding-bottom:22px; }
+  .nava .nava-how-arrow { font-size:0; line-height:0; }
+  .nava .nava-how-arrow::before { content:"↓"; font-size:20px; line-height:1; }
   .nava .nava-risk { padding:64px 0; }
   .nava .nava-risk-grid { grid-template-columns:1fr; gap:36px; }
  .nava .nava-audiences { grid-template-columns:1fr; } .nava .nava-audience,.nava .nava-audience:first-child,.nava .nava-audience:last-child { padding:48px 24px; }
