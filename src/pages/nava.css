@@ -77,7 +77,7 @@
 .nava .nava-risk-trigger[data-state=open] .nava-risk-plus { transform:rotate(45deg); }
 .nava .nava-risk-content p { max-width:480px; font-size:14px; line-height:1.7; color:#B4BED3; }
 .nava .nava-backing-title { max-width:36ch; }
-.nava .nava-backing { padding:88px 0; margin-bottom:0; background:
+.nava .nava-backing { margin-top:0; padding:88px 0; margin-bottom:0; background:
   radial-gradient(60% 80% at 100% 100%, rgba(30,227,162,0.16) 0%, rgba(30,227,162,0) 70%),
   linear-gradient(140deg, #F2F8F6 0%, #E3F1EC 55%, #D4EAE2 100%); }
 .nava .nava-backing .nava-label { color:#0E7A57; }
