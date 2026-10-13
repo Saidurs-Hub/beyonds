@@ -22,6 +22,7 @@ const content = {
     lead: "A private investor consortium that connects Bangladesh's high-growth SMEs with smart private capital, backed by gated originations, shared diligence, and active monitoring after every deal.",
     buttons: ["Become a member", "Raise with Nava"],
   },
+  // MARKET FIGURES — to remove: delete content.figures, the .nava-figures-band markup and all .nava-figures-band / .nava-figures / .nava-figure / .nava-number rules in nava.css; restore audience bottom and risk top padding to 64px and 100px on desktop.
   figures: [ ["< 1/3", "of managed funds in Bangladesh beat inflation"], ["4 Mn+", "SMEs borrow from informal lenders at over 5% a month"], ["$170 Bn", "sits in low-return, illiquid assets like fixed deposits and land"], ["$50k–500k", "the missing middle: too big for MFIs, too small for banks"] ],
   audiences: ([
     { label: "For smart private investors", title: "A trusted pipeline, with the work already done", text: "Performance-driven, proprietary deals with targeted returns of 300 to 500 bps above market rates and flexible ticket sizes.", benefits: ["End-to-end transaction advisory, from sourcing to recovery", "De-risked through co-investment and shared diligence", "Deal briefs, data room review, and investment memos", "Monthly business and field reports after you invest"], button: "Apply for membership", showButton: false }, // Membership CTA hidden for now, set showButton: true to restore
@@ -84,8 +85,6 @@ const Nava = () => {
     <div className="nava">
       <main>
         <section className="nava-container nava-hero"><div><span className="nava-label">{content.hero.label}</span><h1><Hyphens text={content.hero.headline} /> <span><Hyphens text={content.hero.highlight} /></span></h1><p className="nava-lead">{content.hero.lead}</p><div className="nava-actions">{content.hero.buttons.map((label,index) => <JoinButton key={label} className={index ? "nava-button-outline" : ""}>{label}</JoinButton>)}</div></div><div className="nava-hero-spacer" aria-hidden="true" /></section>
-        <section className="nava-container nava-figures nava-grain">{content.figures.map(([value,caption]) => <div className="nava-figure" key={value}><span className="nava-number"><Hyphens text={value} /></span><p>{caption}</p></div>)}</section>
-        <section className="nava-section nava-audiences">{content.audiences.map((audience,index) => <div key={audience.label} className={`nava-audience nava-grain ${index ? "nava-smes" : "nava-investors"}`}><span className="nava-label">{audience.label}</span><h2><Hyphens text={audience.title} /></h2><p>{audience.text}</p><ul className="nava-benefits">{audience.benefits.map(text => <li key={text}>{text}</li>)}</ul>{index === 0 && audience.showButton && <JoinButton className="nava-button-dark">{audience.button}</JoinButton>}</div>)}</section>
         {/* HOW IT WORKS — to remove: delete content.how in Nava.tsx and the .nava-how rules in nava.css. */}
         <section className="nava-how">
           <div className="nava-container">
@@ -105,6 +104,11 @@ const Nava = () => {
               </div>
             </div>
           </div>
+        </section>
+        <section className="nava-section nava-audiences">{content.audiences.map((audience,index) => <div key={audience.label} className={`nava-audience nava-grain ${index ? "nava-smes" : "nava-investors"}`}><span className="nava-label">{audience.label}</span><h2><Hyphens text={audience.title} /></h2><p>{audience.text}</p><ul className="nava-benefits">{audience.benefits.map(text => <li key={text}>{text}</li>)}</ul>{index === 0 && audience.showButton && <JoinButton className="nava-button-dark">{audience.button}</JoinButton>}</div>)}</section>
+        {/* MARKET FIGURES — remove this band, content.figures and its CSS; restore desktop audience/risk padding as noted above. */}
+        <section className="nava-figures-band">
+          <section className="nava-container nava-figures nava-grain">{content.figures.map(([value,caption]) => <div className="nava-figure" key={value}><span className="nava-number"><Hyphens text={value} /></span><p>{caption}</p></div>)}</section>
         </section>
         {/* RISK SECTION — to remove: delete content.risk in Nava.tsx and the .nava-risk rules in nava.css. */}
         <section className="nava-risk">
