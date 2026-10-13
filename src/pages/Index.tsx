@@ -62,8 +62,8 @@ const Index = () => {
                   to={link.path}
                   className={`text-xs tracking-[0.2em] uppercase transition-colors duration-300 ${
                     location.pathname === link.path
-                      ? "nav-link-active"
-                      : "text-foreground/60 hover:text-foreground/90"
+                      ? link.path === "/nava" ? "nav-link-nava-active" : "nav-link-active"
+                      : link.path === "/nava" ? "nava-nav-link text-foreground/60" : "text-foreground/60 hover:text-foreground/90"
                   }`}
                   style={{ fontFamily: "var(--font-body)" }}
                 >
@@ -82,7 +82,7 @@ const Index = () => {
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileOpen(false)}
-                  className="block text-sm tracking-[0.15em] uppercase text-foreground/70 hover:text-foreground transition-colors"
+                  className={`block text-sm tracking-[0.15em] uppercase transition-colors ${link.path === "/nava" ? "nava-nav-link " : ""}text-foreground/70 hover:text-foreground`}
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {link.label}

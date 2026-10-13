@@ -6,7 +6,7 @@
   --deep-gradient:linear-gradient(150deg,#1A2A4C,#131D35,#0E1830);
   --glow-mint:rgba(30,227,162,.48); --glow-cyan:rgba(63,217,232,.16); --glow-white:rgba(255,255,255,.45); --panel:rgba(19,29,53,.85);
   --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  color:var(--ice); font-family:var(--font-body); background:radial-gradient(ellipse at 100% 8%,var(--glow-cyan),transparent 28%),radial-gradient(ellipse at 0% 45%,var(--glow-cyan),transparent 25%),radial-gradient(ellipse at 100% 85%,var(--glow-cyan),transparent 25%),var(--page-gradient); overflow:clip;
+  color:var(--ice); font-family:var(--font-body); background:radial-gradient(45% 30% at 100% 0%, rgba(30,227,162,0.14) 0%, rgba(30,227,162,0) 70%),radial-gradient(ellipse at 100% 8%,var(--glow-cyan),transparent 28%),radial-gradient(ellipse at 0% 45%,var(--glow-cyan),transparent 25%),radial-gradient(ellipse at 100% 85%,var(--glow-cyan),transparent 25%),var(--page-gradient); overflow:clip;
 }
 .nava * { box-sizing:border-box; }
 .nava h1,.nava h2,.nava h3 { font-family:var(--font-display); font-weight:300; letter-spacing:.4px; font-style:normal; margin:0; }
@@ -20,7 +20,7 @@
 .nava .nava-grain { position:relative; isolation:isolate; overflow:hidden; }
 .nava .nava-grain::before { content:""; position:absolute; inset:0; pointer-events:none; z-index:0; mix-blend-mode:overlay; opacity:.32; background-image:var(--grain); background-size:220px; }
 .nava .nava-grain > * { position:relative; z-index:1; }
-.nava .nava-hero { display:grid; grid-template-columns:1.08fr 1fr; gap:64px; padding-top:164px; padding-bottom:112px; align-items:center; background:radial-gradient(50% 60% at 100% 0%, rgba(30,227,162,0.14) 0%, rgba(30,227,162,0) 70%); }
+.nava .nava-hero { display:grid; grid-template-columns:1.08fr 1fr; gap:64px; padding-top:164px; padding-bottom:112px; align-items:center; }
 .nava .nava-hero h1 { font-size:clamp(56px,5.6vw,76px); }
 .nava .nava-hero .nava-label { font-weight:600; font-size:18px; letter-spacing:6px; color:var(--mint); margin-bottom:28px; }
 .nava .nava-hero h1 span { color:var(--mint); white-space:nowrap; }
