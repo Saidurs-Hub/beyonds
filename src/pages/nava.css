@@ -54,17 +54,19 @@
 .nava .nava-benefits li { padding:20px 0; font-size:13px; line-height:1.7; border-top:1px solid var(--hairline); }
 .nava .nava-investors .nava-benefits li { border-color:rgba(19,29,53,.2); }
 .nava .nava-backing-title { max-width:36ch; }
+.nava .nava-backing { padding:88px 0; margin-bottom:100px; background:linear-gradient(140deg,#A9B3CA 0%,#9AA5BF 50%,#8794B2 100%); }
+.nava .nava-backing .nava-label, .nava .nava-backing .nava-backing-title, .nava .nava-backing-stats dt { color:#131D35; }
+.nava .nava-backing .nava-label { margin-bottom:22px; }
 .nava .nava-backing-grid { display:grid; grid-template-columns:3fr 2fr; gap:64px; margin-top:48px; }
 .nava .nava-backing-entries { display:grid; gap:40px; align-content:start; }
-.nava .nava-backing-entry { border-top:1px solid rgba(231,236,245,.24); padding-top:28px; }
+.nava .nava-backing-entry { border-top:1px solid rgba(19,29,53,.25); padding-top:28px; }
 .nava .nava-backing-logo { display:block; width:200px; height:56px; object-fit:contain; object-position:left center; }
-.nava .nava-logo-white { filter:brightness(0) invert(1); }
-.nava .nava-backing-entry p { margin:20px 0 0; font-size:15px; line-height:1.75; color:#B4BED3; }
+.nava .nava-backing-entry p { margin:20px 0 0; font-size:15px; line-height:1.75; color:#26345A; }
 .nava .nava-backing-stats { margin:0; }
-.nava .nava-backing-stats div { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:20px 0; border-top:1px solid rgba(231,236,245,.24); }
-.nava .nava-backing-stats div:last-child { border-bottom:1px solid rgba(231,236,245,.24); }
-.nava .nava-backing-stats dt { font-family:var(--font-display); font-size:44px; font-weight:400; line-height:1.1; color:#E7ECF5; white-space:nowrap; }
-.nava .nava-backing-stats dd { margin:0; font-size:14px; color:var(--soft); text-align:right; }
+.nava .nava-backing-stats div { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:20px 0; border-top:1px solid rgba(19,29,53,.25); }
+.nava .nava-backing-stats div:last-child { border-bottom:1px solid rgba(19,29,53,.25); }
+.nava .nava-backing-stats dt { font-family:var(--font-display); font-size:44px; font-weight:400; line-height:1.1; white-space:nowrap; }
+.nava .nava-backing-stats dd { margin:0; font-size:14px; color:#26345A; text-align:right; }
 .nava .nava-band { background:radial-gradient(60% 100% at 100% 100%,var(--glow-mint),transparent 70%),var(--deep-gradient); padding:80px 0; }
 .nava .nava-join { scroll-margin-top:100px; border-top:1px solid var(--hairline); }
 .nava .nava-join-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; }
@@ -98,6 +100,7 @@
  .nava .nava-figure { border-left:0; border-top:1px solid rgba(19,29,53,.18); padding:24px 0 0; } .nava .nava-figure:first-child { border-top:0; padding-top:0; }
  .nava .nava-section { margin-top:64px; }
  .nava .nava-audiences { grid-template-columns:1fr; } .nava .nava-audience,.nava .nava-audience:first-child,.nava .nava-audience:last-child { padding:48px 24px; }
+  .nava .nava-backing { padding:56px 0; margin-bottom:64px; }
   .nava .nava-backing-grid { grid-template-columns:1fr; gap:48px; margin-top:36px; }
   .nava .nava-backing-logo { width:168px; height:46px; }
  .nava .nava-join-grid { grid-template-columns:1fr; gap:32px; } .nava .nava-band { padding:56px 0; }
