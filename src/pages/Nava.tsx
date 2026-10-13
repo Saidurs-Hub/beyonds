@@ -34,7 +34,7 @@ const content = {
     stats: [["30 yrs", "of MFI experience in the market"], ["400k", "borrower network across the country"], ["$400 Mn", "deployed in the market to date"]] },
   join: { label: "Join us", title: "Building the infrastructure that matches capital to growth.", text: "\n", routes: [ {label:"Investors", title:"Apply for membership", link:"Start application →"}, {label:"SMEs", title:"Submit your company", link:"Share your details →"} ] },
   contact: { label: "Contact us now:", email: "ahmed.jawad@sajida.org" },
-  footer: { name:"NAVA CAPITAL NETWORK", parent:"\n", disclaimer:"Targeted returns are not guaranteed. Investing in private SMEs involves risk, including loss of capital and limited liquidity. Information on this page is for general purposes only and does not constitute an offer or investment advice. [Final disclaimer wording to be confirmed.]" },
+  footer: { name:"NAVA CAPITAL NETWORK", parent:"\n", disclaimer:"\n" },
 };
 
 const JoinButton = ({ children, className = "" }: { children: string; className?: string }) => <Button asChild className={`nava-button ${className}`}><a href="#join">{children}</a></Button>;
