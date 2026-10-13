@@ -20,7 +20,7 @@
 .nava .nava-grain { position:relative; isolation:isolate; overflow:hidden; }
 .nava .nava-grain::before { content:""; position:absolute; inset:0; pointer-events:none; z-index:0; mix-blend-mode:overlay; opacity:.32; background-image:var(--grain); background-size:220px; }
 .nava .nava-grain > * { position:relative; z-index:1; }
-.nava .nava-hero { display:grid; grid-template-columns:1.08fr 1fr; gap:64px; padding-top:164px; padding-bottom:112px; align-items:center; }
+.nava .nava-hero { display:grid; grid-template-columns:1.08fr 1fr; gap:64px; padding-top:164px; padding-bottom:112px; align-items:center; background:radial-gradient(50% 60% at 100% 0%, rgba(30,227,162,0.14) 0%, rgba(30,227,162,0) 70%); }
 .nava .nava-hero h1 { font-size:clamp(56px,5.6vw,76px); }
 .nava .nava-hero h1 span { color:var(--mint); white-space:nowrap; }
 .nava .nava-hero-spacer { min-height:320px; }
@@ -46,39 +46,46 @@
 .nava .nava-audience { padding:64px max(40px,calc((100vw - 1200px)/2)); }
 .nava .nava-audience:first-child { padding-right:48px; }
 .nava .nava-audience:last-child { padding-left:48px; }
-.nava .nava-investors { color:var(--deep); background:radial-gradient(70% 70% at 0% 100%,var(--glow-white),transparent 70%),var(--mint-gradient); }
-.nava .nava-smes { background:radial-gradient(70% 80% at 100% 0%,var(--glow-mint),transparent 70%),var(--deep-gradient); }
+.nava .nava-investors { color:var(--ice); background:radial-gradient(70% 80% at 0% 100%, rgba(30,227,162,0.22) 0%, rgba(30,227,162,0) 70%), linear-gradient(140deg, #0F5550 0%, #0B4246 55%, #08333A 100%); }
+.nava .nava-investors .nava-label { color:#5FF0B0; }
+.nava .nava-investors h2 { color:#FFFFFF; }
+.nava .nava-investors p, .nava .nava-investors .nava-benefits li { color:#CFE3E1; }
+.nava .nava-smes { background:radial-gradient(70% 80% at 100% 0%, rgba(63,217,232,0.14) 0%, rgba(63,217,232,0) 70%), linear-gradient(150deg, #22345C 0%, #1A2849 55%, #141F3A 100%); }
+.nava .nava-smes .nava-label { color:#3FD9E8; }
+.nava .nava-smes h2 { color:#FFFFFF; }
+.nava .nava-smes p, .nava .nava-smes .nava-benefits li { color:#B4BED3; }
 .nava .nava-audience p { margin-top:24px; }
 .nava .nava-benefits { display:grid; grid-template-columns:1fr 1fr; gap:0 24px; margin:32px 0; padding:0; list-style:none; }
 .nava .nava-benefits li { padding:20px 0; font-size:13px; line-height:1.7; border-top:1px solid var(--hairline); }
-.nava .nava-investors .nava-benefits li { border-color:rgba(19,29,53,.2); }
+.nava .nava-investors .nava-benefits li { border-color:rgba(231,236,245,0.18); }
+.nava .nava-smes .nava-benefits li { border-color:rgba(231,236,245,0.14); }
 .nava .nava-backing-title { max-width:36ch; }
 .nava .nava-backing { padding:88px 0; margin-bottom:0; background:
-  radial-gradient(60% 70% at 100% 70%, rgba(30,227,162,0.24) 0%, rgba(30,227,162,0) 70%),
-  linear-gradient(140deg, #0F5550 0%, #0B4246 55%, #08333A 100%); }
-.nava .nava-backing .nava-label { color:#5FF0B0; }
-.nava .nava-backing .nava-backing-title, .nava .nava-backing-stats dt { color:#FFFFFF; }
+  radial-gradient(60% 80% at 100% 100%, rgba(30,227,162,0.16) 0%, rgba(30,227,162,0) 70%),
+  linear-gradient(140deg, #F2F8F6 0%, #E3F1EC 55%, #D4EAE2 100%); }
+.nava .nava-backing .nava-label { color:#0E7A57; }
+.nava .nava-backing .nava-backing-title, .nava .nava-backing-stats dt { color:#131D35; }
 .nava .nava-backing .nava-label { margin-bottom:22px; }
 .nava .nava-backing-grid { display:grid; grid-template-columns:3fr 2fr; gap:64px; margin-top:48px; }
 .nava .nava-backing-entries { display:grid; gap:40px; align-content:start; }
-.nava .nava-backing-entry { border-top:1px solid rgba(231,236,245,0.22); padding-top:28px; }
+.nava .nava-backing-entry { border-top:1px solid rgba(19,29,53,0.18); padding-top:28px; }
 .nava .nava-backing-logo { display:block; width:200px; height:56px; object-fit:contain; object-position:left center; }
-.nava .nava-backing .nava-logo-white { filter:brightness(0) invert(1); }
 .nava .nava-backing-entry:last-child .nava-backing-logo { width:300px; height:96px; }
-.nava .nava-backing-entry p { margin:20px 0 0; font-size:15px; line-height:1.75; font-weight:400; color:#CFE3E1; }
+.nava .nava-backing-entry p { margin:20px 0 0; font-size:15px; line-height:1.75; font-weight:400; color:#26345A; }
 .nava .nava-backing-stats { margin:0; }
-.nava .nava-backing-stats div { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:20px 0; border-top:1px solid rgba(231,236,245,0.22); }
-.nava .nava-backing-stats div:last-child { border-bottom:1px solid rgba(231,236,245,0.22); }
+.nava .nava-backing-stats div { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:20px 0; border-top:1px solid rgba(19,29,53,0.18); }
+.nava .nava-backing-stats div:last-child { border-bottom:1px solid rgba(19,29,53,0.18); }
 .nava .nava-backing-stats dt { font-family:var(--font-display); font-size:44px; font-weight:400; line-height:1.1; white-space:nowrap; }
-.nava .nava-backing-stats dd { margin:0; font-size:14px; color:#CFE3E1; text-align:right; }
+.nava .nava-backing-stats dd { margin:0; font-size:14px; color:#26345A; text-align:right; }
 .nava .nava-band { background:radial-gradient(60% 100% at 100% 100%,var(--glow-mint),transparent 70%),var(--deep-gradient); padding:80px 0; }
 /* HIDDEN FOR NOW: "Join us" band styles (.nava-join, .nava-join-grid, .nava-join-single, .nava-routes, .nava-route) removed — see content.join in Nava.tsx to restore. */
 html:has(.nava) { scroll-behavior:smooth; }
-.nava .nava-contact { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 28px; padding:48px 0; border-top:1px solid rgba(231,236,245,.24); scroll-margin-top:100px; }
+.nava .nava-contact-band { background:radial-gradient(50% 120% at 0% 50%, rgba(15,85,80,0.45) 0%, rgba(15,85,80,0) 70%), linear-gradient(180deg, #1A2849 0%, #131D35 100%); }
+.nava .nava-contact { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 28px; padding:48px 0; scroll-margin-top:100px; }
 .nava .nava-contact-label { font-size:12px; font-weight:500; letter-spacing:3.5px; text-transform:uppercase; color:#B4BED3; margin:0; }
 .nava .nava-contact-email { font-family:var(--font-body); font-weight:500; font-size:20px; line-height:1.4; letter-spacing:0.2px; color:#E7ECF5; user-select:text; }
 .nava .nava-contact-email:hover { text-decoration:underline; text-decoration-color:var(--mint); text-decoration-thickness:1px; text-underline-offset:6px; }
-.nava .nava-footer { padding:40px 0; background:var(--deep); }
+.nava .nava-footer { padding:40px 0; background:#0E1628; }
 .nava .nava-footer-top { display:flex; justify-content:space-between; gap:24px; }
 .nava .nava-footer .nava-label { font-size:10px; letter-spacing:2.5px; }
 .nava .nava-footer p { font-size:11px; color:var(--muted); max-width:1000px; }
