@@ -92,7 +92,7 @@
  .nava h1 { font-size:64px; } .nava h2 { font-size:42px; }
  .nava .nava-hero { gap:36px; }
  .nava .nava-figures { grid-template-columns:repeat(2,1fr); gap:32px 0; } .nava .nava-figure:nth-child(3) { border-left:0; }
- .nava .nava-roadmap { grid-template-columns:repeat(2,1fr); } .nava .nava-backing { padding:40px; } .nava .nava-backing-head { gap:40px; }
+ .nava .nava-roadmap { grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:767px) {
  .nava .nava-container { width:calc(100% - 40px); } .nava h1 { font-size:48px; } .nava h2 { font-size:38px; }
@@ -102,8 +102,8 @@
  .nava .nava-figure { border-left:0; border-top:1px solid rgba(19,29,53,.18); padding:24px 0 0; } .nava .nava-figure:first-child { border-top:0; padding-top:0; }
  .nava .nava-section { margin-top:64px; }
  .nava .nava-audiences { grid-template-columns:1fr; } .nava .nava-audience,.nava .nava-audience:first-child,.nava .nava-audience:last-child { padding:48px 24px; }
-  .nava .nava-backing { padding:24px; } .nava .nava-backing-head { grid-template-columns:1fr; gap:24px; } .nava .nava-backing-panels { grid-template-columns:1fr; } .nava .nava-backing-logo { height:44px; }
-  .nava .nava-backing-stats { grid-template-columns:1fr; } .nava .nava-backing-stats div { border-left:0; padding:18px 0; border-top:1px solid var(--hairline); } .nava .nava-backing-stats div:first-child { border-top:0; padding-top:0; }
+  .nava .nava-backing-grid { grid-template-columns:1fr; gap:48px; margin-top:36px; }
+  .nava .nava-backing-logo { width:168px; height:46px; }
  .nava .nava-roadmap { grid-template-columns:1fr; }
  .nava .nava-join-grid { grid-template-columns:1fr; gap:32px; } .nava .nava-band { padding:56px 0; }
  .nava .nava-footer-top { flex-direction:column; gap:0; }
