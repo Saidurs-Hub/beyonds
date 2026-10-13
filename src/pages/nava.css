@@ -134,7 +134,15 @@ html:has(.nava) { scroll-behavior:smooth; }
   .nava .nava-hero-spacer { display:none; }
  .nava .nava-figures { grid-template-columns:1fr; padding:30px; gap:24px; }
  .nava .nava-figure { border-left:0; border-top:1px solid rgba(19,29,53,.18); padding:24px 0 0; } .nava .nava-figure:first-child { border-top:0; padding-top:0; }
- .nava .nava-section { margin-top:64px; }
+  .nava .nava-section { margin-top:64px; }
+  .nava .nava-how { padding:56px 0; }
+  .nava .nava-how-flow { grid-template-columns:1fr; gap:0; }
+  .nava .nava-how-step-wrap { align-items:center; }
+  .nava .nava-how-step { padding-bottom:22px; }
+  .nava .nava-how-step-wrap:not(:last-child) .nava-how-step { padding-bottom:22px; }
+  .nava .nava-how-arrow::before { content:"↓"; }
+  .nava .nava-how-arrow { font-size:20px; }
+  .nava .nava-how-arrow::before { content:"↓"; }
   .nava .nava-risk { padding:64px 0; }
   .nava .nava-risk-grid { grid-template-columns:1fr; gap:36px; }
  .nava .nava-audiences { grid-template-columns:1fr; } .nava .nava-audience,.nava .nava-audience:first-child,.nava .nava-audience:last-child { padding:48px 24px; }
