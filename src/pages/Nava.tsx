@@ -29,7 +29,7 @@ const content = {
   // RISK SECTION — to remove: delete content.risk, the .nava-risk section markup below and the .nava-risk rules in nava.css.
   risk: {
     label: "HOW WE MANAGE RISK",
-    heading: "Controls at every stage.",
+    heading: "From gated originations to skin in the game",
     items: ([
       { title: "Gated origination", text: "Every deal passes KYC, reference checks and readiness screens before it reaches an investor." },
       { title: "Shared diligence", text: "One independent desk runs diligence for all members, so each pays a fraction." },
