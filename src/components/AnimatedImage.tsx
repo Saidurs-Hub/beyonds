@@ -4,6 +4,7 @@ interface AnimatedImageProps {
   src?: string;
   alt?: string;
   className?: string;
+  style?: React.CSSProperties;
   width?: number;
   height?: number;
   loading?: "lazy" | "eager";
