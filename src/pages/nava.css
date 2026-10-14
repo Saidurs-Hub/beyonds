@@ -10,8 +10,10 @@
   color:var(--ice); font-family:var(--font-body); background:radial-gradient(45% 30% at 100% 0%, rgba(30,227,162,0.14) 0%, rgba(30,227,162,0) 70%),radial-gradient(ellipse at 100% 8%,var(--glow-cyan),transparent 28%),radial-gradient(ellipse at 0% 45%,var(--glow-cyan),transparent 25%),radial-gradient(ellipse at 100% 85%,var(--glow-cyan),transparent 25%),var(--page-gradient); overflow:clip;
 }
 .nava * { box-sizing:border-box; }
-/* HERO LINES — to remove: delete these rules and NavaHeroLines in Nava.tsx. */
+/* HERO RIBBONS — to remove: delete these rules and NavaHeroLines in Nava.tsx. */
 .nava .nava-hero-lines { position:absolute; inset:0 0 auto; width:100%; height:900px; z-index:0; pointer-events:none; }
+/* Light grain over the top of the page, behind the content — belongs to the hero ribbons. */
+.nava::before { content:""; position:absolute; inset:0 0 auto; height:1000px; pointer-events:none; z-index:0; opacity:.22; mix-blend-mode:overlay; background-image:var(--grain); background-size:220px; }
 .nava > main, .nava > .nava-closing { position:relative; z-index:1; }
 .nava h1,.nava h2,.nava h3 { font-family:var(--font-display); font-weight:300; letter-spacing:.4px; font-style:normal; margin:0; }
 .nava .nava-dash { font-family:var(--font-body); }
