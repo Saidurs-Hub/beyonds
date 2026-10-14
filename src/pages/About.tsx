@@ -8,7 +8,8 @@ import aboutBg from "@/assets/about-hero.jpg";
 //   import bangladeshGlobal from "@/assets/bangladesh-global.jpg";
 //   import bangladeshGlobal from "@/assets/bangladesh-global-natural.jpg";
 //   import bangladeshGlobal from "@/assets/bangladesh-collage.jpg";
-import bangladeshGlobal from "@/assets/bangladesh-collage-v2.jpg";
+//   import bangladeshGlobal from "@/assets/bangladesh-collage-v2.jpg";
+import bangladeshGlobal from "@/assets/bangladesh-kantha.jpg";
 
 const About = () => (
   <PageLayout
@@ -91,7 +92,7 @@ const About = () => (
       {/* Global Presence Image */}
       <ScrollReveal>
         <div className="relative rounded-xl overflow-hidden aspect-[21/9] group">
-          <AnimatedImage src={bangladeshGlobal} alt="Screen-print style poster of Bangladeshi motifs in maroon, red and cream: an oversized water lily, Old Dhaka facades and towers, a wooden nouka with a patched sail, and Padma bridge cables" className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+          <AnimatedImage src={bangladeshGlobal} alt="Nakshi kantha embroidery on cream cotton: a stitched water lily medallion surrounded by Old Dhaka facades, a nouka boat, modern towers and fish, in maroon, rose and gold thread" className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
           <div className="absolute inset-0 bg-gradient-to-t from-background/15 to-transparent" />
         </div>
       </ScrollReveal>
