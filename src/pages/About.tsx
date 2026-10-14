@@ -93,6 +93,8 @@ const About = () => (
       <ScrollReveal>
         <div className="relative rounded-xl overflow-hidden aspect-[21/9] group">
           <AnimatedImage src={bangladeshGlobal} alt="Nakshi kantha embroidery on cream cotton: a stitched water lily medallion surrounded by Old Dhaka facades, a nouka boat, modern towers and fish, in maroon, rose and gold thread" className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+          {/* Dusty rose tint on the kantha image — delete this div to go back to cream */}
+          <div aria-hidden="true" className="absolute inset-0 pointer-events-none" style={{ background: "#E2B4BC", mixBlendMode: "multiply" }} />
           <div className="absolute inset-0 bg-gradient-to-t from-background/15 to-transparent" />
         </div>
       </ScrollReveal>
