@@ -78,7 +78,7 @@ const Hyphens = ({ text }: { text: string }) => (
 // leave, so the layout doesn't jump); click/tap and keyboard still work as before on all devices.
 const canHover = typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
 
-// HERO LINES — to remove: delete NavaHeroLines, its render below and .nava-hero-lines CSS.
+// HERO RIBBONS — to remove: delete NavaHeroLines, its render below and .nava-hero-lines CSS.
 const NavaHeroLines = () => (
   <svg className="nava-hero-lines" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true" focusable="false">
     <defs>
@@ -98,13 +98,9 @@ const NavaHeroLines = () => (
       </filter>
     </defs>
     <g mask="url(#nava-lines-mask)" fill="none" stroke="url(#nava-lines-color)">
-      <path d="M -180 -60 C 240 20 450 100 730 65 C 1060 20 1160 310 1580 590" strokeWidth="60" opacity="0.06" filter="url(#nava-lines-blur)" />
-      {Array.from({ length: 16 }, (_, i) => (
-        <path key={i}
-          d={`M -180 ${-160 + i * 13} C 240 ${-80 + i * 12} 450 ${40 + i * 10} 730 ${5 + i * 9} C 1060 ${-40 + i * 11} 1160 ${210 + i * 16} 1580 ${440 + i * 23}`}
-          strokeWidth={1 + (i % 3) * 0.2} opacity={0.08 + ((i * 7) % 10) * 0.03}
-        />
-      ))}
+      <path d="M -180 -60 C 240 20 450 100 730 65 C 1060 20 1160 310 1580 590" strokeWidth="140" opacity="0.22" filter="url(#nava-lines-blur)" />
+      <path d="M -200 120 C 300 160 620 260 900 210 C 1180 160 1300 420 1640 700" strokeWidth="90" opacity="0.12" filter="url(#nava-lines-blur)" />
+      <path d="M 300 -80 C 700 -20 980 60 1180 140 C 1340 200 1420 320 1600 420" strokeWidth="70" opacity="0.10" filter="url(#nava-lines-blur)" />
     </g>
   </svg>
 );
