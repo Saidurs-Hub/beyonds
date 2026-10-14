@@ -4,8 +4,10 @@ import AnimatedImage from "@/components/AnimatedImage";
 import CountUp from "@/components/CountUp";
 
 import aboutBg from "@/assets/about-hero.jpg";
-// To revert, switch back to: import bangladeshGlobal from "@/assets/bangladesh-global.jpg";
-import bangladeshGlobal from "@/assets/bangladesh-global-natural.jpg";
+// To revert, switch back to either:
+//   import bangladeshGlobal from "@/assets/bangladesh-global.jpg";
+//   import bangladeshGlobal from "@/assets/bangladesh-global-natural.jpg";
+import bangladeshGlobal from "@/assets/bangladesh-collage.jpg";
 
 const About = () => (
   <PageLayout
@@ -88,7 +90,7 @@ const About = () => (
       {/* Global Presence Image */}
       <ScrollReveal>
         <div className="relative rounded-xl overflow-hidden aspect-[21/9] group">
-          <AnimatedImage src={bangladeshGlobal} alt="Wide view over a Bangladeshi river delta at dusk with small wooden boats and a hazy city skyline in the distance" className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+          <AnimatedImage src={bangladeshGlobal} alt="Risograph-style collage of Bangladeshi motifs in maroon and cream: a sailing nouka boat, shapla water lilies, the Padma bridge, a rickshaw, a banyan tree and Dhaka towers along the bottom edge" className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
           <div className="absolute inset-0 bg-gradient-to-t from-background/15 to-transparent" />
         </div>
       </ScrollReveal>
