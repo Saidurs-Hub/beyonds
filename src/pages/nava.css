@@ -1,4 +1,5 @@
 .nava {
+  position:relative; isolation:isolate; --lines-mask:#FFFFFF;
   --navy:#1B2846; --deep:#131D35; --mint:#1EE3A2; --mint-soft:#8AF2CF; --cyan:#3FD9E8; --slate:#9AA5BF; --ice:#E7ECF5; --soft:#B4BED3; --muted:#8F9AB5; --hairline:rgba(231,236,245,.12);
   --page-gradient:linear-gradient(180deg,#1B2846 0%,#1F3052 28%,#1A2744 55%,#1E2E50 80%,#18243F 100%);
   --mint-gradient:linear-gradient(145deg,#26E8AC,#1EE3A2,#17C3A0);
@@ -9,6 +10,9 @@
   color:var(--ice); font-family:var(--font-body); background:radial-gradient(45% 30% at 100% 0%, rgba(30,227,162,0.14) 0%, rgba(30,227,162,0) 70%),radial-gradient(ellipse at 100% 8%,var(--glow-cyan),transparent 28%),radial-gradient(ellipse at 0% 45%,var(--glow-cyan),transparent 25%),radial-gradient(ellipse at 100% 85%,var(--glow-cyan),transparent 25%),var(--page-gradient); overflow:clip;
 }
 .nava * { box-sizing:border-box; }
+/* HERO LINES — to remove: delete these rules and NavaHeroLines in Nava.tsx. */
+.nava .nava-hero-lines { position:absolute; inset:0 0 auto; width:100%; height:900px; z-index:0; pointer-events:none; }
+.nava > main, .nava > .nava-closing { position:relative; z-index:1; }
 .nava h1,.nava h2,.nava h3 { font-family:var(--font-display); font-weight:300; letter-spacing:.4px; font-style:normal; margin:0; }
 .nava .nava-dash { font-family:var(--font-body); }
 .nava h1 { font-size:84px; line-height:1; }
@@ -35,9 +39,9 @@
 .nava .nava-button-dark:hover { background:var(--navy); }
 .nava .nava-button-cyan { background:var(--cyan); }
 .nava .nava-figures { margin-top:0; display:grid; grid-template-columns:repeat(4,1fr); border-radius:20px; padding:40px 20px; color:#131D35; background:
-  radial-gradient(60% 80% at 100% 100%, rgba(30,227,162,0.22) 0%, rgba(30,227,162,0) 70%),
-  radial-gradient(50% 70% at 0% 0%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 65%),
-  linear-gradient(140deg, #DDF8EC 0%, #C6F1E0 55%, #ADE7D2 100%); }
+  radial-gradient(55% 80% at 100% 100%, rgba(63,217,232,0.26) 0%, rgba(63,217,232,0) 70%),
+  radial-gradient(45% 70% at 0% 0%, rgba(255,255,255,0.40) 0%, rgba(255,255,255,0) 70%),
+  linear-gradient(135deg, #E2F5F3 0%, #C0E8E3 50%, #96D6CF 100%); }
 .nava .nava-figure { padding:0 26px; border-left:1px solid rgba(19,29,53,.18); }
 .nava .nava-figure:first-child { border-left:0; }
 .nava .nava-number { display:block; font-family:var(--font-display); font-size:48px; font-weight:400; line-height:1.2; margin-bottom:14px; }
@@ -108,8 +112,9 @@
 .nava .nava-risk-content p { max-width:480px; font-size:14px; line-height:1.7; color:#B4BED3; }
 .nava .nava-backing-title { max-width:36ch; }
 .nava .nava-backing { margin-top:0; padding:88px 0; margin-bottom:0; background:
-  radial-gradient(60% 80% at 100% 100%, rgba(30,227,162,0.16) 0%, rgba(30,227,162,0) 70%),
-  linear-gradient(140deg, #F2F8F6 0%, #E3F1EC 55%, #D4EAE2 100%); }
+  radial-gradient(50% 70% at 0% 0%, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 70%),
+  radial-gradient(60% 90% at 100% 100%, rgba(30,227,162,0.26) 0%, rgba(30,227,162,0) 70%),
+  linear-gradient(160deg, #E5F1E8 0%, #CDE6D6 50%, #ADD8BF 100%); }
 .nava .nava-backing .nava-label { color:#0E7A57; }
 .nava .nava-backing .nava-backing-title, .nava .nava-backing-stats dt { color:#131D35; }
 .nava .nava-backing .nava-label { margin-bottom:22px; }
@@ -147,6 +152,7 @@ html:has(.nava) { scroll-behavior:smooth; }
   .nava .nava-figures { grid-template-columns:repeat(2,1fr); gap:32px 0; } .nava .nava-figure:nth-child(3) { border-left:0; }
 }
 @media (max-width:767px) {
+  .nava .nava-hero-lines { opacity:0.5; }
  .nava .nava-container { width:calc(100% - 40px); } .nava h1 { font-size:48px; } .nava h2 { font-size:38px; }
   .nava .nava-hero { grid-template-columns:1fr; padding-top:120px; gap:40px; padding-bottom:96px; }
   .nava .nava-hero .nava-label { font-size:15px; }
