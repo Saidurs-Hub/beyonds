@@ -91,10 +91,11 @@ const About = () => (
 
       {/* Global Presence Image */}
       <ScrollReveal>
-        <div className="relative rounded-xl overflow-hidden aspect-[21/9] group">
-          <AnimatedImage src={bangladeshGlobal} alt="Nakshi kantha embroidery on cream cotton: a stitched water lily medallion surrounded by Old Dhaka facades, a nouka boat, modern towers and fish, in maroon, rose and gold thread" className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
-          {/* Soft wine tint on the kantha image — delete this div to go back to cream */}
-          <div aria-hidden="true" className="absolute inset-0 pointer-events-none" style={{ background: "#C4808F", mixBlendMode: "multiply" }} />
+        <div className="relative isolate rounded-xl overflow-hidden aspect-[21/9] group">
+          {/* Kantha colour treatment: maroon cloth, blush + gold stitches. To go back to the original cream cloth, remove the filter on the image and these two divs. */}
+          <AnimatedImage src={bangladeshGlobal} alt="Nakshi kantha embroidery on cream cotton: a stitched water lily medallion surrounded by Old Dhaka facades, a nouka boat, modern towers and fish, in maroon, rose and gold thread" className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" style={{ filter: "grayscale(1) invert(1) contrast(1.6) brightness(0.95)" }} loading="lazy" />
+          <div aria-hidden="true" className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(90deg, #E0AEBA 0%, #D6BB88 50%, #E0AEBA 100%)", mixBlendMode: "multiply" }} />
+          <div aria-hidden="true" className="absolute inset-0 pointer-events-none" style={{ background: "#5E1A2E", mixBlendMode: "lighten" }} />
           <div className="absolute inset-0 bg-gradient-to-t from-background/15 to-transparent" />
         </div>
       </ScrollReveal>
