@@ -1,5 +1,8 @@
+import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 import ScrollReveal from "@/components/ScrollReveal";
+import BlogCard from "@/components/BlogCard";
+import { blogPosts } from "@/data/blogPosts";
 import insightsHero from "@/assets/insights-hero.jpg";
 
 const studies = [
@@ -29,46 +32,88 @@ const studies = [
   },
 ];
 
-const Insights = () => (
-  <PageLayout
-    gradient="insights"
-    title="Insights"
-    subtitle="Research-driven market intelligence that informs our investment strategy and shapes the entrepreneurship ecosystem."
-    heroImage={insightsHero}
-    heroAlt="Cholpori classroom session with students"
-  >
-    <div className="space-y-0">
-      {studies.map((study, i) => (
-        <div key={study.title}>
-          <ScrollReveal delay={i * 0.05}>
-            <article className={`py-12 md:py-16 ${i < studies.length - 1 ? "border-b border-border/10" : ""}`}>
-              <div className="grid md:grid-cols-[280px_1fr] gap-8 md:gap-12">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <span className="text-accent text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>{study.type}</span>
-                    <span className="text-foreground/20">·</span>
-                    <span className="text-foreground/30 text-[11px] tracking-widest" style={{ fontFamily: "var(--font-body)" }}>{study.year}</span>
-                  </div>
-                  <h2 className="text-foreground text-lg md:text-xl leading-snug" style={{ fontFamily: "var(--font-body)" }}>{study.title}</h2>
-                </div>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="space-y-3">
-                    <h3 className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Key Findings</h3>
-                    <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{study.findings}</p>
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Recommendation</h3>
-                    <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{study.recommendation}</p>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </ScrollReveal>
+const tabs = [
+  { id: "blog", label: "Blog" },
+  { id: "research", label: "Research" },
+] as const;
 
+type TabId = (typeof tabs)[number]["id"];
+
+const Insights = () => {
+  const [activeTab, setActiveTab] = useState<TabId>("blog");
+
+  return (
+    <PageLayout
+      gradient="insights"
+      title="Insights"
+      subtitle="Research-driven market intelligence that informs our investment strategy and shapes the entrepreneurship ecosystem."
+      heroImage={insightsHero}
+      heroAlt="Cholpori classroom session with students"
+    >
+      <div className="space-y-12">
+        <div role="tablist" aria-label="Insights sections" className="flex gap-3">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              role="tab"
+              aria-selected={activeTab === tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-5 py-2 rounded-full text-xs tracking-[0.2em] uppercase border transition-all duration-300 ${
+                activeTab === tab.id
+                  ? "bg-secondary/80 text-foreground border-accent/40 shadow-[0_0_16px_hsl(var(--accent)/0.2)]"
+                  : "text-foreground/50 border-border/20 hover:text-foreground/80 hover:border-border/40"
+              }`}
+              style={{ fontFamily: "var(--font-body)" }}
+            >
+              {tab.label}
+            </button>
+          ))}
         </div>
-      ))}
-    </div>
-  </PageLayout>
-);
+
+        {activeTab === "blog" ? (
+          <div role="tabpanel" aria-label="Blog" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-6">
+            {blogPosts.map((post, i) => (
+              <ScrollReveal key={post.slug} delay={i * 0.05}>
+                <BlogCard post={post} />
+              </ScrollReveal>
+            ))}
+          </div>
+        ) : (
+          <div role="tabpanel" aria-label="Research" className="space-y-0">
+            {studies.map((study, i) => (
+              <div key={study.title}>
+                <ScrollReveal delay={i * 0.05}>
+                  <article className={`py-12 md:py-16 ${i < studies.length - 1 ? "border-b border-border/10" : ""}`}>
+                    <div className="grid md:grid-cols-[280px_1fr] gap-8 md:gap-12">
+                      <div className="space-y-3">
+                        <div className="flex items-center gap-3">
+                          <span className="text-accent text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>{study.type}</span>
+                          <span className="text-foreground/20">·</span>
+                          <span className="text-foreground/30 text-[11px] tracking-widest" style={{ fontFamily: "var(--font-body)" }}>{study.year}</span>
+                        </div>
+                        <h2 className="text-foreground text-lg md:text-xl leading-snug" style={{ fontFamily: "var(--font-body)" }}>{study.title}</h2>
+                      </div>
+                      <div className="grid md:grid-cols-2 gap-8">
+                        <div className="space-y-3">
+                          <h3 className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Key Findings</h3>
+                          <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{study.findings}</p>
+                        </div>
+                        <div className="space-y-3">
+                          <h3 className="text-foreground/30 text-[10px] tracking-[0.25em] uppercase" style={{ fontFamily: "var(--font-body)" }}>Recommendation</h3>
+                          <p className="text-foreground/60 text-sm leading-relaxed" style={{ fontFamily: "var(--font-body)" }}>{study.recommendation}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </ScrollReveal>
+
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </PageLayout>
+  );
+};
 
 export default Insights;
