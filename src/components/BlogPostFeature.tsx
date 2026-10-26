@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
@@ -14,6 +14,65 @@ interface BlogPostFeatureProps {
 // Feature article layout, used only by posts that define `feature` in
 // blogPosts.ts (currently Shondhibazar). All other posts use BlogPost's
 // standard layout.
+const STAT_COUNT_MS = 1500;
+
+// Stat number that counts up from 0 the first time it scrolls into view and
+// then holds the exact final text. The invisible copy of the finished value
+// keeps the box width fixed, so nothing shifts while the number rolls in.
+const StatValue = ({ raw }: { raw: string }) => {
+  const parts = useMemo(() => parseStat(raw), [raw]);
+  const boxRef = useRef<HTMLSpanElement>(null);
+  const [text, setText] = useState(() =>
+    prefersReducedMotion() ? raw : formatStat(parts, 0),
+  );
+
+  useEffect(() => {
+    const el = boxRef.current;
+    if (prefersReducedMotion() || !el || typeof IntersectionObserver === "undefined") {
+      setText(raw);
+      return;
+    }
+    let frame = 0;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        observer.disconnect();
+        const start = performance.now();
+        const step = (now: number) => {
+          const progress = Math.min(1, (now - start) / STAT_COUNT_MS);
+          if (progress >= 1) {
+            setText(raw);
+            return;
+          }
+          setText(formatStat(parts, Math.round(parts.value * easeOutCubic(progress))));
+          frame = requestAnimationFrame(step);
+        };
+        frame = requestAnimationFrame(step);
+      },
+      { threshold: 0.5 },
+    );
+    observer.observe(el);
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(frame);
+    };
+  }, [parts, raw]);
+
+  return (
+    <p
+      className="text-2xl md:text-3xl font-bold text-[hsl(var(--page-maroon-deep))]"
+      style={{ fontFamily: "var(--font-display)" }}
+    >
+      <span ref={boxRef} className="relative inline-block">
+        <span className="invisible" aria-hidden="true">
+          {raw}
+        </span>
+        <span className="absolute inset-0">{text}</span>
+      </span>
+    </p>
+  );
+};
+
 const BlogPostFeature = ({ post, morePosts }: BlogPostFeatureProps) => {
   const feature = post.feature!;
   // Hero photo: src/assets/blog/shondhibazar-hero.jpg. Falls back to the post
@@ -69,9 +128,7 @@ const BlogPostFeature = ({ post, morePosts }: BlogPostFeatureProps) => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {feature.stats.map((stat) => (
             <div key={stat.label} className="bg-[hsl(var(--blog-stat-bg))] rounded-xl px-5 py-6 shadow-lg">
-              <p className="text-2xl md:text-3xl font-bold text-[hsl(var(--page-maroon-deep))]" style={{ fontFamily: "var(--font-display)" }}>
-                {stat.value}
-              </p>
+              <StatValue raw={stat.value} />
               <p className="mt-1 text-xs md:text-sm text-[hsl(var(--page-maroon-deep))]/60" style={{ fontFamily: "var(--font-body)" }}>
                 {stat.label}
               </p>
