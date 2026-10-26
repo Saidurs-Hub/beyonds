@@ -16,7 +16,8 @@ interface BlogPostFeatureProps {
 // standard layout.
 const BlogPostFeature = ({ post, morePosts }: BlogPostFeatureProps) => {
   const feature = post.feature!;
-  // Hero falls back to the post cover until shondhibazar-hero.jpg is uploaded.
+  // Hero photo: src/assets/blog/shondhibazar-hero.jpg. Falls back to the post
+  // cover if that file is ever removed.
   const resolvedHero = resolveBlogImage(feature.heroImage) ?? post.cover;
   const [heroFailed, setHeroFailed] = useState(false);
   const heroSource = heroFailed ? post.cover : resolvedHero;
@@ -28,18 +29,18 @@ const BlogPostFeature = ({ post, morePosts }: BlogPostFeatureProps) => {
     <PageLayout gradient="insights" title={post.title} bareContent>
       {/* Full-width hero: photo with a dark maroon scrim rising from the bottom,
           tag and title in white over it. */}
-      <div className="relative h-[420px] sm:h-[560px] overflow-hidden">
+      <div className="relative h-[470px] sm:h-[560px] overflow-hidden">
         <img
           src={heroSource}
           alt={`${post.title} hero`}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover origin-center scale-[1.08]"
           onError={() => setHeroFailed(true)}
         />
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--page-maroon-deep))] via-[hsl(var(--page-maroon-deep))]/45 to-transparent"
         />
-        <div className="absolute top-0 left-0 right-0 px-6 md:px-12 lg:px-20 pt-32">
+        <div className="absolute top-0 left-0 right-0 px-6 md:px-12 lg:px-20 pt-28 md:pt-32">
           <Link
             to="/insights"
             className="inline-flex items-center gap-1.5 text-sm text-white/70 hover:text-white transition-colors"
@@ -48,7 +49,7 @@ const BlogPostFeature = ({ post, morePosts }: BlogPostFeatureProps) => {
             <ArrowLeft className="h-4 w-4" strokeWidth={1.5} /> Back to Insights
           </Link>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 px-6 md:px-12 lg:px-20 pb-24 max-w-6xl mx-auto">
+        <div className="absolute bottom-0 left-0 right-0 px-6 md:px-12 lg:px-20 pb-16 md:pb-24 max-w-6xl mx-auto">
           <div className="flex flex-wrap items-center gap-2 mb-4">
             <span className="text-[10px] tracking-[0.2em] uppercase text-white font-medium" style={{ fontFamily: "var(--font-body)" }}>
               {post.tag}
