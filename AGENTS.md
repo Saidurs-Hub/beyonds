@@ -6,3 +6,4 @@
 - Blog posts live in `src/data/blogPosts.ts` and are rendered by the shared `BlogCard` on Insights and BlogPost, so adding a post is one data entry and card rendering stays consistent.
 - Resolve optional blog photos with BlogImage's eager asset glob and skip absent section photos; cover placeholders prevent broken images before uploads.
 - PageLayout's optional titlePrefix places post navigation and tags before the heading without changing existing page headers.
+- A post's optional `feature` config switches BlogPost to BlogPostFeature's full-width hero layout via PageLayout's bareContent mode (shared nav and footer kept), so posts without it keep the standard article layout.
