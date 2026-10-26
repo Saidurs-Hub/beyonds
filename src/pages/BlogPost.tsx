@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import BlogImage from "@/components/BlogImage";
 import BlogCard from "@/components/BlogCard";
+import BlogPostFeature from "@/components/BlogPostFeature";
 import { blogPosts, getBlogPost } from "@/data/blogPosts";
 
 const BlogPost = () => {
@@ -16,6 +17,10 @@ const BlogPost = () => {
   if (!post) return <Navigate to="/insights" replace />;
 
   const morePosts = blogPosts.filter((p) => p.slug !== post.slug);
+
+  // Posts with a `feature` config (currently Shondhibazar only) get the
+  // feature layout; every other post keeps the standard layout below.
+  if (post.feature) return <BlogPostFeature post={post} morePosts={morePosts} />;
 
   return (
     <PageLayout gradient="insights" title={post.title} subtitle={post.summary} titlePrefix={

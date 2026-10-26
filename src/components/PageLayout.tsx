@@ -51,9 +51,11 @@ interface PageLayoutProps {
   headerExtra?: ReactNode;
   /** Retain the shared header while the page supplies full-width content and footer. */
   bare?: boolean;
+  /** Like bare, but keeps the standard nav breakpoints and the shared footer. */
+  bareContent?: boolean;
 }
 
-const PageLayout = ({ children, title, subtitle, titlePrefix, heroImage, heroAlt, backgroundColor, gradient, headerExtra, bare = false }: PageLayoutProps) => {
+const PageLayout = ({ children, title, subtitle, titlePrefix, heroImage, heroAlt, backgroundColor, gradient, headerExtra, bare = false, bareContent = false }: PageLayoutProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
@@ -215,7 +217,7 @@ const PageLayout = ({ children, title, subtitle, titlePrefix, heroImage, heroAlt
                 ))}
               </div>
             )}
-            {!bare && <>
+            {!bare && !bareContent && <>
             <motion.div
               className="px-6 md:px-12 lg:px-20 pt-40 md:pt-44 pb-12 md:pb-16 max-w-6xl mx-auto"
               variants={staggerContainer}
@@ -232,7 +234,7 @@ const PageLayout = ({ children, title, subtitle, titlePrefix, heroImage, heroAlt
         )}
 
         {/* Content */}
-        {bare ? children : <motion.main
+        {bare || bareContent ? children : <motion.main
           className="px-6 md:px-12 lg:px-20 py-16 md:py-20 max-w-6xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
