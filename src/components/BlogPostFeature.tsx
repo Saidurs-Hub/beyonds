@@ -16,8 +16,8 @@ interface BlogPostFeatureProps {
 // standard layout.
 const BlogPostFeature = ({ post, morePosts }: BlogPostFeatureProps) => {
   const feature = post.feature!;
-  // Hero falls back to the post cover until shondhibazar-hero.jpg is uploaded.
-  const resolvedHero = resolveBlogImage(feature.heroImage) ?? post.cover;
+  // Hero photo: src/assets/blog/shondhibazar-hero.jpg. Falls back to the post
+  // cover if that file is ever removed.
   const [heroFailed, setHeroFailed] = useState(false);
   const heroSource = heroFailed ? post.cover : resolvedHero;
 
@@ -32,7 +32,7 @@ const BlogPostFeature = ({ post, morePosts }: BlogPostFeatureProps) => {
         <img
           src={heroSource}
           alt={`${post.title} hero`}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover origin-center scale-[1.08]"
           onError={() => setHeroFailed(true)}
         />
         <div
