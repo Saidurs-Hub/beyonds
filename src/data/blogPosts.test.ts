@@ -18,7 +18,7 @@ describe("blog post availability", () => {
 
   it("retains the reserved section photos", () => {
     const post = getBlogPost("shondhibazar");
-    expect(post?.sections.find((section) => section.heading === "Building Trust in Food")?.image).toBe("src/assets/blog/shondhibazar-products.jpg");
+    expect(post?.feature?.twoColumn.find((column) => column.heading === "Building Trust in Food")?.image).toBe("src/assets/blog/shondhibazar-products.jpg");
     expect(post?.sections.find((section) => section.heading === "Building the Next Chapter with OCBIF")?.image).toBe("src/assets/blog/shondhibazar-facility.jpg");
   });
 });
