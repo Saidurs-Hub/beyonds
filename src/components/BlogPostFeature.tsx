@@ -100,14 +100,10 @@ const BlogPostFeature = ({ post, morePosts }: BlogPostFeatureProps) => {
         </div>
 
         {headed.map((section, i) => {
-          const number = String(i + 1).padStart(2, "0");
           const twoCol = feature.twoColumn.find((column) => column.heading === section.heading);
           const twoColImage = twoCol ? resolveBlogImage(twoCol.image) : undefined;
           const body = (
             <div className="space-y-5">
-              <span className="block text-xs tracking-[0.3em] text-foreground/40" style={{ fontFamily: "var(--font-body)" }}>
-                {number}
-              </span>
               <h2 className="text-foreground text-2xl md:text-3xl lg:text-4xl leading-snug" style={{ fontFamily: "var(--font-display)" }}>
                 {section.heading}
               </h2>
