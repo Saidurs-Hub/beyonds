@@ -21,4 +21,16 @@ describe("blog post availability", () => {
     expect(post?.feature?.twoColumn.find((column) => column.heading === "Building Trust in Food")?.image).toBe("src/assets/blog/shondhibazar-products.jpg");
     expect(post?.sections.find((section) => section.heading === "Building the Next Chapter with OCBIF")?.image).toBe("src/assets/blog/shondhibazar-facility.jpg");
   });
+
+  it("adds the second stat row under Growing the Connection", () => {
+    const row = getBlogPost("shondhibazar")?.feature?.inlineStats?.find(
+      (entry) => entry.heading === "Growing the Connection",
+    );
+    expect(row?.stats).toEqual([
+      { value: "228,000+", label: "meals served at Safe Food Experience Centers" },
+      { value: "200,000+", label: "eco-friendly packaging units produced" },
+      { value: "22,000+", label: "glass jars collected for reuse" },
+      { value: "47", label: "product samples approved for the UK and UAE" },
+    ]);
+  });
 });
