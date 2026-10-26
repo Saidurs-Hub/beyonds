@@ -6,5 +6,5 @@
 - [x] Show one Shondhibazar post with graceful photo placeholders and optional section images.
 - [x] Verify Blog, Research, full post and mobile in preview only.
 
-- [ ] Restore five original posts and covers, retaining photo support and navigation fixes.
-- [ ] Verify five cards, every post, More posts links and unchanged Research in preview.
+- [x] Restore five original posts and covers, retaining photo support and navigation fixes.
+- [x] Verify five cards, every post, More posts links and unchanged Research in preview.
