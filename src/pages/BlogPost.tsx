@@ -38,7 +38,7 @@ const BlogPost = () => {
         </div>
     }>
       <div className="space-y-12">
-        <BlogImage key={post.cover} path={post.cover} alt={`${post.title} cover`} cover wordmark={post.slug === "shondhibazar" ? "Shondhibazar" : post.title} />
+        <BlogImage key={post.cover} path={post.cover} alt={`${post.title} cover`} cover tint={post.coverTint !== false} wordmark={post.slug === "shondhibazar" ? "Shondhibazar" : post.title} />
 
         <article className="max-w-[720px] space-y-10">
           {post.sections.map((section, i) => (
