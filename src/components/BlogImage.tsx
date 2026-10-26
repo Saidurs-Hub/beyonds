@@ -15,11 +15,13 @@ interface BlogImageProps {
   path: string;
   alt: string;
   cover?: boolean;
+  // Set to false on a post to show its cover photo without the maroon wash.
+  tint?: boolean;
   wordmark?: string;
   caption?: string;
 }
 
-const BlogImage = ({ path, alt, cover = false, wordmark, caption }: BlogImageProps) => {
+const BlogImage = ({ path, alt, cover = false, tint = true, wordmark, caption }: BlogImageProps) => {
   const source = resolveBlogImage(path);
   const [failedSource, setFailedSource] = useState<string>();
   const available = source && source !== failedSource;
@@ -31,7 +33,7 @@ const BlogImage = ({ path, alt, cover = false, wordmark, caption }: BlogImagePro
         {available ? (
           <>
             <img src={source} alt={alt} loading="lazy" className={`w-full ${cover ? "h-full object-cover" : "h-auto"}`} onError={() => setFailedSource(source)} />
-            {cover && <div aria-hidden="true" className="absolute inset-0 bg-[hsl(var(--page-maroon))]/15 pointer-events-none" />}
+            {cover && tint && <div aria-hidden="true" className="absolute inset-0 bg-[hsl(var(--page-maroon))]/15 pointer-events-none" />}
           </>
         ) : (
           <div className="blog-cover-placeholder absolute inset-0 flex items-center justify-center p-6">

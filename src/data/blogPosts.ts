@@ -22,6 +22,8 @@ export interface BlogPost {
   summary: string;
   tag: string;
   cover: string;
+  // Set to false to show this post's cover photo without the maroon wash.
+  coverTint?: boolean;
   sections: BlogSection[];
 }
 
@@ -144,6 +146,7 @@ export const blogPosts: BlogPost[] = [
       "Shondhibazar connects farmers and families through a safer, more transparent food system built on traceability, fair markets, and better opportunities for farmers.",
     tag: "Portfolio Blog",
     cover: coverPhotos["/src/assets/blog/shondhibazar-cover.jpg"] ?? shondhibazarCover,
+    coverTint: false,
     sections: [
       {
         paragraphs: [
