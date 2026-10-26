@@ -43,6 +43,7 @@ interface PageLayoutProps {
   children: ReactNode;
   title: string;
   subtitle?: string;
+  titlePrefix?: ReactNode;
   heroImage?: string;
   heroAlt?: string;
   backgroundColor?: string;
@@ -52,7 +53,7 @@ interface PageLayoutProps {
   bare?: boolean;
 }
 
-const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundColor, gradient, headerExtra, bare = false }: PageLayoutProps) => {
+const PageLayout = ({ children, title, subtitle, titlePrefix, heroImage, heroAlt, backgroundColor, gradient, headerExtra, bare = false }: PageLayoutProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
@@ -221,6 +222,7 @@ const PageLayout = ({ children, title, subtitle, heroImage, heroAlt, backgroundC
               initial="initial"
               animate="animate"
             >
+              {titlePrefix}
               <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-wide mb-6" style={{ fontFamily: "var(--font-display)" }}>{title}</motion.h1>
               {subtitle && <motion.p variants={fadeUp} className="text-foreground/50 text-base md:text-lg leading-relaxed max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>{subtitle}</motion.p>}
             </motion.div>

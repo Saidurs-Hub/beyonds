@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import type { BlogPost } from "@/data/blogPosts";
+import BlogImage from "@/components/BlogImage";
 
 const BlogCard = ({ post }: { post: BlogPost }) => (
   <Link
@@ -8,14 +9,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => (
     className="group relative h-full flex flex-col bg-card/40 border border-border/20 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_20px_40px_-15px_hsl(var(--accent)/0.25)] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
     aria-label={`Read post: ${post.title}`}
   >
-    <img
-      src={post.cover}
-      alt={`${post.title} cover`}
-      loading="lazy"
-      width={1280}
-      height={720}
-      className="w-full aspect-video object-cover"
-    />
+    <BlogImage path={post.cover} alt={`${post.title} cover`} cover wordmark={post.slug === "shondhibazar" ? "Shondhibazar" : post.title} />
     <div className="flex flex-col flex-1 gap-3 p-6">
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-[10px] tracking-[0.2em] uppercase text-accent font-medium" style={{ fontFamily: "var(--font-body)" }}>
