@@ -79,6 +79,27 @@ const StatValue = ({ raw }: { raw: string }) => {
   );
 };
 
+// A row of white stat boxes: the same look under the hero and inside an article
+// section. The numbers roll in the first time the row is scrolled into view.
+const StatRow = ({
+  stats,
+  className = "",
+}: {
+  stats: { value: string; label: string }[];
+  className?: string;
+}) => (
+  <div className={`grid grid-cols-2 gap-4 lg:grid-cols-4 ${className}`}>
+    {stats.map((stat) => (
+      <div key={stat.label} className="bg-[hsl(var(--blog-stat-bg))] rounded-xl px-5 py-6 shadow-lg">
+        <StatValue raw={stat.value} />
+        <p className="mt-1 text-xs md:text-sm text-[hsl(var(--page-maroon-deep))]/60" style={{ fontFamily: "var(--font-body)" }}>
+          {stat.label}
+        </p>
+      </div>
+    ))}
+  </div>
+);
+
 const BlogPostFeature = ({ post, morePosts }: BlogPostFeatureProps) => {
   const feature = post.feature!;
   // Hero photo: src/assets/blog/shondhibazar-hero.jpg. Falls back to the post
@@ -131,16 +152,7 @@ const BlogPostFeature = ({ post, morePosts }: BlogPostFeatureProps) => {
 
       {/* Stat boxes overlapping the hero's bottom edge. */}
       <div className="relative z-10 px-6 md:px-12 lg:px-20 -mt-14 max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {feature.stats.map((stat) => (
-            <div key={stat.label} className="bg-[hsl(var(--blog-stat-bg))] rounded-xl px-5 py-6 shadow-lg">
-              <StatValue raw={stat.value} />
-              <p className="mt-1 text-xs md:text-sm text-[hsl(var(--page-maroon-deep))]/60" style={{ fontFamily: "var(--font-body)" }}>
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
+        <StatRow stats={feature.stats} />
       </div>
 
       <div className="py-16 md:py-24 space-y-20 md:space-y-28">
@@ -165,16 +177,33 @@ const BlogPostFeature = ({ post, morePosts }: BlogPostFeatureProps) => {
         {headed.map((section, i) => {
           const twoCol = feature.twoColumn.find((column) => column.heading === section.heading);
           const twoColImage = twoCol ? resolveBlogImage(twoCol.image) : undefined;
-          const body = (
+          // An extra stat row for this section, if the post defines one. It
+          // sits under the heading and the first paragraph, so the section
+          // widens to fit the boxes while the text keeps its narrow measure.
+          const inline = feature.inlineStats?.find((entry) => entry.heading === section.heading);
+          const heading = (
+            <h2 className="text-foreground text-2xl md:text-3xl lg:text-4xl leading-snug" style={{ fontFamily: "var(--font-display)" }}>
+              {section.heading}
+            </h2>
+          );
+          const paragraphs = section.paragraphs.map((paragraph, j) => (
+            <p key={j} className="text-foreground/75 text-base md:text-lg leading-loose" style={{ fontFamily: "var(--font-body)" }}>
+              {paragraph}
+            </p>
+          ));
+          const body = inline ? (
+            <>
+              <div className="mx-auto max-w-[720px] space-y-5">
+                {heading}
+                {paragraphs[0]}
+              </div>
+              <StatRow stats={inline.stats} className="my-12" />
+              <div className="mx-auto max-w-[720px] space-y-5">{paragraphs.slice(1)}</div>
+            </>
+          ) : (
             <div className="space-y-5">
-              <h2 className="text-foreground text-2xl md:text-3xl lg:text-4xl leading-snug" style={{ fontFamily: "var(--font-display)" }}>
-                {section.heading}
-              </h2>
-              {section.paragraphs.map((paragraph, j) => (
-                <p key={j} className="text-foreground/75 text-base md:text-lg leading-loose" style={{ fontFamily: "var(--font-body)" }}>
-                  {paragraph}
-                </p>
-              ))}
+              {heading}
+              {paragraphs}
             </div>
           );
 
@@ -188,7 +217,7 @@ const BlogPostFeature = ({ post, morePosts }: BlogPostFeatureProps) => {
           }
 
           return (
-            <section key={i} className="max-w-[720px] mx-auto px-6">
+            <section key={i} className={inline ? "max-w-6xl mx-auto px-6 md:px-12" : "max-w-[720px] mx-auto px-6"}>
               {body}
               {section.image && !twoCol && (
                 <div className="mt-6">
