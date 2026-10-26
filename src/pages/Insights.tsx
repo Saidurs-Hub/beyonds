@@ -4,6 +4,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import BlogCard from "@/components/BlogCard";
 import { blogPosts } from "@/data/blogPosts";
 import insightsHero from "@/assets/insights-hero.jpg";
+import { Button } from "@/components/ui/button";
 
 const studies = [
   {
@@ -53,7 +54,8 @@ const Insights = () => {
       <div className="space-y-12">
         <div role="tablist" aria-label="Insights sections" className="flex gap-3">
           {tabs.map((tab) => (
-            <button
+            <Button
+              variant="ghost"
               key={tab.id}
               role="tab"
               aria-selected={activeTab === tab.id}
@@ -66,7 +68,7 @@ const Insights = () => {
               style={{ fontFamily: "var(--font-body)" }}
             >
               {tab.label}
-            </button>
+            </Button>
           ))}
         </div>
 

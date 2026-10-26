@@ -1,22 +1,25 @@
 import { Link, Navigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
-import ScrollReveal from "@/components/ScrollReveal";
+import BlogImage from "@/components/BlogImage";
 import BlogCard from "@/components/BlogCard";
 import { blogPosts, getBlogPost } from "@/data/blogPosts";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = getBlogPost(slug);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [slug]);
 
   if (!post) return <Navigate to="/insights" replace />;
 
   const morePosts = blogPosts.filter((p) => p.slug !== post.slug);
 
   return (
-    <PageLayout gradient="insights" title={post.title} subtitle={post.summary}>
-      <div className="space-y-12">
-        <div className="space-y-6">
+    <PageLayout gradient="insights" title={post.title} subtitle={post.summary} titlePrefix={
+        <div className="space-y-6 mb-6">
           <Link
             to="/insights"
             className="inline-flex items-center gap-1.5 text-sm text-foreground/50 hover:text-foreground/90 transition-colors"
@@ -33,20 +36,14 @@ const BlogPost = () => {
             </span>
           </div>
         </div>
-
-        <ScrollReveal>
-          <img
-            src={post.cover}
-            alt={`${post.title} cover`}
-            width={1280}
-            height={720}
-            className="w-full aspect-video object-cover rounded-2xl border border-border/20"
-          />
-        </ScrollReveal>
+    }>
+      <div className="space-y-12">
+        <BlogImage key={post.cover} path={post.cover} alt={`${post.title} cover`} cover wordmark={post.slug === "shondhibazar" ? "Shondhibazar" : post.title} />
 
         <article className="max-w-[720px] space-y-10">
           {post.sections.map((section, i) => (
             <section key={i} className="space-y-5">
+              {section.image && <BlogImage path={section.image} alt={section.caption || section.heading || post.title} caption={section.caption} />}
               {section.heading && (
                 <h2 className="text-foreground text-2xl md:text-3xl leading-snug" style={{ fontFamily: "var(--font-display)" }}>
                   {section.heading}
@@ -61,7 +58,7 @@ const BlogPost = () => {
           ))}
         </article>
 
-        <section className="space-y-8 border-t border-border/20 pt-12">
+        {morePosts.length > 0 && <section className="space-y-8 border-t border-border/20 pt-12">
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>
             More posts
           </h2>
@@ -70,7 +67,7 @@ const BlogPost = () => {
               <BlogCard key={p.slug} post={p} />
             ))}
           </div>
-        </section>
+        </section>}
       </div>
     </PageLayout>
   );
