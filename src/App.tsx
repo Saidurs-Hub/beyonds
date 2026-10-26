@@ -12,6 +12,7 @@ const Services = lazy(() => import("./pages/Services.tsx"));
 const Portfolio = lazy(() => import("./pages/Portfolio.tsx"));
 const Team = lazy(() => import("./pages/Team.tsx"));
 const Insights = lazy(() => import("./pages/Insights.tsx"));
+const BlogPost = lazy(() => import("./pages/BlogPost.tsx"));
 const Contact = lazy(() => import("./pages/Contact.tsx"));
 const Nava = lazy(() => import("./pages/Nava.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
@@ -30,6 +31,7 @@ const AnimatedRoutes = () => {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/team" element={<Team />} />
           <Route path="/insights" element={<Insights />} />
+          <Route path="/insights/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/nava" element={<Nava />} />
           <Route path="*" element={<NotFound />} />
