@@ -7,6 +7,10 @@
     --background: 341 55% 7%;
 
     --page-maroon: 341 63% 32%;
+    /* Darker maroon for the Shondhibazar feature layout (stat numbers, hero scrim). */
+    --page-maroon-deep: 337 66% 17%;
+    /* White stat boxes on the Shondhibazar feature layout. */
+    --blog-stat-bg: 0 0% 100%;
     --page-ink: 255 35% 10%;
     --page-blue-purple: 255 35% 18%;
     --page-plum: 298 28% 22%;

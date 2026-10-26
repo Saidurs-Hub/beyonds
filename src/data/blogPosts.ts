@@ -24,7 +24,20 @@ export interface BlogPost {
   cover: string;
   // Set to false to show this post's cover photo without the maroon wash.
   coverTint?: boolean;
+  // Optional feature layout (currently Shondhibazar only): full-width hero,
+  // stat boxes, pull quote and two-column sections. Posts without it keep the
+  // standard article layout.
+  feature?: BlogFeature;
   sections: BlogSection[];
+}
+
+export interface BlogFeature {
+  /** Resolved like the cover: skipped gracefully until the photo is uploaded. */
+  heroImage: string;
+  stats: { value: string; label: string }[];
+  pullQuote: string;
+  /** Headed sections rendered as image + text rows; side is the image side. */
+  twoColumn: { heading: string; image: string; side: "left" | "right" }[];
 }
 
 // To add a post, add one entry here. The Insights blog grid, the post page
@@ -147,6 +160,21 @@ export const blogPosts: BlogPost[] = [
     tag: "Portfolio Blog",
     cover: coverPhotos["/src/assets/blog/shondhibazar-cover.jpg"] ?? shondhibazarCover,
     coverTint: false,
+    // Feature layout for this post only; the other four posts render the standard layout.
+    feature: {
+      heroImage: "src/assets/blog/shondhibazar-hero.jpg",
+      stats: [
+        { value: "1,200+", label: "farmers in the network" },
+        { value: "400+", label: "women farmers leading" },
+        { value: "5,000+", label: "households buying direct" },
+        { value: "BDT 62M", label: "earned by farmers" },
+      ],
+      pullQuote: "It was never just about groceries, but about building a bridge between farmers and families.",
+      twoColumn: [
+        { heading: "Building Trust in Food", image: "src/assets/blog/shondhibazar-products.jpg", side: "left" },
+        { heading: "Building the Next Chapter with OCBIF", image: "src/assets/blog/shondhibazar-facility.jpg", side: "right" },
+      ],
+    },
     sections: [
       {
         paragraphs: [
