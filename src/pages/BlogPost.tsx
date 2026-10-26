@@ -1,4 +1,5 @@
 import { Link, Navigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import BlogImage from "@/components/BlogImage";
@@ -8,6 +9,9 @@ import { blogPosts, getBlogPost } from "@/data/blogPosts";
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = getBlogPost(slug);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [slug]);
 
   if (!post) return <Navigate to="/insights" replace />;
 

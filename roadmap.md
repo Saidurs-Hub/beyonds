@@ -3,5 +3,5 @@
 - [x] Add shared-header-only PageLayout option, Nava route/nav, and Investments bridge card.
 - [x] Verify Nava interactions, mobile layout and unchanged existing pages; do not publish.
 
-- [ ] Show one Shondhibazar post with graceful photo placeholders and optional section images.
-- [ ] Verify Blog, Research, full post and mobile in preview only.
+- [x] Show one Shondhibazar post with graceful photo placeholders and optional section images.
+- [x] Verify Blog, Research, full post and mobile in preview only.
