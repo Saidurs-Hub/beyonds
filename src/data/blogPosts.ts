@@ -156,7 +156,8 @@ export const blogPosts: BlogPost[] = [
       },
       {
         heading: "Building Trust in Food",
-        image: "src/assets/blog/shondhibazar-products.jpg",
+        // Shelf photo removed. To bring it back, add:
+        // image: "src/assets/blog/shondhibazar-products.jpg",
         paragraphs: [
           "Shondhibazar began with a vision of a food system families could trust. Consumers wanted confidence in what they were bringing home, while farmers needed a fairer, steadier way to reach the market. The answer was to build a bridge between them, a connection that worked for both sides. Today, Shondhibazar's network includes more than 1,200 farmers, with over 400 women leading the way. For many, life feels steadier now. They know their harvests will reach the market, each season carries less uncertainty, and access to quality seeds, financial support, and training has changed the way they farm. Planning ahead no longer feels out of reach.",
           "That trust extends to families as well. Over 5,000 households and 15 businesses now buy directly from Shondhibazar farmers. Every product carries a story of safety and care, from the field to the table. Even the packaging reflects that promise, using jute, biodegradable materials, and recycled glass to reduce waste and protect the environment.",
