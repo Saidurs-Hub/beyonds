@@ -38,6 +38,8 @@ export interface BlogFeature {
   pullQuote: string;
   /** Headed sections rendered as image + text rows; side is the image side. */
   twoColumn: { heading: string; image: string; side: "left" | "right" }[];
+  /** Extra stat row dropped under the first paragraph of a matching heading. */
+  inlineStats?: { heading: string; stats: { value: string; label: string }[] }[];
 }
 
 // To add a post, add one entry here. The Insights blog grid, the post page
@@ -173,6 +175,17 @@ export const blogPosts: BlogPost[] = [
       twoColumn: [
         { heading: "Building Trust in Food", image: "src/assets/blog/shondhibazar-products.jpg", side: "left" },
         { heading: "Building the Next Chapter with OCBIF", image: "src/assets/blog/shondhibazar-facility.jpg", side: "right" },
+      ],
+      inlineStats: [
+        {
+          heading: "Growing the Connection",
+          stats: [
+            { value: "228,000+", label: "meals served at Safe Food Experience Centers" },
+            { value: "200,000+", label: "eco-friendly packaging units produced" },
+            { value: "22,000+", label: "glass jars collected for reuse" },
+            { value: "47", label: "product samples approved for the UK and UAE" },
+          ],
+        },
       ],
     },
     sections: [
