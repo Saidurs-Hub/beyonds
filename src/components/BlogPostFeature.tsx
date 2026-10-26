@@ -4,6 +4,12 @@ import { ArrowLeft } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import BlogImage, { resolveBlogImage } from "@/components/BlogImage";
 import BlogCard from "@/components/BlogCard";
+import {
+  easeOutCubic,
+  formatStat,
+  parseStat,
+  prefersReducedMotion,
+} from "@/components/statCount";
 import type { BlogPost } from "@/data/blogPosts";
 
 interface BlogPostFeatureProps {
