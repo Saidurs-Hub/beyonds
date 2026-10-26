@@ -8,7 +8,8 @@ const photos = import.meta.glob("/src/assets/blog/*.{jpg,jpeg,png,webp}", {
 }) as Record<string, string>;
 
 export const resolveBlogImage = (path: string) =>
-  photos[path.startsWith("/") ? path : `/${path}`];
+  photos[path.startsWith("/") ? path : `/${path}`] ??
+  (path.startsWith("src/") || path.startsWith("/src/assets/blog/") ? undefined : path);
 
 interface BlogImageProps {
   path: string;
