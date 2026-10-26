@@ -18,6 +18,7 @@ const BlogPostFeature = ({ post, morePosts }: BlogPostFeatureProps) => {
   const feature = post.feature!;
   // Hero photo: src/assets/blog/shondhibazar-hero.jpg. Falls back to the post
   // cover if that file is ever removed.
+  const resolvedHero = resolveBlogImage(feature.heroImage) ?? post.cover;
   const [heroFailed, setHeroFailed] = useState(false);
   const heroSource = heroFailed ? post.cover : resolvedHero;
 
