@@ -8,6 +8,9 @@ import eudikaCover from "@/assets/blog-covers/eudika.png";
 const coverPhotos = import.meta.glob("/src/assets/blog/shondhibazar-cover.jpg", {
   eager: true, query: "?url", import: "default",
 }) as Record<string, string>;
+const cardPhotos = import.meta.glob("/src/assets/blog/shondhibazar-hero.jpg", {
+  eager: true, query: "?url", import: "default",
+}) as Record<string, string>;
 
 export interface BlogSection {
   heading?: string;
@@ -22,9 +25,11 @@ export interface BlogPost {
   summary: string;
   tag: string;
   cover: string;
+  /** Optional card-only photo, leaving the article's cover fallback unchanged. */
+  cardCover?: string;
   // Set to false to show this post's cover photo without the maroon wash.
   coverTint?: boolean;
-  // Optional feature layout (currently Shondhibazar only): full-width hero,
+  // Optional feature layout: full-width hero,
   // stat boxes, pull quote and two-column sections. Posts without it keep the
   // standard article layout.
   feature?: BlogFeature;
@@ -52,6 +57,17 @@ export const blogPosts: BlogPost[] = [
       "Shikho brings quality learning to every student in Bangladesh, using technology to turn barriers into opportunities.",
     tag: "Portfolio Blog",
     cover: shikhoCover,
+    feature: {
+      heroImage: shikhoCover,
+      stats: [
+        { value: "4M+", label: "learners on the platform" },
+        { value: "64", label: "districts reached" },
+        { value: "65 lakh+", label: "monthly logins" },
+        { value: "1.5M", label: "monthly learners targeted by 2029" },
+      ],
+      pullQuote: "A student's future should never be limited by the place they happen to be born.",
+      twoColumn: [],
+    },
     sections: [
       {
         paragraphs: [
@@ -103,6 +119,17 @@ export const blogPosts: BlogPost[] = [
       "Shomvob connects Bangladesh's blue-collar workers with verified jobs, formal employment, and financial services through a single platform.",
     tag: "Portfolio Blog",
     cover: shomvobCover,
+    feature: {
+      heroImage: shomvobCover,
+      stats: [
+        { value: "2.5M+", label: "job seekers registered" },
+        { value: "32,000+", label: "formal job placements" },
+        { value: "85%", label: "of Bangladesh's workers are informal" },
+        { value: "10M+", label: "registered workers targeted by 2028" },
+      ],
+      pullQuote: "A more direct path to work can give people more than a job. It can give them a foundation to build from.",
+      twoColumn: [],
+    },
     sections: [
       {
         paragraphs: [
@@ -161,8 +188,9 @@ export const blogPosts: BlogPost[] = [
       "Shondhibazar connects farmers and families through a safer, more transparent food system built on traceability, fair markets, and better opportunities for farmers.",
     tag: "Portfolio Blog",
     cover: coverPhotos["/src/assets/blog/shondhibazar-cover.jpg"] ?? shondhibazarCover,
+    cardCover: cardPhotos["/src/assets/blog/shondhibazar-hero.jpg"] ?? coverPhotos["/src/assets/blog/shondhibazar-cover.jpg"] ?? shondhibazarCover,
     coverTint: false,
-    // Feature layout for this post only; the other four posts render the standard layout.
+    // This post also has image sections and an additional in-article stat row.
     feature: {
       heroImage: "src/assets/blog/shondhibazar-hero.jpg",
       stats: [
@@ -244,6 +272,17 @@ export const blogPosts: BlogPost[] = [
       "Aqualink Bangladesh Limited helps businesses, farms, and industries use real-time data and smart automation to cut energy waste, lower costs, and work more efficiently.",
     tag: "Portfolio Blog",
     cover: aqualinkCover,
+    feature: {
+      heroImage: aqualinkCover,
+      stats: [
+        { value: "1,150+", label: "customers across 16 districts" },
+        { value: "20.93%", label: "electricity saved at the Shwapno pilot outlet" },
+        { value: "80,000+ kWh", label: "saved every month" },
+        { value: "1,000+", label: "farmers and technicians trained" },
+      ],
+      pullQuote: "Technology can be designed around real-world needs.",
+      twoColumn: [],
+    },
     sections: [
       {
         paragraphs: [
@@ -308,6 +347,17 @@ export const blogPosts: BlogPost[] = [
       "Eudika connects students with verified tutors while helping educators find more reliable teaching opportunities through technology.",
     tag: "Portfolio Blog",
     cover: eudikaCover,
+    feature: {
+      heroImage: eudikaCover,
+      stats: [
+        { value: "2,000+", label: "tutors found opportunities" },
+        { value: "2,900", label: "customers and beneficiaries" },
+        { value: "BDT 1.5 crore", label: "revenue generated" },
+        { value: "17,000", label: "monthly active users" },
+      ],
+      pullQuote: "Sometimes, finding the right tutor is about more than improving a grade. It is about finding someone who helps a student believe in their ability to learn.",
+      twoColumn: [],
+    },
     sections: [
       {
         paragraphs: [

@@ -8,3 +8,6 @@
 
 - [x] Restore five original posts and covers, retaining photo support and navigation fixes.
 - [x] Verify five cards, every post, More posts links and unchanged Research in preview.
+
+- [ ] Switch only Shondhibazar's card photo and add feature configs for the four other posts without changing article text.
+- [ ] Support decimal count-up values and verify all five posts, mobile layouts and unchanged Research; do not publish.

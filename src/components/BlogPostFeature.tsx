@@ -18,7 +18,7 @@ interface BlogPostFeatureProps {
 }
 
 // Feature article layout, used only by posts that define `feature` in
-// blogPosts.ts (currently Shondhibazar). All other posts use BlogPost's
+// blogPosts.ts. Posts without this config use BlogPost's
 // standard layout.
 const STAT_COUNT_MS = 1500;
 
@@ -50,7 +50,7 @@ const StatValue = ({ raw }: { raw: string }) => {
             setText(raw);
             return;
           }
-          setText(formatStat(parts, Math.round(parts.value * easeOutCubic(progress))));
+          setText(formatStat(parts, parts.value * easeOutCubic(progress)));
           frame = requestAnimationFrame(step);
         };
         frame = requestAnimationFrame(step);
@@ -66,7 +66,7 @@ const StatValue = ({ raw }: { raw: string }) => {
 
   return (
     <p
-      className="text-2xl md:text-3xl font-bold text-[hsl(var(--page-maroon-deep))]"
+      className={`${raw.length > 9 ? "text-base sm:text-2xl lg:text-3xl" : "text-2xl md:text-3xl"} font-bold tabular-nums text-[hsl(var(--page-maroon-deep))]`}
       style={{ fontFamily: "var(--font-display)" }}
     >
       <span ref={boxRef} className="relative inline-block">
@@ -101,12 +101,12 @@ const StatRow = ({
 );
 
 const BlogPostFeature = ({ post, morePosts }: BlogPostFeatureProps) => {
-  const feature = post.feature!;
-  // Hero photo: src/assets/blog/shondhibazar-hero.jpg. Falls back to the post
-  // cover if that file is ever removed.
-  const resolvedHero = resolveBlogImage(feature.heroImage) ?? post.cover;
+  const feature = post.feature;
+  // Missing optional hero photos fall back to the post's existing cover.
+  const resolvedHero = feature ? resolveBlogImage(feature.heroImage) ?? post.cover : post.cover;
   const [heroFailed, setHeroFailed] = useState(false);
   const heroSource = heroFailed ? post.cover : resolvedHero;
+  if (!feature) return null;
 
   const intro = post.sections.filter((section) => !section.heading);
   const headed = post.sections.filter((section) => section.heading);
