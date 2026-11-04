@@ -11,6 +11,8 @@
     --page-maroon-deep: 337 66% 17%;
     /* Feature article stat boxes: transparent fill with a static gold outline glow. */
     --blog-stat-gold: 44 90% 61%;
+    /* Solid fill for the hero-overlapping stat row, matched to the dark blue-purple of the insights page gradient at that spot. */
+    --blog-stat-fill: var(--page-blue-purple);
     --blog-stat-glow: inset 0 0 0 1px hsl(var(--blog-stat-gold) / 0.9), 0 0 16px hsl(var(--blog-stat-gold) / 0.28);
     --page-ink: 255 35% 10%;
     --page-blue-purple: 255 35% 18%;
@@ -181,6 +183,10 @@
     background: transparent;
     /* Inset border preserves the existing box and content dimensions. */
     box-shadow: var(--blog-stat-glow);
+  }
+  /* Hero-overlapping row gets a solid fill so it reads as one color over the photo seam. */
+  .blog-stat-box--filled {
+    background: hsl(var(--blog-stat-fill));
   }
 
   .nav-link-active {

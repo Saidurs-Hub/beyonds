@@ -84,13 +84,16 @@ const StatValue = ({ raw }: { raw: string }) => {
 const StatRow = ({
   stats,
   className = "",
+  filled = false,
 }: {
   stats: { value: string; label: string }[];
   className?: string;
+  /* Filled rows sit over the hero photo seam and need a solid background. */
+  filled?: boolean;
 }) => (
   <div className={`grid grid-cols-2 gap-4 lg:grid-cols-4 ${className}`}>
     {stats.map((stat) => (
-      <div key={stat.label} className="blog-stat-box rounded-xl px-5 py-6">
+      <div key={stat.label} className={`blog-stat-box rounded-xl px-5 py-6${filled ? " blog-stat-box--filled" : ""}`}>
         <StatValue raw={stat.value} />
         <p className="mt-1 text-xs md:text-sm text-white/75" style={{ fontFamily: "var(--font-body)" }}>
           {stat.label}
@@ -152,7 +155,7 @@ const BlogPostFeature = ({ post, morePosts }: BlogPostFeatureProps) => {
 
       {/* Stat boxes overlapping the hero's bottom edge. */}
       <div className="relative z-10 px-6 md:px-12 lg:px-20 -mt-14 max-w-6xl mx-auto">
-        <StatRow stats={feature.stats} />
+        <StatRow stats={feature.stats} filled />
       </div>
 
       <div className="py-16 md:py-24 space-y-20 md:space-y-28">
