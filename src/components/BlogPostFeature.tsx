@@ -66,7 +66,7 @@ const StatValue = ({ raw }: { raw: string }) => {
 
   return (
     <p
-      className={`${raw.length > 9 ? "text-base sm:text-2xl lg:text-3xl" : "text-2xl md:text-3xl"} font-bold tabular-nums text-[hsl(var(--blog-stat-foreground))]`}
+      className={`${raw.length > 9 ? "text-base sm:text-2xl lg:text-3xl" : "text-2xl md:text-3xl"} font-bold tabular-nums text-[hsl(var(--blog-stat-gold))]`}
       style={{ fontFamily: "var(--font-display)" }}
     >
       <span ref={boxRef} className="relative inline-block">
@@ -92,7 +92,7 @@ const StatRow = ({
     {stats.map((stat) => (
       <div key={stat.label} className="blog-stat-box rounded-xl px-5 py-6">
         <StatValue raw={stat.value} />
-        <p className="mt-1 text-xs md:text-sm text-[hsl(var(--blog-stat-foreground))]/70" style={{ fontFamily: "var(--font-body)" }}>
+        <p className="mt-1 text-xs md:text-sm text-white/75" style={{ fontFamily: "var(--font-body)" }}>
           {stat.label}
         </p>
       </div>
