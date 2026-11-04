@@ -66,7 +66,7 @@ const StatValue = ({ raw }: { raw: string }) => {
 
   return (
     <p
-      className={`${raw.length > 9 ? "text-base sm:text-2xl lg:text-3xl" : "text-2xl md:text-3xl"} font-bold tabular-nums text-[hsl(var(--page-maroon-deep))]`}
+      className={`${raw.length > 9 ? "text-base sm:text-2xl lg:text-3xl" : "text-2xl md:text-3xl"} font-bold tabular-nums text-[hsl(var(--blog-stat-foreground))]`}
       style={{ fontFamily: "var(--font-display)" }}
     >
       <span ref={boxRef} className="relative inline-block">
@@ -79,7 +79,7 @@ const StatValue = ({ raw }: { raw: string }) => {
   );
 };
 
-// A row of white stat boxes: the same look under the hero and inside an article
+// A row of branded stat boxes: the same look under the hero and inside an article
 // section. The numbers roll in the first time the row is scrolled into view.
 const StatRow = ({
   stats,
@@ -90,9 +90,9 @@ const StatRow = ({
 }) => (
   <div className={`grid grid-cols-2 gap-4 lg:grid-cols-4 ${className}`}>
     {stats.map((stat) => (
-      <div key={stat.label} className="bg-[hsl(var(--blog-stat-bg))] rounded-xl px-5 py-6 shadow-lg">
+      <div key={stat.label} className="blog-stat-box rounded-xl px-5 py-6">
         <StatValue raw={stat.value} />
-        <p className="mt-1 text-xs md:text-sm text-[hsl(var(--page-maroon-deep))]/60" style={{ fontFamily: "var(--font-body)" }}>
+        <p className="mt-1 text-xs md:text-sm text-[hsl(var(--blog-stat-foreground))]/70" style={{ fontFamily: "var(--font-body)" }}>
           {stat.label}
         </p>
       </div>
