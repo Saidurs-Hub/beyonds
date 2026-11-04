@@ -9,11 +9,9 @@
     --page-maroon: 341 63% 32%;
     /* Darker maroon for feature article hero scrims. */
     --page-maroon-deep: 337 66% 17%;
-    /* Feature article stat boxes: translucent brand gradient and static gold glow. */
-    --blog-stat-bg: linear-gradient(135deg, hsl(var(--page-maroon) / 0.9) 0%, hsl(var(--page-maroon-deep) / 0.92) 52%, hsl(var(--page-blue-purple) / 0.9) 100%);
+    /* Feature article stat boxes: transparent fill with a static gold outline glow. */
     --blog-stat-gold: 44 90% 61%;
-    --blog-stat-foreground: 0 0% 100%;
-    --blog-stat-glow: inset 0 0 0 1px hsl(var(--blog-stat-gold) / 0.9), inset 0 0 12px hsl(var(--blog-stat-gold) / 0.1), 0 0 8px hsl(var(--blog-stat-gold) / 0.16), 0 0 22px hsl(var(--blog-stat-gold) / 0.1);
+    --blog-stat-glow: inset 0 0 0 1px hsl(var(--blog-stat-gold) / 0.9), 0 0 16px hsl(var(--blog-stat-gold) / 0.28);
     --page-ink: 255 35% 10%;
     --page-blue-purple: 255 35% 18%;
     --page-plum: 298 28% 22%;
@@ -180,7 +178,7 @@
   .page-gradient-insights { background-image: var(--gradient-insights); }
   .blog-cover-placeholder { background-image: var(--blog-cover-placeholder); }
   .blog-stat-box {
-    background: var(--blog-stat-bg);
+    background: transparent;
     /* Inset border preserves the existing box and content dimensions. */
     box-shadow: var(--blog-stat-glow);
   }
