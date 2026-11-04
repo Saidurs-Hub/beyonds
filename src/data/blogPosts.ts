@@ -1,4 +1,4 @@
-import shikhoCover from "@/assets/blog-covers/shikho.png";
+import shikhoPhoto from "@/assets/blog/shikho-hero.jpg.asset.json";
 import shomvobCover from "@/assets/blog-covers/shomvob.png";
 import shondhibazarCover from "@/assets/blog-covers/shondhibazar.png";
 import aqualinkCover from "@/assets/blog-covers/aqualink.png";
@@ -56,9 +56,9 @@ export const blogPosts: BlogPost[] = [
     summary:
       "Shikho brings quality learning to every student in Bangladesh, using technology to turn barriers into opportunities.",
     tag: "Portfolio Blog",
-    cover: shikhoCover,
+    cover: shikhoPhoto.url,
     feature: {
-      heroImage: shikhoCover,
+      heroImage: shikhoPhoto.url,
       stats: [
         { value: "4M+", label: "learners on the platform" },
         { value: "64", label: "districts reached" },
