@@ -1,4 +1,4 @@
-// Pure helpers behind the Shondhibazar feature article's count-up stat numbers.
+// Pure helpers behind the feature articles' count-up stat numbers.
 // They live apart from the component so parsing and formatting can be tested
 // without rendering anything.
 
@@ -6,21 +6,33 @@ export interface StatParts {
   prefix: string;
   value: number;
   suffix: string;
+  decimals: number;
+  grouped: boolean;
 }
 
 // Splits a display value such as "1,200+", "400+" or "BDT 62M" into the text
 // before the number, the number itself, and the text after it.
 export const parseStat = (raw: string): StatParts => {
-  const match = raw.match(/^([^\d]*)([\d,]+)(.*)$/);
-  if (!match) return { prefix: raw, value: 0, suffix: "" };
+  const match = raw.match(/^([^\d]*)([\d,]+(?:\.\d+)?)(.*)$/);
+  if (!match) return { prefix: raw, value: 0, suffix: "", decimals: 0, grouped: false };
   const [, prefix, digits, suffix] = match;
-  return { prefix, value: Number(digits.replace(/,/g, "")), suffix };
+  return {
+    prefix,
+    value: Number(digits.replace(/,/g, "")),
+    suffix,
+    decimals: digits.split(".")[1]?.length ?? 0,
+    grouped: digits.includes(","),
+  };
 };
 
 // Renders an intermediate count with the original prefix, suffix and comma
 // grouping, so the number never changes shape mid-animation.
 export const formatStat = (parts: StatParts, count: number): string =>
-  `${parts.prefix}${count.toLocaleString("en-US")}${parts.suffix}`;
+  `${parts.prefix}${count.toLocaleString("en-US", {
+    useGrouping: parts.grouped,
+    minimumFractionDigits: parts.decimals,
+    maximumFractionDigits: parts.decimals,
+  })}${parts.suffix}`;
 
 // Ease-out cubic: quick start, gentle stop.
 export const easeOutCubic = (t: number): number => 1 - Math.pow(1 - t, 3);
