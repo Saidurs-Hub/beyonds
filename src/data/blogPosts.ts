@@ -1,5 +1,3 @@
-import shikhoPhoto from "@/assets/blog/shikho-hero.jpg.asset.json";
-import shomvobCover from "@/assets/blog-covers/shomvob.png";
 import shondhibazarCover from "@/assets/blog-covers/shondhibazar.png";
 import aqualinkCover from "@/assets/blog-covers/aqualink.png";
 import eudikaCover from "@/assets/blog-covers/eudika.png";
@@ -56,9 +54,10 @@ export const blogPosts: BlogPost[] = [
     summary:
       "Shikho brings quality learning to every student in Bangladesh, using technology to turn barriers into opportunities.",
     tag: "Portfolio Blog",
-    cover: shikhoPhoto.url,
+    cover: "/src/assets/blog/shikho-hero.jpg",
+    coverTint: false,
     feature: {
-      heroImage: shikhoPhoto.url,
+      heroImage: "/src/assets/blog/shikho-hero.jpg",
       stats: [
         { value: "4M+", label: "learners on the platform" },
         { value: "64", label: "districts reached" },
@@ -118,9 +117,10 @@ export const blogPosts: BlogPost[] = [
     summary:
       "Shomvob connects Bangladesh's blue-collar workers with verified jobs, formal employment, and financial services through a single platform.",
     tag: "Portfolio Blog",
-    cover: shomvobCover,
+    cover: "/src/assets/blog/shomvob-hero.jpg",
+    coverTint: false,
     feature: {
-      heroImage: shomvobCover,
+      heroImage: "/src/assets/blog/shomvob-hero.jpg",
       stats: [
         { value: "2.5M+", label: "job seekers registered" },
         { value: "32,000+", label: "formal job placements" },
