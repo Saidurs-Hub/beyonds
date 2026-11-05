@@ -1,5 +1,4 @@
 import shondhibazarCover from "@/assets/blog-covers/shondhibazar.png";
-import aqualinkCover from "@/assets/blog-covers/aqualink.png";
 import eudikaCover from "@/assets/blog-covers/eudika.png";
 
 // Prefer the uploaded Shondhibazar photo; retain the original cover until it exists.
