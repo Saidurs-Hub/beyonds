@@ -1,6 +1,5 @@
 import shikhoPhoto from "@/assets/blog/shikho-hero.jpg.asset.json";
 import shomvobPhoto from "@/assets/blog/shomvob-hero.jpg.asset.json";
-import shomvobCover from "@/assets/blog-covers/shomvob.png";
 import shondhibazarCover from "@/assets/blog-covers/shondhibazar.png";
 import aqualinkCover from "@/assets/blog-covers/aqualink.png";
 import eudikaCover from "@/assets/blog-covers/eudika.png";
