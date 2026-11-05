@@ -119,9 +119,9 @@ export const blogPosts: BlogPost[] = [
     summary:
       "Shomvob connects Bangladesh's blue-collar workers with verified jobs, formal employment, and financial services through a single platform.",
     tag: "Portfolio Blog",
-    cover: shomvobCover,
+    cover: shomvobPhoto.url,
     feature: {
-      heroImage: shomvobCover,
+      heroImage: shomvobPhoto.url,
       stats: [
         { value: "2.5M+", label: "job seekers registered" },
         { value: "32,000+", label: "formal job placements" },
