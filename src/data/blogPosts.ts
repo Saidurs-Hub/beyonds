@@ -1,5 +1,4 @@
 import shondhibazarCover from "@/assets/blog-covers/shondhibazar.png";
-import aqualinkCover from "@/assets/blog-covers/aqualink.png";
 import eudikaCover from "@/assets/blog-covers/eudika.png";
 
 // Prefer the uploaded Shondhibazar photo; retain the original cover until it exists.
@@ -271,9 +270,10 @@ export const blogPosts: BlogPost[] = [
     summary:
       "Aqualink Bangladesh Limited helps businesses, farms, and industries use real-time data and smart automation to cut energy waste, lower costs, and work more efficiently.",
     tag: "Portfolio Blog",
-    cover: aqualinkCover,
+    cover: "/src/assets/blog/aqualink-hero.jpg",
+    coverTint: false,
     feature: {
-      heroImage: aqualinkCover,
+      heroImage: "/src/assets/blog/aqualink-hero.jpg",
       stats: [
         { value: "1,150+", label: "customers across 16 districts" },
         { value: "20.93%", label: "electricity saved at the Shwapno pilot outlet" },
