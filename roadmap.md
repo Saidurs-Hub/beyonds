@@ -11,3 +11,4 @@
 
 - [x] Switch only Shondhibazar's card photo and add feature configs for the four other posts without changing article text.
 - [x] Support decimal count-up values and verify all five posts, mobile layouts and unchanged Research; do not publish.
+- [ ] Hide Nava's navigation, Investments bridge, and direct page access while preserving it for restoration; verify without publishing.
