@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Suspense, lazy } from "react";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -14,7 +14,7 @@ const Team = lazy(() => import("./pages/Team.tsx"));
 const Insights = lazy(() => import("./pages/Insights.tsx"));
 const BlogPost = lazy(() => import("./pages/BlogPost.tsx"));
 const Contact = lazy(() => import("./pages/Contact.tsx"));
-const Nava = lazy(() => import("./pages/Nava.tsx"));
+// Nava is hidden for now. Restore its lazy import and route to make the retained page available again.
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
@@ -33,7 +33,7 @@ const AnimatedRoutes = () => {
           <Route path="/insights" element={<Insights />} />
           <Route path="/insights/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/nava" element={<Nava />} />
+          <Route path="/nava" element={<Navigate to="/" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>

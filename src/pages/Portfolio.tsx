@@ -1,5 +1,4 @@
 import PageLayout from "@/components/PageLayout";
-import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 import { openExternalLink } from "@/lib/openExternalLink";
 import { Sprout, ShoppingBag, Briefcase, Truck, Factory, Building2 } from "lucide-react";
@@ -96,6 +95,7 @@ const Portfolio = () => (
           </div>
         </section>
       </ScrollReveal>
+      {/* Nava is hidden for now. Restore the Link import and uncomment this section to show it again.
       <ScrollReveal>
         <section className="space-y-10">
           <h2 className="text-foreground/40 text-[11px] tracking-[0.25em] uppercase font-medium" style={{ fontFamily: "var(--font-body)" }}>Co-invest with us</h2>
@@ -107,6 +107,7 @@ const Portfolio = () => (
           </Link>
         </section>
       </ScrollReveal>
+      */}
     </div>
   </PageLayout>
 );

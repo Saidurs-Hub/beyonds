@@ -9,7 +9,7 @@ const navLinks = [
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
   { label: "Investments", path: "/portfolio" },
-  { label: "Nava", path: "/nava" },
+  // Nava is hidden for now. Restore { label: "Nava", path: "/nava" } here to show it again.
   { label: "Team", path: "/team" },
   { label: "Insights", path: "/insights" },
   { label: "Contact", path: "/contact" },
